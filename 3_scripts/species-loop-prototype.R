@@ -224,7 +224,7 @@ NFJ_regional_trends(dat, regions.dict)
   form.7.2 = formula(count ~ doy + I(doy^2) +
                      te(lat, lon, by = year, k = c(10, 10), bs = c("cr", "cr")) 
                    + sourcefac + regionfac)
-  
+
   
   
   ## Parameters for looping ----------
