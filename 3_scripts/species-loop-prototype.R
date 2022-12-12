@@ -269,7 +269,7 @@ sitere_maker = function(dat){
   use.inferred = TRUE
   
   ## Specifying taxa:
-  specs.do.all = FALSE #If TRUE, try to apply model to all species with 400+data points
+  specs.do.all = TRUE #If TRUE, try to apply model to all species with 400+data points
   # If false, use the default four species defined here:
   
   ## should we constrain model to only region (convex hull) of non-inferred points?
@@ -305,6 +305,7 @@ sitere_maker = function(dat){
     code.tab = code.tab[code.tab >=400]
     code.tab = code.tab[names(code.tab != "?-SP")]
     code.tab = code.tab[names(code.tab != "TBD")]
+    code.tab = code.tab[names(code.tab != "BFLY")]
     code.tab = code.tab[!grepl("-", names(code.tab))|
                           grepl("^S-", names(code.tab))]
     sum(dat$code %in% names(code.tab))

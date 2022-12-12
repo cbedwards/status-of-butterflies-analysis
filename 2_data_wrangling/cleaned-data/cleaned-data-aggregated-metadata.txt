@@ -1,1 +1,38 @@
-UPDATE THIS.
+Columns:
+============================================
+
+Identification:
+code – The code that Leslie + the GU team uses to identify taxa (based on NABA species)
+name – scientific name reported (may include subspecies, etc)
+common – common name 
+
+Fundamentals:
+count – number of butterflies reported
+year – year of observation
+doy – day of year of observation (ie 1-366) 
+source – What program collected this observation?
+lat – latitude of observation (or centroid of county, where appropriate)
+lon – longitude of observation (or centroid of county, where appropriate)
+
+Effort:
+Duration – effort metric for some pollard walk programs
+list.length – column for calculating list length (effort metric) for list length analysis of MA butterfly club data (not currently implemented, all Nas presently)
+party.size – effort metric for NABA fourth of July counts
+party.minutes – effort metric for NABA fourth of July counts
+site – unique identifier for the site. For many pollard-type data, effort is likely to be similar across days/years in the same site (since they walk the same route each time). When other effort information isn't available, a random effect of site in these cases can help account for differences in efforts between sites.
+
+Additional:
+state – State associated with the lat/lon (calculations are based on lat/lon, and data points at the boundaries of states may be mis-placed)
+date – date of observation (for ease of use – doy and year columns have the same information)
+presence – 0 or 1 for absent or present. note: currently excluding Shapiro presence/absence only data (so this can be calculated from counts)
+event.type – what type of gathering event was it? “NFJ” is the aggregated circles of Naba Fourth of July counts, “Pollard” are repeated transect walks (including actual Pollard walks and similar methods), “trip” are MA butterfly club trips. 
+event.id – unique identifier of individual observation event. For example, a trip that sees four species will have four rows of data, each sharing the same event.id. Used in code that calculates "inferred zeros"
+gather – how was the data gathered. “Community” means all species observed were reported (and we can infer zeros for any species not reported)
+
+===================================
+Derived columns:
+  THESE ARE NOT PRESENT IN THIS DATA FILE but are often generated in my analysis scripts, and this seemed like a good place to describe them
+   (in addition to the analysis scripts)
+region: geographic regions as defined by the FWS (https://www.fws.gov/about/regions), based on states. 2_data_wrangling/FWS-regions-by-states.csv has the dictionary for this
+site.re: site (above) is a unique identifier for each site. However, when including site as a random effect, sites with very little data are unlikely to be represented well with a random effect. sitere_maker() identifies all sites that have non-zero records in at least 5 years (it can be tweaked to change this threshold). For these sites with sufficient data, their site.re is identical to "site". For all other sites, their site.re is folded into a generic "light on data" site. 
+regionfac, sourcefac, site.refac: factor versions of region, site, and site.re, because mgcv::gam() and mgcv::bam() don't accept characters are variables.
