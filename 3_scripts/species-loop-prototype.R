@@ -188,21 +188,21 @@ NFJ_regional_trends(dat, regions.dict)
   
   ### Models I'm exploring: --------
   # ## baseline formula:
-  form.4 = as.formula(count ~ te(doy, lat, lon, k = c(7,  5, 5),  bs = c(cc, cr, cr)) +
-                        te(lat, lon, by = year, k = c(5, 5), bs = c(cr, cr)) + sourcefac)
+  form.4 = as.formula(count ~ te(doy, lat, lon, k = c(7,  5, 5),  bs = c("cc", "cr", "cr")) +
+                        te(lat, lon, by = year, k = c(5, 5), bs = c("cr", "cr")) + sourcefac)
   ## with shrinkage for doy x space
-  form.5 = as.formula(count ~ te(doy, lat, lon, k = c(7,  5, 5),  bs = c(cc, cs, cs)) +
-                        te(lat, lon, by = year, k = c(5, 5), bs = c(cr, cr)) + sourcefac)
+  form.5 = as.formula(count ~ te(doy, lat, lon, k = c(7,  5, 5),  bs = c("cc", "cs", "cs")) +
+                        te(lat, lon, by = year, k = c(5, 5), bs = c("cr", "cr")) + sourcefac)
   ## activity curve static in each region
-  form.6 = as.formula(count ~ s(doy,by = regionfac, k = c(7),  bs = c(cc)) +
-                        te(lat, lon, by = year, k = c(5, 5), bs = c(cr, cr)) + sourcefac)
-  form.6.2 = as.formula(count ~ s(doy,by = regionfac, k = c(7),  bs = c(cc)) +
-                          te(lat, lon, by = year, k = c(10, 10), bs = c(cr, cr)) + sourcefac)
+  form.6 = as.formula(count ~ s(doy,by = regionfac, k = c(7),  bs = c("cc")) +
+                        te(lat, lon, by = year, k = c(5, 5), bs = c("cr", "cr")) + sourcefac)
+  form.6.2 = as.formula(count ~ s(doy, by = regionfac, k = c(7),  bs = c("cc")) +
+                          te(lat, lon, by = year, k = c(10, 10), bs = c("cr", "cr")) + sourcefac)
   ## Trying to allow doy to vary across years and regions
-  form.6.2.1 = as.formula(count ~ te(doy, year, by = regionfac, k = c(5, 3),  bs = c(cc, cr)) +
-                            te(lat, lon, by = year, k = c(10, 10), bs = c(cr, cr)) + sourcefac)
-  form.6.2.2 = as.formula(count ~ te(doy, by = regionfac, k = c(7),  bs = c(cc)) +
-                            te(doy, by = year, k = c(7),  bs = c(cc)) +
+  form.6.2.1 = as.formula(count ~ te(doy, year, by = regionfac, k = c(5, 3),  bs = c("cc", "cr")) +
+                            te(lat, lon, by = year, k = c(10, 10), bs = c("cr", "cr")) + sourcefac)
+  form.6.2.2 = as.formula(count ~ te(doy, by = regionfac, k = c(7),  bs = c("cc")) +
+                            te(doy, by = year, k = c(7),  bs = c("cc")) +
                             te(lat, lon, by = year, k = c(10, 10), bs = c("cr", "cr")) + sourcefac)
   
   form.6.3 = formula(count ~ te(doy, regionfac, k = c(6),  bs = c("cc", "re")) +
@@ -211,8 +211,8 @@ NFJ_regional_trends(dat, regions.dict)
                        sourcefac + s(regionfac, bs = "re"))
   
   ## Gaussian activity curve static in each region
-  form.7 = formula(count ~ reginofac + doy:regionfac + I(doy^2):regionfac +
-                     te(lat, lon, by = year, k = c(5, 5), bs = c(cr, cr)) + sourcefac)
+  form.7 = formula(count ~ regionfac + doy:regionfac + I(doy^2):regionfac +
+                     te(lat, lon, by = year, k = c(10, 10), bs = c("cr", "cr")) + sourcefac)
   
   
   ## Parameters for looping ----------
@@ -230,7 +230,7 @@ NFJ_regional_trends(dat, regions.dict)
   geography.constrain = FALSE 
   
   ## formula:
-  form.use = form.6.3 ## can specify form listed above or use formula() to write it directly here.
+  form.use = form.7 ## can specify form listed above or use formula() to write it directly here.
   
   
   
@@ -350,14 +350,14 @@ NFJ_regional_trends(dat, regions.dict)
     ## 
     ## Another option is to NOT specific knots. I've found specifying them works a bit
     ## better in my test cases, but feel free to experiment.
-    doy.knots = c(.5, 
-                  as.numeric(quantile(dat$doy[dat$inferred==FALSE],
-                                      probs = seq(.05,.95, length = 4))),
-                  365.5)
-    lat.knots = as.numeric(quantile(dat$lat[dat$inferred==FALSE],
-                                    probs = seq(0,1, length = 10)))
-    lon.knots = as.numeric(quantile(dat$lon[dat$inferred==FALSE],
-                                    probs = seq(0,1, length = 10)))
+    # doy.knots = c(.5, 
+    #               as.numeric(quantile(dat$doy[dat$inferred==FALSE],
+    #                                   probs = seq(.05,.95, length = 4))),
+    #               365.5)
+    # lat.knots = as.numeric(quantile(dat$lat[dat$inferred==FALSE],
+    #                                 probs = seq(0,1, length = 10)))
+    # lon.knots = as.numeric(quantile(dat$lon[dat$inferred==FALSE],
+    #                                 probs = seq(0,1, length = 10)))
     ## actual list of knots that will be used:
     # knots.list = list(doy = doy.knots,
     #                   lat = lat.knots,
@@ -367,7 +367,7 @@ NFJ_regional_trends(dat, regions.dict)
     #             Dec 31 and Jan 1
     #knots.list = list() #if allowing ALL knots to be bplaced automatically (not recommended with cylic spline)    #
     
-    print(paste0(specname.cur, " (", code.cur, "), Inferring zeros = ", inferred.zeros.cur))
+    print(paste0(specname.cur, " (", code.cur, "), Inferring zeros = ", use.inferred))
     time.start = proc.time()
     fit = bam(form.use,
               data = dat,
@@ -386,11 +386,12 @@ NFJ_regional_trends(dat, regions.dict)
     
     ## generate plots --------------
     ## plot abundance map
-    out.abund = abund_mapper(dat, fit, regions.dict, dat.constrain = dat.constrain)
+    out.abund = abund_mapper(dat, fit, regions.dict, dat.constrain = geography.constrain)
     out.abund$fig
     
     ## plot trends
-    out.trend = trend_plotter(dat, fit, regions.dict, color.zoom = FALSE)
+    out.trend = trend_plotter(dat, fit, regions.dict, 
+                              dat.constrain = geography.constrain)
     out.trend$fig #+ scale_fill_viridis()
     
     ## plot activity curves for point of max data

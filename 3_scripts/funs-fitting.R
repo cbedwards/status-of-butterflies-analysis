@@ -60,7 +60,8 @@ grid_plot_oneyr = function(dat, regions.dict, dat.constrain){
                           doy = seq(0,365, by = 1))
 }
 
-abund_mapper = function(dat, fit, regions.dict, sourcefac = "NFJ", dat.constrain = FALSE,
+abund_mapper = function(dat, fit, regions.dict, sourcefac = "NFJ", 
+                        dat.constrain = FALSE,#if constraining geography to convex hull, set this to TRUE to only predict there.
                         do.confidence = FALSE){ #if true, calculate upper and lower confidence limits. Possibly. Interpretation seems tricky
   state.map.data <- maps::map('state', fill = TRUE, plot = FALSE) %>%
     st_as_sf()
@@ -114,9 +115,9 @@ abund_mapper = function(dat, fit, regions.dict, sourcefac = "NFJ", dat.constrain
   return(res)
 }
 
-trend_plotter = function(dat, fit, regions.dict, dat.constrain = FALSE, #if TRUE, only predict in the convex hull of the lat/lon of the data 
-                         sourcefac = "NFJ",
-                         color.zoom = FALSE){ #if FALSE, set up 2-color gradient moving outward from 0. 
+trend_plotter = function(dat, fit, regions.dict, 
+                         dat.constrain = FALSE, #if TRUE, only predict in the convex hull of the lat/lon of the data 
+                         sourcefac = "NFJ"){ #if FALSE, set up 2-color gradient moving outward from 0. 
   #                                                  If TRUE, use a single color gradient adapted to observe GR.
   ## using median year and median year + 1 to help minimize numerical weirdness.
   ## 
@@ -150,15 +151,11 @@ trend_plotter = function(dat, fit, regions.dict, dat.constrain = FALSE, #if TRUE
     geom_sf(data = state.map.data, fill = NA)+
     theme_minimal()+
     labs(fill = "Growth rate")+
-    ggtitle(paste0(dat$code[1], " growth rates\ncoral points: inferred observations; green points: direct observations"))
-  if(color.zoom){
-    gp = gp + scale_fill_viridis()
-  }else{
-    gp = gp + scale_fill_gradient2(low = muted("blue"),
-                                   mid = "white",
-                                   high = muted("green"),
-                                   midpoint = 0)
-  }
+    ggtitle(paste0(dat$code[1], " growth rates\ncoral points: inferred observations; green points: direct observations"))+
+    scale_fill_gradient2(low = muted("blue"),
+                         mid = "white",
+                         high = muted("green"),
+                         midpoint = 0)
   return(list(fig = gp, data  = loc.plot))
 }
 
