@@ -17,3 +17,6 @@ You should now be good to go. `3_scripts/species-loop-prototype.R` walks through
 and has code to loop over any given taxa codes and generate pdf reports of the results in 4_res/fit-summaries. `species-loop-prototype.R`
 is flexible, and should accomodate experimenting with a wide range of model formulation and data filtering.
 
+The .gitignore files should ensure that the raw data or the species-filtered data in 2_data_wrangling can't be commited to git and pushed to github. As a reminder, cleaned-data-aggregated.csv SHOULD NOT BE PUSHED TO GITHUB OR SHARED, and the individual data files generated in `2_data_wrangling/cleaned by code` similarly SHOULD NOT BE PUSHED TO GITHUB OR SHARED.
+
+I've included *.pdf and *.jpg in the overall .gitignore file because those files will rapidly clog up your repository, and you don't want to save the history of binary files like pdfs.
