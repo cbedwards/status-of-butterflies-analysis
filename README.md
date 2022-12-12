@@ -20,3 +20,8 @@ is flexible, and should accomodate experimenting with a wide range of model form
 The .gitignore files should ensure that the raw data or the species-filtered data in 2_data_wrangling can't be commited to git and pushed to github. As a reminder, cleaned-data-aggregated.csv SHOULD NOT BE PUSHED TO GITHUB OR SHARED, and the individual data files generated in `2_data_wrangling/cleaned by code` similarly SHOULD NOT BE PUSHED TO GITHUB OR SHARED.
 
 I've included *.pdf and *.jpg in the overall .gitignore file because those files will rapidly clog up your repository, and you don't want to save the history of binary files like pdfs.
+
+## Visualizing data coverage
+
+To facilitate looking at data coverage across space and time, I've made a shiny app: https://edwards-evoeco.shinyapps.io/sbus-data-coverage/
+![image](https://user-images.githubusercontent.com/13240120/207097545-d827a459-1341-495a-bbbf-7df60b6cbf98.png). This provides summaries of data coverage at relatively broad scales (ie nearest whole lat/lon, etc), and so does not violate our MOUs. 
