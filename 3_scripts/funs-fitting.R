@@ -98,7 +98,7 @@ abund_mapper = function(dat, fit, regions.dict, sourcefac = "NFJ",
     geom_sf(data = state.map.data, fill = NA)+
     scale_fill_viridis()+
     theme_minimal()+
-    ggtitle(paste0(dat$code[1], " estimated abundance (averaged across all years)\ncoral points: inferred observations; green points: direct observations"))
+    ggtitle(paste0(dat$code[1], ": ", dat$sommon[1], " estimated abundance (averaged across all years)\ncoral points: inferred observations; green points: direct observations"))
   if(do.confidence){
     gp.lower = ggplot()+
       geom_tile(data = loc.sum, aes(x = lon, y = lat, fill = log10(abund.lower)))+
@@ -159,7 +159,7 @@ trend_plotter = function(dat, fit, regions.dict,
     geom_sf(data = state.map.data, fill = NA)+
     theme_minimal()+
     labs(fill = "Growth rate")+
-    ggtitle(paste0(dat$code[1], " growth rates\ncoral points: inferred observations; green points: direct observations"))+
+    ggtitle(paste0(dat$code[1], ": ", dat$sommon[1]," growth rates\ncoral points: inferred observations; green points: direct observations"))+
     scale_fill_gradient2(low = muted("blue"),
                          mid = "white",
                          high = muted("green"),
@@ -222,7 +222,7 @@ activity_plotter = function(dat, fit, regions.dict, lat.plot, lon.plot,
     geom_point(data = dat.plot, aes(col = sourcefac))+
     geom_line(col = 'black') +
     facet_wrap( ~ year)+
-    ggtitle(paste0(dat$code[1], " at (", lon.plot, ", ", lat.plot,") predicted for ", names(rev(sort(table(dat.plot$sourcefac))))[1]))+
+    ggtitle(paste0(dat$code[1],": ", dat$sommon[1], " at (", lon.plot, ", ", lat.plot,") predicted for ", names(rev(sort(table(dat.plot$sourcefac))))[1]))+
     theme_minimal()
 }
 
@@ -273,7 +273,7 @@ NFJ_compare = function(dat, fit, regions.dict, nyears = 5,
     geom_point(aes(col = region))+
     geom_smooth(method = lm)+
     # geom_smooth(method = lm, formula = dat.full$count.pred ~ dat.full$count:dat.full$region)+
-    ggtitle(paste0(dat.full$code[1], ", NFJ counts vs predictions, last ", nyears, " years\n",
+    ggtitle(paste0(dat.full$code[1],": ", dat$sommon[1], ", NFJ counts vs predictions, last ", nyears, " years\n",
                    "Correlation of ", round(dat.cor$estimate,4),", ", p_pretty(dat.cor$p.value)))+
     xlab("Actual count")+
     ylab("Prediction")
@@ -299,7 +299,7 @@ NFJ_regional_trends = function(dat, regions.dict){
     ylab("Count")+
     geom_smooth(method = "glm.nb")+
     scale_y_log10()+
-    ggtitle(paste0(dat$code[1]," Trends in NFJ data, log scale, by region\nline: glm.nb; points: count+1"))
+    ggtitle(paste0(dat$code[1],": ", dat$sommon[1]," Trends in NFJ data, log scale, by region\nline: glm.nb; points: count+1"))
 }
 
 

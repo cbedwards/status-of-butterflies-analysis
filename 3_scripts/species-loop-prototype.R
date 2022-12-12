@@ -257,12 +257,14 @@ sitere_maker = function(dat){
   form.9 = formula(count ~te(lat, lon, by = year, k = c(10, 10), bs = c("cr", "cr")) +
                      sourcefac)
   form.9.1 = formula(count ~te(lat, lon, by = year, k = c(10, 10), bs = c("cr", "cr")) +
-                     sourcefac + s(site.refac, bs = 're'))
+                       sourcefac + s(site.refac, bs = 're'))
+  form.9.2 = formula(count ~ te(lat, lon, by = year, k = c(10, 10), bs = c("cr", "cr")) +
+                       s(site.refac, bs = 're'))
   
   ## Parameters for looping ----------
   
   ## specifying run name (to help identify/distinguish results files for different parameterizations)
-  run.suffix = "site-RE" ## Change this for whatever you're trying out
+  run.suffix = "NABA-only-site-RE" ## Change this for whatever you're trying out
   ## specify whether or not to use inferred 0s.
   use.inferred = TRUE
   
@@ -271,12 +273,14 @@ sitere_maker = function(dat){
   # If false, use the default four species defined here:
   
   ## should we constrain model to only region (convex hull) of non-inferred points?
-  geography.constrain = FALSE 
+  geography.constrain = TRUE 
   
   ## formula:
-  form.use = form.9.1 ## can specify form listed above or use formula() to write it directly here.
+  form.use = form.9.2 ## can specify form listed above or use formula() to write it directly here.
   
-  
+  ## select a subset of the data sources to use
+  ##   if left as NULL, will use all sources
+  use.only.source = "NFJ"
   
   ## How many threads to use when fitting? reduce if your computer is struggling.
   n.threads.use = 4
@@ -331,6 +335,7 @@ sitere_maker = function(dat){
     
     dat$sourcefac = as.factor(dat$source)
     
+    
     ## adding customized site levels for sites with 5+ years of non-zero data
     dat$site.refac = sitere_maker(dat)
     
@@ -361,7 +366,7 @@ sitere_maker = function(dat){
     names.vec = unique(dat$name)
     ##remove "absence for" entries in list of species names -- these are to denote inferences
     names.vec = names.vec[!grepl("absence for ", names.vec)]
-    plot.title = paste0(code.cur, ": ", paste0(names.vec, collapse = ", "))
+    plot.title = paste0(dat$common[1], " (", code.cur,")", ": " , paste0(names.vec, collapse = ", "))
     
     ## constraining geography if called for
     ## Thinking here is that splines can misbehave if we have many observations (of 0)
@@ -376,6 +381,12 @@ sitere_maker = function(dat){
     if(geography.constrain == TRUE){
       shape.hull = convhulln(dat[dat$inferred==FALSE,c("lon", "lat")])
       dat = dat[inhulln(shape.hull, as.matrix(dat[, c("lon","lat")])),]
+    }
+    
+    ## Filtering source, if any
+    if(!is.null(use.only.source)){
+      dat = dat %>% 
+        filter(source %in% use.only.source)
     }
     
     ## Specifying knots -- THIS MIGHT NEED TO BE UPDATED
@@ -467,7 +478,7 @@ sitere_maker = function(dat){
     print("Saving...")
     ## identify next available version number (to avoid overwriting)
     cur.files = list.files(here(paste0("4_res/fit-summaries/")))
-    cur.file.code = cur.files[grepl(code.cur, cur.files)]
+    cur.file.code = cur.files[grepl(paste0(code.cur,"-", run.suffix), cur.files)]
     cur.file.code = cur.file.code[grepl("[.]pdf", cur.file.code)]
     if(length(cur.file.code)>0){
       cur.file.code = gsub("[.]pdf", "", cur.file.code)
@@ -509,6 +520,7 @@ sitere_maker = function(dat){
       text(1,4, "Model fitting summary:", pos = 4, cex = 3)
       text(1,3, plot.words, pos = 4, cex = 2)
       text(1,2, plot.form, pos = 4, cex = 2)
+      text(1,1.5, paste0("Sources limited to:", use.only.source), pos = 4)
       text(1,1, knots.vec, pos = 4)
       
       gp = ggarrange(gp.hist, gp.counts, ncol=1)
