@@ -217,20 +217,22 @@ NFJ_regional_trends(dat, regions.dict)
   ## does it behave better if we fit our quadratic terms as random effects by region?
   form.7.1 = formula(count ~ regionfac + s(regionfac, doy, bs = 're')+
                        s(regionfac, I(doy^2), bs = 're') +
-                    te(lat, lon, by = year, k = c(10, 10), bs = c("cr", "cr")) + sourcefac)
+                       te(lat, lon, by = year, k = c(10, 10), bs = c("cr", "cr")) + sourcefac)
   
   ## what if we just use a single quadratic shape for all regions?
   ## Note: this seems to encourage semi-reasonable behavior
   form.7.2 = formula(count ~ doy + I(doy^2) +
-                     te(lat, lon, by = year, k = c(10, 10), bs = c("cr", "cr")) 
-                   + sourcefac + regionfac)
-
-  
+                       te(lat, lon, by = year, k = c(10, 10), bs = c("cr", "cr")) 
+                     + sourcefac + regionfac)
+  ## let's make it super simple: doy is a single smooth for all regions
+  form.8 =  formula(count ~ s(doy, bs = "cc"),
+                      te(lat, lon, by = year, k = c(10, 10), bs = c("cr", "cr")) 
+                    + sourcefac + regionfac)
   
   ## Parameters for looping ----------
   
   ## specifying run name (to help identify/distinguish results files for different parameterizations)
-  run.suffix = "quadraticdoy-nonregional" ## Change this for whatever you're trying out
+  run.suffix = "doy-simple-smooth" ## Change this for whatever you're trying out
   ## specify whether or not to use inferred 0s.
   use.inferred = TRUE
   
@@ -242,7 +244,7 @@ NFJ_regional_trends(dat, regions.dict)
   geography.constrain = FALSE 
   
   ## formula:
-  form.use = form.7.2 ## can specify form listed above or use formula() to write it directly here.
+  form.use = form.8 ## can specify form listed above or use formula() to write it directly here.
   
   
   
@@ -299,7 +301,7 @@ NFJ_regional_trends(dat, regions.dict)
     
     dat$sourcefac = as.factor(dat$source)
     
-   
+    
     
     ## Grab semi-USGS regions, designated by state based on this map: https://www.fws.gov/about/regions
     regions.dict = read.csv(here("2_data_wrangling/FWS-regions-by-state.csv"))
@@ -362,10 +364,10 @@ NFJ_regional_trends(dat, regions.dict)
     ## 
     ## Another option is to NOT specific knots. I've found specifying them works a bit
     ## better in my test cases, but feel free to experiment.
-    # doy.knots = c(.5, 
-    #               as.numeric(quantile(dat$doy[dat$inferred==FALSE],
-    #                                   probs = seq(.05,.95, length = 4))),
-    #               365.5)
+    doy.knots = c(.5,
+                  as.numeric(quantile(dat$doy[dat$inferred==FALSE],
+                                      probs = seq(.05,.95, length = 4))),
+                  365.5)
     # lat.knots = as.numeric(quantile(dat$lat[dat$inferred==FALSE],
     #                                 probs = seq(0,1, length = 10)))
     # lon.knots = as.numeric(quantile(dat$lon[dat$inferred==FALSE],
