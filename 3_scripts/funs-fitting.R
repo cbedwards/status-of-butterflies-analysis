@@ -37,6 +37,10 @@ grid_plot_allyr = function(dat, regions.dict, dat.constrain){
   grid.plot = expand_grid(loc.pts[, c("lat","lon", "regionfac")],
                           doy = seq(0,365, by = 1),
                           year = unique(dat$year))
+  if("site.refac" %in% names(dat)){
+    grid.plot$site.refac = as.factor("light on data")
+  }
+  return(grid.plot)
 }
 
 grid_plot_oneyr = function(dat, regions.dict, dat.constrain){
@@ -58,6 +62,10 @@ grid_plot_oneyr = function(dat, regions.dict, dat.constrain){
   loc.pts = loc.pts[loc.pts$regionfac %in% dat$regionfac, ]
   grid.plot = expand_grid(loc.pts[, c("lat","lon", "regionfac")],
                           doy = seq(0,365, by = 1))
+  if("site.refac" %in% names(dat)){
+    grid.plot$site.refac = as.factor("light on data")
+  }
+  return(grid.plot)
 }
 
 abund_mapper = function(dat, fit, regions.dict, sourcefac = "NFJ", 
@@ -205,6 +213,9 @@ activity_plotter = function(dat, fit, regions.dict, lat.plot, lon.plot,
                                        lon = lon.plot,
                                        sourcefac = sourcefac,
                                        regionfac = region.plot))
+  if("site.refac" %in% names(dat)){
+    dat.pred$site.refac = as.factor("light on data")
+  }
   dat.pred$count = predict(fit, newdata = dat.pred, type = "response")
   ## plot
   ggplot(dat.pred, aes(x = doy, y = count)) +
@@ -226,6 +237,9 @@ NFJ_compare = function(dat, fit, regions.dict, nyears = 5,
   if(across.doy){
     dat.pred = expand_grid(nesting(dat.comp[, c("lat", "lon", "year", "regionfac")]),
                            doy = 0:365)
+    if("site.refac" %in% names(dat)){
+      dat.pred$site.refac = as.factor("light on data")
+    }
     dat.pred$sourcefac = "NFJ"
     dat.pred$count.pred = predict(fit, newdata = dat.pred, type = "response")
     dat.pred = dat.pred %>% 
@@ -246,7 +260,9 @@ NFJ_compare = function(dat, fit, regions.dict, nyears = 5,
   }
   dat.cor = cor.test(dat.full$count, dat.full$count.pred)
   p_pretty = function(p){
-    if(p<0.001){
+    if(is.na(p) | is.null(p)){
+      res = "P undefined"
+    }else if(p<0.001){
       res = "P < 0.001"
     }else(
       res = paste0("P = ",round(p, 3))
