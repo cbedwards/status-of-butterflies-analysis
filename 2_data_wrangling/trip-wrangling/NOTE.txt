@@ -1,0 +1,2 @@
+trip-codes.csv and trip-templates.csv should be copied here from the shared dropbox folder. 
+Again, these contain information covered by MOU, so do NOT share or upload to github.
