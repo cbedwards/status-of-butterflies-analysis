@@ -13,7 +13,7 @@ After pulling or downloading + unzipping this github repository,
  - copy `cleaned-data-aggregated.csv` from the shared dropbox folder into 2_data_wrangling/cleaned-data
  - copy `trip-codes.csv` and `trip-templates.csv` from the shared dropbox folder into 2_data_wrangling/trip-wrangling
 
-You should now be good to go. `3_scripts/model-fitting-example.R` walks through fitting a single taxa (cabbage white), looking at individual pieces. `3_scripts/model-tester.R` fits an arbitrary set of taxa to the given codes and other parameters, leaning heavily on the functions in `model-fitting-function.R`, and should make it easy to rapidly prototype/test models. `model-fitting-function.R` also saves a summary text file with the parameters and species run, for easy tracking of which parameter combinations have been tested.
+You should now be good to go. `3_scripts/model-fitting-example.R` walks through fitting a single taxa (cabbage white), looking at individual pieces of the model-fitting and results-creation process. `3_scripts/model-tester.R` fits an arbitrary set of taxa to the given codes and other parameters, leaning heavily on the functions in `model-fitting-function.R`, and should make it easy to rapidly prototype/test models. `model-fitting-function.R` also saves a summary text file with the parameters and species run, for easy tracking of which parameter combinations have been tested.
 
 The .gitignore files should ensure that the raw data or the species-filtered data in 2_data_wrangling can't be commited to git and pushed to github. As a reminder, cleaned-data-aggregated.csv SHOULD NOT BE PUSHED TO GITHUB OR SHARED, and the individual data files generated in `2_data_wrangling/cleaned by code` similarly SHOULD NOT BE PUSHED TO GITHUB OR SHARED.
 
