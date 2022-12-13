@@ -264,7 +264,7 @@ sitere_maker = function(dat){
   ## Parameters for looping ----------
   
   ## specifying run name (to help identify/distinguish results files for different parameterizations)
-  run.suffix = "NABA-only-site-RE" ## Change this for whatever you're trying out
+  run.suffix = "allsources-only-site-RE" ## Change this for whatever you're trying out
   ## specify whether or not to use inferred 0s.
   use.inferred = TRUE
   
@@ -276,11 +276,11 @@ sitere_maker = function(dat){
   geography.constrain = TRUE 
   
   ## formula:
-  form.use = form.9.2 ## can specify form listed above or use formula() to write it directly here.
+  form.use = form.9.1 ## can specify form listed above or use formula() to write it directly here.
   
   ## select a subset of the data sources to use
   ##   if left as NULL, will use all sources
-  use.only.source = "NFJ"
+  use.only.source = NULL
   
   ## How many threads to use when fitting? reduce if your computer is struggling.
   n.threads.use = 4
@@ -521,7 +521,7 @@ sitere_maker = function(dat){
       text(1,4, "Model fitting summary:", pos = 4, cex = 3)
       text(1,3, plot.words, pos = 4, cex = 2)
       text(1,2, plot.form, pos = 4, cex = 2)
-      text(1,1.5, paste0("Sources limited to:", use.only.source), pos = 4)
+      text(1,1.5, paste0("Sources limited to:  ", paste0(use.only.source, collapse=", ")), pos = 4)
       text(1,1, knots.vec, pos = 4)
       
       gp = ggarrange(gp.hist, gp.counts, ncol=1)

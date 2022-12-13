@@ -1,0 +1,3 @@
+Maps of data coverage are generated here. See 3_scripts/data-density-mapping.R
+
+taxa-list.csv gives the GU code and all associated scientific names.

@@ -31,8 +31,8 @@ gather – how was the data gathered. “Community” means all species observed
 
 ===================================
 Derived columns:
-  THESE ARE NOT PRESENT IN THIS DATA FILE but are often generated in my analysis scripts, and this seemed like a good place to describe them
-   (in addition to the analysis scripts)
+  THESE ARE NOT PRESENT IN THIS DATA FILE but are often generated in my analysis scripts, and this seemed like a good place to describe them (in addition to being described in the analysis scripts)
+
 region: geographic regions as defined by the FWS (https://www.fws.gov/about/regions), based on states. 2_data_wrangling/FWS-regions-by-states.csv has the dictionary for this
 site.re: site (above) is a unique identifier for each site. However, when including site as a random effect, sites with very little data are unlikely to be represented well with a random effect. sitere_maker() identifies all sites that have non-zero records in at least 5 years (it can be tweaked to change this threshold). For these sites with sufficient data, their site.re is identical to "site". For all other sites, their site.re is folded into a generic "light on data" site. 
 regionfac, sourcefac, site.refac: factor versions of region, site, and site.re, because mgcv::gam() and mgcv::bam() don't accept characters are variables.
