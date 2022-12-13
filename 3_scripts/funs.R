@@ -1,3 +1,4 @@
+library(here)
 library(sp)
 library(rworldmap)
 library(spData)
@@ -74,11 +75,11 @@ trip_abs = function(dat){
   return(dat)
 }
 
-library(here)
-library(data.table, include.only = c("fread", "fwrite"))
+
 #creates a dataset from 1 or more GU codes, adding absenses from community gathering
 #events that didn't report that species. Can give multiple GU codes
-make_dataset = function(code, name.pretty){
+make_dataset = function(code, name.pretty = NULL){
+  if(is.null(name.pretty)){name.pretty = code}
   dat = as.data.frame(fread(here("2_data_wrangling/cleaned-data/cleaned-data-aggregated.csv")))
   dat.cur = trip_abs(dat[dat$code %in% code,])
   fwrite(dat.cur, 

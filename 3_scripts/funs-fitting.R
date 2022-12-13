@@ -269,7 +269,7 @@ NFJ_compare = function(dat, fit, regions.dict, nyears = 5,
     )
     return(res)
   }
-  ggplot(dat.full, aes(x = count, y = count.pred))+
+  gp = ggplot(dat.full, aes(x = count, y = count.pred))+
     geom_point(aes(col = region))+
     geom_smooth(method = lm)+
     # geom_smooth(method = lm, formula = dat.full$count.pred ~ dat.full$count:dat.full$region)+
@@ -277,6 +277,7 @@ NFJ_compare = function(dat, fit, regions.dict, nyears = 5,
                    "Correlation of ", round(dat.cor$estimate,4),", ", p_pretty(dat.cor$p.value)))+
     xlab("Actual count")+
     ylab("Prediction")
+  return(list(fig = gp, cor = round(dat.cor$estimate,4)))
 }
 
 NFJ_regional_trends = function(dat, regions.dict){
