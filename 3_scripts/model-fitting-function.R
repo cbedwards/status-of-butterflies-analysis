@@ -1,6 +1,7 @@
 ## Function for fitting a single model and returning various results
 library(tidyverse)
 library(formula.tools)
+library(rmarkdown)
 
 model_runner = function(code.cur, #GU code for taxa of interest
                         form.use, #gam formula to fit
@@ -121,12 +122,12 @@ model_runner = function(code.cur, #GU code for taxa of interest
                             dat.constrain = geography.constrain)
   out.trend$fig #+ scale_fill_viridis()
   
-  print("calculating activity curve at data-dense region")
+  cat("calculating activity curve at data-dense region")
   ## plot activity curves for point of max data
   gp.activity.maxdata = demo_activity_plots(dat, fit, regions.dict)
   ## plot activity curves for point of max estimated density (diangostic for unreasonable activity curves)
   pt.maxabund = out.abund$data[which.max(out.abund$data$abund.index),]
-  print("calculating activity curve at high estimated abundance region")
+  cat("calculating activity curve at high estimated abundance region")
   gp.activity.maxabund = activity_plotter(dat, fit, regions.dict, 
                                           lat.plot = pt.maxabund$lat, 
                                           lon.plot = pt.maxabund$lon,
@@ -134,11 +135,11 @@ model_runner = function(code.cur, #GU code for taxa of interest
                                           source.adaptive = FALSE)
   
   ## Plot NFJ abundance by region
-  print("Comparing to NFJ abundance")
+  cat("Comparing to NFJ abundance")
   compare.abund = NFJ_compare(dat, fit, regions.dict, nyears = 10)
   
   ## Plot NFJ trends by region
-  print("Comparing to NFJ trends")
+  cat("Comparing to NFJ trends")
   gp.nfj.trend = NFJ_regional_trends(dat, regions.dict)
   
   ## calculate some diagnostics for info-plot
@@ -159,7 +160,7 @@ model_runner = function(code.cur, #GU code for taxa of interest
   plot.form = gsub("[+]", "+\n  ", plot.form)
   diagnostics.text = c(heading = "Model fitting summary:",
                        title = plot.title,
-                       form = plot.form,
+                       formula = plot.form,
                        sources = paste0("Sources limited to:  ", paste0(use.only.source, collapse=", ")),
                        knots = knots.vec
   )
@@ -179,6 +180,62 @@ model_runner = function(code.cur, #GU code for taxa of interest
               diagnostics.text = diagnostics.text))
 }
 
+report_maker = function(modelfit.output,
+                        code.cur,
+                        run.suffix, 
+                        fig.width = 7.5, 
+                        fig.height = 5){
+  cur.files = list.files(here(paste0("4_res/fit-summaries/")))
+  cur.file.code = cur.files[grepl(paste0(code.cur,"-", run.suffix), cur.files)]
+  cur.file.code = cur.file.code[grepl("[.]pdf", cur.file.code)]
+  if(length(cur.file.code)>0){
+    cur.file.code = gsub("[.]pdf", "", cur.file.code)
+    cur.nums = as.numeric(gsub(paste0(code.cur, "-", run.suffix,"-V"), "", cur.file.code))
+    use.num = max(cur.nums)+1
+  }else{
+    use.num = 1
+  }
+  filename.use = paste0(code.cur,
+                        "-", run.suffix,
+                        "-V", use.num, ".html")
+  path.use = here(paste0("4_res/fit-summaries/", filename.use))
+  
+  ## saving jpgs for making the report
+  ggsave(here("4_res/fit-summaries/temp-files/cur.abund.jpg"),
+         modelfit.output$fig.abund, 
+         width = fig.width, height = fig.height)
+  ggsave(here("4_res/fit-summaries/temp-files/cur.nfj.abund.jpg"),
+         modelfit.output$fig.nfj.abund, 
+         width = fig.width, height = fig.height)
+  ggsave(here("4_res/fit-summaries/temp-files/cur.trend.jpg"),
+         modelfit.output$fig.trend, 
+         width = fig.width, height = fig.height)
+  ggsave(here("4_res/fit-summaries/temp-files/cur.nfj.trend.jpg"),
+         modelfit.output$fig.nfj.trend, 
+         width = fig.width, height = fig.height)
+  saveRDS(modelfit.output$diagnostics.text,
+          here("4_res/fit-summaries/temp-files/cur.diagnostics.RDS"))
+  ggsave(here("4_res/fit-summaries/temp-files/cur.counts.jpg"),
+         modelfit.output$fig.counts, 
+         width = fig.width, height = fig.height)
+  ggsave(here("4_res/fit-summaries/temp-files/cur.hist.jpg"),
+         modelfit.output$fig.hist, 
+         width = fig.width, height = fig.height)
+  ggsave(here("4_res/fit-summaries/temp-files/cur.activity.maxdata.jpg"),
+         modelfit.output$fig.activity.maxdata, 
+         width = fig.width, height = fig.height)
+  ggsave(here("4_res/fit-summaries/temp-files/cur.activity.maxabund.jpg"),
+         modelfit.output$fig.activity.maxabund, 
+         width = fig.width, height = fig.height)
+  render(input = here("3_scripts/species-fitting-report.Rmd"),
+         output_dir = here("4_res/fit-summaries/"),
+         params = list(title = out$diagnostics.text[["title"]]),
+         output_file = filename.use)
+  return(path.use)
+}
+
+
+## Note: this makes a big pdf that's hard to load/view.
 model_saver = function(modelfit.output,
                        code.cur,
                        run.suffix){
@@ -198,8 +255,8 @@ model_saver = function(modelfit.output,
                          code.cur,
                          "-", run.suffix,
                          "-V", use.num, ".pdf"))
-  print(paste0("Saving ", modelfit.output$plot.title," to\n",
-               path.use))
+  cat(paste0("Saving ", modelfit.output$plot.title," to\n",
+             path.use))
   pdf(path.use,
       width = 15, height = 20)
   ## map of abundance
@@ -215,7 +272,7 @@ model_saver = function(modelfit.output,
        xaxt = "n", yaxt = "n", xlab = "", ylab = "")
   text(1,4, modelfit.output$diagnostics.text["heading"], pos = 4, cex = 3)
   text(1,3, modelfit.output$diagnostics.text["title"], pos = 4, cex = 2)
-  text(1,2, modelfit.output$diagnostics.text["form"], pos = 4, cex = 2)
+  text(1,2, modelfit.output$diagnostics.text["formula"], pos = 4, cex = 2)
   text(1,1.5, modelfit.output$diagnostics.text["sources"], pos = 4)
   text(1,1, modelfit.output$diagnostics.text["knots"], pos = 4)
   

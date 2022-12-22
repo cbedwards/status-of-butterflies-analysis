@@ -97,7 +97,7 @@ knot_maker = function(dat){
 regions.dict = read.csv(here("2_data_wrangling/FWS-regions-by-state.csv"))
 
 ## specifying run name (to help identify/distinguish results files for different parameterizations)
-run.suffix = "collin-fourspec-basics" ## Change this for whatever you're trying out
+run.suffix = "markdown-report-test" ## Change this for whatever you're trying out
 ## specify whether or not to use inferred 0s.
 use.inferred = TRUE
 
@@ -124,6 +124,7 @@ n.threads.use = 4
 ## choosing species
 
 #Set of four example species:
+#note that the only important column is $code. I include specname for ease of reading.
 specs.do = data.frame(code = c("PIERAP", 
                                "NYMVAU",
                                "VANCAR",
@@ -132,6 +133,9 @@ specs.do = data.frame(code = c("PIERAP",
                                    "Compton tortoiseshell",
                                    "painted lady",
                                    "Baltimore checkerspot")
+)
+specs.do = data.frame(code = c("PIERAP"),
+                      specname = c("cabbage white")
 )
 
 # alternately, apply approach to ALL species
@@ -162,7 +166,7 @@ for(i.spec in 1:nrow(specs.do)){
                      geography.constrain = geography.constrain,
                      use.only.source = use.only.source,
                      n.threads.use = n.threads.use)
-  output.name = model_saver(out,
+  output.name = report_maker(out,
                             code.cur = code.cur,
                             run.suffix = run.suffix)
   summary.df = rbind(summary.df,

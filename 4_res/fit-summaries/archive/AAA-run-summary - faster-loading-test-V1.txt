@@ -1,0 +1,120 @@
+Fit on: 2022-12-14 10:40:37
+
+Parameters:
+==================
+form.use:
+  count ~ te(lat, lon, by = year, k = c(10, 10), bs = c("cr", "cr")) + sourcefac + s(site.refac, bs = "re")
+
+use.inferred:
+  TRUE
+
+geography.constrain:
+  FALSE
+
+use.only.source:
+  
+
+
+
+Correlation summaries:
+==================
+code	abund.correlation
+PIERAP	0.2422
+
+
+ Report files generated:
+==================
+G:/repos/status-of-butterflies-analysis/4_res/fit-summaries/PIERAP-faster-loading-test-V2.pdf
+
+
+ Human notes on model fit:
+==================
+[Fill in as desired]
+
+
+============================================================
+============================================================
+============================================================
+
+
+
+Extra details:  knot and site-making functions, region dictionary
+==================
+
+
+knot_maker():
+function(dat){
+  return(list())
+}
+<bytecode: 0x0000022b06d32bb0>
+
+
+sitere_maker():
+function(dat){
+  temp = dat %>% 
+    group_by(site, year) %>% 
+    summarize(has.nonzero = any(count>0)) %>% 
+    filter(has.nonzero == TRUE) %>% 
+    group_by(site) %>% 
+    summarize(nyear.nonzero = n()) %>% 
+    filter(nyear.nonzero < 5)
+  site.re = rep("light on data", nrow(dat))
+  site.re[dat$site %in% temp$site] = dat$site[dat$site %in% temp$site]
+  site.re = as.factor(site.re)
+  site.re = relevel(site.re, ref = "light on data")
+  return(as.factor(site.re))
+}
+<bytecode: 0x0000022b0b064488>
+
+
+Region dictionary:
+state	region
+Alabama	Southeast
+Arizona	Southwest
+Arkansas	Southeast
+California	Pacific Southwest
+Colorado	Mountain-Prarie
+Connecticut	Northeast
+Delaware	Northeast
+District of Columbia	Northeast
+Florida	Southeast
+Georgia	Southeast
+Idaho	Pacific
+Illinois	Midwest
+Indiana	Midwest
+Iowa	Midwest
+Kansas	Mountain-Prarie
+Kentucky	Southeast
+Louisiana	Southeast
+Maine	Northeast
+Maryland	Northeast
+Massachusetts	Northeast
+Michigan	Midwest
+Minnesota	Midwest
+Mississippi	Southeast
+Missouri	Midwest
+Montana	Mountain-Prarie
+Nebraska	Mountain-Prarie
+Nevada	Pacific Southwest
+New Hampshire	Northeast
+New Jersey	Northeast
+New Mexico	Southwest
+New York	Northeast
+North Carolina	Southeast
+North Dakota	Mountain-Prarie
+Ohio	Midwest
+Oklahoma	Southwest
+Oregon	Pacific
+Pennsylvania	Northeast
+Rhode Island	Northeast
+South Carolina	Southeast
+South Dakota	Mountain-Prarie
+Tennessee	Southeast
+Texas	Southwest
+Utah	Mountain-Prarie
+Vermont	Northeast
+Virginia	Northeast
+Washington	Pacific
+West Virginia	Northeast
+Wisconsin	Midwest
+Wyoming	Mountain-Prarie

@@ -91,10 +91,11 @@ abund_mapper = function(dat, fit, regions.dict, sourcefac = "NFJ",
       group_by(lat, lon) %>% 
       summarize(abund.index = mean(count)*365)
   }
+  dat.pts = viz_filter(dat %>%  select(lon,lat, inferred), reso = 2)
   gp = ggplot()+
     geom_tile(data = loc.sum, aes(x = lon, y = lat, fill = log10(abund.index)))+
-    geom_point(data = dat %>% filter(inferred == TRUE), aes(x = lon, y = lat), col = "coral", size = .2)+
-    geom_point(data = dat %>% filter(inferred == FALSE), aes(x = lon, y = lat), col = "springgreen3", size = .2)+
+    geom_point(data = dat.pts %>% filter(inferred == TRUE), aes(x = lon, y = lat), col = "coral", size = .2)+
+    geom_point(data = dat.pts %>% filter(inferred == FALSE), aes(x = lon, y = lat), col = "springgreen3", size = .2)+
     geom_sf(data = state.map.data, fill = NA)+
     scale_fill_viridis()+
     theme_minimal()+
@@ -102,14 +103,14 @@ abund_mapper = function(dat, fit, regions.dict, sourcefac = "NFJ",
   if(do.confidence){
     gp.lower = ggplot()+
       geom_tile(data = loc.sum, aes(x = lon, y = lat, fill = log10(abund.lower)))+
-      geom_point(data = dat, aes(x = lon, y = lat), size = .2)+
+      geom_point(data = dat.pts, aes(x = lon, y = lat), size = .2)+
       geom_sf(data = state.map.data, fill = NA)+
       scale_fill_viridis()+
       theme_minimal()+
       ggtitle(paste0(dat$code[1], " estimated abundance, LOWER CONFIDENCE LIMIT"))
     gp.upper= ggplot()+
       geom_tile(data = loc.sum, aes(x = lon, y = lat, fill = log10(abund.upper)))+
-      geom_point(data = dat, aes(x = lon, y = lat), size = .2)+
+      geom_point(data = dat.pts, aes(x = lon, y = lat), size = .2)+
       geom_sf(data = state.map.data, fill = NA)+
       scale_fill_viridis()+
       theme_minimal()+
@@ -151,11 +152,12 @@ trend_plotter = function(dat, fit, regions.dict,
     summarize(gr.med = median(gr)) %>% 
     ungroup()
   
+  dat.pts = viz_filter(dat %>%  select(lon,lat, inferred), reso = 2)
   gp = ggplot()+
     geom_tile(data = loc.plot, 
               aes(x = lon, y = lat, fill = gr.med))+
-    geom_point(data = dat %>% filter(inferred == TRUE), aes(x = lon, y = lat), col = "coral", size = .2)+
-    geom_point(data = dat %>% filter(inferred == FALSE), aes(x = lon, y = lat), col = "springgreen3", size = .2)+
+    geom_point(data = dat.pts %>% filter(inferred == TRUE), aes(x = lon, y = lat), col = "coral", size = .2)+
+    geom_point(data = dat.pts %>% filter(inferred == FALSE), aes(x = lon, y = lat), col = "springgreen3", size = .2)+
     geom_sf(data = state.map.data, fill = NA)+
     theme_minimal()+
     labs(fill = "Growth rate")+
@@ -218,8 +220,11 @@ activity_plotter = function(dat, fit, regions.dict, lat.plot, lon.plot,
   }
   dat.pred$count = predict(fit, newdata = dat.pred, type = "response")
   ## plot
+  dat.pt = dat %>%  
+    select(doy, count) %>% 
+    unique()
   ggplot(dat.pred, aes(x = doy, y = count)) +
-    geom_point(data = dat.plot, aes(col = sourcefac))+
+    geom_point(data = dat.pt, aes(col = sourcefac))+
     geom_line(col = 'black') +
     facet_wrap( ~ year)+
     ggtitle(paste0(dat$code[1],": ", dat$sommon[1], " at (", lon.plot, ", ", lat.plot,") predicted for ", names(rev(sort(table(dat.plot$sourcefac))))[1]))+

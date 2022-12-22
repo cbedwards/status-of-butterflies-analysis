@@ -1,2 +1,0 @@
-This folder will get populated with jpgs of key diagnostic plots (maps of abundance, maps of trends, counts in actual data across DOY and region). 
-The motivation here is that the pdfs can be slow to look at/load, and it is handy to have quick-to-view jpgs.

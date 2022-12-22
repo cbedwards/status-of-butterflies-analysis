@@ -2,7 +2,7 @@ Columns:
 ============================================
 
 Identification:
-code – The code that Leslie + the GU team uses to identify taxa (based on NABA species)
+code – The code that Leslie + the GU team uses to identify taxa, which is an enhanced version of the NABA codes
 name – scientific name reported (may include subspecies, etc)
 common – common name 
 
@@ -15,7 +15,7 @@ lat – latitude of observation (or centroid of county, where appropriate)
 lon – longitude of observation (or centroid of county, where appropriate)
 
 Effort:
-Duration – effort metric for some pollard walk programs
+Duration – survey minutes for some pollard walk programs
 list.length – column for calculating list length (effort metric) for list length analysis of MA butterfly club data (not currently implemented, all Nas presently)
 party.size – effort metric for NABA fourth of July counts
 party.minutes – effort metric for NABA fourth of July counts
