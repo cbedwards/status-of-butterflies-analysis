@@ -1,0 +1,1 @@
+Temp files generated for faster report-making (rather than saving RDS and loading RDS of the figures, which is much more time-intensive). .gitignore is set to ignore the contents, as they are not needed once the report is made.
