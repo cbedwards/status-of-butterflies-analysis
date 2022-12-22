@@ -156,11 +156,11 @@ model_runner = function(code.cur, #GU code for taxa of interest
     }
   }
   ## Page with summary information (in words)
-  plot.form = as.character(formula(fit))[3]
-  plot.form = gsub("[+]", "+\n  ", plot.form)
+  # plot.form = as.character(formula(fit))[3]
+  # plot.form = gsub("[+]", "+\n  ", plot.form)
   diagnostics.text = c(heading = "Model fitting summary:",
                        title = plot.title,
-                       formula = plot.form,
+                       formula = as.character(form.use),
                        sources = paste0("Sources limited to:  ", paste0(use.only.source, collapse=", ")),
                        knots = knots.vec
   )

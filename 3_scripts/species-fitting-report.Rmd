@@ -28,7 +28,7 @@ library(knitr)
 ```{r}
 #| label: tbl-model
 #| tbl-cap: "Details of model fitting"
-diagnostics.text = readRDS(here("3_scripts/temp-files/cur.diagnostics.RDS"))
+diagnostics.text = readRDS(here("4_res/fit-summaries/temp-files/cur.diagnostics.RDS"))
 kable(diagnostics.text[-1])
 ```
 
