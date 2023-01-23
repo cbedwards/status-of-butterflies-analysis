@@ -5,7 +5,7 @@ library(rmarkdown)
 
 model_runner = function(code.cur, #GU code for taxa of interest
                         form.use, #gam formula to fit
-                        knot_maker, #function taking as sole argument `dat`, handlescustom knot placement. 
+                        knot_maker, #function taking as sole argument `dat`, handles custom knot placement. 
                         #            for default knot placement, knot_maker = function(dat){return(list())}
                         sitere_maker, # function to create site.refac, factors corresponding to sites for random effects.
                         #               if not using site-level random effects in your model, 

@@ -97,7 +97,7 @@ knot_maker = function(dat){
 regions.dict = read.csv(here("2_data_wrangling/FWS-regions-by-state.csv"))
 
 ## specifying run name (to help identify/distinguish results files for different parameterizations)
-run.suffix = "markdown-report-test" ## Change this for whatever you're trying out
+run.suffix = "new-inferred-zeroes" ## Change this for whatever you're trying out
 ## specify whether or not to use inferred 0s.
 use.inferred = TRUE
 
@@ -134,9 +134,9 @@ specs.do = data.frame(code = c("PIERAP",
                                    "painted lady",
                                    "Baltimore checkerspot")
 )
-specs.do = data.frame(code = c("PIERAP"),
-                      specname = c("cabbage white")
-)
+# specs.do = data.frame(code = c("PIERAP"),
+#                       specname = c("cabbage white")
+# )
 
 # alternately, apply approach to ALL species
 if(specs.do.all){
@@ -178,7 +178,6 @@ for(i.spec in 1:nrow(specs.do)){
 }
 
 ## saving summary file ----------------
-
 ## to avoid accidental overwriting: automated numbering
 cur.files = list.files(here(paste0("4_res/fit-summaries/")))
 cur.file.code = cur.files[grepl(paste0("AAA-run-summary - ", run.suffix), cur.files)]

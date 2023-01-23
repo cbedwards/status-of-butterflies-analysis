@@ -60,15 +60,21 @@ trip_abs = function(dat){
   trip.temp = as.data.frame(fread(here("2_data_wrangling/trip-wrangling/trip-templates.csv")))
   usecodes = as.data.frame(fread(here("2_data_wrangling/trip-wrangling/trip-codes.csv")))
   dat$inferred = FALSE
-  if(any(unique(dat$code) %in% usecodes$x)){
+  dat.usecode = unique(dat$code)[unique(dat$code) %in% usecodes$x]
+  if(length(dat.usecode>0)){
     print("integrating trip absences")
-    #identify all the trips that were NOT observed in the data
-    trip.abs = trip.temp[!(trip.temp$event.id %in% dat$event.id),]
-    trip.abs$code = dat$code[1]
-    trip.abs$name = paste0("absence for ", dat$code[1])
-    trip.abs$inferred = TRUE
-    trip.abs = trip.abs[,names(dat)]
-    dat = rbind(dat,trip.abs)
+    for(i in 1:length(dat.usecode)){
+      #identify all the trips that were NOT observed in the data
+      code.cur = dat.usecode[i]
+      dat.cur = dat[dat$code == code.cur,]
+      trip.abs = trip.temp[!(trip.temp$event.id %in% dat.cur$event.id),]
+      trip.abs$code = code.cur
+      trip.abs$name = paste0("absence for ", code.cur)
+      trip.abs$inferred = TRUE
+      trip.abs$common = dat[dat$code == code.cur,"common"][1]
+      trip.abs = trip.abs[,names(dat)]
+      dat = rbind(dat,trip.abs)
+    }
   }else{
     print("taxa was never present for community sampling, skipping adding absences") 
   }
@@ -76,7 +82,7 @@ trip_abs = function(dat){
 }
 
 
-#creates a dataset from 1 or more GU codes, adding absenses from community gathering
+#creates a dataset from 1 or more GU codes, adding absences from community gathering
 #events that didn't report that species. Can give multiple GU codes
 make_dataset = function(code, name.pretty = NULL){
   if(is.null(name.pretty)){name.pretty = code}
