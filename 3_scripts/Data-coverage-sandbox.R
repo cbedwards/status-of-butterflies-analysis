@@ -81,12 +81,55 @@ ggplot(dat.plot %>% filter(!is.na(party.minutes)), aes(x = year))+
   theme.larger
 
 dat.plot = dat %>% 
+  filter(code == "VANCAR") %>% 
   group_by(year, source) %>% 
-  summarize(data.count = length(unique(event.id)))
+  summarize(data.count = length(unique(event.id))) %>% 
+  ungroup() %>% 
+  filter(year <= 2020)
+dat.plot$source.pretty = "State program (misc)"
+dat.plot$source.pretty[dat.plot$source == "Shapiro"] = "Shapiro Transect Counts"
+dat.plot$source.pretty[dat.plot$source == "NFJ"] = "Naba 4th of July"
+dat.plot$source.pretty[dat.plot$source == "MASSBfly"] = "MA butterfly club"
+dat.plot$source.pretty[dat.plot$source == "Illinois Butterfly Monitoring Network"] = "Illinois Butterfly Monitoring Network"
+dat.plot$source.pretty[dat.plot$source == "OhioLeps"] = "OhioLeps"
+dat.plot = dat.plot %>% 
+  filter(source.pretty != "State program (misc)")
 
-ggplot(dat.plot, aes(x = year, y = data.count, group = source, color = source))+
-  geom_path()+
-  theme(legend.position = "none")+
+
+ggplot(dat.plot, aes(x = year, y = data.count, group = source.pretty, fill = source.pretty))+
+  geom_area()+
+  theme_bw()+
+  theme(legend.position = c(.3,.8))+
+  # scale_fill_discrete()+
+  xlab("Year")+
+  ylab("Number of observations")+
+  scale_fill_viridis(name = "Data Source", option = "D", discrete = TRUE)+
   theme.larger
 
-  facet_wrap(. ~ source)+
+
+
+## Looking at data across the year:
+## read in all data
+library(cedwards)
+dat = qread(paste0("2_data_wrangling/cleaned-data/cleaned-data-aggregated.csv"))
+dat$datedate = as.Date(dat$date, format = "%m/%d/%Y")
+doy.labs = seq(1,365, length = 5)
+ggplot(dat)+
+  geom_density(aes(x = doy), fill = 'lavender')+
+  theme_bw()+
+  scale_x_continuous(breaks = doy.labs, labels = doy_2md(doy.labs))+
+  theme.larger+
+  xlab("")+
+  ggtitle("Records across the year\nall data,all years")
+
+## aggregating to decade
+dat$decade = round(dat$year, -1)
+ggplot(dat %>% filter(year > 1969))+
+  geom_density(aes(x = doy), fill = 'lavender')+
+  theme_bw()+
+  facet_wrap(. ~ decade, ncol = 1)+
+  scale_x_continuous(breaks = doy.labs, labels = doy_2md(doy.labs, short = TRUE))+
+  theme.larger
+  xlab("")+
+  ggtitle("Records across the year\nall data,all years")
+    

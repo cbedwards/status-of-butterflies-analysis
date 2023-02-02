@@ -21,7 +21,7 @@ model_runner = function(code.cur, #GU code for taxa of interest
   #                                          Decrease if you're running into computer performance issues.
   if(use.inferred){
     make_dataset(code = code.cur)
-    dat = qread(paste0("2_data_wrangling/cleaned by code/",code.cur, ".csv"))
+    dat = qread(paste0("2_data_wrangling/cleaned by code/",code.cur, ".csv")) 
   }else{
     ## curious if the inferred 0s are messing things up
     dat = qread(paste0("2_data_wrangling/cleaned-data/cleaned-data-aggregated.csv"))

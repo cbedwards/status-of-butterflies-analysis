@@ -97,7 +97,7 @@ make_dataset = function(code, name.pretty = NULL){
 viz_filter = function(dat, reso = 4){
   stopifnot(c("lat","lon") %in% names(dat))
   ind.bad = duplicated(round(dat[,c("lat","lon")], reso))
-  return(dat[ind.bad,])
+  return(dat[!ind.bad,])
 }
 
 loc_viz = function(dat, reso = 4){
