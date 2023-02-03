@@ -80,9 +80,12 @@ do.summary = FALSE #If true, create summary text file for the whole combination 
 regions.dict = read.csv(here("2_data_wrangling/FWS-regions-by-state.csv"))
 
 ## specifying run name (to help identify/distinguish results files for different parameterizations)
-run.suffix = "pheno-gauss" ## Change this for whatever you're trying out
+run.suffix = "range-constraint-test" ## Change this for whatever you're trying out
 ## specify whether or not to use inferred 0s.
 use.inferred = TRUE
+
+## should we constrain data to within the range maps? Seems like a good idea when we have them
+use.range = TRUE
 
 ## Specifying taxa:
 specs.do.all = FALSE #If TRUE, try to apply model to all species with 400+data points
@@ -92,8 +95,7 @@ specs.do.all = FALSE #If TRUE, try to apply model to all species with 400+data p
 geography.constrain = FALSE
 
 ## formula:
-form.use = formula(count ~ te(lat, lon, by = year, k = c(10, 10), bs = c("cr", "cr")) +
-                     doy + I(doy^2) + 
+form.use = formula(count ~ te(lat, lon, by = year, k = c(5, 5), bs = c("cr", "cr")) +
                      sourcefac + 
                      s(site.refac, bs = 're')) ## can specify form listed above or use formula() to write it directly here.
 
@@ -149,7 +151,8 @@ for(i.spec in 1:nrow(specs.do)){
                      use.inferred = use.inferred,
                      geography.constrain = geography.constrain,
                      use.only.source = use.only.source,
-                     n.threads.use = n.threads.use)
+                     n.threads.use = n.threads.use,
+                     use.range = use.range)
   output.name = report_maker(out,
                              code.cur = code.cur,
                              run.suffix = run.suffix)

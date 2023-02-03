@@ -2,6 +2,7 @@
 library(tidyverse)
 library(formula.tools)
 library(rmarkdown)
+library(sp)
 
 model_runner = function(code.cur, #GU code for taxa of interest
                         form.use, #gam formula to fit
@@ -13,6 +14,8 @@ model_runner = function(code.cur, #GU code for taxa of interest
                         #               if using each site as a separate level for random effects,
                         #               sitere_maker = function(dat){return(as.factor(dat$site))}
                         regions.dict, #dictionary to map states to regions
+                        use.range = FALSE, #if TRUE, reads in associated range map from 2_data_wrangling and cuts observations outside it
+                        suitability.cutoff = NA, #if NA, use kml polygons of range map. If specified, estimated habitat suitability from .tiff, and include points with the specified suitability
                         use.inferred = TRUE, #if TRUE, infer zeros from community surveys that didn't report focal species
                         geography.constrain = FALSE, #if TRUE, restrict data to only the observations within the convex hull (in lat/lon)
                         #                               of non-inferred data
@@ -30,8 +33,23 @@ model_runner = function(code.cur, #GU code for taxa of interest
   }
   dat = dat %>% 
     filter(!is.na(count))
-  # dim(dat)
-  # head(dat)
+  
+  ## Crop to range, if that option is taken 
+  if(use.range){
+    dat.sp = dat # separate object for spatial coordinates, because I'm paranoid about interactions with other code #use polygon range map
+    range.map = rgdal::readOGR(here(paste0("2_data_wrangling/range-maps/", code.cur, ".kml")))
+    coordinates(dat.sp) <- ~ lon + lat
+    sp::proj4string(dat.sp) <- sp::proj4string(range.map)
+    if(is.na(suitability.cutoff)){ ## just use polygon of range map
+      overlaid <- sp::over(dat.sp, as(range.map, "SpatialPolygons"))
+      ind.within <- which(!is.na(overlaid))
+    }else{ #use gradient of habitat suitability and specified cutoff.
+      hsm <- raster::raster(here(paste0("2_data_wrangling/range-maps/", code.cur, ".tiff")))
+      site.suitability <- raster::extract(hsm, dat.sp)
+      ind.within <- which(site.suitability > suitability.cutoff)
+    }
+    dat = dat[ind.within,]
+  }
   
   ## make factor version of source
   dat$sourcefac = as.factor(dat$source)

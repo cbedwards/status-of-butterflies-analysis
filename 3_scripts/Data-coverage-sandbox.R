@@ -61,7 +61,7 @@ dat.plot = dat %>%
   group_by(year, source) %>%
   summarize(party.minutes = mean(party.minutes, na.rm=T),
             duration = mean(duration, na.rm=T))
-  
+
 ggplot(dat.plot %>% filter(!is.na(duration)), aes(x = year))+
   geom_point(aes(y = duration))+
   geom_path(aes(y = duration))+
@@ -130,6 +130,22 @@ ggplot(dat %>% filter(year > 1969))+
   facet_wrap(. ~ decade, ncol = 1)+
   scale_x_continuous(breaks = doy.labs, labels = doy_2md(doy.labs, short = TRUE))+
   theme.larger
-  xlab("")+
+xlab("")+
   ggtitle("Records across the year\nall data,all years")
-    
+
+
+## Mapping NFJ sites for thinking about drivers vs coverage
+state.map.data <- maps::map('state', fill = TRUE, plot = FALSE) %>%
+  st_as_sf()
+dat.pts = dat %>%  
+  filter(source == "NFJ") %>% 
+  select(lon,lat) %>% 
+  viz_filter(reso = 2)
+ggplot()+
+  geom_sf(data = state.map.data, fill = NA) +
+  geom_point(data = dat.pts, aes(x = lon, y = lat), col = 'cornflowerblue')+
+  ggtitle("NABA circle count locations")+
+  theme_bw()+
+  theme.larger
+
+

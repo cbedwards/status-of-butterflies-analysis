@@ -2,11 +2,21 @@ library(here)
 library(sp)
 library(rworldmap)
 library(spData)
+library(tidyverse)
 
 #quick read function for ease of reading
 library(data.table, include.only = c("fread", "fwrite"))
 qread = function(x) as.data.frame(fread(here(x))) 
 
+## ggplot theme for easier visualization
+
+theme.larger =   theme(axis.title = element_text(size = rel(1.8)),
+                       axis.text = element_text(size = rel(1.8)),
+                       strip.text = element_text(size = rel(1.8)),
+                       plot.title = element_text(size = rel(1.8)),
+                       legend.text = element_text(size = rel(1.8)),
+                       legend.title = element_text(size = rel(1.8)),
+)
 
 coords_2country = function(long,#longitude (vector)
                            lat #latitude (vector)
