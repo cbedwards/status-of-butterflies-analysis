@@ -2,6 +2,9 @@ library(sf)
 library(tidyverse)
 library(MASS, include.only = "glm.nb")
 library(viridis)
+library(here)
+source(here("3_scripts/funs.R"))
+
 ## Notes for convex hulls:
 # ## identifying convex hull of locations -- don't want to predict in weird spaces because SPLINE
 # library(geometry)
@@ -17,14 +20,17 @@ library(viridis)
 #                                  lat = seq(min(dat$lat), max(dat$lat), by = 1)))
 # pts.test = pts.rect[inhulln(shape.hull, pts.rect),]
 
-grid_plot_allyr = function(dat, regions.dict, dat.constrain){
+grid_plot_allyr = function(dat, regions.dict, use.range, dat.constrain){
   ## for easy calculating abundance
   loc.pts = as.data.frame(expand.grid(lon = seq(min(dat$lon), max(dat$lon), by = 1),
                                       lat = seq(min(dat$lat), max(dat$lat), by = 1)))
-  if(dat.constrain){
+  if(use.range){
+    loc.pts = use_range(loc.pts, code.cur = dat$code[1])
+  }else if(dat.constrain){
     shape.hull = convhulln(loc.pts[,c("lon", "lat")])
     loc.pts = loc.pts[inhulln(shape.hull, as.matrix(loc.pts[, c("lon","lat")])),]
   }
+  
   loc.pts$country = coords_2country(long = loc.pts$lon, lat = loc.pts$lat)
   loc.pts = loc.pts[!is.na(loc.pts$country),]
   loc.pts = loc.pts[loc.pts$country=="USA",]
@@ -47,7 +53,9 @@ grid_plot_oneyr = function(dat, regions.dict, dat.constrain){
   ## for calculating trends
   loc.pts = as.data.frame(expand.grid(lon = seq(min(dat$lon), max(dat$lon), by = .2),
                                       lat = seq(min(dat$lat), max(dat$lat), by = .2)))
-  if(dat.constrain){
+  if(use.range){
+    loc.pts = use_range(loc.pts, code.cur = dat$code[1])
+  }else if(dat.constrain){
     shape.hull = convhulln(loc.pts[,c("lon", "lat")])
     loc.pts = loc.pts[inhulln(shape.hull, as.matrix(loc.pts[, c("lon","lat")])),]
   }
@@ -69,12 +77,14 @@ grid_plot_oneyr = function(dat, regions.dict, dat.constrain){
 }
 
 abund_mapper = function(dat, fit, regions.dict, sourcefac = "NFJ", 
+                        use.range = FALSE, #if TRUE, constrain to species range KML
                         dat.constrain = FALSE,#if constraining geography to convex hull, set this to TRUE to only predict there.
                         do.confidence = FALSE){ #if true, calculate upper and lower confidence limits. Possibly. Interpretation seems tricky
   state.map.data <- maps::map('state', fill = TRUE, plot = FALSE) %>%
     st_as_sf()
-  grid.plot = grid_plot_allyr(dat, regions.dict, dat.constrain)
+  grid.plot = grid_plot_allyr(dat, regions.dict, use.range = use.range, dat.constrain = dat.constrain)
   grid.plot$sourcefac = sourcefac
+  ## confidence stuff is messy. Not keeping this updated.
   if(do.confidence){
     mod.pred = predict(fit, newdata = grid.plot, type = "response", se = TRUE)
     grid.plot$count = mod.pred$fit
@@ -91,6 +101,33 @@ abund_mapper = function(dat, fit, regions.dict, sourcefac = "NFJ",
       group_by(lat, lon) %>% 
       summarize(abund.index = mean(count)*365)
   }
+  ## calculating abundance metrics
+  
+  ## yearly total abundance
+  abund.species = grid.plot %>% 
+    group_by(year) %>% 
+    summarize(abund.index = sum(count)) %>% 
+    ungroup()
+  ## yearly abundance at location of highest predicted density.
+  loc.highdense = loc.sum[(loc.sum$abund.index == max(loc.sum$abund.index))[1],]
+  abund.highdense = grid.plot %>% 
+    filter(lat == loc.highdense$lat, 
+           lon == loc.highdense$lon)
+  ## yearly abundance at location with most NFJ sightings. 
+  # reminder: predictions are happening at the rounded lat/lon, so let's find the rounded lat/lon with
+  # the most NFJ obs
+  dat.nfj = dat %>% 
+    filter(source == "NFJ") %>% 
+    mutate(lon = round(lon),
+           lat = round(lat)) %>% 
+    group_by(lon, lat) %>% 
+    summarize(abund = mean(count)) %>% 
+    ungroup()
+  loc.bestnfj = dat.nfj[dat.nfj$abund == max(dat.nfj$abund)[1],]
+  abund.bestnfj = grid.plot %>% 
+    filter(lat == loc.bestnfj$lat, 
+           lon == loc.bestnfj$lon)
+  ## visualizing
   dat.pts = viz_filter(dat %>%  select(lon,lat, inferred), reso = 2)
   gp = ggplot()+
     geom_tile(data = loc.sum, aes(x = lon, y = lat, fill = log10(abund.index)))+
@@ -100,6 +137,13 @@ abund_mapper = function(dat, fit, regions.dict, sourcefac = "NFJ",
     scale_fill_viridis()+
     theme_minimal()+
     ggtitle(paste0(dat$code[1], ": ", dat$sommon[1], " estimated abundance (averaged across all years)\ncoral points: inferred observations; green points: direct observations"))
+  ## TROUBLE ADDING RANGE MAP. UPDATE HERE WITH ELIZA INPUT
+  # if(use.range){
+  #   range.map = rgdal::readOGR(here(paste0("2_data_wrangling/range-maps/", code.cur, ".kml")))
+  #   gp = gp + 
+  #     geom_path(data = range.map, aes(x = long, y = lat), fill = NA, color = "black")
+  # }
+  ## confidence stuff is messy. Not keeping this updated.
   if(do.confidence){
     gp.lower = ggplot()+
       geom_tile(data = loc.sum, aes(x = lon, y = lat, fill = log10(abund.lower)))+
@@ -116,10 +160,11 @@ abund_mapper = function(dat, fit, regions.dict, sourcefac = "NFJ",
       theme_minimal()+
       ggtitle(paste0(dat$code[1], " estimated abundance, UPPER CONFIDENCE LIMIT"))
   }
+  ## not keeping do.confidence updated
   if(do.confidence){
     res = list(fig = gp, fig.lower = gp.lower, fig.upper = gp.upper, data  = loc.sum)
   }else{
-    res = list(fig = gp, data = loc.sum)
+    res = list(fig = gp, data = loc.sum, abund.species = abund.species, abund.highdense = abund.highdense, abund.bestnfj = abund.bestnfj)
   }
   return(res)
 }

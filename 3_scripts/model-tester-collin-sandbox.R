@@ -127,15 +127,23 @@ specs.do = data.frame(code = c("PIERAP",
 # alternately, apply approach to ALL species
 if(specs.do.all){
   dat = qread(paste0("2_data_wrangling/cleaned-data/cleaned-data-aggregated.csv"))
-  code.tab = table(dat$code)
-  code.tab = code.tab[code.tab >=400]
-  code.tab = code.tab[names(code.tab != "?-SP")]
-  code.tab = code.tab[names(code.tab != "TBD")]
-  code.tab = code.tab[names(code.tab != "BFLY")]
-  code.tab = code.tab[!grepl("-", names(code.tab))|
-                        grepl("^S-", names(code.tab))]
-  sum(dat$code %in% names(code.tab))
-  specs.do = data.frame(code = names(code.tab))
+  #count the number of years, sites, and observation events with > 0 butterflies reported (per species)
+  dat.sum = dat %>% 
+    filter(presence == 1) %>% 
+    group_by(code) %>% 
+    summarise(nyear = length(unique(year)),
+              nsite = length(unique(site)),
+              nobs = n()
+    ) %>% 
+    ungroup()
+  dat.use = dat.sum %>% ## identifying thresholds for minimum years of data, minimum sites, minimum obs 
+    filter(nobs >= 100) %>% 
+    filter(nyear >= 5 ) %>% 
+    filter(nsite >= 5 )
+  dat.use = dat.use[!(grepl("-", dat.use$code)),]
+  dat.use = dat.use %>% 
+    filter(code != "TBD")
+  specs.do = data.frame(code = dat.use$code)
   specs.do$specname = specs.do$code
 }
 

@@ -3,6 +3,7 @@ library(sp)
 library(rworldmap)
 library(spData)
 library(tidyverse)
+library(data.table, include.only = c("fread", "fwrite"))
 
 #quick read function for ease of reading
 library(data.table, include.only = c("fread", "fwrite"))
@@ -65,43 +66,69 @@ coords_2state <- function(long,
 ### checking trips
 ## NOTE: this is ONLY written to work with a single species at a time, and based on 
 ## using trip-wrangling data generated in final-data-integration.R and stored in 2_data_wrangling/trip-wrangling/
-library(data.table, include.only = c("fread", "fwrite"))
-trip_abs = function(dat){
-  trip.temp = as.data.frame(fread(here("2_data_wrangling/trip-wrangling/trip-templates.csv")))
-  usecodes = as.data.frame(fread(here("2_data_wrangling/trip-wrangling/trip-codes.csv")))
+
+trip_abs = function(dat, #full data set
+                    code.cur, #code to work with
+                    infer.messy.levels = c("GENUS", "SUBFAMILY", "FAMILY", "COMPLEX")){ #what levels of unidentified to not include in infering zeroes
   dat$inferred = FALSE
-  dat.usecode = unique(dat$code)[unique(dat$code) %in% usecodes$x]
-  if(length(dat.usecode>0)){
-    print("integrating trip absences")
-    for(i in 1:length(dat.usecode)){
-      #identify all the trips that were NOT observed in the data
-      code.cur = dat.usecode[i]
-      dat.cur = dat[dat$code == code.cur,]
-      trip.abs = trip.temp[!(trip.temp$event.id %in% dat.cur$event.id),]
-      trip.abs$code = code.cur
-      trip.abs$name = paste0("absence for ", code.cur)
-      trip.abs$inferred = TRUE
-      trip.abs$common = dat[dat$code == code.cur,"common"][1]
-      trip.abs = trip.abs[,names(dat)]
-      dat = rbind(dat,trip.abs)
-    }
-  }else{
-    print("taxa was never present for community sampling, skipping adding absences") 
-  }
-  return(dat)
+  dat.com = dat %>%  
+    filter(gather == "community") %>% 
+    filter(!is.na(code))
+  trip.temp = as.data.frame(fread(here("2_data_wrangling/trip-wrangling/trip-templates.csv")))
+  dict.zeroes = as.data.frame(fread(here("2_data_wrangling/trip-wrangling/dictionary-zeroes.csv")))
+  dict.zeroes = dict.zeroes[dict.zeroes$code == code.cur,]
+  dict.zeroes = dict.zeroes[dict.zeroes$tax.messy.level %in% infer.messy.levels,]
+  dat.usecodes = c(code.cur, dict.zeroes$code.messy)
+  dat.obs = dat.com[dat.com$code %in% dat.usecodes,]
+  events.obs = unique(dat.obs$event.id)
+  events.no.obs = unique(dat.com$event.id)
+  events.no.obs = events.no.obs[!events.no.obs %in% events.obs]
+  cat(paste0("Total of ", length(events.obs), " observations of taxa (or related unknowns), and\n", length(events.no.obs), " inferred zero events."))
+  #identify all the trips that were NOT observed in the data
+  trip.abs = trip.temp[trip.temp$event.id %in% events.no.obs,]
+  trip.abs$code = code.cur
+  trip.abs$name = paste0("absence for ", code.cur)
+  trip.abs$inferred = TRUE
+  trip.abs$common = dat[dat$code == code.cur,"common"][1]
+  trip.abs = trip.abs[,names(dat)]
+  dat.use = dat[dat$code == code.cur, ]
+  dat.use = dat.use[!is.na(dat.use$code),]
+  dat.use = rbind(dat.use, trip.abs)
+  return(dat.use)
 }
 
 
-#creates a dataset from 1 or more GU codes, adding absences from community gathering
-#events that didn't report that species. Can give multiple GU codes
-make_dataset = function(code, name.pretty = NULL){
-  if(is.null(name.pretty)){name.pretty = code}
+#creates a dataset from a GU code, adding absences from community gathering
+#events that didn't report that species. Use infer.messy.levels to handle zero inference 
+#when there is a report of an uknown at genus level, family 
+make_dataset = function(code.cur, 
+                        use.range,
+                        infer.messy.levels,
+                        name.pretty = NULL){
+  if(is.null(name.pretty)){name.pretty = code.cur}
   dat = as.data.frame(fread(here("2_data_wrangling/cleaned-data/cleaned-data-aggregated.csv")))
-  dat.cur = trip_abs(dat[dat$code %in% code,])
+  dat.cur = trip_abs(dat, code.cur, infer.messy.levels)
+  ## add code to restrict to range
+  ## just use polygon of range map
+  if(use.range){
+    print("Constraining data to range")
+    dat.cur = use_range(dat = dat.cur, code.cur = code.cur)
+  }
   fwrite(dat.cur, 
          here("2_data_wrangling/cleaned by code", paste0(name.pretty,".csv")))
 }
 
+use_range = function(dat, #data frame of any data of interest, with columns `lon` and `lat` for longitude and latitude.
+                     code.cur){
+  dat.sp = dat # separate object for spatial coordinates, because I'm paranoid about interactions with other code #use polygon range map
+  range.map = rgdal::readOGR(here(paste0("2_data_wrangling/range-maps/", code.cur, ".kml")))
+  coordinates(dat.sp) <- ~ lon + lat
+  sp::proj4string(dat.sp) <- sp::proj4string(range.map)
+  overlaid <- sp::over(dat.sp, as(range.map, "SpatialPolygons"))
+  ind.within <- which(!is.na(overlaid))
+  dat.cur = dat.cur[ind.within,]
+  return(dat.cur)
+}
 
 ## quickly filter to avoid plotting multiple points with identical lat/lon (makes mapping much faster)
 viz_filter = function(dat, reso = 4){

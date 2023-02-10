@@ -3,6 +3,9 @@ library(tidyverse)
 library(formula.tools)
 library(rmarkdown)
 library(sp)
+library(here)
+source(here("3_scripts/funs.R"))
+source(here("3_scripts/funs-fitting.R"))
 
 model_runner = function(code.cur, #GU code for taxa of interest
                         form.use, #gam formula to fit
@@ -17,13 +20,18 @@ model_runner = function(code.cur, #GU code for taxa of interest
                         use.range = FALSE, #if TRUE, reads in associated range map from 2_data_wrangling and cuts observations outside it
                         suitability.cutoff = NA, #if NA, use kml polygons of range map. If specified, estimated habitat suitability from .tiff, and include points with the specified suitability
                         use.inferred = TRUE, #if TRUE, infer zeros from community surveys that didn't report focal species
+                        infer.messy.levels = c("GENUS", "SUBFAMILY", "FAMILY", "COMPLEX"), #for infering zeroes, what level of "unidentified" do we not infer zeroes
+                        ## at the default, if a trip did not report the focal species, but did report an unknown in the family, subfamily, genus, or species complex
+                        ## we do NOT infer zeroes. FOr a more selective approach, try setting to just c("GENUS", "COMPLEX") - this will infer more zeroes.
                         geography.constrain = FALSE, #if TRUE, restrict data to only the observations within the convex hull (in lat/lon)
-                        #                               of non-inferred data
+                        #                               of non-inferred data. NOTE: this is overridden if using the range maps (if use.range == TRUE)
                         use.only.source= NULL, #if NULL, use all sources. If a vector of characters, use only the specified sources.
                         n.threads.use = 4){ #how many threads to let mgcv::bam() use. 
   #                                          Decrease if you're running into computer performance issues.
   if(use.inferred){
-    make_dataset(code = code.cur)
+    make_dataset(code = code.cur, 
+                 use.range = use.range, 
+                 infer.messy.levels = infer.messy.levels)
     dat = qread(paste0("2_data_wrangling/cleaned by code/",code.cur, ".csv")) 
   }else{
     ## curious if the inferred 0s are messing things up
@@ -34,22 +42,25 @@ model_runner = function(code.cur, #GU code for taxa of interest
   dat = dat %>% 
     filter(!is.na(count))
   
-  ## Crop to range, if that option is taken 
-  if(use.range){
-    dat.sp = dat # separate object for spatial coordinates, because I'm paranoid about interactions with other code #use polygon range map
-    range.map = rgdal::readOGR(here(paste0("2_data_wrangling/range-maps/", code.cur, ".kml")))
-    coordinates(dat.sp) <- ~ lon + lat
-    sp::proj4string(dat.sp) <- sp::proj4string(range.map)
-    if(is.na(suitability.cutoff)){ ## just use polygon of range map
-      overlaid <- sp::over(dat.sp, as(range.map, "SpatialPolygons"))
-      ind.within <- which(!is.na(overlaid))
-    }else{ #use gradient of habitat suitability and specified cutoff.
-      hsm <- raster::raster(here(paste0("2_data_wrangling/range-maps/", code.cur, ".tiff")))
-      site.suitability <- raster::extract(hsm, dat.sp)
-      ind.within <- which(site.suitability > suitability.cutoff)
-    }
-    dat = dat[ind.within,]
-  }
+  ## 
+  ## UPDATE: this is being applied in the data generation step (make_dataset) to reduce size of data files.
+  ## Crop to range, if that option is taken
+  ## 
+  # if(use.range){
+  #   dat.sp = dat # separate object for spatial coordinates, because I'm paranoid about interactions with other code #use polygon range map
+  #   range.map = rgdal::readOGR(here(paste0("2_data_wrangling/range-maps/", code.cur, ".kml")))
+  #   coordinates(dat.sp) <- ~ lon + lat
+  #   sp::proj4string(dat.sp) <- sp::proj4string(range.map)
+  #   if(is.na(suitability.cutoff)){ ## just use polygon of range map
+  #     overlaid <- sp::over(dat.sp, as(range.map, "SpatialPolygons"))
+  #     ind.within <- which(!is.na(overlaid))
+  #   }else{ #use gradient of habitat suitability and specified cutoff.
+  #     hsm <- raster::raster(here(paste0("2_data_wrangling/range-maps/", code.cur, ".tiff")))
+  #     site.suitability <- raster::extract(hsm, dat.sp)
+  #     ind.within <- which(site.suitability > suitability.cutoff)
+  #   }
+  #   dat = dat[ind.within,]
+  # }
   
   ## make factor version of source
   dat$sourcefac = as.factor(dat$source)
@@ -88,7 +99,7 @@ model_runner = function(code.cur, #GU code for taxa of interest
   names.vec = names.vec[!grepl("absence for ", names.vec)]
   plot.title = paste0(dat$common[1], " (", code.cur,")", ": " , paste0(names.vec, collapse = ", "))
   
-  ## constraining geography if called for - this verwsion is clipping to the convex hull
+  ## constraining geography if called for - this version is clipping to the convex hull
   ## My thinking here is that splines can misbehave if we have many observations (of 0)
   ## in biologically uninteresting areas (ie lots of 0s on the east coast for a 
   ## west-coast-only species). This can happen because of our conferred zeroes
@@ -131,7 +142,7 @@ model_runner = function(code.cur, #GU code for taxa of interest
   ## generate plots --------------
   ## plot abundance map
   print("calculating abundance")
-  out.abund = abund_mapper(dat, fit, regions.dict, dat.constrain = geography.constrain)
+  out.abund = abund_mapper(dat, fit, regions.dict, use.range = use.range, dat.constrain = geography.constrain)
   out.abund$fig
   
   print("calculating trends")
