@@ -80,12 +80,12 @@ do.summary = FALSE #If true, create summary text file for the whole combination 
 regions.dict = read.csv(here("2_data_wrangling/FWS-regions-by-state.csv"))
 
 ## specifying run name (to help identify/distinguish results files for different parameterizations)
-run.suffix = "range-constraint-test" ## Change this for whatever you're trying out
+run.suffix = "range-constraint-test-unconstrained" ## Change this for whatever you're trying out
 ## specify whether or not to use inferred 0s.
 use.inferred = TRUE
 
 ## should we constrain data to within the range maps? Seems like a good idea when we have them
-use.range = TRUE
+use.range = FALSE
 
 ## Specifying taxa:
 specs.do.all = FALSE #If TRUE, try to apply model to all species with 400+data points

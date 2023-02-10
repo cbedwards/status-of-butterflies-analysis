@@ -1,0 +1,1678 @@
+code,genus,species,common.name,code.messy,tax.messy.level
+ACHALB,Achalarus,albociliatus,Skinner's Cloudywing,ACH-SP,GENUS
+ACHCAS,Achalarus,casica,Desert Cloudywing,ACH-SP,GENUS
+ACHJAL,Achalarus,jalapus,Jalapus Cloudywing,ACH-SP,GENUS
+ACHLYC,Achalarus,lyciades,Hoary Edge,ACH-SP,GENUS
+ACHTOX,Achalarus,toxeus,Coyote Cloudywing,ACH-SP,GENUS
+ADEBAS,Adelpha,basiloides,Spot-celled Sister,ADE-SP,GENUS
+ADEBRE,Adelpha,bredowii,California Sister,ADE-SP,GENUS
+ADEFES,Adelpha,fessonia,Band-celled Sister,ADE-SP,GENUS
+AGAALL,Agathymus,alliae,Mojave Giant-Skipper,AGA-SP,GENUS
+AGAARY,Agathymus,aryxna,Arizona Giant-Skipper,AGA-SP,GENUS
+AGAEVA,Agathymus,evansi,Huachuca Giant-Skipper,AGA-SP,GENUS
+AGAMAR,Agathymus,mariae,Mary's Giant-Skipper,AGA-SP,GENUS
+AGANEU,Agathymus,neumoegeni,Orange Giant-Skipper,AGA-SP,GENUS
+AGAPOL,Agathymus,polingi,Poling's Giant-Skipper,AGA-SP,GENUS
+AGAREM,Agathymus,remingtoni,Coahuila Giant-Skipper,AGA-SP,GENUS
+AGASTE,Agathymus,stephensi,California Giant-Skipper,AGA-SP,GENUS
+AGRCAS,Agriades,cassiope,Heather Blue,AGR-SP,GENUS
+AGRGLA,Agriades,glandon,Arctic Blue,AGR-SP,GENUS
+AGRGLA,Agriades,glandon,Glandon' Arctic Blue,AGR-SP,GENUS
+AGRGLA,Agriades,glandon,Mountain' Arctic Blue,AGR-SP,GENUS
+AGRGLA,Agriades,glandon,Sierra' Arctic Blue,AGR-SP,GENUS
+AGUASA,Aguna,asander,Gold-spotted Aguna,AGU-SP,GENUS
+AGUCLA,Aguna,claxon,Emerald Aguna,AGU-SP,GENUS
+AGUMET,Aguna,metophis,Tailed Aguna,AGU-SP,GENUS
+AMBAEN,Amblyscirtes,aenus,Bronze Roadside-Skipper,AMB-SP,GENUS
+AMBAES,Amblyscirtes,aesculapius,Lace-winged Roadside-Skipper,AMB-SP,GENUS
+AMBALT,Amblyscirtes,alternata,Dusky Roadside-Skipper,AMB-SP,GENUS
+AMBBEL,Amblyscirtes,belli,Bell's Roadside-Skipper,AMB-SP,GENUS
+AMBCAR,Amblyscirtes,carolina,Carolina Roadside-Skipper,AMB-SP,GENUS
+AMBCAS,Amblyscirtes,cassus,Cassus Roadside-Skipper,AMB-SP,GENUS
+AMBCEL,Amblyscirtes,celia,Celia's Roadside-Skipper,AMB-SP,GENUS
+AMBELI,Amblyscirtes,elissa,Elissa Roadside-Skipper,AMB-SP,GENUS
+AMBEOS,Amblyscirtes,eos,Dotted Roadside-Skipper,AMB-SP,GENUS
+AMBEXO,Amblyscirtes,exoteria,Large Roadside-Skipper,AMB-SP,GENUS
+AMBFIM,Amblyscirtes,fimbriata,Orange-edged Roadside-Skipper,AMB-SP,GENUS
+AMBHEG,Amblyscirtes,hegon,Pepper and Salt Skipper,AMB-SP,GENUS
+AMBLIN,Amblyscirtes,linda,Linda's Roadside-Skipper,AMB-SP,GENUS
+AMBNER,Amblyscirtes,nereus,Slaty Roadside-Skipper,AMB-SP,GENUS
+AMBNYS,Amblyscirtes,nysa,Nysa Roadside-Skipper,AMB-SP,GENUS
+AMBOSL,Amblyscirtes,oslari,Oslar's Roadside-Skipper,AMB-SP,GENUS
+AMBPHY,Amblyscirtes,phylace,Orange-headed Roadside-Skipper,AMB-SP,GENUS
+AMBREV,Amblyscirtes,reversa,Reversed Roadside-Skipper,AMB-SP,GENUS
+AMBSIM,Amblyscirtes,simius,Simius Roadside-Skipper,AMB-SP,GENUS
+AMBTEX,Amblyscirtes,texanae,Texas Roadside-Skipper,AMB-SP,GENUS
+AMBTOL,Amblyscirtes,tolteca,Toltec Roadside-Skipper,AMB-SP,GENUS
+AMBTOL,Amblyscirtes,tolteca,Prenda' Toltec Roadside-Skipper,AMB-SP,GENUS
+AMBVIA,Amblyscirtes,vialis,Common Roadside-Skipper,AMB-SP,GENUS
+ANAAID,Anaea,aidea,Tropical Leafwing,ANA-SP,GENUS
+ANAAND,Anaea,andria,Goatweed Leafwing,ANA-SP,GENUS
+ANAFLO,Anaea,floridalis,Florida Leafwing,ANA-SP,GENUS
+ANAGLY,Anaea,glycerium,Angled Leafwing,ANA-SP,GENUS
+ANAPIT,Anaea,pithyusa,Pale-spotted Leafwing,ANA-SP,GENUS
+ANARCHR,Anartia,chrysopelea,Cuban Peacock,ANAR-SP,GENUS
+ANARFAT,Anartia,fatima,Banded Peacock,ANAR-SP,GENUS
+ANARJAT,Anartia,jatrophae,White Peacock,ANAR-SP,GENUS
+ANATLOG,Anatrytone,logan,Delaware Skipper,ANAT-SP,GENUS
+ANATMAZ,Anatrytone,mazai,Glowing Skipper,ANAT-SP,GENUS
+ANCARE,Ancyloxypha,arene,Tropical Least Skipper,ANC-SP,GENUS
+ANCNUM,Ancyloxypha,numitor,Least Skipper,ANC-SP,GENUS
+ANTCLO,Anteos,clorinde,White Angled-Sulphur,ANT-SP,GENUS
+ANTMAE,Anteos,maerula,Yellow Angled-Sulphur,ANT-SP,GENUS
+ANTHCET,Anthocharis,cethura,Desert Orangetip,ANTH-SP,GENUS
+ANTHCET,Anthocharis,cethura,Pima Orangetip,ANTH-SP,GENUS
+ANTHLAN,Anthocharis,lanceolata,Gray Marble,ANTH-SP,GENUS
+ANTHMID,Anthocharis,midea,Falcate Orangetip,ANTH-SP,GENUS
+ANTHSAR,Anthocharis,sara,Sara Orangetip,ANTH-SP,GENUS
+ANTHSAR,Anthocharis,sara,'Pacific' Sara Orangetip,ANTH-SP,GENUS
+ANTHSAR,Anthocharis,sara,'Stella' Sara Orangetip,ANTH-SP,GENUS
+APOHEP,Apodemia,hepburni,Hepburn's Metalmark,APO-SP,GENUS
+APOMOR,Apodemia,mormo,Mormon Metalmark,APO-SP,GENUS
+APOMUL,Apodemia,multiplaga,Narrow-winged Metalmark,APO-SP,GENUS
+APONAI,Apodemia,nais,Nais Metalmark,APO-SP,GENUS
+APONAI,Apodemia,nais,'Nais' Nais Metalmark,APO-SP,GENUS
+APONAI,Apodemia,nais,'Chisos' Nais Metalmark,APO-SP,GENUS
+APOPAL,Apodemia,palmeri,Palmer's Metalmark,APO-SP,GENUS
+APOPHY,Apodemia,phyciodoides,Crescent Metalmark,APO-SP,GENUS
+APOWAL,Apodemia,walkeri,Walker's Metalmark,APO-SP,GENUS
+ASTCEL,Asterocampa,celtis,Hackberry Emperor,AST-SP,GENUS
+ASTCLY,Asterocampa,clyton,Tawny Emperor,AST-SP,GENUS
+ASTIDY,Asterocampa,idyja,Cream-banded' Dusky Emperor,AST-SP,GENUS
+ASTLEI,Asterocampa,leilia,Empress Leilia,AST-SP,GENUS
+ASTRALA,Astraptes,alardus,Frosted Flasher,ASTR-SP,GENUS
+ASTRANA,Astraptes,anaphus,Yellow-tipped Flasher,ASTR-SP,GENUS
+ASTREGR,Astraptes,egregius,Small-spotted Flasher,ASTR-SP,GENUS
+ASTRFUL,Astraptes,fulgerator,Two-barred Flasher,ASTR-SP,GENUS
+ASTRGIL,Astraptes,gilberti,Gilbert's Flasher,ASTR-SP,GENUS
+ATRYCES,Atrytonopsis,cestus,Cestus Skipper,ATRY-SP,GENUS
+ATRYDEV,Atrytonopsis,deva,Deva Skipper,ATRY-SP,GENUS
+ATRYEDW,Atrytonopsis,edwardsii,Sheep Skipper,ATRY-SP,GENUS
+ATRYHIA,Atrytonopsis,hianna,Dusted Skipper,ATRY-SP,GENUS
+ATRYLUN,Atrytonopsis,lunus,Moon-marked Skipper,ATRY-SP,GENUS
+ATRYPIT,Atrytonopsis,pittacus,White-barred Skipper,ATRY-SP,GENUS
+ATRYPYT,Atrytonopsis,python,Python Skipper,ATRY-SP,GENUS
+ATRYVIE,Atrytonopsis,vierecki,Viereck's Skipper,ATRY-SP,GENUS
+AUTCEL,Autochton,cellus,Golden Banded-Skipper,AUT-SP,GENUS
+AUTCIN,Autochton,cincta,Chisos Banded-Skipper,AUT-SP,GENUS
+AUTPSE,Autochton,pseudocellus,Sonoran Banded-Skipper,AUT-SP,GENUS
+BATPHI,Battus,philenor,Pipevine Swallowtail,BAT-SP,GENUS
+BATPOL,Battus,polydamas,Polydamas Swallowtail,BAT-SP,GENUS
+BOLBRE,Bolla,brennus,Obscure Bolla,BOL-SP,GENUS
+BOLCLY,Bolla,clytius,Mottled Bolla,BOL-SP,GENUS
+BOLOALB,Boloria,alberta,Alberta Fritillary,BOLO-SP,GENUS
+BOLOAST,Boloria,astarte,Astarte Fritillary,BOLO-SP,GENUS
+BOLOAST,Boloria,astarte,Distinct' Astarte Fritillary,BOLO-SP,GENUS
+BOLOBEL,Boloria,bellona,Meadow Fritillary,BOLO-SP,GENUS
+BOLOCHA,Boloria,chariclea,Arctic Fritillary,BOLO-SP,GENUS
+BOLOEPI,Boloria,epithore,Pacific Fritillary,BOLO-SP,GENUS
+BOLOEUN,Boloria,eunomia,Bog Fritillary,BOLO-SP,GENUS
+BOLOFRE,Boloria,freija,Freija Fritillary,BOLO-SP,GENUS
+BOLOFRI,Boloria,frigga,Frigga Fritillary,BOLO-SP,GENUS
+BOLOIMP,Boloria,improba,Dingy Fritillary,BOLO-SP,GENUS
+BOLOIMP,Boloria,improba,'Wind River' Dingy Fritillary,BOLO-SP,GENUS
+BOLOKRI,Boloria,kriemhild,Relict Fritillary,BOLO-SP,GENUS
+BOLOMON,Boloria,montinus,Purplish Fritillary,BOLO-SP,GENUS
+BOLONAP,Boloria,napaea,Mountain Fritillary,BOLO-SP,GENUS
+BOLONAT,Boloria,natazhati,Cryptic Fritillary,BOLO-SP,GENUS
+BOLOPOL,Boloria,polaris,Polaris Fritillary,BOLO-SP,GENUS
+BOLOSEL,Boloria,selene,Silver-bordered Fritillary,BOLO-SP,GENUS
+S-BOAC,Boloria,improba acrocnema,Uncompahgre' Dingy Fritillary,BOLO-SP,GENUS
+BREEXI,Brephidium,exile,Western Pygmy-Blue,BRE-SP,GENUS
+BREISO,Brephidium,isophthalma,Eastern Pygmy-Blue,BRE-SP,GENUS
+CALARI,Calephelis,arizonensis,Arizona Metalmark,CAL-SP,GENUS
+CALBOR,Calephelis,borealis,Northern Metalmark,CAL-SP,GENUS
+CALMUT,Calephelis,mutica,Swamp Metalmark,CAL-SP,GENUS
+CALNEM,Calephelis,nemesis,Fatal Metalmark,CAL-SP,GENUS
+CALPER,Calephelis,perditalis,Rounded Metalmark,CAL-SP,GENUS
+CALRAW,Calephelis,rawsoni,Rawson's Metalmark,CAL-SP,GENUS
+CALRAW,Calephelis,rawsoni,'Rawson's' Rawson's Metalmark,CAL-SP,GENUS
+CALRAW,Calephelis,rawsoni,'Freeman's' Rawson's Metalmark,CAL-SP,GENUS
+CALVIR,Calephelis,virginiensis,Little Metalmark,CAL-SP,GENUS
+CALWRI,Calephelis,wrighti,Wright's Metalmark,CAL-SP,GENUS
+CALLAUG,Callophrys,augustinus,Brown Elfin,CALL-SP,GENUS
+CALLDUM,Callophrys,dumetorum,Bramble Hairstreak,CALL-SP,GENUS
+CALLDUM,Callophrys,dumetorum,Bramble' Bramble Hairstreak,CALL-SP,GENUS
+CALLDUM,Callophrys,dumetorum,'Coastal' Bramble Hairstreak,CALL-SP,GENUS
+CALLDUM,Callophrys,dumetorum,Canyon' Bramble Hairstreak,CALL-SP,GENUS
+CALLDUM,Callophrys,dumetorum,Immaculate' Bramble Hairstreak,CALL-SP,GENUS
+CALLERY,Callophrys,eryphon,Western Pine Elfin,CALL-SP,GENUS
+CALLFOT,Callophrys,fotis,Desert Elfin,CALL-SP,GENUS
+CALLGRY,Callophrys,gryneus,Juniper Hairstreak,CALL-SP,GENUS
+CALLGRY,Callophrys,gryneus,Olive' Juniper Hairstreak,CALL-SP,GENUS
+CALLGRY,Callophrys,gryneus,Sweadner's' Juniper Hairstreak,CALL-SP,GENUS
+CALLGRY,Callophrys,gryneus,Siva' Juniper Hairstreak,CALL-SP,GENUS
+CALLGRY,Callophrys,gryneus,Nelson's' Juniper Hairstreak,CALL-SP,GENUS
+CALLGRY,Callophrys,gryneus,Muir's' Juniper Hairstreak,CALL-SP,GENUS
+CALLGRY,Callophrys,gryneus,Loki' Juniper Hairstreak,CALL-SP,GENUS
+CALLGRY,Callophrys,gryneus,'Thorne's' Juniper Hairstreak,CALL-SP,GENUS
+CALLHEN,Callophrys,henrici,Henry's Elfin,CALL-SP,GENUS
+CALLHES,Callophrys,hesseli,Hessel's Hairstreak,CALL-SP,GENUS
+CALLIRU,Callophrys,irus,Frosted Elfin,CALL-SP,GENUS
+CALLJOH,Callophrys,johnsoni,Johnson's Hairstreak,CALL-SP,GENUS
+CALLLAN,Callophrys,lanoraieensis,Bog Elfin,CALL-SP,GENUS
+CALLMCF,Callophrys,mcfarlandi,Sandia Hairstreak,CALL-SP,GENUS
+CALLMOS,Callophrys,mossii,Moss' Elfin,CALL-SP,GENUS
+CALLNIP,Callophrys,niphon,Eastern Pine Elfin,CALL-SP,GENUS
+CALLPOL,Callophrys,polios,Hoary Elfin,CALL-SP,GENUS
+CALLSHE,Callophrys,sheridanii,Sheridan's Hairstreak,CALL-SP,GENUS
+CALLSHE,Callophrys,sheridanii,'White-lined' Sheridan's Hairstreak,CALL-SP,GENUS
+CALLSHE,Callophrys,sheridanii,'Desert' Sheridan's Hairstreak,CALL-SP,GENUS
+CALLSHE,Callophrys,sheridanii,Alpine' Sheridan's Hairstreak,CALL-SP,GENUS
+CALLSPI,Callophrys,spinetorum,Thicket Hairstreak,CALL-SP,GENUS
+CALLXAM,Callophrys,xami,Xami Hairstreak,CALL-SP,GENUS
+CALYCEC,Calycopis,cecrops,Red-banded Hairstreak,CALY-SP,GENUS
+CALYISO,Calycopis,isobeon,Dusky-blue Groundstreak,CALY-SP,GENUS
+CELLAD,Celastrina,ladon,Spring Azure,CEL-SP,GENUS
+CELLAD,Celastrina,ladon,'Spring' Spring Azure,CEL-SP,GENUS
+CELLAD,Celastrina,ladon,'Edward's' Spring Azure,CEL-SP,GENUS
+CELLAD,Celastrina,ladon,Cherry Gall' Spring Azure,CEL-SP,GENUS
+CELLAD,Celastrina,ladon,'Atlantic' Spring Azure,CEL-SP,GENUS
+CELLAD,Celastrina,ladon,Hops' Spring Azure,CEL-SP,GENUS
+CELLAD,Celastrina,ladon,'Manitoba' Spring Azure,CEL-SP,GENUS
+CELLAD,Celastrina,ladon,Summer' Spring Azure,CEL-SP,GENUS
+CELNEG,Celastrina,neglectamajor,Appalachian Azure,CEL-SP,GENUS
+CELNIG,Celastrina,nigra,Dusky Azure,CEL-SP,GENUS
+CELAFRI,Celaenorrhinus,fritzgaertneri,Fritzgaertner's Flat,CELA-SP,GENUS
+CELASTA,Celaenorrhinus,stallingsi,Stallings' Flat,CELA-SP,GENUS
+CELOLIM,Celotes,limpia,Scarce Streaky-Skipper,CELO-SP,GENUS
+CELONES,Celotes,nessus,Common Streaky-Skipper,CELO-SP,GENUS
+CERMEA,Cercyonis,meadii,Mead's Wood-Nymph,CER-SP,GENUS
+CEROET,Cercyonis,oetus,Small Wood-Nymph,CER-SP,GENUS
+CERPEG,Cercyonis,pegala,Common Wood-Nymph,CER-SP,GENUS
+CERSTH,Cercyonis,sthenele,Great Basin Wood-Nymph,CER-SP,GENUS
+CHICAT,Chioides,catillus,White-striped Longtail,CHI-SP,GENUS
+CHIZIL,Chioides,zilpa,Zilpa Longtail,CHI-SP,GENUS
+CHIOASY,Chiomara,asychis,White-patched Skipper,CHIO-SP,GENUS
+CHIOMIT,Chiomara,mithrax,Slaty Skipper,CHIO-SP,GENUS
+CHLMAE,Chlorostrymon,maesites,Amethyst Hairstreak,CHL-SP,GENUS
+CHLSIM,Chlorostrymon,simaethis,Silver-banded Hairstreak,CHL-SP,GENUS
+CHLTEL,Chlorostrymon,telea,Telea Hairstreak,CHL-SP,GENUS
+CHLOACA,Chlosyne,acastus,Sagebrush Checkerspot,CHLO-SP,GENUS
+CHLOCAL,Chlosyne,californica,California Patch,CHLO-SP,GENUS
+CHLOCHI,Chlosyne,chinatiensis,Chinati Checkerspot,CHLO-SP,GENUS
+CHLOCYN,Chlosyne,cyneas,Black Checkerspot,CHLO-SP,GENUS
+CHLODEF,Chlosyne,definita,Definite Patch,CHLO-SP,GENUS
+CHLOEND,Chlosyne,endeis,Banded Patch,CHLO-SP,GENUS
+CHLOFUL,Chlosyne,fulvia,Fulvia Checkerspot,CHLO-SP,GENUS
+CHLOGAB,Chlosyne,gabbii,Gabb's Checkerspot,CHLO-SP,GENUS
+CHLOGOR,Chlosyne,gorgone,Gorgone Checkerspot,CHLO-SP,GENUS
+CHLOHAR,Chlosyne,harrisii,Harris' Checkerspot,CHLO-SP,GENUS
+CHLOHOF,Chlosyne,hoffmanni,Hoffmann's Checkerspot,CHLO-SP,GENUS
+CHLOJAN,Chlosyne,janais,Crimson Patch,CHLO-SP,GENUS
+CHLOLAC,Chlosyne,lacinia,Bordered Patch,CHLO-SP,GENUS
+CHLOLEA,Chlosyne,leanira,Leanira Checkerspot,CHLO-SP,GENUS
+CHLOMAR,Chlosyne,marina,Red-spotted Patch,CHLO-SP,GENUS
+CHLONYC,Chlosyne,nycteis,Silvery Checkerspot,CHLO-SP,GENUS
+CHLOPAL,Chlosyne,palla,Northern Checkerspot,CHLO-SP,GENUS
+CHLOROS,Chlosyne,rosita,Rosita Patch,CHLO-SP,GENUS
+CHLOTHE,Chlosyne,theona,Theona Checkerspot,CHLO-SP,GENUS
+CHLOWHI,Chlosyne,whitneyi,Rockslide Checkerspot,CHLO-SP,GENUS
+CODALC,Codatractus,alcaeus,White-crescent Longtail,COD-SP,GENUS
+CODARI,Codatractus,arizonensis,Arizona Skipper,COD-SP,GENUS
+CODMYS,Codatractus,mysie,Valeriana Skipper,COD-SP,GENUS
+COEHAY,Coenonympha,haydenii,Hayden's Ringlet,COE-SP,GENUS
+COETUL,Coenonympha,tullia,Common Ringlet,COE-SP,GENUS
+COETUL,Coenonympha,tullia,Inornate' Common Ringlet,COE-SP,GENUS
+COETUL,Coenonympha,tullia,'Salt Marsh' Common Ringlet,COE-SP,GENUS
+COETUL,Coenonympha,tullia,Ochre' Common Ringlet,COE-SP,GENUS
+COETUL,Coenonympha,tullia,Northwest' Common Ringlet,COE-SP,GENUS
+COETUL,Coenonympha,tullia,California' Common Ringlet,COE-SP,GENUS
+COGCAI,Cogia,caicus,Gold-costa Skipper,COG-SP,GENUS
+COGCAL,Cogia,calchas,Mimosa Skipper,COG-SP,GENUS
+COGHIP,Cogia,hippalus,Acacia Skipper,COG-SP,GENUS
+COGOUT,Cogia,outis,Outis Skipper,COG-SP,GENUS
+COLALE,Colias,alexandra,Queen Alexandra's Sulphur,COL-SP,GENUS
+COLALE,Colias,alexandra,'Harford's' Queen Alexandra's Sulphur,COL-SP,GENUS
+COLBEH,Colias,behrii,Sierra Sulphur,COL-SP,GENUS
+COLBOO,Colias,boothi,Booth's Sulphur,COL-SP,GENUS
+COLCAN,Colias,canadensis,Canadian Sulphur,COL-SP,GENUS
+COLCES,Colias,cesonia,Southern Dogface,COL-SP,GENUS
+COLCHR,Colias,christina,Christina's Sulphur,COL-SP,GENUS
+COLEU1,Colias,eurydice,California Dogface,COL-SP,GENUS
+COLEU2,Colias,eurytheme,Orange Sulphur,COL-SP,GENUS
+COLGIG,Colias,gigantea,Giant Sulphur,COL-SP,GENUS
+COLHEC,Colias,hecla,Hecla Sulphur,COL-SP,GENUS
+COLINT,Colias,interior,Pink-edged Sulphur,COL-SP,GENUS
+COLJOH,Colias,johanseni,Coppermine Sulphur,COL-SP,GENUS
+COLMEA,Colias,meadii,Mead's Sulphur,COL-SP,GENUS
+COLNAS,Colias,nastes,Labrador Sulphur,COL-SP,GENUS
+COLOCC,Colias,occidentalis,Western Sulphur,COL-SP,GENUS
+COLPAL,Colias,palaeno,Palaeno Sulphur,COL-SP,GENUS
+COLPEL,Colias,pelidne,Pelidne Sulphur,COL-SP,GENUS
+COLPHI,Colias,philodice,Clouded Sulphur,COL-SP,GENUS
+COLSCU,Colias,scudderi,Scudder's Sulphur,COL-SP,GENUS
+COPAUR,Copaeodes,aurantiacus,Orange Skipperling,COP-SP,GENUS
+COPMIN,Copaeodes,minimus,Southern Skipperling,COP-SP,GENUS
+CYAGOO,Cyanophrys,goodsoni,Goodson's Greenstreak,CYA-SP,GENUS
+CYAHER,Cyanophrys,herodotus,Tropical Greenstreak,CYA-SP,GENUS
+CYAMIS,Cyanophrys,miserabilis,Clench's Greenstreak,CYA-SP,GENUS
+CYLGEM,Cyllopsis,gemma,Gemmed Satyr,CYL-SP,GENUS
+CYLPER,Cyllopsis,pertepida,Canyonland Satyr,CYL-SP,GENUS
+CYLPYR,Cyllopsis,pyracmon,Nabokov's Satyr,CYL-SP,GENUS
+CYLPYR,Cyllopsis,pyracmon,'Nabokov's' Nabokov's Satyr,CYL-SP,GENUS
+CYLPYR,Cyllopsis,pyracmon,'Henshaw's' Nabokov's Satyr,CYL-SP,GENUS
+CYMODI,Cymaenes,odilia,Fawn-spotted Skipper,CYM-SP,GENUS
+CYMTRI,Cymaenes,tripunctus,Three-spotted Skipper,CYM-SP,GENUS
+DANERE,Danaus,eresimus,Soldier,DAN-SP,GENUS
+DANGIL,Danaus,gilippus,Queen,DAN-SP,GENUS
+DANPLE,Danaus,plexippus,Monarch,DAN-SP,GENUS
+DOXLAU,Doxocopa,laure,Silver Emperor,DOX-SP,GENUS
+DOXPAV,Doxocopa,pavon,Pavon Emperor,DOX-SP,GENUS
+ELEANG,Electrostrymon,angelia,Fulvous Hairstreak,ELE-SP,GENUS
+ELECAN,Electrostrymon,canus,Muted Hairstreak,ELE-SP,GENUS
+ELESAN,Electrostrymon,sangala,Ruddy Hairstreak,ELE-SP,GENUS
+EMEARE,Emesis,ares,Ares Metalmark,EME-SP,GENUS
+EMEEME,Emesis,emesia,Curve-winged Metalmark,EME-SP,GENUS
+EMETEN,Emesis,tenedia,Falcate Metalmark,EME-SP,GENUS
+EMEZEL,Emesis,zela,Zela Metalmark,EME-SP,GENUS
+ENOANT,Enodia,anthedon,Northern Pearly-eye,ENO-SP,GENUS
+ENOCRE,Enodia,creola,Creole Pearly-eye,ENO-SP,GENUS
+ENOPOR,Enodia,portlandia,Southern Pearly-eye,ENO-SP,GENUS
+EPACLA,Epargyreus,clarus,Silver-spotted Skipper,EPA-SP,GENUS
+EPAEXA,Epargyreus,exadeus,Broken Silverdrop,EPA-SP,GENUS
+EPAZES,Epargyreus,zestos,Zestos Skipper,EPA-SP,GENUS
+ERECAL,Erebia,callias,Colorado Alpine,ERE-SP,GENUS
+EREDAB,Erebia,dabanensis,Four-dotted Alpine,ERE-SP,GENUS
+EREDI1,Erebia,disa,Disa Alpine,ERE-SP,GENUS
+EREDI2,Erebia,discoidalis,Red-disked Alpine,ERE-SP,GENUS
+EREEPI,Erebia,epipsodea,Common Alpine,ERE-SP,GENUS
+EREFAS,Erebia,fasciata,Banded Alpine,ERE-SP,GENUS
+EREKOZ,Erebia,kozhantshikovi,Reddish Alpine,ERE-SP,GENUS
+EREMAG,Erebia,magdalena,Magdalena Alpine,ERE-SP,GENUS
+EREMAN,Erebia,mancinus,Taiga Alpine,ERE-SP,GENUS
+EREOCC,Erebia,occulta,Eskimo Alpine,ERE-SP,GENUS
+EREROS,Erebia,rossii,Ross' Alpine,ERE-SP,GENUS
+ERETHE,Erebia,theano,Theano Alpine,ERE-SP,GENUS
+EREVID,Erebia,vidleri,Vidler's Alpine,ERE-SP,GENUS
+EROLAE,Erora,laeta,Early Hairstreak,ERO-SP,GENUS
+EROQUA,Erora,quaderna,Arizona Hairstreak,ERO-SP,GENUS
+ERYAFR,Erynnis,afranius,Afranius Duskywing,ERY-SP,GENUS
+ERYBAP,Erynnis,baptisiae,Wild Indigo Duskywing,ERY-SP,GENUS
+ERYBRI,Erynnis,brizo,Sleepy Duskywing,ERY-SP,GENUS
+ERYFUN,Erynnis,funeralis,Funereal Duskywing,ERY-SP,GENUS
+ERYHOR,Erynnis,horatius,Horace's Duskywing,ERY-SP,GENUS
+ERYICE,Erynnis,icelus,Dreamy Duskywing,ERY-SP,GENUS
+ERYJUV,Erynnis,juvenalis,Juvenal's Duskywing,ERY-SP,GENUS
+ERYJUV,Erynnis,juvenalis,'Arizona' Juvenal's Duskywing,ERY-SP,GENUS
+ERYLUC,Erynnis,lucilius,Columbine Duskywing,ERY-SP,GENUS
+ERYMAR,Erynnis,martialis,Mottled Duskywing,ERY-SP,GENUS
+ERYMER,Erynnis,meridianus,Meridian Duskywing,ERY-SP,GENUS
+ERYPAC,Erynnis,pacuvius,Pacuvius Duskywing,ERY-SP,GENUS
+ERYPER,Erynnis,persius,Persius Duskywing,ERY-SP,GENUS
+ERYPRO,Erynnis,propertius,Propertius Duskywing,ERY-SP,GENUS
+ERYSCU,Erynnis,scudderi,Scudder's Duskywing,ERY-SP,GENUS
+ERYTEL,Erynnis,telemachus,Rocky Mountain Duskywing,ERY-SP,GENUS
+ERYTRI,Erynnis,tristis,Mournful Duskywing,ERY-SP,GENUS
+ERYZAR,Erynnis,zarucco,Zarucco Duskywing,ERY-SP,GENUS
+EUCAUS,Euchloe,ausonides,Large Marble,EUC-SP,GENUS
+EUCCRE,Euchloe,creusa,Northern Marble,EUC-SP,GENUS
+EUCGUA,Euchloe,guaymasensis,Sonoran Marble,EUC-SP,GENUS
+EUCHYA,Euchloe,hyantis,Pearly Marble,EUC-SP,GENUS
+EUCHYA,Euchloe,hyantis,'California' Pearly Marble,EUC-SP,GENUS
+EUCHYA,Euchloe,hyantis,'Desert' Pearly Marble,EUC-SP,GENUS
+EUCNAI,Euchloe,naina,Green Marble,EUC-SP,GENUS
+EUCOLY,Euchloe,olympia,Olympia Marble,EUC-SP,GENUS
+EUNMON,Eunica,monima,Dingy Purplewing,EUN-SP,GENUS
+EUNTAT,Eunica,tatila,Florida Purplewing,EUN-SP,GENUS
+EUPBAT,Euphilotes,battoides,Square-spotted Blue,EUP-SP,GENUS
+EUPBAT,Euphilotes,battoides,'El Segundo' Square-spotted Blue,EUP-SP,GENUS
+EUPBAT,Euphilotes,battoides,Bernardino' Square-spotted Blue,EUP-SP,GENUS
+EUPENO,Euphilotes,enoptes,Dotted Blue,EUP-SP,GENUS
+EUPENO,Euphilotes,enoptes,'Mojave' Dotted Blue,EUP-SP,GENUS
+EUPENO,Euphilotes,enoptes,Dammer's' Dotted Blue,EUP-SP,GENUS
+EUPRIT,Euphilotes,rita,Rita Blue,EUP-SP,GENUS
+EUPRIT,Euphilotes,rita,'Pale' Rita Blue,EUP-SP,GENUS
+EUPSPA,Euphilotes,spaldingi,Spalding's Blue,EUP-SP,GENUS
+EUPHCHA,Euphydryas,chalcedona,Variable Checkerspot,EUPH-SP,GENUS
+EUPHCHA,Euphydryas,chalcedona,Chalcedon' Variable Checkerspot,EUPH-SP,GENUS
+EUPHCHA,Euphydryas,chalcedona,'Snowberry' Variable Checkerspot,EUPH-SP,GENUS
+EUPHCHA,Euphydryas,chalcedona,Anicia' Variable Checkerspot,EUPH-SP,GENUS
+EUPHEDI,Euphydryas,editha,Edith's Checkerspot,EUPH-SP,GENUS
+EUPHGIL,Euphydryas,gillettii,Gillett's Checkerspot,EUPH-SP,GENUS
+EUPHPHA,Euphydryas,phaeton,Baltimore Checkerspot,EUPH-SP,GENUS
+EUPTCLA,Euptoieta,claudia,Variegated Fritillary,EUPT-SP,GENUS
+EUPTHEG,Euptoieta,hegesia,Mexican Fritillary,EUPT-SP,GENUS
+EUPYARP,Euphyes,arpa,Palmetto Skipper,EUPY-SP,GENUS
+EUPYBAY,Euphyes,bayensis,Bay Skipper,EUPY-SP,GENUS
+EUPYBER,Euphyes,berryi,Berry's Skipper,EUPY-SP,GENUS
+EUPYBIM,Euphyes,bimacula,Two-spotted Skipper,EUPY-SP,GENUS
+EUPYCON,Euphyes,conspicua,Black Dash,EUPY-SP,GENUS
+EUPYDIO,Euphyes,dion,Dion Skipper,EUPY-SP,GENUS
+EUPYDUK,Euphyes,dukesi,Dukes' Skipper,EUPY-SP,GENUS
+EUPYPIL,Euphyes,pilatka,Palatka Skipper,EUPY-SP,GENUS
+EUPYVES,Euphyes,vestris,Dun Skipper,EUPY-SP,GENUS
+EURALB,Eurema,albula,Ghost Yellow,EUR-SP,GENUS
+EURBOI,Eurema,boisduvaliana,Boisduval's Yellow,EUR-SP,GENUS
+EURDAI,Eurema,daira,Barred Yellow,EUR-SP,GENUS
+EURDIN,Eurema,dina,Dina Yellow,EUR-SP,GENUS
+EURLIS,Eurema,lisa,Little Yellow,EUR-SP,GENUS
+EURMES,Eurema,messalina,Shy Yellow,EUR-SP,GENUS
+EURMEX,Eurema,mexicana,Mexican Yellow,EUR-SP,GENUS
+EURNIC,Eurema,nicippe,Sleepy Orange,EUR-SP,GENUS
+EURNIS,Eurema,nise,Mimosa Yellow,EUR-SP,GENUS
+EURPRO,Eurema,proterpia,Tailed Orange,EUR-SP,GENUS
+EURSAL,Eurema,salome,Salome Yellow,EUR-SP,GENUS
+EURYMAR,Eurytides,marcellus,Zebra Swallowtail,EURY-SP,GENUS
+EURYPHI,Eurytides,philolaus,Dark Kite-Swallowtail,EURY-SP,GENUS
+EVEAMY,Everes,amyntula,Western Tailed-Blue,EVE-SP,GENUS
+EVECOM,Everes,comyntas,Eastern Tailed-Blue,EVE-SP,GENUS
+GANHOW,Ganyra,howarthii,Howarth's White,GAN-SP,GENUS
+GANJOS,Ganyra,josephina,Giant White,GAN-SP,GENUS
+GLALYG,Glaucopsyche,lygdamus,Silvery Blue,GLA-SP,GENUS
+GLAPIA,Glaucopsyche,piasus,Arrowhead Blue,GLA-SP,GENUS
+GLAXER,Glaucopsyche,xerces,Xerces Blue,GLA-SP,GENUS
+HAMAM1,Hamadryas,amphichloe,Pale Cracker,HAM-SP,GENUS
+HAMAM2,Hamadryas,amphinome,Red Cracker,HAM-SP,GENUS
+HAMATL,Hamadryas,atlantis,Black-patched Cracker,HAM-SP,GENUS
+HAMFEB,Hamadryas,februa,Gray Cracker,HAM-SP,GENUS
+HAMFER,Hamadryas,feronia,Variable Cracker,HAM-SP,GENUS
+HAMGLA,Hamadryas,glauconome,Glaucous Cracker,HAM-SP,GENUS
+HAMGUA,Hamadryas,guatemalena,Guatemalan Cracker,HAM-SP,GENUS
+HELCHA,Heliconius,charithonia,Zebra Heliconian,HEL-SP,GENUS
+HELERA,Heliconius,erato,Erato Heliconian,HEL-SP,GENUS
+HELIARS,Heliopetes,arsalte,Veined White-Skipper,HELI-SP,GENUS
+HELIDOM,Heliopetes,domicella,Erichson's White-Skipper,HELI-SP,GENUS
+HELIERI,Heliopetes,ericetorum,Northern White-Skipper,HELI-SP,GENUS
+HELILAV,Heliopetes,laviana,Laviana White-Skipper,HELI-SP,GENUS
+HELIMAC,Heliopetes,macaira,Turk's-cap White-Skipper,HELI-SP,GENUS
+HELISUB,Heliopetes,sublinea,East-Mexican White-Skipper,HELI-SP,GENUS
+HEMAMM,Hemiargus,ammon,Nickerbean Blue,HEM-SP,GENUS
+HEMCER,Hemiargus,ceraunus,Ceraunus Blue,HEM-SP,GENUS
+HEMISO,Hemiargus,isola,Reakirt's Blue,HEM-SP,GENUS
+HEMTHO,Hemiargus,thomasi,Miami Blue,HEM-SP,GENUS
+HESATT,Hesperia,attalus,Dotted Skipper,HES-SP,GENUS
+HESCOL,Hesperia,columbia,Columbian Skipper,HES-SP,GENUS
+HESCOM,Hesperia,comma,Common Branded Skipper,HES-SP,GENUS
+HESDAC,Hesperia,dacotae,Dakota Skipper,HES-SP,GENUS
+HESJUB,Hesperia,juba,Juba Skipper,HES-SP,GENUS
+HESLEO,Hesperia,leonardus,Leonard's Skipper,HES-SP,GENUS
+HESLIN,Hesperia,lindseyi,Lindsey's Skipper,HES-SP,GENUS
+HESMES,Hesperia,meskei,Meske's Skipper,HES-SP,GENUS
+HESMET,Hesperia,metea,Cobweb Skipper,HES-SP,GENUS
+HESMIR,Hesperia,miriamae,Sierra Skipper,HES-SP,GENUS
+HESNEV,Hesperia,nevada,Nevada Skipper,HES-SP,GENUS
+HESOTT,Hesperia,ottoe,Ottoe Skipper,HES-SP,GENUS
+HESPAH,Hesperia,pahaska,Pahaska Skipper,HES-SP,GENUS
+HESSAS,Hesperia,sassacus,Indian Skipper,HES-SP,GENUS
+HESUNC,Hesperia,uncas,Uncas Skipper,HES-SP,GENUS
+HESVIR,Hesperia,viridis,Green Skipper,HES-SP,GENUS
+HESWOO,Hesperia,woodgatei,Apache Skipper,HES-SP,GENUS
+HESPALP,Hesperopsis,alpheus,Saltbush Sootywing,HESP-SP,GENUS
+HESPALP,Hesperopsis,alpheus,'Saltbush' Saltbush Sootywing,HESP-SP,GENUS
+HESPALP,Hesperopsis,alpheus,MacNeill's' Saltbush Sootywing,HESP-SP,GENUS
+HESPLIB,Hesperopsis,libya,Mojave Sootywing,HESP-SP,GENUS
+HISACH,Historis,acheronta,Tailed Cecropian,HIS-SP,GENUS
+HISODI,Historis,odius,Orion Cecropian,HIS-SP,GENUS
+JUNCOE,Junonia,coenia,Common Buckeye,JUN-SP,GENUS
+JUNEVA,Junonia,evarete,Mangrove Buckeye,JUN-SP,GENUS
+JUNGEN,Junonia,genoveva,Tropical Buckeye,JUN-SP,GENUS
+LEPCAS,Leptotes,cassius,Cassius Blue,LEP-SP,GENUS
+LEPMAR,Leptotes,marina,Marine Blue,LEP-SP,GENUS
+LERACC,Lerema,accius,Clouded Skipper,LER-SP,GENUS
+LERLIR,Lerema,liris,Liris Skipper,LER-SP,GENUS
+LEROARA,Lerodea,arabus,Violet-clouded Skipper,LERO-SP,GENUS
+LERODYS,Lerodea,dysaules,Olive-clouded Skipper,LERO-SP,GENUS
+LEROEUF,Lerodea,eufala,Eufala Skipper,LERO-SP,GENUS
+LIMARC,Limenitis,archippus,Viceroy,LIM-SP,GENUS
+LIMART,Limenitis,arthemis,Red-spotted Admiral,LIM-SP,GENUS
+LIMLOR,Limenitis,lorquini,Lorquin's Admiral,LIM-SP,GENUS
+LIMWEI,Limenitis,weidemeyerii,Weidemeyer's Admiral,LIM-SP,GENUS
+S-LIAR,Limenitis,arthemis arthemis,White Admiral,LIM-SP,GENUS
+S-LIAS,Limenitis,arthemis astyanax,Red-spotted Purple,LIM-SP,GENUS
+LYCIDA,Lycaeides,idas,Northern Blue,LYC-SP,GENUS
+LYCMEL,Lycaeides,melissa,Melissa Blue,LYC-SP,GENUS
+S-LYSA,Lycaeides,melissa,Karner' Melissa Blue,LYC-SP,GENUS
+LYCAARO,Lycaena,arota,Tailed Copper,LYCA-SP,GENUS
+LYCACUP,Lycaena,cupreus,Lustrous Copper,LYCA-SP,GENUS
+LYCACUP,Lycaena,cupreus,Snow's' Lustrous Copper,LYCA-SP,GENUS
+LYCADIO,Lycaena,dione,Gray Copper,LYCA-SP,GENUS
+LYCADOR,Lycaena,dorcas,Dorcas Copper,LYCA-SP,GENUS
+LYCADOR,Lycaena,dorcas,'Maine' Dorcas Copper,LYCA-SP,GENUS
+LYCADOR,Lycaena,dorcas,Salt Marsh' Dorcas Copper,LYCA-SP,GENUS
+LYCAEDI,Lycaena,editha,Edith's Copper,LYCA-SP,GENUS
+LYCAEPI,Lycaena,epixanthe,Bog Copper,LYCA-SP,GENUS
+LYCAGOR,Lycaena,gorgon,Gorgon Copper,LYCA-SP,GENUS
+LYCAHEL,Lycaena,helloides,Purplish Copper,LYCA-SP,GENUS
+LYCAHER,Lycaena,hermes,Hermes Copper,LYCA-SP,GENUS
+LYCAHET,Lycaena,heteronea,Blue Copper,LYCA-SP,GENUS
+LYCAHYL,Lycaena,hyllus,Bronze Copper,LYCA-SP,GENUS
+LYCAMAR,Lycaena,mariposa,Mariposa Copper,LYCA-SP,GENUS
+LYCANIV,Lycaena,nivalis,Lilac-bordered Copper,LYCA-SP,GENUS
+LYCAPHL,Lycaena,phlaeas,American Copper,LYCA-SP,GENUS
+LYCARUB,Lycaena,rubidus,Ruddy Copper,LYCA-SP,GENUS
+LYCARUB,Lycaena,rubidus,'White Mountains' Ruddy Copper,LYCA-SP,GENUS
+LYCAXAN,Lycaena,xanthoides,Great Copper,LYCA-SP,GENUS
+MARCHI,Marpesia,chiron,Many-banded Daggerwing,MAR-SP,GENUS
+MARCOR,Marpesia,coresia,Waiter Daggerwing,MAR-SP,GENUS
+MARELE,Marpesia,eleuchea,Antillean Daggerwing,MAR-SP,GENUS
+MARPET,Marpesia,petreus,Ruddy Daggerwing,MAR-SP,GENUS
+MEGCOF,Megathymus,cofaqui,Cofaqui Giant-Skipper,MEG-SP,GENUS
+MEGSTR,Megathymus,streckeri,Strecker's Giant-Skipper,MEG-SP,GENUS
+MEGURS,Megathymus,ursus,Ursine Giant-Skipper,MEG-SP,GENUS
+MEGYUC,Megathymus,yuccae,Yucca Giant-Skipper,MEG-SP,GENUS
+MEGICYM,Megisto,cymela,Little Wood-Satyr,MEGI-SP,GENUS
+MEGIRUB,Megisto,rubricata,Red Satyr,MEGI-SP,GENUS
+MINIAZI,Ministrymon,azia,Gray Ministreak,MINI-SP,GENUS
+MINICLY,Ministrymon,clytie,Clytie Ministreak,MINI-SP,GENUS
+MINILED,Ministrymon,leda,Leda Ministreak,MINI-SP,GENUS
+MYSCYA,Myscelia,cyananthe,Blackened Bluewing,MYS-SP,GENUS
+MYSETH,Myscelia,ethusa,Mexican Bluewing,MYS-SP,GENUS
+NASJUL,Nastra,julia,Julia's Skipper,NAS-SP,GENUS
+NASLHE,Nastra,lherminier,Swarthy Skipper,NAS-SP,GENUS
+NASNEA,Nastra,neamathla,Neamathla Skipper,NAS-SP,GENUS
+NEONARE,Neonympha,areolata,Georgia Satyr,NEON-SP,GENUS
+NEONMIT,Neonympha,mitchellii,Mitchell's Satyr,NEON-SP,GENUS
+NEOPMEN,Neophasia,menapia,Pine White,NEOP-SP,GENUS
+NEOPTER,Neophasia,terlootii,Chiricahua White,NEOP-SP,GENUS
+NYMANT,Nymphalis,antiopa,Mourning Cloak,NYM-SP,GENUS
+NYMCAL,Nymphalis,californica,California Tortoiseshell,NYM-SP,GENUS
+NYMMIL,Nymphalis,milberti,Milbert's Tortoiseshell,NYM-SP,GENUS
+NYMURT,Nymphalis,urticae,Small Tortoiseshell,NYM-SP,GENUS
+NYMVAU,Nymphalis,vaualbum,Compton Tortoiseshell,NYM-SP,GENUS
+OAREDW,Oarisma,edwardsii,Edwards' Skipperling,OAR-SP,GENUS
+OARGAR,Oarisma,garita,Garita Skipperling,OAR-SP,GENUS
+OARPOW,Oarisma,poweshiek,Poweshiek Skipperling,OAR-SP,GENUS
+OCHAGR,Ochlodes,agricola,Rural Skipper,OCH-SP,GENUS
+OCHSYL,Ochlodes,sylvanoides,Woodland Skipper,OCH-SP,GENUS
+OCHYUM,Ochlodes,yuma,Yuma Skipper,OCH-SP,GENUS
+OENALB,Oeneis,alberta,Alberta Arctic,OEN-SP,GENUS
+OENALP,Oeneis,alpina,Sentinel Arctic,OEN-SP,GENUS
+OENCHR,Oeneis,chryxus,Chryxus Arctic,OEN-SP,GENUS
+OENCHR,Oeneis,chryxus,Brown' Chryxus Arctic,OEN-SP,GENUS
+OENCHR,Oeneis,chryxus,'California' Chryxus Arctic,OEN-SP,GENUS
+OENJUT,Oeneis,jutta,Jutta Arctic,OEN-SP,GENUS
+OENMAC,Oeneis,macounii,Macoun's Arctic,OEN-SP,GENUS
+OENMEL,Oeneis,melissa,Melissa Arctic,OEN-SP,GENUS
+OENNEV,Oeneis,nevadensis,Great Arctic,OEN-SP,GENUS
+OENPOL,Oeneis,polixenes,Polixenes Arctic,OEN-SP,GENUS
+OENROS,Oeneis,rosovi,Early Arctic,OEN-SP,GENUS
+OENTAY,Oeneis,taygete,White-veined Arctic,OEN-SP,GENUS
+OENUHL,Oeneis,uhleri,Uhler's Arctic,OEN-SP,GENUS
+PANERR,Panoquina,errans,Wandering Skipper,PAN-SP,GENUS
+PANFUS,Panoquina,fusina,Evans' Skipper,PAN-SP,GENUS
+PANHEC,Panoquina,hecebola,Hecebolus Skipper,PAN-SP,GENUS
+PANOCO,Panoquina,ocola,Ocola Skipper,PAN-SP,GENUS
+PANPA1,Panoquina,panoquin,Salt Marsh Skipper,PAN-SP,GENUS
+PANPA2,Panoquina,panoquinoides,Obscure Skipper,PAN-SP,GENUS
+PANSYL,Panoquina,sylvicola,Purple-washed Skipper,PAN-SP,GENUS
+PAPAN1,Papilio,andraemon,Bahamian Swallowtail,PAP-SP,GENUS
+PAPAN2,Papilio,androgeus,Androgeus Swallowtail,PAP-SP,GENUS
+PAPANC,Papilio,anchisiades,Ruby-spotted Swallowtail,PAP-SP,GENUS
+PAPARI,Papilio,aristodemus,Schaus' Swallowtail,PAP-SP,GENUS
+PAPAST,Papilio,astyalus,Broad-banded Swallowtail,PAP-SP,GENUS
+PAPBRE,Papilio,brevicauda,Short-tailed Swallowtail,PAP-SP,GENUS
+PAPCAN,Papilio,canadensis,Canadian Tiger Swallowtail,PAP-SP,GENUS
+PAPCRE,Papilio,cresphontes,Giant Swallowtail,PAP-SP,GENUS
+PAPEUR,Papilio,eurymedon,Pale Swallowtail,PAP-SP,GENUS
+PAPGAR,Papilio,garamas,Magnificent Swallowtail,PAP-SP,GENUS
+PAPGLA,Papilio,glaucus,Eastern Tiger Swallowtail,PAP-SP,GENUS
+PAPIND,Papilio,indra,Indra Swallowtail,PAP-SP,GENUS
+PAPJOA,Papilio,joanae,Ozark Swallowtail,PAP-SP,GENUS
+PAPMAC,Papilio,machaon,Old World Swallowtail,PAP-SP,GENUS
+PAPMAC,Papilio,machaon,'Baird's' Old World Swallowtail,PAP-SP,GENUS
+PAPMAC,Papilio,machaon,'Oregon' Swallowtail,PAP-SP,GENUS
+PAPMUL,Papilio,multicaudata,Two-tailed Swallowtail,PAP-SP,GENUS
+PAPORN,Papilio,ornythion,Ornythion Swallowtail,PAP-SP,GENUS
+PAPPAL,Papilio,palamedes,Palamedes Swallowtail,PAP-SP,GENUS
+PAPPHA,Papilio,pharnaces,Pink-spotted Swallowtail,PAP-SP,GENUS
+PAPPIL,Papilio,pilumnus,Three-tailed Swallowtail,PAP-SP,GENUS
+PAPPOL,Papilio,polyxenes,Black Swallowtail,PAP-SP,GENUS
+PAPPOL,Papilio,polyxenes,'Desert' Black Swallowtail,PAP-SP,GENUS
+PAPRUT,Papilio,rutulus,Western Tiger Swallowtail,PAP-SP,GENUS
+PAPTHO,Papilio,thoas,Thoas Swallowtail,PAP-SP,GENUS
+PAPTRO,Papilio,troilus,Spicebush Swallowtail,PAP-SP,GENUS
+PAPVIC,Papilio,victorinus,Victorine Swallowtail,PAP-SP,GENUS
+PAPXUT,Papilio,xuthus,Chinese Swallowtail,PAP-SP,GENUS
+PAPZEL,Papilio,zelicaon,Anise Swallowtail,PAP-SP,GENUS
+PARNCLO,Parnassius,clodius,Clodius Parnassian,PARN-SP,GENUS
+PARNEVE,Parnassius,eversmanni,Eversmann's Parnassian,PARN-SP,GENUS
+PARNPHO,Parnassius,phoebus,Phoebus Parnassian,PARN-SP,GENUS
+PARNPHO,Parnassius,phoebus,'Phoebus' Phoebus Parnassian,PARN-SP,GENUS
+PARNPHO,Parnassius,phoebus,Rocky Mountain' Phoebus Parnassian,PARN-SP,GENUS
+PARNPHO,Parnassius,phoebus,'Sierra Nevada' Phoebus Parnassian,PARN-SP,GENUS
+PELARI,Pellicia,arina,Glazed Pellicia,PEL-SP,GENUS
+PELDIM,Pellicia,dimidiata,Morning Glory Pellicia,PEL-SP,GENUS
+PHOPIG,Phocides,pigmalion,Mangrove Skipper,PHO-SP,GENUS
+PHOPOL,Phocides,polybius,Guava Skipper,PHO-SP,GENUS
+PHOEAGA,Phoebis,agarithe,Large Orange Sulphur,PHOE-SP,GENUS
+PHOENEO,Phoebis,neocypris,Tailed Sulphur,PHOE-SP,GENUS
+PHOEORB,Phoebis,orbis,Orbed Sulphur,PHOE-SP,GENUS
+PHOEPHI,Phoebis,philea,Orange-barred Sulphur,PHOE-SP,GENUS
+PHOESEN,Phoebis,sennae,Cloudless Sulphur,PHOE-SP,GENUS
+PHOESTA,Phoebis,statira,Statira Sulphur,PHOE-SP,GENUS
+PHOLCAT,Pholisora,catullus,Common Sootywing,PHOL-SP,GENUS
+PHOLMEJ,Pholisora,mejicana,Mexican Sootywing,PHOL-SP,GENUS
+PHYARG,Phyciodes,argentea,Chestnut Crescent,PHY-SP,GENUS
+PHYBAT,Phyciodes,batesii,Tawny Crescent,PHY-SP,GENUS
+PHYCAM,Phyciodes,campestris,Field Crescent,PHY-SP,GENUS
+PHYFRI,Phyciodes,frisia,Cuban Crescent,PHY-SP,GENUS
+PHYMYL,Phyciodes,mylitta,Mylitta Crescent,PHY-SP,GENUS
+PHYORS,Phyciodes,orseis,California Crescent,PHY-SP,GENUS
+PHYPAL,Phyciodes,pallida,Pale Crescent,PHY-SP,GENUS
+PHYPHA,Phyciodes,phaon,Phaon Crescent,PHY-SP,GENUS
+PHYPIC,Phyciodes,picta,Painted Crescent,PHY-SP,GENUS
+PHYPTO,Phyciodes,ptolyca,Black Crescent,PHY-SP,GENUS
+PHYSEL,Phyciodes,selenis,Northern Crescent,PHY-SP,GENUS
+PHYTEX,Phyciodes,texana,Texan Crescent,PHY-SP,GENUS
+PHYTEX,Phyciodes,texana,'Texan' Texan Crescent,PHY-SP,GENUS
+PHYTEX,Phyciodes,texana,Seminole' Texan Crescent,PHY-SP,GENUS
+PHYTHA,Phyciodes,tharos,Pearl Crescent,PHY-SP,GENUS
+PHYTUL,Phyciodes,tulcis,Pale-banded Crescent,PHY-SP,GENUS
+PHYVES,Phyciodes,vesta,Vesta Crescent,PHY-SP,GENUS
+PIENAP,Pieris,napi,Mustard White,PIE-SP,GENUS
+PIENAP,Pieris,napi,'Veined' Mustard White,PIE-SP,GENUS
+PIENAP,Pieris,napi,'Margined' Mustard White,PIE-SP,GENUS
+PIERAP,Pieris,rapae,Cabbage White,PIE-SP,GENUS
+PIEVIR,Pieris,virginiensis,West Virginia White,PIE-SP,GENUS
+PIRCIN,Piruna,cingo,Many-spotted Skipperling,PIR-SP,GENUS
+PIRHAF,Piruna,haferniki,Chisos Skipperling,PIR-SP,GENUS
+PIRMIC,Piruna,microstictus,Small-spotted Skipperling,PIR-SP,GENUS
+PIRPIR,Piruna,pirus,Russet Skipperling,PIR-SP,GENUS
+PIRPOL,Piruna,polingi,Four-spotted Skipperling,PIR-SP,GENUS
+PLEACM,Plebejus,acmon,Acmon Blue,PLE-SP,GENUS
+PLEAMI,Plebejus,emigdionis,San Emigdio Blue,PLE-SP,GENUS
+PLEICA,Plebejus,icarioides,Boisduval's Blue,PLE-SP,GENUS
+PLEICA,Plebejus,icarioides,'Mission' Boisduval's Blue,PLE-SP,GENUS
+PLELUP,Plebejus,lupini,Lupine Blue,PLE-SP,GENUS
+PLENEU,Plebejus,neurona,Veined Blue,PLE-SP,GENUS
+PLESAE,Plebejus,saepiolus,Greenish Blue,PLE-SP,GENUS
+PLESHA,Plebejus,shasta,Shasta Blue,PLE-SP,GENUS
+POAAAR,Poanes,aaroni,Aaron's Skipper,POA-SP,GENUS
+POAHOB,Poanes,hobomok,Hobomok Skipper,POA-SP,GENUS
+POAMAS,Poanes,massasoit,Mulberry Wing,POA-SP,GENUS
+POAMEL,Poanes,melane,Umber Skipper,POA-SP,GENUS
+POATAX,Poanes,taxiles,Taxiles Skipper,POA-SP,GENUS
+POAVIA,Poanes,viator,Broad-winged Skipper,POA-SP,GENUS
+POAYEH,Poanes,yehl,Yehl Skipper,POA-SP,GENUS
+POAZAB,Poanes,zabulon,Zabulon Skipper,POA-SP,GENUS
+POLMIN,Poladryas,minuta,Dotted Checkerspot,POL-SP,GENUS
+POLGLEO,Polygonus,leo,Hammock Skipper,POLG-SP,GENUS
+POLGMAN,Polygonus,manueli,Manuel's Skipper,POLG-SP,GENUS
+POLIBAR,Polites,baracoa,Baracoa Skipper,POLI-SP,GENUS
+POLICAR,Polites,carus,Carus Skipper,POLI-SP,GENUS
+POLIDRA,Polites,draco,Draco Skipper,POLI-SP,GENUS
+POLIMAR,Polites,mardon,Mardon Skipper,POLI-SP,GENUS
+POLIMYS,Polites,mystic,Long Dash,POLI-SP,GENUS
+POLIORI,Polites,origenes,Crossline Skipper,POLI-SP,GENUS
+POLIPEC,Polites,peckius,Peck's Skipper,POLI-SP,GENUS
+POLIRHE,Polites,rhesus,Rhesus Skipper,POLI-SP,GENUS
+POLISAB,Polites,sabuleti,Sandhill Skipper,POLI-SP,GENUS
+POLISON,Polites,sonora,Sonoran Skipper,POLI-SP,GENUS
+POLITHE,Polites,themistocles,Tawny-edged Skipper,POLI-SP,GENUS
+POLIVIB,Polites,vibex,Whirlabout,POLI-SP,GENUS
+POLTMEX,Polythrix,mexicanus,Mexican Longtail,POLT-SP,GENUS
+POLTOCT,Polythrix,octomaculata,Eight-spotted Longtail,POLT-SP,GENUS
+POLYCOM,Polygonia,comma,Eastern Comma,POLY-SP,GENUS
+POLYFAU,Polygonia,faunus,Green Comma,POLY-SP,GENUS
+POLYFAU,Polygonia,faunus,'Green' Green Comma,POLY-SP,GENUS
+POLYFAU,Polygonia,faunus,'Sylvan' Green Comma,POLY-SP,GENUS
+POLYGRA,Polygonia,gracilis,Hoary Comma,POLY-SP,GENUS
+POLYGRA,Polygonia,gracilis,Zephyr' Hoary Comma,POLY-SP,GENUS
+POLYINT,Polygonia,interrogationis,Question Mark,POLY-SP,GENUS
+POLYORE,Polygonia,oreas,Oreas Comma,POLY-SP,GENUS
+POLYPRO,Polygonia,progne,Gray Comma,POLY-SP,GENUS
+POLYSAT,Polygonia,satyrus,Satyr Comma,POLY-SP,GENUS
+PONBEC,Pontia,beckerii,Becker's White,PON-SP,GENUS
+PONOCC,Pontia,occidentalis,Western White,PON-SP,GENUS
+PONPRO,Pontia,protodice,Checkered White,PON-SP,GENUS
+PONSIS,Pontia,sisymbrii,Spring White,PON-SP,GENUS
+PROBUL,Problema,bulenta,Rare Skipper,PRO-SP,GENUS
+PROBYS,Problema,byssus,Byssus Skipper,PRO-SP,GENUS
+PYRALB,Pyrgus,albescens,White Checkered-Skipper,PYR-SP,GENUS
+PYRCEN,Pyrgus,centaureae,Grizzled Skipper,PYR-SP,GENUS
+PYRCEN,Pyrgus,centaureae,'Appalachian' Grizzled Skipper,PYR-SP,GENUS
+PYRCOM,Pyrgus,communis,Common Checkered-Skipper,PYR-SP,GENUS
+PYROIL,Pyrgus,oileus,Tropical Checkered-Skipper,PYR-SP,GENUS
+PYRPHI,Pyrgus,philetas,Desert Checkered-Skipper,PYR-SP,GENUS
+PYRRUR,Pyrgus,ruralis,Two-banded Checkered-Skipper,PYR-SP,GENUS
+PYRSCR,Pyrgus,scriptura,Small Checkered-Skipper,PYR-SP,GENUS
+PYRXAN,Pyrgus,xanthus,Mountain Checkered-Skipper,PYR-SP,GENUS
+REKMAR,Rekoa,marius,Marius Hairstreak,REK-SP,GENUS
+REKPAL,Rekoa,palegon,Gold-bordered Hairstreak,REK-SP,GENUS
+SATACA,Satyrium,acadica,Acadian Hairstreak,SAT-SP,GENUS
+SATAUR,Satyrium,auretorum,Gold-hunter's Hairstreak,SAT-SP,GENUS
+SATBEH,Satyrium,behrii,Behr's Hairstreak,SAT-SP,GENUS
+SATCA1,Satyrium,calanus,Banded Hairstreak,SAT-SP,GENUS
+SATCA2,Satyrium,californica,California Hairstreak,SAT-SP,GENUS
+SATCA3,Satyrium,caryaevorum,Hickory Hairstreak,SAT-SP,GENUS
+SATEDW,Satyrium,edwardsii,Edwards' Hairstreak,SAT-SP,GENUS
+SATFAV,Satyrium,favonius,Oak Hairstreak,SAT-SP,GENUS
+SATFAV,Satyrium,favonius,Southern' Oak Hairstreak,SAT-SP,GENUS
+SATFAV,Satyrium,favonius,Northern' Oak Hairstreak,SAT-SP,GENUS
+SATFUL,Satyrium,fulginosa,Sooty Hairstreak,SAT-SP,GENUS
+SATILA,Satyrium,ilavia,Ilavia Hairstreak,SAT-SP,GENUS
+SATKIN,Satyrium,kingi,King's Hairstreak,SAT-SP,GENUS
+SATLIP,Satyrium,liparops,Striped Hairstreak,SAT-SP,GENUS
+SATPOL,Satyrium,polingi,Poling's Hairstreak,SAT-SP,GENUS
+SATSAE,Satyrium,saepium,Hedgerow Hairstreak,SAT-SP,GENUS
+SATSYL,Satyrium,sylvinus,Sylvan Hairstreak,SAT-SP,GENUS
+SATTET,Satyrium,tetra,Mountain Mahogany Hairstreak,SAT-SP,GENUS
+SATTIT,Satyrium,titus,Coral Hairstreak,SAT-SP,GENUS
+SATYAPP,Satyrodes,appalachia,Appalachian Brown,SATY-SP,GENUS
+SATYEUR,Satyrodes,eurydice,Eyed Brown,SATY-SP,GENUS
+SIPEPA,Siproeta,epaphus,Rusty-tipped Page,SIP-SP,GENUS
+SIPSTE,Siproeta,stelenes,Malachite,SIP-SP,GENUS
+SPEYADI,Speyeria,adiaste,Unsilvered Fritillary,SPEY-SP,GENUS
+SPEYAPH,Speyeria,aphrodite,Aphrodite Fritillary,SPEY-SP,GENUS
+SPEYATL,Speyeria,atlantis,Atlantis Fritillary,SPEY-SP,GENUS
+SPEYATL,Speyeria,atlantis,Atlantis' Atlantis Fritillary,SPEY-SP,GENUS
+SPEYATL,Speyeria,atlantis,Hesperis' Atlantis Fritillary,SPEY-SP,GENUS
+SPEYATL,Speyeria,atlantis,Southwestern' Atlantis Fritillary,SPEY-SP,GENUS
+SPEYCAL,Speyeria,callippe,Callippe Fritillary,SPEY-SP,GENUS
+SPEYCOR,Speyeria,coronis,Coronis Fritillary,SPEY-SP,GENUS
+SPEYCYB,Speyeria,cybele,Great Spangled Fritillary,SPEY-SP,GENUS
+SPEYDIA,Speyeria,diana,Diana Fritillary,SPEY-SP,GENUS
+SPEYEDW,Speyeria,edwardsii,Edwards' Fritillary,SPEY-SP,GENUS
+SPEYEGL,Speyeria,egleis,Great Basin Fritillary,SPEY-SP,GENUS
+SPEYHYD,Speyeria,hydaspe,Hydaspe Fritillary,SPEY-SP,GENUS
+SPEYIDA,Speyeria,idalia,Regal Fritillary,SPEY-SP,GENUS
+SPEYMOR,Speyeria,mormonia,Mormon Fritillary,SPEY-SP,GENUS
+SPEYNOK,Speyeria,nokomis,Nokomis Fritillary,SPEY-SP,GENUS
+SPEYZER,Speyeria,zerene,Zerene Fritillary,SPEY-SP,GENUS
+SPEYZER,Speyeria,zerene,'Spring Mountains' Zerene Fritillary,SPEY-SP,GENUS
+STAPCEO,Staphylus,ceos,Golden-headed Scallopwing,STAP-SP,GENUS
+STAPHAY,Staphylus,hayhurstii,Hayhurst's Scallopwing,STAP-SP,GENUS
+STAPMAZ,Staphylus,mazans,Mazans Scallopwing,STAP-SP,GENUS
+STRACI,Strymon,acis,Bartram's Scrub-Hairstreak,STR-SP,GENUS
+STRALB,Strymon,albata,White Scrub-Hairstreak,STR-SP,GENUS
+STRALE,Strymon,alea,Lacey's Scrub-Hairstreak,STR-SP,GENUS
+STRAVA,Strymon,avalona,Avalon Scrub-Hairstreak,STR-SP,GENUS
+STRBAZ,Strymon,bazochii,Lantana Scrub-Hairstreak,STR-SP,GENUS
+STRBEB,Strymon,bebrycia,Red-lined Scrub-Hairstreak,STR-SP,GENUS
+STRCES,Strymon,cestri,Tailless Scrub-Hairstreak,STR-SP,GENUS
+STRIST,Strymon,istapa,Mallow Scrub-Hairstreak,STR-SP,GENUS
+STRLIM,Strymon,limenia,Disguised Scrub-Hairstreak,STR-SP,GENUS
+STRMAR,Strymon,martialis,Martial Scrub-Hairstreak,STR-SP,GENUS
+STRMEL,Strymon,melinus,Gray Hairstreak,STR-SP,GENUS
+STRRUF,Strymon,rufofusca,Red-crescent Scrub-Hairstreak,STR-SP,GENUS
+STRSER,Strymon,serapio,Bromeliad Scrub-Hairstreak,STR-SP,GENUS
+STRYOJ,Strymon,yojoa,Yojoa Scrub-Hairstreak,STR-SP,GENUS
+SYNMAL,Synapte,malitiosa,Malicious Skipper,SYN-SP,GENUS
+SYNSAL,Synapte,salenus,Salenus Skipper,SYN-SP,GENUS
+SYNSYR,Synapte,syraces,Faceted Skipper,SYN-SP,GENUS
+SYSPUL,Systasea,pulverulenta,Texas Powdered-Skipper,SYS-SP,GENUS
+SYSZAM,Systasea,zampa,Arizona Powdered-Skipper,SYS-SP,GENUS
+THOBAT,Thorybes,bathyllus,Southern Cloudywing,THO-SP,GENUS
+THOCON,Thorybes,confusis,Confused Cloudywing,THO-SP,GENUS
+THODIV,Thorybes,diversus,Western Cloudywing,THO-SP,GENUS
+THODRU,Thorybes,drusius,Drusius Cloudywing,THO-SP,GENUS
+THOMEX,Thorybes,mexicanus,Mexican Cloudywing,THO-SP,GENUS
+THOPYL,Thorybes,pylades,Northern Cloudywing,THO-SP,GENUS
+URBBEL,Urbanus,belli,Double-striped Longtail,URB-SP,GENUS
+URBDO1,Urbanus,dorantes,Dorantes Longtail,URB-SP,GENUS
+URBDO2,Urbanus,doryssus,White-tailed Longtail,URB-SP,GENUS
+URBESM,Urbanus,esmeraldus,Esmeralda Longtail,URB-SP,GENUS
+URBPR1,Urbanus,procne,Brown Longtail,URB-SP,GENUS
+URBPR2,Urbanus,pronus,Pronus Longtail,URB-SP,GENUS
+URBPR3,Urbanus,proteus,Long-tailed Skipper,URB-SP,GENUS
+URBSIM,Urbanus,simplicius,Plain Longtail,URB-SP,GENUS
+URBTAN,Urbanus,tanna,Tanna Longtail,URB-SP,GENUS
+URBTEL,Urbanus,teleus,Teleus Longtail,URB-SP,GENUS
+VANANN,Vanessa,annabella,West Coast Lady,VAN-SP,GENUS
+VANATA,Vanessa,atalanta,Red Admiral,VAN-SP,GENUS
+VANCAR,Vanessa,cardui,Painted Lady,VAN-SP,GENUS
+VANTAM,Vanessa,tameneamea,Kamehameha Lady,VAN-SP,GENUS
+VANVIR,Vanessa,virginiensis,American Lady,VAN-SP,GENUS
+WALEGE,Wallengrenia,egeremet,Northern Broken-Dash,WAL-SP,GENUS
+WALOTH,Wallengrenia,otho,Southern Broken-Dash,WAL-SP,GENUS
+ASTCEL,Asterocampa,celtis,Hackberry Emperor,SF-APAT,SUBFAMILY
+ASTCLY,Asterocampa,clyton,Tawny Emperor,SF-APAT,SUBFAMILY
+ASTIDY,Asterocampa,idyja,Cream-banded' Dusky Emperor,SF-APAT,SUBFAMILY
+ASTLEI,Asterocampa,leilia,Empress Leilia,SF-APAT,SUBFAMILY
+DOXLAU,Doxocopa,laure,Silver Emperor,SF-APAT,SUBFAMILY
+DOXPAV,Doxocopa,pavon,Pavon Emperor,SF-APAT,SUBFAMILY
+ANTCLO,Anteos,clorinde,White Angled-Sulphur,SF-COLI,SUBFAMILY
+ANTMAE,Anteos,maerula,Yellow Angled-Sulphur,SF-COLI,SUBFAMILY
+COLALE,Colias,alexandra,Queen Alexandra's Sulphur,SF-COLI,SUBFAMILY
+COLALE,Colias,alexandra,'Harford's' Queen Alexandra's Sulphur,SF-COLI,SUBFAMILY
+COLBEH,Colias,behrii,Sierra Sulphur,SF-COLI,SUBFAMILY
+COLBOO,Colias,boothi,Booth's Sulphur,SF-COLI,SUBFAMILY
+COLCAN,Colias,canadensis,Canadian Sulphur,SF-COLI,SUBFAMILY
+COLCES,Colias,cesonia,Southern Dogface,SF-COLI,SUBFAMILY
+COLCHR,Colias,christina,Christina's Sulphur,SF-COLI,SUBFAMILY
+COLEU1,Colias,eurydice,California Dogface,SF-COLI,SUBFAMILY
+COLEU2,Colias,eurytheme,Orange Sulphur,SF-COLI,SUBFAMILY
+COLGIG,Colias,gigantea,Giant Sulphur,SF-COLI,SUBFAMILY
+COLHEC,Colias,hecla,Hecla Sulphur,SF-COLI,SUBFAMILY
+COLINT,Colias,interior,Pink-edged Sulphur,SF-COLI,SUBFAMILY
+COLJOH,Colias,johanseni,Coppermine Sulphur,SF-COLI,SUBFAMILY
+COLMEA,Colias,meadii,Mead's Sulphur,SF-COLI,SUBFAMILY
+COLNAS,Colias,nastes,Labrador Sulphur,SF-COLI,SUBFAMILY
+COLOCC,Colias,occidentalis,Western Sulphur,SF-COLI,SUBFAMILY
+COLPAL,Colias,palaeno,Palaeno Sulphur,SF-COLI,SUBFAMILY
+COLPEL,Colias,pelidne,Pelidne Sulphur,SF-COLI,SUBFAMILY
+COLPHI,Colias,philodice,Clouded Sulphur,SF-COLI,SUBFAMILY
+COLSCU,Colias,scudderi,Scudder's Sulphur,SF-COLI,SUBFAMILY
+EURALB,Eurema,albula,Ghost Yellow,SF-COLI,SUBFAMILY
+EURBOI,Eurema,boisduvaliana,Boisduval's Yellow,SF-COLI,SUBFAMILY
+EURDAI,Eurema,daira,Barred Yellow,SF-COLI,SUBFAMILY
+EURDIN,Eurema,dina,Dina Yellow,SF-COLI,SUBFAMILY
+EURLIS,Eurema,lisa,Little Yellow,SF-COLI,SUBFAMILY
+EURMES,Eurema,messalina,Shy Yellow,SF-COLI,SUBFAMILY
+EURMEX,Eurema,mexicana,Mexican Yellow,SF-COLI,SUBFAMILY
+EURNIC,Eurema,nicippe,Sleepy Orange,SF-COLI,SUBFAMILY
+EURNIS,Eurema,nise,Mimosa Yellow,SF-COLI,SUBFAMILY
+EURPRO,Eurema,proterpia,Tailed Orange,SF-COLI,SUBFAMILY
+EURSAL,Eurema,salome,Salome Yellow,SF-COLI,SUBFAMILY
+KRILYS,Kricogonia,lyside,Lyside Sulphur,SF-COLI,SUBFAMILY
+NATIOL,Nathalis,iole,Dainty Sulphur,SF-COLI,SUBFAMILY
+PHOEAGA,Phoebis,agarithe,Large Orange Sulphur,SF-COLI,SUBFAMILY
+PHOENEO,Phoebis,neocypris,Tailed Sulphur,SF-COLI,SUBFAMILY
+PHOEORB,Phoebis,orbis,Orbed Sulphur,SF-COLI,SUBFAMILY
+PHOEPHI,Phoebis,philea,Orange-barred Sulphur,SF-COLI,SUBFAMILY
+PHOESEN,Phoebis,sennae,Cloudless Sulphur,SF-COLI,SUBFAMILY
+PHOESTA,Phoebis,statira,Statira Sulphur,SF-COLI,SUBFAMILY
+AGRAVAN,Agraulis,vanillae,Gulf Fritillary,SF-HELI,SUBFAMILY
+BOLOALB,Boloria,alberta,Alberta Fritillary,SF-HELI,SUBFAMILY
+BOLOAST,Boloria,astarte,Astarte Fritillary,SF-HELI,SUBFAMILY
+BOLOAST,Boloria,astarte,Distinct' Astarte Fritillary,SF-HELI,SUBFAMILY
+BOLOBEL,Boloria,bellona,Meadow Fritillary,SF-HELI,SUBFAMILY
+BOLOCHA,Boloria,chariclea,Arctic Fritillary,SF-HELI,SUBFAMILY
+BOLOEPI,Boloria,epithore,Pacific Fritillary,SF-HELI,SUBFAMILY
+BOLOEUN,Boloria,eunomia,Bog Fritillary,SF-HELI,SUBFAMILY
+BOLOFRE,Boloria,freija,Freija Fritillary,SF-HELI,SUBFAMILY
+BOLOFRI,Boloria,frigga,Frigga Fritillary,SF-HELI,SUBFAMILY
+BOLOIMP,Boloria,improba,Dingy Fritillary,SF-HELI,SUBFAMILY
+BOLOIMP,Boloria,improba,'Wind River' Dingy Fritillary,SF-HELI,SUBFAMILY
+BOLOKRI,Boloria,kriemhild,Relict Fritillary,SF-HELI,SUBFAMILY
+BOLOMON,Boloria,montinus,Purplish Fritillary,SF-HELI,SUBFAMILY
+BOLONAP,Boloria,napaea,Mountain Fritillary,SF-HELI,SUBFAMILY
+BOLONAT,Boloria,natazhati,Cryptic Fritillary,SF-HELI,SUBFAMILY
+BOLOPOL,Boloria,polaris,Polaris Fritillary,SF-HELI,SUBFAMILY
+BOLOSEL,Boloria,selene,Silver-bordered Fritillary,SF-HELI,SUBFAMILY
+DIOMON,Dione,moneta,Mexican Silverspot,SF-HELI,SUBFAMILY
+DRYAJUL,Dryas,iulia,Julia Heliconian,SF-HELI,SUBFAMILY
+DRYPHA,Dryadula,phaetusa,Banded Orange Heliconian,SF-HELI,SUBFAMILY
+EUEISA,Eueides,isabella,Isabella's Heliconian,SF-HELI,SUBFAMILY
+EUPTCLA,Euptoieta,claudia,Variegated Fritillary,SF-HELI,SUBFAMILY
+EUPTHEG,Euptoieta,hegesia,Mexican Fritillary,SF-HELI,SUBFAMILY
+HELCHA,Heliconius,charithonia,Zebra Heliconian,SF-HELI,SUBFAMILY
+HELERA,Heliconius,erato,Erato Heliconian,SF-HELI,SUBFAMILY
+S-BOAC,Boloria,improba acrocnema,Uncompahgre' Dingy Fritillary,SF-HELI,SUBFAMILY
+SPEYADI,Speyeria,adiaste,Unsilvered Fritillary,SF-HELI,SUBFAMILY
+SPEYAPH,Speyeria,aphrodite,Aphrodite Fritillary,SF-HELI,SUBFAMILY
+SPEYATL,Speyeria,atlantis,Atlantis Fritillary,SF-HELI,SUBFAMILY
+SPEYATL,Speyeria,atlantis,Atlantis' Atlantis Fritillary,SF-HELI,SUBFAMILY
+SPEYATL,Speyeria,atlantis,Hesperis' Atlantis Fritillary,SF-HELI,SUBFAMILY
+SPEYATL,Speyeria,atlantis,Southwestern' Atlantis Fritillary,SF-HELI,SUBFAMILY
+SPEYCAL,Speyeria,callippe,Callippe Fritillary,SF-HELI,SUBFAMILY
+SPEYCOR,Speyeria,coronis,Coronis Fritillary,SF-HELI,SUBFAMILY
+SPEYCYB,Speyeria,cybele,Great Spangled Fritillary,SF-HELI,SUBFAMILY
+SPEYDIA,Speyeria,diana,Diana Fritillary,SF-HELI,SUBFAMILY
+SPEYEDW,Speyeria,edwardsii,Edwards' Fritillary,SF-HELI,SUBFAMILY
+SPEYEGL,Speyeria,egleis,Great Basin Fritillary,SF-HELI,SUBFAMILY
+SPEYHYD,Speyeria,hydaspe,Hydaspe Fritillary,SF-HELI,SUBFAMILY
+SPEYIDA,Speyeria,idalia,Regal Fritillary,SF-HELI,SUBFAMILY
+SPEYMOR,Speyeria,mormonia,Mormon Fritillary,SF-HELI,SUBFAMILY
+SPEYNOK,Speyeria,nokomis,Nokomis Fritillary,SF-HELI,SUBFAMILY
+SPEYZER,Speyeria,zerene,Zerene Fritillary,SF-HELI,SUBFAMILY
+SPEYZER,Speyeria,zerene,'Spring Mountains' Zerene Fritillary,SF-HELI,SUBFAMILY
+ADOPRI,Adopaeoides,prittwitzi,Sunrise Skipper,SF-HESP,SUBFAMILY
+AMBAEN,Amblyscirtes,aenus,Bronze Roadside-Skipper,SF-HESP,SUBFAMILY
+AMBAES,Amblyscirtes,aesculapius,Lace-winged Roadside-Skipper,SF-HESP,SUBFAMILY
+AMBALT,Amblyscirtes,alternata,Dusky Roadside-Skipper,SF-HESP,SUBFAMILY
+AMBBEL,Amblyscirtes,belli,Bell's Roadside-Skipper,SF-HESP,SUBFAMILY
+AMBCAR,Amblyscirtes,carolina,Carolina Roadside-Skipper,SF-HESP,SUBFAMILY
+AMBCAS,Amblyscirtes,cassus,Cassus Roadside-Skipper,SF-HESP,SUBFAMILY
+AMBCEL,Amblyscirtes,celia,Celia's Roadside-Skipper,SF-HESP,SUBFAMILY
+AMBELI,Amblyscirtes,elissa,Elissa Roadside-Skipper,SF-HESP,SUBFAMILY
+AMBEOS,Amblyscirtes,eos,Dotted Roadside-Skipper,SF-HESP,SUBFAMILY
+AMBEXO,Amblyscirtes,exoteria,Large Roadside-Skipper,SF-HESP,SUBFAMILY
+AMBFIM,Amblyscirtes,fimbriata,Orange-edged Roadside-Skipper,SF-HESP,SUBFAMILY
+AMBHEG,Amblyscirtes,hegon,Pepper and Salt Skipper,SF-HESP,SUBFAMILY
+AMBLIN,Amblyscirtes,linda,Linda's Roadside-Skipper,SF-HESP,SUBFAMILY
+AMBNER,Amblyscirtes,nereus,Slaty Roadside-Skipper,SF-HESP,SUBFAMILY
+AMBNYS,Amblyscirtes,nysa,Nysa Roadside-Skipper,SF-HESP,SUBFAMILY
+AMBOSL,Amblyscirtes,oslari,Oslar's Roadside-Skipper,SF-HESP,SUBFAMILY
+AMBPHY,Amblyscirtes,phylace,Orange-headed Roadside-Skipper,SF-HESP,SUBFAMILY
+AMBREV,Amblyscirtes,reversa,Reversed Roadside-Skipper,SF-HESP,SUBFAMILY
+AMBSIM,Amblyscirtes,simius,Simius Roadside-Skipper,SF-HESP,SUBFAMILY
+AMBTEX,Amblyscirtes,texanae,Texas Roadside-Skipper,SF-HESP,SUBFAMILY
+AMBTOL,Amblyscirtes,tolteca,Toltec Roadside-Skipper,SF-HESP,SUBFAMILY
+AMBTOL,Amblyscirtes,tolteca,Prenda' Toltec Roadside-Skipper,SF-HESP,SUBFAMILY
+AMBVIA,Amblyscirtes,vialis,Common Roadside-Skipper,SF-HESP,SUBFAMILY
+ANATLOG,Anatrytone,logan,Delaware Skipper,SF-HESP,SUBFAMILY
+ANATMAZ,Anatrytone,mazai,Glowing Skipper,SF-HESP,SUBFAMILY
+ANCARE,Ancyloxypha,arene,Tropical Least Skipper,SF-HESP,SUBFAMILY
+ANCNUM,Ancyloxypha,numitor,Least Skipper,SF-HESP,SUBFAMILY
+ASBCAP,Asbolis,capucinus,Monk Skipper,SF-HESP,SUBFAMILY
+ATACAM,Atalopedes,campestris,Sachem,SF-HESP,SUBFAMILY
+ATRARO,Atrytone,arogos,Arogos Skipper,SF-HESP,SUBFAMILY
+ATRYCES,Atrytonopsis,cestus,Cestus Skipper,SF-HESP,SUBFAMILY
+ATRYDEV,Atrytonopsis,deva,Deva Skipper,SF-HESP,SUBFAMILY
+ATRYEDW,Atrytonopsis,edwardsii,Sheep Skipper,SF-HESP,SUBFAMILY
+ATRYHIA,Atrytonopsis,hianna,Dusted Skipper,SF-HESP,SUBFAMILY
+ATRYLUN,Atrytonopsis,lunus,Moon-marked Skipper,SF-HESP,SUBFAMILY
+ATRYPIT,Atrytonopsis,pittacus,White-barred Skipper,SF-HESP,SUBFAMILY
+ATRYPYT,Atrytonopsis,python,Python Skipper,SF-HESP,SUBFAMILY
+ATRYVIE,Atrytonopsis,vierecki,Viereck's Skipper,SF-HESP,SUBFAMILY
+CALPETH,Calpodes,ethlius,Brazilian Skipper,SF-HESP,SUBFAMILY
+CONCHY,Conga,chydaea,Hidden-ray Skipper,SF-HESP,SUBFAMILY
+COPAUR,Copaeodes,aurantiacus,Orange Skipperling,SF-HESP,SUBFAMILY
+COPMIN,Copaeodes,minimus,Southern Skipperling,SF-HESP,SUBFAMILY
+CORCOR,Corticea,corticea,Redundant Skipper,SF-HESP,SUBFAMILY
+CYMODI,Cymaenes,odilia,Fawn-spotted Skipper,SF-HESP,SUBFAMILY
+CYMTRI,Cymaenes,tripunctus,Three-spotted Skipper,SF-HESP,SUBFAMILY
+DECPER,Decinea,percosius,Double-dotted Skipper,SF-HESP,SUBFAMILY
+ERITHR,Erionota,thrax,Banana Skipper,SF-HESP,SUBFAMILY
+EUPYARP,Euphyes,arpa,Palmetto Skipper,SF-HESP,SUBFAMILY
+EUPYBAY,Euphyes,bayensis,Bay Skipper,SF-HESP,SUBFAMILY
+EUPYBER,Euphyes,berryi,Berry's Skipper,SF-HESP,SUBFAMILY
+EUPYBIM,Euphyes,bimacula,Two-spotted Skipper,SF-HESP,SUBFAMILY
+EUPYCON,Euphyes,conspicua,Black Dash,SF-HESP,SUBFAMILY
+EUPYDIO,Euphyes,dion,Dion Skipper,SF-HESP,SUBFAMILY
+EUPYDUK,Euphyes,dukesi,Dukes' Skipper,SF-HESP,SUBFAMILY
+EUPYPIL,Euphyes,pilatka,Palatka Skipper,SF-HESP,SUBFAMILY
+EUPYVES,Euphyes,vestris,Dun Skipper,SF-HESP,SUBFAMILY
+HESATT,Hesperia,attalus,Dotted Skipper,SF-HESP,SUBFAMILY
+HESCOL,Hesperia,columbia,Columbian Skipper,SF-HESP,SUBFAMILY
+HESCOM,Hesperia,comma,Common Branded Skipper,SF-HESP,SUBFAMILY
+HESDAC,Hesperia,dacotae,Dakota Skipper,SF-HESP,SUBFAMILY
+HESJUB,Hesperia,juba,Juba Skipper,SF-HESP,SUBFAMILY
+HESLEO,Hesperia,leonardus,Leonard's Skipper,SF-HESP,SUBFAMILY
+HESLIN,Hesperia,lindseyi,Lindsey's Skipper,SF-HESP,SUBFAMILY
+HESMES,Hesperia,meskei,Meske's Skipper,SF-HESP,SUBFAMILY
+HESMET,Hesperia,metea,Cobweb Skipper,SF-HESP,SUBFAMILY
+HESMIR,Hesperia,miriamae,Sierra Skipper,SF-HESP,SUBFAMILY
+HESNEV,Hesperia,nevada,Nevada Skipper,SF-HESP,SUBFAMILY
+HESOTT,Hesperia,ottoe,Ottoe Skipper,SF-HESP,SUBFAMILY
+HESPAH,Hesperia,pahaska,Pahaska Skipper,SF-HESP,SUBFAMILY
+HESSAS,Hesperia,sassacus,Indian Skipper,SF-HESP,SUBFAMILY
+HESUNC,Hesperia,uncas,Uncas Skipper,SF-HESP,SUBFAMILY
+HESVIR,Hesperia,viridis,Green Skipper,SF-HESP,SUBFAMILY
+HESWOO,Hesperia,woodgatei,Apache Skipper,SF-HESP,SUBFAMILY
+HYLPHY,Hylephila,phyleus,Fiery Skipper,SF-HESP,SUBFAMILY
+LERACC,Lerema,accius,Clouded Skipper,SF-HESP,SUBFAMILY
+LERLIR,Lerema,liris,Liris Skipper,SF-HESP,SUBFAMILY
+LEROARA,Lerodea,arabus,Violet-clouded Skipper,SF-HESP,SUBFAMILY
+LERODYS,Lerodea,dysaules,Olive-clouded Skipper,SF-HESP,SUBFAMILY
+LEROEUF,Lerodea,eufala,Eufala Skipper,SF-HESP,SUBFAMILY
+MONTYR,Monca,tyrtaeus,Violet-patched Skipper,SF-HESP,SUBFAMILY
+NASJUL,Nastra,julia,Julia's Skipper,SF-HESP,SUBFAMILY
+NASLHE,Nastra,lherminier,Swarthy Skipper,SF-HESP,SUBFAMILY
+NASNEA,Nastra,neamathla,Neamathla Skipper,SF-HESP,SUBFAMILY
+NYCNYC,Nyctelius,nyctelius,Violet-banded Skipper,SF-HESP,SUBFAMILY
+OAREDW,Oarisma,edwardsii,Edwards' Skipperling,SF-HESP,SUBFAMILY
+OARGAR,Oarisma,garita,Garita Skipperling,SF-HESP,SUBFAMILY
+OARPOW,Oarisma,poweshiek,Poweshiek Skipperling,SF-HESP,SUBFAMILY
+OCHAGR,Ochlodes,agricola,Rural Skipper,SF-HESP,SUBFAMILY
+OCHSYL,Ochlodes,sylvanoides,Woodland Skipper,SF-HESP,SUBFAMILY
+OCHYUM,Ochlodes,yuma,Yuma Skipper,SF-HESP,SUBFAMILY
+OLIMAC,Oligoria,maculata,Twin-spot Skipper,SF-HESP,SUBFAMILY
+PANERR,Panoquina,errans,Wandering Skipper,SF-HESP,SUBFAMILY
+PANFUS,Panoquina,fusina,Evans' Skipper,SF-HESP,SUBFAMILY
+PANHEC,Panoquina,hecebola,Hecebolus Skipper,SF-HESP,SUBFAMILY
+PANOCO,Panoquina,ocola,Ocola Skipper,SF-HESP,SUBFAMILY
+PANPA1,Panoquina,panoquin,Salt Marsh Skipper,SF-HESP,SUBFAMILY
+PANPA2,Panoquina,panoquinoides,Obscure Skipper,SF-HESP,SUBFAMILY
+PANSYL,Panoquina,sylvicola,Purple-washed Skipper,SF-HESP,SUBFAMILY
+PARASNO,Paratrytone,snowi,Snow's Skipper,SF-HESP,SUBFAMILY
+PERPHI,Perichares,philetes,Green-backed Ruby-eye,SF-HESP,SUBFAMILY
+POAAAR,Poanes,aaroni,Aaron's Skipper,SF-HESP,SUBFAMILY
+POAHOB,Poanes,hobomok,Hobomok Skipper,SF-HESP,SUBFAMILY
+POAMAS,Poanes,massasoit,Mulberry Wing,SF-HESP,SUBFAMILY
+POAMEL,Poanes,melane,Umber Skipper,SF-HESP,SUBFAMILY
+POATAX,Poanes,taxiles,Taxiles Skipper,SF-HESP,SUBFAMILY
+POAVIA,Poanes,viator,Broad-winged Skipper,SF-HESP,SUBFAMILY
+POAYEH,Poanes,yehl,Yehl Skipper,SF-HESP,SUBFAMILY
+POAZAB,Poanes,zabulon,Zabulon Skipper,SF-HESP,SUBFAMILY
+POLIBAR,Polites,baracoa,Baracoa Skipper,SF-HESP,SUBFAMILY
+POLICAR,Polites,carus,Carus Skipper,SF-HESP,SUBFAMILY
+POLIDRA,Polites,draco,Draco Skipper,SF-HESP,SUBFAMILY
+POLIMAR,Polites,mardon,Mardon Skipper,SF-HESP,SUBFAMILY
+POLIMYS,Polites,mystic,Long Dash,SF-HESP,SUBFAMILY
+POLIORI,Polites,origenes,Crossline Skipper,SF-HESP,SUBFAMILY
+POLIPEC,Polites,peckius,Peck's Skipper,SF-HESP,SUBFAMILY
+POLIRHE,Polites,rhesus,Rhesus Skipper,SF-HESP,SUBFAMILY
+POLISAB,Polites,sabuleti,Sandhill Skipper,SF-HESP,SUBFAMILY
+POLISON,Polites,sonora,Sonoran Skipper,SF-HESP,SUBFAMILY
+POLITHE,Polites,themistocles,Tawny-edged Skipper,SF-HESP,SUBFAMILY
+POLIVIB,Polites,vibex,Whirlabout,SF-HESP,SUBFAMILY
+POMVER,Pompeius,verna,Little Glassywing,SF-HESP,SUBFAMILY
+PROBUL,Problema,bulenta,Rare Skipper,SF-HESP,SUBFAMILY
+PROBYS,Problema,byssus,Byssus Skipper,SF-HESP,SUBFAMILY
+PSEEUN,Pseudocopaeodes,eunus,Alkali Skipper,SF-HESP,SUBFAMILY
+QUAEUL,Quasimellana,eulogius,Common Mellana,SF-HESP,SUBFAMILY
+RHIOSC,Rhinthon,osca,Osca Skipper,SF-HESP,SUBFAMILY
+STIMOR,Stinga,morrisoni,Morrison's Skipper,SF-HESP,SUBFAMILY
+SYNMAL,Synapte,malitiosa,Malicious Skipper,SF-HESP,SUBFAMILY
+SYNSAL,Synapte,salenus,Salenus Skipper,SF-HESP,SUBFAMILY
+SYNSYR,Synapte,syraces,Faceted Skipper,SF-HESP,SUBFAMILY
+THEMAC,Thespieus,macareus,Chestnut-marked Skipper,SF-HESP,SUBFAMILY
+THYLIN,Thymelicus,lineola,European Skipper,SF-HESP,SUBFAMILY
+VETFAN,Vettius,fantasos,Fantastic Skipper,SF-HESP,SUBFAMILY
+VIDPER,Vidius,perigenes,Pale-rayed Skipper,SF-HESP,SUBFAMILY
+WALEGE,Wallengrenia,egeremet,Northern Broken-Dash,SF-HESP,SUBFAMILY
+WALOTH,Wallengrenia,otho,Southern Broken-Dash,SF-HESP,SUBFAMILY
+CARTPAL,Carterocephalus,palaemon,Arctic Skipper,SF-HETE,SUBFAMILY
+PIRCIN,Piruna,cingo,Many-spotted Skipperling,SF-HETE,SUBFAMILY
+PIRHAF,Piruna,haferniki,Chisos Skipperling,SF-HETE,SUBFAMILY
+PIRMIC,Piruna,microstictus,Small-spotted Skipperling,SF-HETE,SUBFAMILY
+PIRPIR,Piruna,pirus,Russet Skipperling,SF-HETE,SUBFAMILY
+PIRPOL,Piruna,polingi,Four-spotted Skipperling,SF-HETE,SUBFAMILY
+ADEBAS,Adelpha,basiloides,Spot-celled Sister,SF-LIME,SUBFAMILY
+ADEBRE,Adelpha,bredowii,California Sister,SF-LIME,SUBFAMILY
+ADEFES,Adelpha,fessonia,Band-celled Sister,SF-LIME,SUBFAMILY
+BIBHYP,Biblis,hyperia,Red Rim,SF-LIME,SUBFAMILY
+DYNDYO,Dynamine,dyonis,Blue-eyed Sailor,SF-LIME,SUBFAMILY
+EPIADR,Epiphile,adrasta,Common Banner,SF-LIME,SUBFAMILY
+EUNMON,Eunica,monima,Dingy Purplewing,SF-LIME,SUBFAMILY
+EUNTAT,Eunica,tatila,Florida Purplewing,SF-LIME,SUBFAMILY
+HAMAM1,Hamadryas,amphichloe,Pale Cracker,SF-LIME,SUBFAMILY
+HAMAM2,Hamadryas,amphinome,Red Cracker,SF-LIME,SUBFAMILY
+HAMATL,Hamadryas,atlantis,Black-patched Cracker,SF-LIME,SUBFAMILY
+HAMFEB,Hamadryas,februa,Gray Cracker,SF-LIME,SUBFAMILY
+HAMFER,Hamadryas,feronia,Variable Cracker,SF-LIME,SUBFAMILY
+HAMGLA,Hamadryas,glauconome,Glaucous Cracker,SF-LIME,SUBFAMILY
+HAMGUA,Hamadryas,guatemalena,Guatemalan Cracker,SF-LIME,SUBFAMILY
+HISACH,Historis,acheronta,Tailed Cecropian,SF-LIME,SUBFAMILY
+HISODI,Historis,odius,Orion Cecropian,SF-LIME,SUBFAMILY
+LIMARC,Limenitis,archippus,Viceroy,SF-LIME,SUBFAMILY
+LIMART,Limenitis,arthemis,Red-spotted Admiral,SF-LIME,SUBFAMILY
+LIMLOR,Limenitis,lorquini,Lorquin's Admiral,SF-LIME,SUBFAMILY
+LIMWEI,Limenitis,weidemeyerii,Weidemeyer's Admiral,SF-LIME,SUBFAMILY
+MARCHI,Marpesia,chiron,Many-banded Daggerwing,SF-LIME,SUBFAMILY
+MARCOR,Marpesia,coresia,Waiter Daggerwing,SF-LIME,SUBFAMILY
+MARELE,Marpesia,eleuchea,Antillean Daggerwing,SF-LIME,SUBFAMILY
+MARPET,Marpesia,petreus,Ruddy Daggerwing,SF-LIME,SUBFAMILY
+MESAMY,Mestra,amymone,Common Mestra,SF-LIME,SUBFAMILY
+MYSCYA,Myscelia,cyananthe,Blackened Bluewing,SF-LIME,SUBFAMILY
+MYSETH,Myscelia,ethusa,Mexican Bluewing,SF-LIME,SUBFAMILY
+S-LIAR,Limenitis,arthemis arthemis,White Admiral,SF-LIME,SUBFAMILY
+S-LIAS,Limenitis,arthemis astyanax,Red-spotted Purple,SF-LIME,SUBFAMILY
+SMYBLO,Smyrna,blomfildia,Blomfild's Beauty,SF-LIME,SUBFAMILY
+AGAALL,Agathymus,alliae,Mojave Giant-Skipper,SF-MEGA,SUBFAMILY
+AGAARY,Agathymus,aryxna,Arizona Giant-Skipper,SF-MEGA,SUBFAMILY
+AGAEVA,Agathymus,evansi,Huachuca Giant-Skipper,SF-MEGA,SUBFAMILY
+AGAMAR,Agathymus,mariae,Mary's Giant-Skipper,SF-MEGA,SUBFAMILY
+AGANEU,Agathymus,neumoegeni,Orange Giant-Skipper,SF-MEGA,SUBFAMILY
+AGAPOL,Agathymus,polingi,Poling's Giant-Skipper,SF-MEGA,SUBFAMILY
+AGAREM,Agathymus,remingtoni,Coahuila Giant-Skipper,SF-MEGA,SUBFAMILY
+AGASTE,Agathymus,stephensi,California Giant-Skipper,SF-MEGA,SUBFAMILY
+MEGCOF,Megathymus,cofaqui,Cofaqui Giant-Skipper,SF-MEGA,SUBFAMILY
+MEGSTR,Megathymus,streckeri,Strecker's Giant-Skipper,SF-MEGA,SUBFAMILY
+MEGURS,Megathymus,ursus,Ursine Giant-Skipper,SF-MEGA,SUBFAMILY
+MEGYUC,Megathymus,yuccae,Yucca Giant-Skipper,SF-MEGA,SUBFAMILY
+STAMAC,Stallingsia,maculosa,Manfreda Giant-Skipper,SF-MEGA,SUBFAMILY
+ANARCHR,Anartia,chrysopelea,Cuban Peacock,SF-NYMP,SUBFAMILY
+ANARFAT,Anartia,fatima,Banded Peacock,SF-NYMP,SUBFAMILY
+ANARJAT,Anartia,jatrophae,White Peacock,SF-NYMP,SUBFAMILY
+CHLOACA,Chlosyne,acastus,Sagebrush Checkerspot,SF-NYMP,SUBFAMILY
+CHLOCAL,Chlosyne,californica,California Patch,SF-NYMP,SUBFAMILY
+CHLOCHI,Chlosyne,chinatiensis,Chinati Checkerspot,SF-NYMP,SUBFAMILY
+CHLOCYN,Chlosyne,cyneas,Black Checkerspot,SF-NYMP,SUBFAMILY
+CHLODEF,Chlosyne,definita,Definite Patch,SF-NYMP,SUBFAMILY
+CHLOEND,Chlosyne,endeis,Banded Patch,SF-NYMP,SUBFAMILY
+CHLOFUL,Chlosyne,fulvia,Fulvia Checkerspot,SF-NYMP,SUBFAMILY
+CHLOGAB,Chlosyne,gabbii,Gabb's Checkerspot,SF-NYMP,SUBFAMILY
+CHLOGOR,Chlosyne,gorgone,Gorgone Checkerspot,SF-NYMP,SUBFAMILY
+CHLOHAR,Chlosyne,harrisii,Harris' Checkerspot,SF-NYMP,SUBFAMILY
+CHLOHOF,Chlosyne,hoffmanni,Hoffmann's Checkerspot,SF-NYMP,SUBFAMILY
+CHLOJAN,Chlosyne,janais,Crimson Patch,SF-NYMP,SUBFAMILY
+CHLOLAC,Chlosyne,lacinia,Bordered Patch,SF-NYMP,SUBFAMILY
+CHLOLEA,Chlosyne,leanira,Leanira Checkerspot,SF-NYMP,SUBFAMILY
+CHLOMAR,Chlosyne,marina,Red-spotted Patch,SF-NYMP,SUBFAMILY
+CHLONYC,Chlosyne,nycteis,Silvery Checkerspot,SF-NYMP,SUBFAMILY
+CHLOPAL,Chlosyne,palla,Northern Checkerspot,SF-NYMP,SUBFAMILY
+CHLOROS,Chlosyne,rosita,Rosita Patch,SF-NYMP,SUBFAMILY
+CHLOTHE,Chlosyne,theona,Theona Checkerspot,SF-NYMP,SUBFAMILY
+CHLOWHI,Chlosyne,whitneyi,Rockslide Checkerspot,SF-NYMP,SUBFAMILY
+DYMDYM,Dymasia,dymas,Tiny Checkerspot,SF-NYMP,SUBFAMILY
+EUPHCHA,Euphydryas,chalcedona,Variable Checkerspot,SF-NYMP,SUBFAMILY
+EUPHCHA,Euphydryas,chalcedona,Chalcedon' Variable Checkerspot,SF-NYMP,SUBFAMILY
+EUPHCHA,Euphydryas,chalcedona,'Snowberry' Variable Checkerspot,SF-NYMP,SUBFAMILY
+EUPHCHA,Euphydryas,chalcedona,Anicia' Variable Checkerspot,SF-NYMP,SUBFAMILY
+EUPHEDI,Euphydryas,editha,Edith's Checkerspot,SF-NYMP,SUBFAMILY
+EUPHGIL,Euphydryas,gillettii,Gillett's Checkerspot,SF-NYMP,SUBFAMILY
+EUPHPHA,Euphydryas,phaeton,Baltimore Checkerspot,SF-NYMP,SUBFAMILY
+HYPLMIS,Hypolimnas,misippus,Mimic,SF-NYMP,SUBFAMILY
+HYPNLET,Hypanartia,lethe,Orange Mapwing,SF-NYMP,SUBFAMILY
+JUNCOE,Junonia,coenia,Common Buckeye,SF-NYMP,SUBFAMILY
+JUNEVA,Junonia,evarete,Mangrove Buckeye,SF-NYMP,SUBFAMILY
+JUNGEN,Junonia,genoveva,Tropical Buckeye,SF-NYMP,SUBFAMILY
+MICELV,Microtia,elva,Elf,SF-NYMP,SUBFAMILY
+NYMANT,Nymphalis,antiopa,Mourning Cloak,SF-NYMP,SUBFAMILY
+NYMCAL,Nymphalis,californica,California Tortoiseshell,SF-NYMP,SUBFAMILY
+NYMMIL,Nymphalis,milberti,Milbert's Tortoiseshell,SF-NYMP,SUBFAMILY
+NYMURT,Nymphalis,urticae,Small Tortoiseshell,SF-NYMP,SUBFAMILY
+NYMVAU,Nymphalis,vaualbum,Compton Tortoiseshell,SF-NYMP,SUBFAMILY
+PHYARG,Phyciodes,argentea,Chestnut Crescent,SF-NYMP,SUBFAMILY
+PHYBAT,Phyciodes,batesii,Tawny Crescent,SF-NYMP,SUBFAMILY
+PHYCAM,Phyciodes,campestris,Field Crescent,SF-NYMP,SUBFAMILY
+PHYFRI,Phyciodes,frisia,Cuban Crescent,SF-NYMP,SUBFAMILY
+PHYMYL,Phyciodes,mylitta,Mylitta Crescent,SF-NYMP,SUBFAMILY
+PHYORS,Phyciodes,orseis,California Crescent,SF-NYMP,SUBFAMILY
+PHYPAL,Phyciodes,pallida,Pale Crescent,SF-NYMP,SUBFAMILY
+PHYPHA,Phyciodes,phaon,Phaon Crescent,SF-NYMP,SUBFAMILY
+PHYPIC,Phyciodes,picta,Painted Crescent,SF-NYMP,SUBFAMILY
+PHYPTO,Phyciodes,ptolyca,Black Crescent,SF-NYMP,SUBFAMILY
+PHYSEL,Phyciodes,selenis,Northern Crescent,SF-NYMP,SUBFAMILY
+PHYTEX,Phyciodes,texana,Texan Crescent,SF-NYMP,SUBFAMILY
+PHYTEX,Phyciodes,texana,'Texan' Texan Crescent,SF-NYMP,SUBFAMILY
+PHYTEX,Phyciodes,texana,Seminole' Texan Crescent,SF-NYMP,SUBFAMILY
+PHYTHA,Phyciodes,tharos,Pearl Crescent,SF-NYMP,SUBFAMILY
+PHYTUL,Phyciodes,tulcis,Pale-banded Crescent,SF-NYMP,SUBFAMILY
+PHYVES,Phyciodes,vesta,Vesta Crescent,SF-NYMP,SUBFAMILY
+POLARA,Polyadryas,arachne,Arachne Checkerspot,SF-NYMP,SUBFAMILY
+POLMIN,Poladryas,minuta,Dotted Checkerspot,SF-NYMP,SUBFAMILY
+POLYCOM,Polygonia,comma,Eastern Comma,SF-NYMP,SUBFAMILY
+POLYFAU,Polygonia,faunus,Green Comma,SF-NYMP,SUBFAMILY
+POLYFAU,Polygonia,faunus,'Green' Green Comma,SF-NYMP,SUBFAMILY
+POLYFAU,Polygonia,faunus,'Sylvan' Green Comma,SF-NYMP,SUBFAMILY
+POLYGRA,Polygonia,gracilis,Hoary Comma,SF-NYMP,SUBFAMILY
+POLYGRA,Polygonia,gracilis,Zephyr' Hoary Comma,SF-NYMP,SUBFAMILY
+POLYINT,Polygonia,interrogationis,Question Mark,SF-NYMP,SUBFAMILY
+POLYORE,Polygonia,oreas,Oreas Comma,SF-NYMP,SUBFAMILY
+POLYPRO,Polygonia,progne,Gray Comma,SF-NYMP,SUBFAMILY
+POLYSAT,Polygonia,satyrus,Satyr Comma,SF-NYMP,SUBFAMILY
+SIPEPA,Siproeta,epaphus,Rusty-tipped Page,SF-NYMP,SUBFAMILY
+SIPSTE,Siproeta,stelenes,Malachite,SF-NYMP,SUBFAMILY
+TEXELA,Texola,elada,Elada Checkerspot,SF-NYMP,SUBFAMILY
+VANANN,Vanessa,annabella,West Coast Lady,SF-NYMP,SUBFAMILY
+VANATA,Vanessa,atalanta,Red Admiral,SF-NYMP,SUBFAMILY
+VANCAR,Vanessa,cardui,Painted Lady,SF-NYMP,SUBFAMILY
+VANTAM,Vanessa,tameneamea,Kamehameha Lady,SF-NYMP,SUBFAMILY
+VANVIR,Vanessa,virginiensis,American Lady,SF-NYMP,SUBFAMILY
+BATPHI,Battus,philenor,Pipevine Swallowtail,SF-PAPI,SUBFAMILY
+BATPOL,Battus,polydamas,Polydamas Swallowtail,SF-PAPI,SUBFAMILY
+EURYMAR,Eurytides,marcellus,Zebra Swallowtail,SF-PAPI,SUBFAMILY
+EURYPHI,Eurytides,philolaus,Dark Kite-Swallowtail,SF-PAPI,SUBFAMILY
+PAPAN1,Papilio,andraemon,Bahamian Swallowtail,SF-PAPI,SUBFAMILY
+PAPAN2,Papilio,androgeus,Androgeus Swallowtail,SF-PAPI,SUBFAMILY
+PAPANC,Papilio,anchisiades,Ruby-spotted Swallowtail,SF-PAPI,SUBFAMILY
+PAPARI,Papilio,aristodemus,Schaus' Swallowtail,SF-PAPI,SUBFAMILY
+PAPAST,Papilio,astyalus,Broad-banded Swallowtail,SF-PAPI,SUBFAMILY
+PAPBRE,Papilio,brevicauda,Short-tailed Swallowtail,SF-PAPI,SUBFAMILY
+PAPCAN,Papilio,canadensis,Canadian Tiger Swallowtail,SF-PAPI,SUBFAMILY
+PAPCRE,Papilio,cresphontes,Giant Swallowtail,SF-PAPI,SUBFAMILY
+PAPEUR,Papilio,eurymedon,Pale Swallowtail,SF-PAPI,SUBFAMILY
+PAPGAR,Papilio,garamas,Magnificent Swallowtail,SF-PAPI,SUBFAMILY
+PAPGLA,Papilio,glaucus,Eastern Tiger Swallowtail,SF-PAPI,SUBFAMILY
+PAPIND,Papilio,indra,Indra Swallowtail,SF-PAPI,SUBFAMILY
+PAPJOA,Papilio,joanae,Ozark Swallowtail,SF-PAPI,SUBFAMILY
+PAPMAC,Papilio,machaon,Old World Swallowtail,SF-PAPI,SUBFAMILY
+PAPMAC,Papilio,machaon,'Baird's' Old World Swallowtail,SF-PAPI,SUBFAMILY
+PAPMAC,Papilio,machaon,'Oregon' Swallowtail,SF-PAPI,SUBFAMILY
+PAPMUL,Papilio,multicaudata,Two-tailed Swallowtail,SF-PAPI,SUBFAMILY
+PAPORN,Papilio,ornythion,Ornythion Swallowtail,SF-PAPI,SUBFAMILY
+PAPPAL,Papilio,palamedes,Palamedes Swallowtail,SF-PAPI,SUBFAMILY
+PAPPHA,Papilio,pharnaces,Pink-spotted Swallowtail,SF-PAPI,SUBFAMILY
+PAPPIL,Papilio,pilumnus,Three-tailed Swallowtail,SF-PAPI,SUBFAMILY
+PAPPOL,Papilio,polyxenes,Black Swallowtail,SF-PAPI,SUBFAMILY
+PAPPOL,Papilio,polyxenes,'Desert' Black Swallowtail,SF-PAPI,SUBFAMILY
+PAPRUT,Papilio,rutulus,Western Tiger Swallowtail,SF-PAPI,SUBFAMILY
+PAPTHO,Papilio,thoas,Thoas Swallowtail,SF-PAPI,SUBFAMILY
+PAPTRO,Papilio,troilus,Spicebush Swallowtail,SF-PAPI,SUBFAMILY
+PAPVIC,Papilio,victorinus,Victorine Swallowtail,SF-PAPI,SUBFAMILY
+PAPXUT,Papilio,xuthus,Chinese Swallowtail,SF-PAPI,SUBFAMILY
+PAPZEL,Papilio,zelicaon,Anise Swallowtail,SF-PAPI,SUBFAMILY
+PARALO,Parides,alopius,White-dotted Cattleheart,SF-PAPI,SUBFAMILY
+ANTHCET,Anthocharis,cethura,Desert Orangetip,SF-PIER,SUBFAMILY
+ANTHCET,Anthocharis,cethura,Pima Orangetip,SF-PIER,SUBFAMILY
+ANTHLAN,Anthocharis,lanceolata,Gray Marble,SF-PIER,SUBFAMILY
+ANTHMID,Anthocharis,midea,Falcate Orangetip,SF-PIER,SUBFAMILY
+ANTHSAR,Anthocharis,sara,Sara Orangetip,SF-PIER,SUBFAMILY
+ANTHSAR,Anthocharis,sara,'Pacific' Sara Orangetip,SF-PIER,SUBFAMILY
+ANTHSAR,Anthocharis,sara,'Stella' Sara Orangetip,SF-PIER,SUBFAMILY
+APPDRU,Appias,drusilla,Florida White,SF-PIER,SUBFAMILY
+ASCMON,Ascia,monuste,Great Southern White,SF-PIER,SUBFAMILY
+CATNIM,Catasticta,nimbice,Mexican Dartwhite,SF-PIER,SUBFAMILY
+EUCAUS,Euchloe,ausonides,Large Marble,SF-PIER,SUBFAMILY
+EUCCRE,Euchloe,creusa,Northern Marble,SF-PIER,SUBFAMILY
+EUCGUA,Euchloe,guaymasensis,Sonoran Marble,SF-PIER,SUBFAMILY
+EUCHYA,Euchloe,hyantis,Pearly Marble,SF-PIER,SUBFAMILY
+EUCHYA,Euchloe,hyantis,'California' Pearly Marble,SF-PIER,SUBFAMILY
+EUCHYA,Euchloe,hyantis,'Desert' Pearly Marble,SF-PIER,SUBFAMILY
+EUCNAI,Euchloe,naina,Green Marble,SF-PIER,SUBFAMILY
+EUCOLY,Euchloe,olympia,Olympia Marble,SF-PIER,SUBFAMILY
+GANHOW,Ganyra,howarthii,Howarth's White,SF-PIER,SUBFAMILY
+GANJOS,Ganyra,josephina,Giant White,SF-PIER,SUBFAMILY
+NEOPMEN,Neophasia,menapia,Pine White,SF-PIER,SUBFAMILY
+NEOPTER,Neophasia,terlootii,Chiricahua White,SF-PIER,SUBFAMILY
+PIENAP,Pieris,napi,Mustard White,SF-PIER,SUBFAMILY
+PIENAP,Pieris,napi,'Veined' Mustard White,SF-PIER,SUBFAMILY
+PIENAP,Pieris,napi,'Margined' Mustard White,SF-PIER,SUBFAMILY
+PIERAP,Pieris,rapae,Cabbage White,SF-PIER,SUBFAMILY
+PIEVIR,Pieris,virginiensis,West Virginia White,SF-PIER,SUBFAMILY
+PONBEC,Pontia,beckerii,Becker's White,SF-PIER,SUBFAMILY
+PONOCC,Pontia,occidentalis,Western White,SF-PIER,SUBFAMILY
+PONPRO,Pontia,protodice,Checkered White,SF-PIER,SUBFAMILY
+PONSIS,Pontia,sisymbrii,Spring White,SF-PIER,SUBFAMILY
+AGRCAS,Agriades,cassiope,Heather Blue,SF-POLY,SUBFAMILY
+AGRGLA,Agriades,glandon,Arctic Blue,SF-POLY,SUBFAMILY
+AGRGLA,Agriades,glandon,Glandon' Arctic Blue,SF-POLY,SUBFAMILY
+AGRGLA,Agriades,glandon,Mountain' Arctic Blue,SF-POLY,SUBFAMILY
+AGRGLA,Agriades,glandon,Sierra' Arctic Blue,SF-POLY,SUBFAMILY
+BREEXI,Brephidium,exile,Western Pygmy-Blue,SF-POLY,SUBFAMILY
+BREISO,Brephidium,isophthalma,Eastern Pygmy-Blue,SF-POLY,SUBFAMILY
+CELLAD,Celastrina,ladon,Spring Azure,SF-POLY,SUBFAMILY
+CELLAD,Celastrina,ladon,'Spring' Spring Azure,SF-POLY,SUBFAMILY
+CELLAD,Celastrina,ladon,'Edward's' Spring Azure,SF-POLY,SUBFAMILY
+CELLAD,Celastrina,ladon,Cherry Gall' Spring Azure,SF-POLY,SUBFAMILY
+CELLAD,Celastrina,ladon,'Atlantic' Spring Azure,SF-POLY,SUBFAMILY
+CELLAD,Celastrina,ladon,Hops' Spring Azure,SF-POLY,SUBFAMILY
+CELLAD,Celastrina,ladon,'Manitoba' Spring Azure,SF-POLY,SUBFAMILY
+CELLAD,Celastrina,ladon,Summer' Spring Azure,SF-POLY,SUBFAMILY
+CELNEG,Celastrina,neglectamajor,Appalachian Azure,SF-POLY,SUBFAMILY
+CELNIG,Celastrina,nigra,Dusky Azure,SF-POLY,SUBFAMILY
+EUPBAT,Euphilotes,battoides,Square-spotted Blue,SF-POLY,SUBFAMILY
+EUPBAT,Euphilotes,battoides,'El Segundo' Square-spotted Blue,SF-POLY,SUBFAMILY
+EUPBAT,Euphilotes,battoides,Bernardino' Square-spotted Blue,SF-POLY,SUBFAMILY
+EUPENO,Euphilotes,enoptes,Dotted Blue,SF-POLY,SUBFAMILY
+EUPENO,Euphilotes,enoptes,'Mojave' Dotted Blue,SF-POLY,SUBFAMILY
+EUPENO,Euphilotes,enoptes,Dammer's' Dotted Blue,SF-POLY,SUBFAMILY
+EUPRIT,Euphilotes,rita,Rita Blue,SF-POLY,SUBFAMILY
+EUPRIT,Euphilotes,rita,'Pale' Rita Blue,SF-POLY,SUBFAMILY
+EUPSPA,Euphilotes,spaldingi,Spalding's Blue,SF-POLY,SUBFAMILY
+EVEAMY,Everes,amyntula,Western Tailed-Blue,SF-POLY,SUBFAMILY
+EVECOM,Everes,comyntas,Eastern Tailed-Blue,SF-POLY,SUBFAMILY
+GLALYG,Glaucopsyche,lygdamus,Silvery Blue,SF-POLY,SUBFAMILY
+GLAPIA,Glaucopsyche,piasus,Arrowhead Blue,SF-POLY,SUBFAMILY
+GLAXER,Glaucopsyche,xerces,Xerces Blue,SF-POLY,SUBFAMILY
+HEMAMM,Hemiargus,ammon,Nickerbean Blue,SF-POLY,SUBFAMILY
+HEMCER,Hemiargus,ceraunus,Ceraunus Blue,SF-POLY,SUBFAMILY
+HEMISO,Hemiargus,isola,Reakirt's Blue,SF-POLY,SUBFAMILY
+HEMTHO,Hemiargus,thomasi,Miami Blue,SF-POLY,SUBFAMILY
+LAMBOE,Lampides,boeticus,Pea Blue,SF-POLY,SUBFAMILY
+LEPCAS,Leptotes,cassius,Cassius Blue,SF-POLY,SUBFAMILY
+LEPMAR,Leptotes,marina,Marine Blue,SF-POLY,SUBFAMILY
+LYCIDA,Lycaeides,idas,Northern Blue,SF-POLY,SUBFAMILY
+LYCMEL,Lycaeides,melissa,Melissa Blue,SF-POLY,SUBFAMILY
+PHILSPE,Philotiella,speciosa,Small Blue,SF-POLY,SUBFAMILY
+PHISON,Philotes,sonorensis,Sonoran Blue,SF-POLY,SUBFAMILY
+PLEACM,Plebejus,acmon,Acmon Blue,SF-POLY,SUBFAMILY
+PLEAMI,Plebejus,emigdionis,San Emigdio Blue,SF-POLY,SUBFAMILY
+PLEICA,Plebejus,icarioides,Boisduval's Blue,SF-POLY,SUBFAMILY
+PLEICA,Plebejus,icarioides,'Mission' Boisduval's Blue,SF-POLY,SUBFAMILY
+PLELUP,Plebejus,lupini,Lupine Blue,SF-POLY,SUBFAMILY
+PLENEU,Plebejus,neurona,Veined Blue,SF-POLY,SUBFAMILY
+PLESAE,Plebejus,saepiolus,Greenish Blue,SF-POLY,SUBFAMILY
+PLESHA,Plebejus,shasta,Shasta Blue,SF-POLY,SUBFAMILY
+S-LYSA,Lycaeides,melissa,Karner' Melissa Blue,SF-POLY,SUBFAMILY
+VACOPT,Vacciniina,optilete,Cranberry Blue,SF-POLY,SUBFAMILY
+VAGBLA,Vaga,blackburni,Hawaiian Blue,SF-POLY,SUBFAMILY
+ZIZCYN,Zizula,cyna,Cyna Blue,SF-POLY,SUBFAMILY
+ACHALB,Achalarus,albociliatus,Skinner's Cloudywing,SF-PYRG,SUBFAMILY
+ACHCAS,Achalarus,casica,Desert Cloudywing,SF-PYRG,SUBFAMILY
+ACHJAL,Achalarus,jalapus,Jalapus Cloudywing,SF-PYRG,SUBFAMILY
+ACHLTHR,Achlyodes,thraso,Sickle-winged Skipper,SF-PYRG,SUBFAMILY
+ACHLYC,Achalarus,lyciades,Hoary Edge,SF-PYRG,SUBFAMILY
+ACHTOX,Achalarus,toxeus,Coyote Cloudywing,SF-PYRG,SUBFAMILY
+AGUASA,Aguna,asander,Gold-spotted Aguna,SF-PYRG,SUBFAMILY
+AGUCLA,Aguna,claxon,Emerald Aguna,SF-PYRG,SUBFAMILY
+AGUMET,Aguna,metophis,Tailed Aguna,SF-PYRG,SUBFAMILY
+ANTIEMO,Antigonus,emorsus,White Spurwing,SF-PYRG,SUBFAMILY
+ARTTRA,Arteurotia,tractipennis,Starred Skipper,SF-PYRG,SUBFAMILY
+ASTRALA,Astraptes,alardus,Frosted Flasher,SF-PYRG,SUBFAMILY
+ASTRANA,Astraptes,anaphus,Yellow-tipped Flasher,SF-PYRG,SUBFAMILY
+ASTREGR,Astraptes,egregius,Small-spotted Flasher,SF-PYRG,SUBFAMILY
+ASTRFUL,Astraptes,fulgerator,Two-barred Flasher,SF-PYRG,SUBFAMILY
+ASTRGIL,Astraptes,gilberti,Gilbert's Flasher,SF-PYRG,SUBFAMILY
+AUTCEL,Autochton,cellus,Golden Banded-Skipper,SF-PYRG,SUBFAMILY
+AUTCIN,Autochton,cincta,Chisos Banded-Skipper,SF-PYRG,SUBFAMILY
+AUTPSE,Autochton,pseudocellus,Sonoran Banded-Skipper,SF-PYRG,SUBFAMILY
+BOLBRE,Bolla,brennus,Obscure Bolla,SF-PYRG,SUBFAMILY
+BOLCLY,Bolla,clytius,Mottled Bolla,SF-PYRG,SUBFAMILY
+CABPOT,Cabares,potrillo,Potrillo Skipper,SF-PYRG,SUBFAMILY
+CARRCAN,Carrhenes,canescens,Hoary Skipper,SF-PYRG,SUBFAMILY
+CELAFRI,Celaenorrhinus,fritzgaertneri,Fritzgaertner's Flat,SF-PYRG,SUBFAMILY
+CELASTA,Celaenorrhinus,stallingsi,Stallings' Flat,SF-PYRG,SUBFAMILY
+CELOLIM,Celotes,limpia,Scarce Streaky-Skipper,SF-PYRG,SUBFAMILY
+CELONES,Celotes,nessus,Common Streaky-Skipper,SF-PYRG,SUBFAMILY
+CHICAT,Chioides,catillus,White-striped Longtail,SF-PYRG,SUBFAMILY
+CHIOASY,Chiomara,asychis,White-patched Skipper,SF-PYRG,SUBFAMILY
+CHIOMIT,Chiomara,mithrax,Slaty Skipper,SF-PYRG,SUBFAMILY
+CHIZIL,Chioides,zilpa,Zilpa Longtail,SF-PYRG,SUBFAMILY
+CODALC,Codatractus,alcaeus,White-crescent Longtail,SF-PYRG,SUBFAMILY
+CODARI,Codatractus,arizonensis,Arizona Skipper,SF-PYRG,SUBFAMILY
+CODMYS,Codatractus,mysie,Valeriana Skipper,SF-PYRG,SUBFAMILY
+COGCAI,Cogia,caicus,Gold-costa Skipper,SF-PYRG,SUBFAMILY
+COGCAL,Cogia,calchas,Mimosa Skipper,SF-PYRG,SUBFAMILY
+COGHIP,Cogia,hippalus,Acacia Skipper,SF-PYRG,SUBFAMILY
+COGOUT,Cogia,outis,Outis Skipper,SF-PYRG,SUBFAMILY
+EPACLA,Epargyreus,clarus,Silver-spotted Skipper,SF-PYRG,SUBFAMILY
+EPAEXA,Epargyreus,exadeus,Broken Silverdrop,SF-PYRG,SUBFAMILY
+EPAZES,Epargyreus,zestos,Zestos Skipper,SF-PYRG,SUBFAMILY
+EPHBRU,Ephyriades,brunneus,Florida Duskywing,SF-PYRG,SUBFAMILY
+ERYAFR,Erynnis,afranius,Afranius Duskywing,SF-PYRG,SUBFAMILY
+ERYBAP,Erynnis,baptisiae,Wild Indigo Duskywing,SF-PYRG,SUBFAMILY
+ERYBRI,Erynnis,brizo,Sleepy Duskywing,SF-PYRG,SUBFAMILY
+ERYFUN,Erynnis,funeralis,Funereal Duskywing,SF-PYRG,SUBFAMILY
+ERYHOR,Erynnis,horatius,Horace's Duskywing,SF-PYRG,SUBFAMILY
+ERYICE,Erynnis,icelus,Dreamy Duskywing,SF-PYRG,SUBFAMILY
+ERYJUV,Erynnis,juvenalis,Juvenal's Duskywing,SF-PYRG,SUBFAMILY
+ERYJUV,Erynnis,juvenalis,'Arizona' Juvenal's Duskywing,SF-PYRG,SUBFAMILY
+ERYLUC,Erynnis,lucilius,Columbine Duskywing,SF-PYRG,SUBFAMILY
+ERYMAR,Erynnis,martialis,Mottled Duskywing,SF-PYRG,SUBFAMILY
+ERYMER,Erynnis,meridianus,Meridian Duskywing,SF-PYRG,SUBFAMILY
+ERYPAC,Erynnis,pacuvius,Pacuvius Duskywing,SF-PYRG,SUBFAMILY
+ERYPER,Erynnis,persius,Persius Duskywing,SF-PYRG,SUBFAMILY
+ERYPRO,Erynnis,propertius,Propertius Duskywing,SF-PYRG,SUBFAMILY
+ERYSCU,Erynnis,scudderi,Scudder's Duskywing,SF-PYRG,SUBFAMILY
+ERYTEL,Erynnis,telemachus,Rocky Mountain Duskywing,SF-PYRG,SUBFAMILY
+ERYTRI,Erynnis,tristis,Mournful Duskywing,SF-PYRG,SUBFAMILY
+ERYZAR,Erynnis,zarucco,Zarucco Duskywing,SF-PYRG,SUBFAMILY
+GESGES,Gesta,gesta,False Duskywing,SF-PYRG,SUBFAMILY
+GORBEG,Gorgythion,begga,Variegated Skipper,SF-PYRG,SUBFAMILY
+GRASTI,Grais,stigmatica,Hermit Skipper,SF-PYRG,SUBFAMILY
+HELIARS,Heliopetes,arsalte,Veined White-Skipper,SF-PYRG,SUBFAMILY
+HELIDOM,Heliopetes,domicella,Erichson's White-Skipper,SF-PYRG,SUBFAMILY
+HELIERI,Heliopetes,ericetorum,Northern White-Skipper,SF-PYRG,SUBFAMILY
+HELILAV,Heliopetes,laviana,Laviana White-Skipper,SF-PYRG,SUBFAMILY
+HELIMAC,Heliopetes,macaira,Turk's-cap White-Skipper,SF-PYRG,SUBFAMILY
+HESPALP,Hesperopsis,alpheus,Saltbush Sootywing,SF-PYRG,SUBFAMILY
+HESPALP,Hesperopsis,alpheus,'Saltbush' Saltbush Sootywing,SF-PYRG,SUBFAMILY
+HESPALP,Hesperopsis,alpheus,MacNeill's' Saltbush Sootywing,SF-PYRG,SUBFAMILY
+HESPLIB,Hesperopsis,libya,Mojave Sootywing,SF-PYRG,SUBFAMILY
+NISRUB,Nisoniades,rubescens,Purplish-black Skipper,SF-PYRG,SUBFAMILY
+NOCSTA,Noctuana,stator,Red-studded Skipper,SF-PYRG,SUBFAMILY
+PELARI,Pellicia,arina,Glazed Pellicia,SF-PYRG,SUBFAMILY
+PELDIM,Pellicia,dimidiata,Morning Glory Pellicia,SF-PYRG,SUBFAMILY
+PHOLCAT,Pholisora,catullus,Common Sootywing,SF-PYRG,SUBFAMILY
+PHOLMEJ,Pholisora,mejicana,Mexican Sootywing,SF-PYRG,SUBFAMILY
+PHOPIG,Phocides,pigmalion,Mangrove Skipper,SF-PYRG,SUBFAMILY
+PHOPOL,Phocides,polybius,Guava Skipper,SF-PYRG,SUBFAMILY
+POLGLEO,Polygonus,leo,Hammock Skipper,SF-PYRG,SUBFAMILY
+POLGMAN,Polygonus,manueli,Manuel's Skipper,SF-PYRG,SUBFAMILY
+POLTMEX,Polythrix,mexicanus,Mexican Longtail,SF-PYRG,SUBFAMILY
+POLTOCT,Polythrix,octomaculata,Eight-spotted Longtail,SF-PYRG,SUBFAMILY
+PROTMER,Proteides,mercurius,Mercurial Skipper,SF-PYRG,SUBFAMILY
+PYRALB,Pyrgus,albescens,White Checkered-Skipper,SF-PYRG,SUBFAMILY
+PYRCEN,Pyrgus,centaureae,Grizzled Skipper,SF-PYRG,SUBFAMILY
+PYRCEN,Pyrgus,centaureae,'Appalachian' Grizzled Skipper,SF-PYRG,SUBFAMILY
+PYRCOM,Pyrgus,communis,Common Checkered-Skipper,SF-PYRG,SUBFAMILY
+PYROIL,Pyrgus,oileus,Tropical Checkered-Skipper,SF-PYRG,SUBFAMILY
+PYRPHI,Pyrgus,philetas,Desert Checkered-Skipper,SF-PYRG,SUBFAMILY
+PYRRUR,Pyrgus,ruralis,Two-banded Checkered-Skipper,SF-PYRG,SUBFAMILY
+PYRSCR,Pyrgus,scriptura,Small Checkered-Skipper,SF-PYRG,SUBFAMILY
+PYRXAN,Pyrgus,xanthus,Mountain Checkered-Skipper,SF-PYRG,SUBFAMILY
+SOSBIF,Sostrata,bifasciata,Blue-studded Skipper,SF-PYRG,SUBFAMILY
+SPACLO,Spathilepia,clonius,Falcate Skipper,SF-PYRG,SUBFAMILY
+STAPCEO,Staphylus,ceos,Golden-headed Scallopwing,SF-PYRG,SUBFAMILY
+STAPHAY,Staphylus,hayhurstii,Hayhurst's Scallopwing,SF-PYRG,SUBFAMILY
+STAPMAZ,Staphylus,mazans,Mazans Scallopwing,SF-PYRG,SUBFAMILY
+SYSPUL,Systasea,pulverulenta,Texas Powdered-Skipper,SF-PYRG,SUBFAMILY
+SYSZAM,Systasea,zampa,Arizona Powdered-Skipper,SF-PYRG,SUBFAMILY
+THOBAT,Thorybes,bathyllus,Southern Cloudywing,SF-PYRG,SUBFAMILY
+THOCON,Thorybes,confusis,Confused Cloudywing,SF-PYRG,SUBFAMILY
+THODIV,Thorybes,diversus,Western Cloudywing,SF-PYRG,SUBFAMILY
+THODRU,Thorybes,drusius,Drusius Cloudywing,SF-PYRG,SUBFAMILY
+THOMEX,Thorybes,mexicanus,Mexican Cloudywing,SF-PYRG,SUBFAMILY
+THOPYL,Thorybes,pylades,Northern Cloudywing,SF-PYRG,SUBFAMILY
+TIMPUR,Timochares,ruptifasciatus,Brown-banded Skipper,SF-PYRG,SUBFAMILY
+TYPUND,Typhedanus,undulatus,Mottled Longtail,SF-PYRG,SUBFAMILY
+URBBEL,Urbanus,belli,Double-striped Longtail,SF-PYRG,SUBFAMILY
+URBDO1,Urbanus,dorantes,Dorantes Longtail,SF-PYRG,SUBFAMILY
+URBDO2,Urbanus,doryssus,White-tailed Longtail,SF-PYRG,SUBFAMILY
+URBESM,Urbanus,esmeraldus,Esmeralda Longtail,SF-PYRG,SUBFAMILY
+URBPR1,Urbanus,procne,Brown Longtail,SF-PYRG,SUBFAMILY
+URBPR2,Urbanus,pronus,Pronus Longtail,SF-PYRG,SUBFAMILY
+URBPR3,Urbanus,proteus,Long-tailed Skipper,SF-PYRG,SUBFAMILY
+URBSIM,Urbanus,simplicius,Plain Longtail,SF-PYRG,SUBFAMILY
+URBTAN,Urbanus,tanna,Tanna Longtail,SF-PYRG,SUBFAMILY
+URBTEL,Urbanus,teleus,Teleus Longtail,SF-PYRG,SUBFAMILY
+XENTRY,Xenophanes,tryxus,Glassy-winged Skipper,SF-PYRG,SUBFAMILY
+ZESDOR,Zestusa,dorus,Short-tailed Skipper,SF-PYRG,SUBFAMILY
+CERMEA,Cercyonis,meadii,Mead's Wood-Nymph,SF-SATY,SUBFAMILY
+CEROET,Cercyonis,oetus,Small Wood-Nymph,SF-SATY,SUBFAMILY
+CERPEG,Cercyonis,pegala,Common Wood-Nymph,SF-SATY,SUBFAMILY
+CERSTH,Cercyonis,sthenele,Great Basin Wood-Nymph,SF-SATY,SUBFAMILY
+COEHAY,Coenonympha,haydenii,Hayden's Ringlet,SF-SATY,SUBFAMILY
+COETUL,Coenonympha,tullia,Common Ringlet,SF-SATY,SUBFAMILY
+COETUL,Coenonympha,tullia,Inornate' Common Ringlet,SF-SATY,SUBFAMILY
+COETUL,Coenonympha,tullia,'Salt Marsh' Common Ringlet,SF-SATY,SUBFAMILY
+COETUL,Coenonympha,tullia,Ochre' Common Ringlet,SF-SATY,SUBFAMILY
+COETUL,Coenonympha,tullia,Northwest' Common Ringlet,SF-SATY,SUBFAMILY
+COETUL,Coenonympha,tullia,California' Common Ringlet,SF-SATY,SUBFAMILY
+CYLGEM,Cyllopsis,gemma,Gemmed Satyr,SF-SATY,SUBFAMILY
+CYLPER,Cyllopsis,pertepida,Canyonland Satyr,SF-SATY,SUBFAMILY
+CYLPYR,Cyllopsis,pyracmon,Nabokov's Satyr,SF-SATY,SUBFAMILY
+CYLPYR,Cyllopsis,pyracmon,'Nabokov's' Nabokov's Satyr,SF-SATY,SUBFAMILY
+CYLPYR,Cyllopsis,pyracmon,'Henshaw's' Nabokov's Satyr,SF-SATY,SUBFAMILY
+ENOANT,Enodia,anthedon,Northern Pearly-eye,SF-SATY,SUBFAMILY
+ENOCRE,Enodia,creola,Creole Pearly-eye,SF-SATY,SUBFAMILY
+ENOPOR,Enodia,portlandia,Southern Pearly-eye,SF-SATY,SUBFAMILY
+ERECAL,Erebia,callias,Colorado Alpine,SF-SATY,SUBFAMILY
+EREDAB,Erebia,dabanensis,Four-dotted Alpine,SF-SATY,SUBFAMILY
+EREDI1,Erebia,disa,Disa Alpine,SF-SATY,SUBFAMILY
+EREDI2,Erebia,discoidalis,Red-disked Alpine,SF-SATY,SUBFAMILY
+EREEPI,Erebia,epipsodea,Common Alpine,SF-SATY,SUBFAMILY
+EREFAS,Erebia,fasciata,Banded Alpine,SF-SATY,SUBFAMILY
+EREKOZ,Erebia,kozhantshikovi,Reddish Alpine,SF-SATY,SUBFAMILY
+EREMAG,Erebia,magdalena,Magdalena Alpine,SF-SATY,SUBFAMILY
+EREMAN,Erebia,mancinus,Taiga Alpine,SF-SATY,SUBFAMILY
+EREOCC,Erebia,occulta,Eskimo Alpine,SF-SATY,SUBFAMILY
+EREROS,Erebia,rossii,Ross' Alpine,SF-SATY,SUBFAMILY
+ERETHE,Erebia,theano,Theano Alpine,SF-SATY,SUBFAMILY
+EREVID,Erebia,vidleri,Vidler's Alpine,SF-SATY,SUBFAMILY
+HERSOS,Hermeuptychia,sosybius,Carolina Satyr,SF-SATY,SUBFAMILY
+MEGICYM,Megisto,cymela,Little Wood-Satyr,SF-SATY,SUBFAMILY
+MEGIRUB,Megisto,rubricata,Red Satyr,SF-SATY,SUBFAMILY
+NEOMRID,Neominois,ridingsii,Ridings' Satyr,SF-SATY,SUBFAMILY
+NEONARE,Neonympha,areolata,Georgia Satyr,SF-SATY,SUBFAMILY
+NEONMIT,Neonympha,mitchellii,Mitchell's Satyr,SF-SATY,SUBFAMILY
+OENALB,Oeneis,alberta,Alberta Arctic,SF-SATY,SUBFAMILY
+OENALP,Oeneis,alpina,Sentinel Arctic,SF-SATY,SUBFAMILY
+OENCHR,Oeneis,chryxus,Chryxus Arctic,SF-SATY,SUBFAMILY
+OENCHR,Oeneis,chryxus,Brown' Chryxus Arctic,SF-SATY,SUBFAMILY
+OENCHR,Oeneis,chryxus,'California' Chryxus Arctic,SF-SATY,SUBFAMILY
+OENJUT,Oeneis,jutta,Jutta Arctic,SF-SATY,SUBFAMILY
+OENMAC,Oeneis,macounii,Macoun's Arctic,SF-SATY,SUBFAMILY
+OENMEL,Oeneis,melissa,Melissa Arctic,SF-SATY,SUBFAMILY
+OENNEV,Oeneis,nevadensis,Great Arctic,SF-SATY,SUBFAMILY
+OENPOL,Oeneis,polixenes,Polixenes Arctic,SF-SATY,SUBFAMILY
+OENROS,Oeneis,rosovi,Early Arctic,SF-SATY,SUBFAMILY
+OENTAY,Oeneis,taygete,White-veined Arctic,SF-SATY,SUBFAMILY
+OENUHL,Oeneis,uhleri,Uhler's Arctic,SF-SATY,SUBFAMILY
+PARALL,Paramacera,allyni,Pine Satyr,SF-SATY,SUBFAMILY
+SATYAPP,Satyrodes,appalachia,Appalachian Brown,SF-SATY,SUBFAMILY
+SATYEUR,Satyrodes,eurydice,Eyed Brown,SF-SATY,SUBFAMILY
+SYRPAT,Gyrocheilus,patrobas,Red-bordered Satyr,SF-SATY,SUBFAMILY
+ALLSTR,Allosmaitia,strophius,Strophius Hairstreak,SF-THEC,SUBFAMILY
+ARAJAD,Arawacus,jada,Creamy Stripe-streak,SF-THEC,SUBFAMILY
+ATLHAL,Atlides,halesus,Great Purple Hairstreak,SF-THEC,SUBFAMILY
+CALLAUG,Callophrys,augustinus,Brown Elfin,SF-THEC,SUBFAMILY
+CALLDUM,Callophrys,dumetorum,Bramble Hairstreak,SF-THEC,SUBFAMILY
+CALLDUM,Callophrys,dumetorum,Bramble' Bramble Hairstreak,SF-THEC,SUBFAMILY
+CALLDUM,Callophrys,dumetorum,'Coastal' Bramble Hairstreak,SF-THEC,SUBFAMILY
+CALLDUM,Callophrys,dumetorum,Canyon' Bramble Hairstreak,SF-THEC,SUBFAMILY
+CALLDUM,Callophrys,dumetorum,Immaculate' Bramble Hairstreak,SF-THEC,SUBFAMILY
+CALLERY,Callophrys,eryphon,Western Pine Elfin,SF-THEC,SUBFAMILY
+CALLFOT,Callophrys,fotis,Desert Elfin,SF-THEC,SUBFAMILY
+CALLGRY,Callophrys,gryneus,Juniper Hairstreak,SF-THEC,SUBFAMILY
+CALLGRY,Callophrys,gryneus,Olive' Juniper Hairstreak,SF-THEC,SUBFAMILY
+CALLGRY,Callophrys,gryneus,Sweadner's' Juniper Hairstreak,SF-THEC,SUBFAMILY
+CALLGRY,Callophrys,gryneus,Siva' Juniper Hairstreak,SF-THEC,SUBFAMILY
+CALLGRY,Callophrys,gryneus,Nelson's' Juniper Hairstreak,SF-THEC,SUBFAMILY
+CALLGRY,Callophrys,gryneus,Muir's' Juniper Hairstreak,SF-THEC,SUBFAMILY
+CALLGRY,Callophrys,gryneus,Loki' Juniper Hairstreak,SF-THEC,SUBFAMILY
+CALLGRY,Callophrys,gryneus,'Thorne's' Juniper Hairstreak,SF-THEC,SUBFAMILY
+CALLHEN,Callophrys,henrici,Henry's Elfin,SF-THEC,SUBFAMILY
+CALLHES,Callophrys,hesseli,Hessel's Hairstreak,SF-THEC,SUBFAMILY
+CALLIRU,Callophrys,irus,Frosted Elfin,SF-THEC,SUBFAMILY
+CALLJOH,Callophrys,johnsoni,Johnson's Hairstreak,SF-THEC,SUBFAMILY
+CALLLAN,Callophrys,lanoraieensis,Bog Elfin,SF-THEC,SUBFAMILY
+CALLMCF,Callophrys,mcfarlandi,Sandia Hairstreak,SF-THEC,SUBFAMILY
+CALLMOS,Callophrys,mossii,Moss' Elfin,SF-THEC,SUBFAMILY
+CALLNIP,Callophrys,niphon,Eastern Pine Elfin,SF-THEC,SUBFAMILY
+CALLPOL,Callophrys,polios,Hoary Elfin,SF-THEC,SUBFAMILY
+CALLSHE,Callophrys,sheridanii,Sheridan's Hairstreak,SF-THEC,SUBFAMILY
+CALLSHE,Callophrys,sheridanii,'White-lined' Sheridan's Hairstreak,SF-THEC,SUBFAMILY
+CALLSHE,Callophrys,sheridanii,'Desert' Sheridan's Hairstreak,SF-THEC,SUBFAMILY
+CALLSHE,Callophrys,sheridanii,Alpine' Sheridan's Hairstreak,SF-THEC,SUBFAMILY
+CALLSPI,Callophrys,spinetorum,Thicket Hairstreak,SF-THEC,SUBFAMILY
+CALLXAM,Callophrys,xami,Xami Hairstreak,SF-THEC,SUBFAMILY
+CALYCEC,Calycopis,cecrops,Red-banded Hairstreak,SF-THEC,SUBFAMILY
+CALYISO,Calycopis,isobeon,Dusky-blue Groundstreak,SF-THEC,SUBFAMILY
+CHLMAE,Chlorostrymon,maesites,Amethyst Hairstreak,SF-THEC,SUBFAMILY
+CHLSIM,Chlorostrymon,simaethis,Silver-banded Hairstreak,SF-THEC,SUBFAMILY
+CHLTEL,Chlorostrymon,telea,Telea Hairstreak,SF-THEC,SUBFAMILY
+CYAGOO,Cyanophrys,goodsoni,Goodson's Greenstreak,SF-THEC,SUBFAMILY
+CYAHER,Cyanophrys,herodotus,Tropical Greenstreak,SF-THEC,SUBFAMILY
+CYAMIS,Cyanophrys,miserabilis,Clench's Greenstreak,SF-THEC,SUBFAMILY
+ELEANG,Electrostrymon,angelia,Fulvous Hairstreak,SF-THEC,SUBFAMILY
+ELECAN,Electrostrymon,canus,Muted Hairstreak,SF-THEC,SUBFAMILY
+ELESAN,Electrostrymon,sangala,Ruddy Hairstreak,SF-THEC,SUBFAMILY
+EROLAE,Erora,laeta,Early Hairstreak,SF-THEC,SUBFAMILY
+EROQUA,Erora,quaderna,Arizona Hairstreak,SF-THEC,SUBFAMILY
+EUMATA,Eumaeus,atala,Atala,SF-THEC,SUBFAMILY
+HABGRU,Habrodais,grunus,Golden Hairstreak,SF-THEC,SUBFAMILY
+HYPSCRI,Hypostrymon,critola,Sonoran Hairstreak,SF-THEC,SUBFAMILY
+HYPUCRY,Hypaurotis,crysalus,Colorado Hairstreak,SF-THEC,SUBFAMILY
+MINIAZI,Ministrymon,azia,Gray Ministreak,SF-THEC,SUBFAMILY
+MINICLY,Ministrymon,clytie,Clytie Ministreak,SF-THEC,SUBFAMILY
+MINILED,Ministrymon,leda,Leda Ministreak,SF-THEC,SUBFAMILY
+OCAOCR,Ocaria,ocrisia,Black Hairstreak,SF-THEC,SUBFAMILY
+OENOORT,Oenomaus,ortygnus,Aquamarine Hairstreak,SF-THEC,SUBFAMILY
+PARRMAL,Parrhasius,m-album,White M Hairstreak,SF-THEC,SUBFAMILY
+PHAALC,Phaeostrymon,alcestis,Soapberry Hairstreak,SF-THEC,SUBFAMILY
+REKMAR,Rekoa,marius,Marius Hairstreak,SF-THEC,SUBFAMILY
+REKPAL,Rekoa,palegon,Gold-bordered Hairstreak,SF-THEC,SUBFAMILY
+SATACA,Satyrium,acadica,Acadian Hairstreak,SF-THEC,SUBFAMILY
+SATAUR,Satyrium,auretorum,Gold-hunter's Hairstreak,SF-THEC,SUBFAMILY
+SATBEH,Satyrium,behrii,Behr's Hairstreak,SF-THEC,SUBFAMILY
+SATCA1,Satyrium,calanus,Banded Hairstreak,SF-THEC,SUBFAMILY
+SATCA2,Satyrium,californica,California Hairstreak,SF-THEC,SUBFAMILY
+SATCA3,Satyrium,caryaevorum,Hickory Hairstreak,SF-THEC,SUBFAMILY
+SATEDW,Satyrium,edwardsii,Edwards' Hairstreak,SF-THEC,SUBFAMILY
+SATFAV,Satyrium,favonius,Oak Hairstreak,SF-THEC,SUBFAMILY
+SATFAV,Satyrium,favonius,Southern' Oak Hairstreak,SF-THEC,SUBFAMILY
+SATFAV,Satyrium,favonius,Northern' Oak Hairstreak,SF-THEC,SUBFAMILY
+SATFUL,Satyrium,fulginosa,Sooty Hairstreak,SF-THEC,SUBFAMILY
+SATILA,Satyrium,ilavia,Ilavia Hairstreak,SF-THEC,SUBFAMILY
+SATKIN,Satyrium,kingi,King's Hairstreak,SF-THEC,SUBFAMILY
+SATLIP,Satyrium,liparops,Striped Hairstreak,SF-THEC,SUBFAMILY
+SATPOL,Satyrium,polingi,Poling's Hairstreak,SF-THEC,SUBFAMILY
+SATSAE,Satyrium,saepium,Hedgerow Hairstreak,SF-THEC,SUBFAMILY
+SATSYL,Satyrium,sylvinus,Sylvan Hairstreak,SF-THEC,SUBFAMILY
+SATTET,Satyrium,tetra,Mountain Mahogany Hairstreak,SF-THEC,SUBFAMILY
+SATTIT,Satyrium,titus,Coral Hairstreak,SF-THEC,SUBFAMILY
+SIDTEP,Siderus,tephraeus,Pearly-gray Hairstreak,SF-THEC,SUBFAMILY
+STRACI,Strymon,acis,Bartram's Scrub-Hairstreak,SF-THEC,SUBFAMILY
+STRALB,Strymon,albata,White Scrub-Hairstreak,SF-THEC,SUBFAMILY
+STRALE,Strymon,alea,Lacey's Scrub-Hairstreak,SF-THEC,SUBFAMILY
+STRAVA,Strymon,avalona,Avalon Scrub-Hairstreak,SF-THEC,SUBFAMILY
+STRBAZ,Strymon,bazochii,Lantana Scrub-Hairstreak,SF-THEC,SUBFAMILY
+STRBEB,Strymon,bebrycia,Red-lined Scrub-Hairstreak,SF-THEC,SUBFAMILY
+STRCES,Strymon,cestri,Tailless Scrub-Hairstreak,SF-THEC,SUBFAMILY
+STRIST,Strymon,istapa,Mallow Scrub-Hairstreak,SF-THEC,SUBFAMILY
+STRLIM,Strymon,limenia,Disguised Scrub-Hairstreak,SF-THEC,SUBFAMILY
+STRMAR,Strymon,martialis,Martial Scrub-Hairstreak,SF-THEC,SUBFAMILY
+STRMEL,Strymon,melinus,Gray Hairstreak,SF-THEC,SUBFAMILY
+STRRUF,Strymon,rufofusca,Red-crescent Scrub-Hairstreak,SF-THEC,SUBFAMILY
+STRSER,Strymon,serapio,Bromeliad Scrub-Hairstreak,SF-THEC,SUBFAMILY
+STRYOJ,Strymon,yojoa,Yojoa Scrub-Hairstreak,SF-THEC,SUBFAMILY
+TMOECH,Tmolus,echion,Red-spotted Hairstreak,SF-THEC,SUBFAMILY
+APOHEP,Apodemia,hepburni,Hepburn's Metalmark,F-HESP,FAMILY
+APOMOR,Apodemia,mormo,Mormon Metalmark,F-HESP,FAMILY
+APOMUL,Apodemia,multiplaga,Narrow-winged Metalmark,F-HESP,FAMILY
+APONAI,Apodemia,nais,Nais Metalmark,F-HESP,FAMILY
+APONAI,Apodemia,nais,'Nais' Nais Metalmark,F-HESP,FAMILY
+APONAI,Apodemia,nais,'Chisos' Nais Metalmark,F-HESP,FAMILY
+APOPAL,Apodemia,palmeri,Palmer's Metalmark,F-HESP,FAMILY
+APOPHY,Apodemia,phyciodoides,Crescent Metalmark,F-HESP,FAMILY
+APOWAL,Apodemia,walkeri,Walker's Metalmark,F-HESP,FAMILY
+CALARI,Calephelis,arizonensis,Arizona Metalmark,F-HESP,FAMILY
+CALBOR,Calephelis,borealis,Northern Metalmark,F-HESP,FAMILY
+CALMUT,Calephelis,mutica,Swamp Metalmark,F-HESP,FAMILY
+CALNEM,Calephelis,nemesis,Fatal Metalmark,F-HESP,FAMILY
+CALPER,Calephelis,perditalis,Rounded Metalmark,F-HESP,FAMILY
+CALRAW,Calephelis,rawsoni,Rawson's Metalmark,F-HESP,FAMILY
+CALRAW,Calephelis,rawsoni,'Rawson's' Rawson's Metalmark,F-HESP,FAMILY
+CALRAW,Calephelis,rawsoni,'Freeman's' Rawson's Metalmark,F-HESP,FAMILY
+CALVIR,Calephelis,virginiensis,Little Metalmark,F-HESP,FAMILY
+CALWRI,Calephelis,wrighti,Wright's Metalmark,F-HESP,FAMILY
+CARINO,Caria,ino,Red-bordered Metalmark,F-HESP,FAMILY
+EMEARE,Emesis,ares,Ares Metalmark,F-HESP,FAMILY
+EMEEME,Emesis,emesia,Curve-winged Metalmark,F-HESP,FAMILY
+EMETEN,Emesis,tenedia,Falcate Metalmark,F-HESP,FAMILY
+EMEZEL,Emesis,zela,Zela Metalmark,F-HESP,FAMILY
+LASSUL,Lasaia,sula,Blue Metalmark,F-HESP,FAMILY
+MELPIX,Melanis,pixe,Red-bordered Pixie,F-HESP,FAMILY
+GREMOR,Greta,morgane,Thick-tipped Greta,F-HESP,FAMILY
+ITADEM,Itaballia,demophile,Cross-barred White,F-HESP,FAMILY
+TEMLAO,Temenis,laothoe,Orange Banner,F-HESP,FAMILY
+ZIEGUZ,Ziegleria,guzanta,Orange-crescent Groundstreak,F-HESP,FAMILY
+BIEZON,Baeotis,zonata,Bumble Bee Metalmark,F-HESP,FAMILY
+ACHLPAL,Achlyodes,pallida,Pale Sicklewing,F-HESP,FAMILY
+POMPOM,Pompeius,pompeius,Common Glassywing,F-HESP,FAMILY
+RHEARC,Rhetus,arcius,Sword-tailed Beautymark,F-HESP,FAMILY
+MELLIL,Melinaea,lilis,Heliconoid Ticlear,F-HESP,FAMILY
+APOHEP,Apodemia,hepburni,Hepburn's Metalmark,F-LYCA,FAMILY
+APOMOR,Apodemia,mormo,Mormon Metalmark,F-LYCA,FAMILY
+APOMUL,Apodemia,multiplaga,Narrow-winged Metalmark,F-LYCA,FAMILY
+APONAI,Apodemia,nais,Nais Metalmark,F-LYCA,FAMILY
+APONAI,Apodemia,nais,'Nais' Nais Metalmark,F-LYCA,FAMILY
+APONAI,Apodemia,nais,'Chisos' Nais Metalmark,F-LYCA,FAMILY
+APOPAL,Apodemia,palmeri,Palmer's Metalmark,F-LYCA,FAMILY
+APOPHY,Apodemia,phyciodoides,Crescent Metalmark,F-LYCA,FAMILY
+APOWAL,Apodemia,walkeri,Walker's Metalmark,F-LYCA,FAMILY
+CALARI,Calephelis,arizonensis,Arizona Metalmark,F-LYCA,FAMILY
+CALBOR,Calephelis,borealis,Northern Metalmark,F-LYCA,FAMILY
+CALMUT,Calephelis,mutica,Swamp Metalmark,F-LYCA,FAMILY
+CALNEM,Calephelis,nemesis,Fatal Metalmark,F-LYCA,FAMILY
+CALPER,Calephelis,perditalis,Rounded Metalmark,F-LYCA,FAMILY
+CALRAW,Calephelis,rawsoni,Rawson's Metalmark,F-LYCA,FAMILY
+CALRAW,Calephelis,rawsoni,'Rawson's' Rawson's Metalmark,F-LYCA,FAMILY
+CALRAW,Calephelis,rawsoni,'Freeman's' Rawson's Metalmark,F-LYCA,FAMILY
+CALVIR,Calephelis,virginiensis,Little Metalmark,F-LYCA,FAMILY
+CALWRI,Calephelis,wrighti,Wright's Metalmark,F-LYCA,FAMILY
+CARINO,Caria,ino,Red-bordered Metalmark,F-LYCA,FAMILY
+EMEARE,Emesis,ares,Ares Metalmark,F-LYCA,FAMILY
+EMEEME,Emesis,emesia,Curve-winged Metalmark,F-LYCA,FAMILY
+EMETEN,Emesis,tenedia,Falcate Metalmark,F-LYCA,FAMILY
+EMEZEL,Emesis,zela,Zela Metalmark,F-LYCA,FAMILY
+LASSUL,Lasaia,sula,Blue Metalmark,F-LYCA,FAMILY
+MELPIX,Melanis,pixe,Red-bordered Pixie,F-LYCA,FAMILY
+GREMOR,Greta,morgane,Thick-tipped Greta,F-LYCA,FAMILY
+ITADEM,Itaballia,demophile,Cross-barred White,F-LYCA,FAMILY
+TEMLAO,Temenis,laothoe,Orange Banner,F-LYCA,FAMILY
+ZIEGUZ,Ziegleria,guzanta,Orange-crescent Groundstreak,F-LYCA,FAMILY
+BIEZON,Baeotis,zonata,Bumble Bee Metalmark,F-LYCA,FAMILY
+ACHLPAL,Achlyodes,pallida,Pale Sicklewing,F-LYCA,FAMILY
+POMPOM,Pompeius,pompeius,Common Glassywing,F-LYCA,FAMILY
+RHEARC,Rhetus,arcius,Sword-tailed Beautymark,F-LYCA,FAMILY
+MELLIL,Melinaea,lilis,Heliconoid Ticlear,F-LYCA,FAMILY
+APOHEP,Apodemia,hepburni,Hepburn's Metalmark,F-NYMP,FAMILY
+APOMOR,Apodemia,mormo,Mormon Metalmark,F-NYMP,FAMILY
+APOMUL,Apodemia,multiplaga,Narrow-winged Metalmark,F-NYMP,FAMILY
+APONAI,Apodemia,nais,Nais Metalmark,F-NYMP,FAMILY
+APONAI,Apodemia,nais,'Nais' Nais Metalmark,F-NYMP,FAMILY
+APONAI,Apodemia,nais,'Chisos' Nais Metalmark,F-NYMP,FAMILY
+APOPAL,Apodemia,palmeri,Palmer's Metalmark,F-NYMP,FAMILY
+APOPHY,Apodemia,phyciodoides,Crescent Metalmark,F-NYMP,FAMILY
+APOWAL,Apodemia,walkeri,Walker's Metalmark,F-NYMP,FAMILY
+CALARI,Calephelis,arizonensis,Arizona Metalmark,F-NYMP,FAMILY
+CALBOR,Calephelis,borealis,Northern Metalmark,F-NYMP,FAMILY
+CALMUT,Calephelis,mutica,Swamp Metalmark,F-NYMP,FAMILY
+CALNEM,Calephelis,nemesis,Fatal Metalmark,F-NYMP,FAMILY
+CALPER,Calephelis,perditalis,Rounded Metalmark,F-NYMP,FAMILY
+CALRAW,Calephelis,rawsoni,Rawson's Metalmark,F-NYMP,FAMILY
+CALRAW,Calephelis,rawsoni,'Rawson's' Rawson's Metalmark,F-NYMP,FAMILY
+CALRAW,Calephelis,rawsoni,'Freeman's' Rawson's Metalmark,F-NYMP,FAMILY
+CALVIR,Calephelis,virginiensis,Little Metalmark,F-NYMP,FAMILY
+CALWRI,Calephelis,wrighti,Wright's Metalmark,F-NYMP,FAMILY
+CARINO,Caria,ino,Red-bordered Metalmark,F-NYMP,FAMILY
+EMEARE,Emesis,ares,Ares Metalmark,F-NYMP,FAMILY
+EMEEME,Emesis,emesia,Curve-winged Metalmark,F-NYMP,FAMILY
+EMETEN,Emesis,tenedia,Falcate Metalmark,F-NYMP,FAMILY
+EMEZEL,Emesis,zela,Zela Metalmark,F-NYMP,FAMILY
+LASSUL,Lasaia,sula,Blue Metalmark,F-NYMP,FAMILY
+MELPIX,Melanis,pixe,Red-bordered Pixie,F-NYMP,FAMILY
+GREMOR,Greta,morgane,Thick-tipped Greta,F-NYMP,FAMILY
+ITADEM,Itaballia,demophile,Cross-barred White,F-NYMP,FAMILY
+TEMLAO,Temenis,laothoe,Orange Banner,F-NYMP,FAMILY
+ZIEGUZ,Ziegleria,guzanta,Orange-crescent Groundstreak,F-NYMP,FAMILY
+BIEZON,Baeotis,zonata,Bumble Bee Metalmark,F-NYMP,FAMILY
+ACHLPAL,Achlyodes,pallida,Pale Sicklewing,F-NYMP,FAMILY
+POMPOM,Pompeius,pompeius,Common Glassywing,F-NYMP,FAMILY
+RHEARC,Rhetus,arcius,Sword-tailed Beautymark,F-NYMP,FAMILY
+MELLIL,Melinaea,lilis,Heliconoid Ticlear,F-NYMP,FAMILY
+APOHEP,Apodemia,hepburni,Hepburn's Metalmark,F-PAPI,FAMILY
+APOMOR,Apodemia,mormo,Mormon Metalmark,F-PAPI,FAMILY
+APOMUL,Apodemia,multiplaga,Narrow-winged Metalmark,F-PAPI,FAMILY
+APONAI,Apodemia,nais,Nais Metalmark,F-PAPI,FAMILY
+APONAI,Apodemia,nais,'Nais' Nais Metalmark,F-PAPI,FAMILY
+APONAI,Apodemia,nais,'Chisos' Nais Metalmark,F-PAPI,FAMILY
+APOPAL,Apodemia,palmeri,Palmer's Metalmark,F-PAPI,FAMILY
+APOPHY,Apodemia,phyciodoides,Crescent Metalmark,F-PAPI,FAMILY
+APOWAL,Apodemia,walkeri,Walker's Metalmark,F-PAPI,FAMILY
+CALARI,Calephelis,arizonensis,Arizona Metalmark,F-PAPI,FAMILY
+CALBOR,Calephelis,borealis,Northern Metalmark,F-PAPI,FAMILY
+CALMUT,Calephelis,mutica,Swamp Metalmark,F-PAPI,FAMILY
+CALNEM,Calephelis,nemesis,Fatal Metalmark,F-PAPI,FAMILY
+CALPER,Calephelis,perditalis,Rounded Metalmark,F-PAPI,FAMILY
+CALRAW,Calephelis,rawsoni,Rawson's Metalmark,F-PAPI,FAMILY
+CALRAW,Calephelis,rawsoni,'Rawson's' Rawson's Metalmark,F-PAPI,FAMILY
+CALRAW,Calephelis,rawsoni,'Freeman's' Rawson's Metalmark,F-PAPI,FAMILY
+CALVIR,Calephelis,virginiensis,Little Metalmark,F-PAPI,FAMILY
+CALWRI,Calephelis,wrighti,Wright's Metalmark,F-PAPI,FAMILY
+CARINO,Caria,ino,Red-bordered Metalmark,F-PAPI,FAMILY
+EMEARE,Emesis,ares,Ares Metalmark,F-PAPI,FAMILY
+EMEEME,Emesis,emesia,Curve-winged Metalmark,F-PAPI,FAMILY
+EMETEN,Emesis,tenedia,Falcate Metalmark,F-PAPI,FAMILY
+EMEZEL,Emesis,zela,Zela Metalmark,F-PAPI,FAMILY
+LASSUL,Lasaia,sula,Blue Metalmark,F-PAPI,FAMILY
+MELPIX,Melanis,pixe,Red-bordered Pixie,F-PAPI,FAMILY
+GREMOR,Greta,morgane,Thick-tipped Greta,F-PAPI,FAMILY
+ITADEM,Itaballia,demophile,Cross-barred White,F-PAPI,FAMILY
+TEMLAO,Temenis,laothoe,Orange Banner,F-PAPI,FAMILY
+ZIEGUZ,Ziegleria,guzanta,Orange-crescent Groundstreak,F-PAPI,FAMILY
+BIEZON,Baeotis,zonata,Bumble Bee Metalmark,F-PAPI,FAMILY
+ACHLPAL,Achlyodes,pallida,Pale Sicklewing,F-PAPI,FAMILY
+POMPOM,Pompeius,pompeius,Common Glassywing,F-PAPI,FAMILY
+RHEARC,Rhetus,arcius,Sword-tailed Beautymark,F-PAPI,FAMILY
+MELLIL,Melinaea,lilis,Heliconoid Ticlear,F-PAPI,FAMILY
+APOHEP,Apodemia,hepburni,Hepburn's Metalmark,F-PIER,FAMILY
+APOMOR,Apodemia,mormo,Mormon Metalmark,F-PIER,FAMILY
+APOMUL,Apodemia,multiplaga,Narrow-winged Metalmark,F-PIER,FAMILY
+APONAI,Apodemia,nais,Nais Metalmark,F-PIER,FAMILY
+APONAI,Apodemia,nais,'Nais' Nais Metalmark,F-PIER,FAMILY
+APONAI,Apodemia,nais,'Chisos' Nais Metalmark,F-PIER,FAMILY
+APOPAL,Apodemia,palmeri,Palmer's Metalmark,F-PIER,FAMILY
+APOPHY,Apodemia,phyciodoides,Crescent Metalmark,F-PIER,FAMILY
+APOWAL,Apodemia,walkeri,Walker's Metalmark,F-PIER,FAMILY
+CALARI,Calephelis,arizonensis,Arizona Metalmark,F-PIER,FAMILY
+CALBOR,Calephelis,borealis,Northern Metalmark,F-PIER,FAMILY
+CALMUT,Calephelis,mutica,Swamp Metalmark,F-PIER,FAMILY
+CALNEM,Calephelis,nemesis,Fatal Metalmark,F-PIER,FAMILY
+CALPER,Calephelis,perditalis,Rounded Metalmark,F-PIER,FAMILY
+CALRAW,Calephelis,rawsoni,Rawson's Metalmark,F-PIER,FAMILY
+CALRAW,Calephelis,rawsoni,'Rawson's' Rawson's Metalmark,F-PIER,FAMILY
+CALRAW,Calephelis,rawsoni,'Freeman's' Rawson's Metalmark,F-PIER,FAMILY
+CALVIR,Calephelis,virginiensis,Little Metalmark,F-PIER,FAMILY
+CALWRI,Calephelis,wrighti,Wright's Metalmark,F-PIER,FAMILY
+CARINO,Caria,ino,Red-bordered Metalmark,F-PIER,FAMILY
+EMEARE,Emesis,ares,Ares Metalmark,F-PIER,FAMILY
+EMEEME,Emesis,emesia,Curve-winged Metalmark,F-PIER,FAMILY
+EMETEN,Emesis,tenedia,Falcate Metalmark,F-PIER,FAMILY
+EMEZEL,Emesis,zela,Zela Metalmark,F-PIER,FAMILY
+LASSUL,Lasaia,sula,Blue Metalmark,F-PIER,FAMILY
+MELPIX,Melanis,pixe,Red-bordered Pixie,F-PIER,FAMILY
+GREMOR,Greta,morgane,Thick-tipped Greta,F-PIER,FAMILY
+ITADEM,Itaballia,demophile,Cross-barred White,F-PIER,FAMILY
+TEMLAO,Temenis,laothoe,Orange Banner,F-PIER,FAMILY
+ZIEGUZ,Ziegleria,guzanta,Orange-crescent Groundstreak,F-PIER,FAMILY
+BIEZON,Baeotis,zonata,Bumble Bee Metalmark,F-PIER,FAMILY
+ACHLPAL,Achlyodes,pallida,Pale Sicklewing,F-PIER,FAMILY
+POMPOM,Pompeius,pompeius,Common Glassywing,F-PIER,FAMILY
+RHEARC,Rhetus,arcius,Sword-tailed Beautymark,F-PIER,FAMILY
+MELLIL,Melinaea,lilis,Heliconoid Ticlear,F-PIER,FAMILY
+APOHEP,Apodemia,hepburni,Hepburn's Metalmark,F-RIOD,FAMILY
+APOMOR,Apodemia,mormo,Mormon Metalmark,F-RIOD,FAMILY
+APOMUL,Apodemia,multiplaga,Narrow-winged Metalmark,F-RIOD,FAMILY
+APONAI,Apodemia,nais,Nais Metalmark,F-RIOD,FAMILY
+APONAI,Apodemia,nais,'Nais' Nais Metalmark,F-RIOD,FAMILY
+APONAI,Apodemia,nais,'Chisos' Nais Metalmark,F-RIOD,FAMILY
+APOPAL,Apodemia,palmeri,Palmer's Metalmark,F-RIOD,FAMILY
+APOPHY,Apodemia,phyciodoides,Crescent Metalmark,F-RIOD,FAMILY
+APOWAL,Apodemia,walkeri,Walker's Metalmark,F-RIOD,FAMILY
+CALARI,Calephelis,arizonensis,Arizona Metalmark,F-RIOD,FAMILY
+CALBOR,Calephelis,borealis,Northern Metalmark,F-RIOD,FAMILY
+CALMUT,Calephelis,mutica,Swamp Metalmark,F-RIOD,FAMILY
+CALNEM,Calephelis,nemesis,Fatal Metalmark,F-RIOD,FAMILY
+CALPER,Calephelis,perditalis,Rounded Metalmark,F-RIOD,FAMILY
+CALRAW,Calephelis,rawsoni,Rawson's Metalmark,F-RIOD,FAMILY
+CALRAW,Calephelis,rawsoni,'Rawson's' Rawson's Metalmark,F-RIOD,FAMILY
+CALRAW,Calephelis,rawsoni,'Freeman's' Rawson's Metalmark,F-RIOD,FAMILY
+CALVIR,Calephelis,virginiensis,Little Metalmark,F-RIOD,FAMILY
+CALWRI,Calephelis,wrighti,Wright's Metalmark,F-RIOD,FAMILY
+CARINO,Caria,ino,Red-bordered Metalmark,F-RIOD,FAMILY
+EMEARE,Emesis,ares,Ares Metalmark,F-RIOD,FAMILY
+EMEEME,Emesis,emesia,Curve-winged Metalmark,F-RIOD,FAMILY
+EMETEN,Emesis,tenedia,Falcate Metalmark,F-RIOD,FAMILY
+EMEZEL,Emesis,zela,Zela Metalmark,F-RIOD,FAMILY
+LASSUL,Lasaia,sula,Blue Metalmark,F-RIOD,FAMILY
+MELPIX,Melanis,pixe,Red-bordered Pixie,F-RIOD,FAMILY
+GREMOR,Greta,morgane,Thick-tipped Greta,F-RIOD,FAMILY
+ITADEM,Itaballia,demophile,Cross-barred White,F-RIOD,FAMILY
+TEMLAO,Temenis,laothoe,Orange Banner,F-RIOD,FAMILY
+ZIEGUZ,Ziegleria,guzanta,Orange-crescent Groundstreak,F-RIOD,FAMILY
+BIEZON,Baeotis,zonata,Bumble Bee Metalmark,F-RIOD,FAMILY
+ACHLPAL,Achlyodes,pallida,Pale Sicklewing,F-RIOD,FAMILY
+POMPOM,Pompeius,pompeius,Common Glassywing,F-RIOD,FAMILY
+RHEARC,Rhetus,arcius,Sword-tailed Beautymark,F-RIOD,FAMILY
+MELLIL,Melinaea,lilis,Heliconoid Ticlear,F-RIOD,FAMILY
+COLEU1,Colias,eurydice,California Dogface,C-COL,COMPLEX
+COLPHI,Colias,philodice,Clouded Sulphur,C-COL,COMPLEX

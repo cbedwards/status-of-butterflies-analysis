@@ -88,7 +88,7 @@ model_runner = function(code.cur, #GU code for taxa of interest
   names.vec = names.vec[!grepl("absence for ", names.vec)]
   plot.title = paste0(dat$common[1], " (", code.cur,")", ": " , paste0(names.vec, collapse = ", "))
   
-  ## constraining geography if called for
+  ## constraining geography if called for - this verwsion is clipping to the convex hull
   ## My thinking here is that splines can misbehave if we have many observations (of 0)
   ## in biologically uninteresting areas (ie lots of 0s on the east coast for a 
   ## west-coast-only species). This can happen because of our conferred zeroes
@@ -195,7 +195,8 @@ model_runner = function(code.cur, #GU code for taxa of interest
               fig.activity.maxabund = gp.activity.maxabund,
               fig.hist =gp.hist,
               fig.counts = gp.counts,
-              diagnostics.text = diagnostics.text))
+              diagnostics.text = diagnostics.text,
+              fitted.model = fit))
 }
 
 report_maker = function(modelfit.output,
