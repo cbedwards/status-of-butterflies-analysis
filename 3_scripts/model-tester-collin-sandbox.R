@@ -73,19 +73,19 @@ knot_maker = function(dat){
 
 ## Parameters for looping ----------
 
-do.summary = FALSE #If true, create summary text file for the whole combination of runs. 
+do.summary = TRUE #If true, create summary text file for the whole combination of runs. 
 ## expect to use this once we settle on a fit.
 
 ## Grab semi-USGS regions, designated by state based on this map: https://www.fws.gov/about/regions
 regions.dict = read.csv(here("2_data_wrangling/FWS-regions-by-state.csv"))
 
 ## specifying run name (to help identify/distinguish results files for different parameterizations)
-run.suffix = "range-constraint-test-unconstrained" ## Change this for whatever you're trying out
+run.suffix = "updated-fitting-tests" ## Change this for whatever you're trying out
 ## specify whether or not to use inferred 0s.
 use.inferred = TRUE
 
 ## should we constrain data to within the range maps? Seems like a good idea when we have them
-use.range = FALSE
+use.range = TRUE
 
 ## Specifying taxa:
 specs.do.all = FALSE #If TRUE, try to apply model to all species with 400+data points
@@ -98,6 +98,12 @@ geography.constrain = FALSE
 form.use = formula(count ~ te(lat, lon, by = year, k = c(5, 5), bs = c("cr", "cr")) +
                      sourcefac + 
                      s(site.refac, bs = 're')) ## can specify form listed above or use formula() to write it directly here.
+do.pheno = FALSE
+
+## NOTE: if NOT fitting a doy term in the model, you can set `do.pheno` to FALSE, 
+## greatly speading up estimation of abundance + trends from the fitted model.
+## `do.pheno` MUST BE SET TO TRUE if there is a "doy" term in the model, so that 
+## abundance and trend are estimated from the full activity curve, not from 1 day per year.
 
 ## select a subset of the data sources to use
 ##   if left as NULL, will use all sources
@@ -120,8 +126,8 @@ specs.do = data.frame(code = c("PIERAP",
                                    "painted lady",
                                    "Baltimore checkerspot")
 )
-# specs.do = data.frame(code = c("PIERAP"),
-#                       specname = c("cabbage white")
+# specs.do = data.frame(code = c("EUPHPHA"),
+#                       specname = c("Baltimore checkerspot")
 # )
 
 # alternately, apply approach to ALL species
@@ -160,14 +166,28 @@ for(i.spec in 1:nrow(specs.do)){
                      geography.constrain = geography.constrain,
                      use.only.source = use.only.source,
                      n.threads.use = n.threads.use,
-                     use.range = use.range)
+                     use.range = use.range,
+                     do.pheno = do.pheno)
+  ## NOTE: I've updated the report_maker() to reduce the number of plots it creates.
+  ## This step is a sizeable chunk of the run-time, and creating things we don't use
+  ## wastes time.
   output.name = report_maker(out,
                              code.cur = code.cur,
                              run.suffix = run.suffix)
+  ## calculate trends
+  out.lm = lm(log(abund.index) ~ year, data = out$abund.species)
+  trend.spec = coef(out.lm)[2]
+  out.lm = lm(log(abund.index) ~ year, data = out$abund.highdense)
+  trend.highdense = coef(out.lm)[2]
+  out.lm = lm(log(abund.index) ~ year, data = out$abund.bestnfj)
+  trend.bestnfj = coef(out.lm)[2]
   summary.df = rbind(summary.df,
                      data.frame(
                        code = code.cur, 
                        abund.correlation = out$abund.cor,
+                       species.trend = trend.spec,
+                       trend.at.highest.predictions = trend.highdense,
+                       trend.at.best.nfj.data = trend.bestnfj,
                        filename = output.name
                      ))
 }
@@ -185,6 +205,9 @@ if(do.summary){
   }else{
     use.num = 1
   }
+  write.csv(summary.df,
+            here(paste0("4_res/fit-summaries/","AAA-run-summary - ", run.suffix, "-V", use.num, "-trends.csv")),
+            row.names = FALSE)
   path.use = here(paste0("4_res/fit-summaries/","AAA-run-summary - ", run.suffix, "-V", use.num, ".txt"))
   
   parm_paster = function(parm.name){

@@ -23,11 +23,14 @@ model_runner = function(code.cur, #GU code for taxa of interest
                         infer.messy.levels = c("GENUS", "SUBFAMILY", "FAMILY", "COMPLEX"), #for infering zeroes, what level of "unidentified" do we not infer zeroes
                         ## at the default, if a trip did not report the focal species, but did report an unknown in the family, subfamily, genus, or species complex
                         ## we do NOT infer zeroes. FOr a more selective approach, try setting to just c("GENUS", "COMPLEX") - this will infer more zeroes.
+                        do.pheno = TRUE, #If model doesn't include doy term, set to FALSE to speed up calculations. MAKE SURE THIS IS TRUE WHEN THERE IS A DOY TERM IN THE MODEL!
                         geography.constrain = FALSE, #if TRUE, restrict data to only the observations within the convex hull (in lat/lon)
                         #                               of non-inferred data. NOTE: this is overridden if using the range maps (if use.range == TRUE)
                         use.only.source= NULL, #if NULL, use all sources. If a vector of characters, use only the specified sources.
                         n.threads.use = 4){ #how many threads to let mgcv::bam() use. 
   #                                          Decrease if you're running into computer performance issues.
+  
+  if(!do.pheno){cat("do.pheno set to FALSE, calculations of trends + abundance calculated accordingly.\nCheck that there is no `doy` term in the model!\n")}
   if(use.inferred){
     make_dataset(code = code.cur, 
                  use.range = use.range, 
@@ -98,6 +101,7 @@ model_runner = function(code.cur, #GU code for taxa of interest
   ##remove "absence for" entries in list of species names -- these are to denote inferences
   names.vec = names.vec[!grepl("absence for ", names.vec)]
   plot.title = paste0(dat$common[1], " (", code.cur,")", ": " , paste0(names.vec, collapse = ", "))
+  cat(paste0("\n**************\nFitting ", plot.title,"\n**************\n"))
   
   ## constraining geography if called for - this version is clipping to the convex hull
   ## My thinking here is that splines can misbehave if we have many observations (of 0)
@@ -122,7 +126,6 @@ model_runner = function(code.cur, #GU code for taxa of interest
   
   #
   
-  print(paste0("Fitting ", plot.title))
   time.start = proc.time()
   fit = bam(form.use,
             data = dat,
@@ -141,22 +144,23 @@ model_runner = function(code.cur, #GU code for taxa of interest
   
   ## generate plots --------------
   ## plot abundance map
-  print("calculating abundance")
-  out.abund = abund_mapper(dat, fit, regions.dict, use.range = use.range, dat.constrain = geography.constrain)
+  cat("calculating abundance\n")
+  out.abund = abund_mapper(dat, fit, regions.dict, use.range = use.range, dat.constrain = geography.constrain, do.pheno = do.pheno)
   out.abund$fig
   
-  print("calculating trends")
+  cat("calculating trends\n")
   ## plot trends
   out.trend = trend_plotter(dat, fit, regions.dict, 
-                            dat.constrain = geography.constrain)
+                            dat.constrain = geography.constrain,
+                            do.pheno = do.pheno)
   out.trend$fig #+ scale_fill_viridis()
   
-  cat("calculating activity curve at data-dense region")
+  cat("calculating activity curve at data-dense region\n")
   ## plot activity curves for point of max data
   gp.activity.maxdata = demo_activity_plots(dat, fit, regions.dict)
   ## plot activity curves for point of max estimated density (diangostic for unreasonable activity curves)
   pt.maxabund = out.abund$data[which.max(out.abund$data$abund.index),]
-  cat("calculating activity curve at high estimated abundance region")
+  cat("calculating activity curve at high estimated abundance region\n")
   gp.activity.maxabund = activity_plotter(dat, fit, regions.dict, 
                                           lat.plot = pt.maxabund$lat, 
                                           lon.plot = pt.maxabund$lon,
@@ -164,12 +168,13 @@ model_runner = function(code.cur, #GU code for taxa of interest
                                           source.adaptive = FALSE)
   
   ## Plot NFJ abundance by region
-  cat("Comparing to NFJ abundance")
-  compare.abund = NFJ_compare(dat, fit, regions.dict, nyears = 10)
+  cat("Comparing to NFJ abundance\n")
+  compare.abund = NFJ_compare(dat, fit, regions.dict, use.range = use.range, nyears = 10)
   
   ## Plot NFJ trends by region
-  cat("Comparing to NFJ trends")
-  gp.nfj.trend = NFJ_regional_trends(dat, regions.dict)
+  ## This is no longer being used in the report. uncomment if being used again.
+  # cat("Comparing to NFJ trends")
+  # gp.nfj.trend = NFJ_regional_trends(dat, regions.dict, use.range = use.range)
   
   ## calculate some diagnostics for info-plot
   
@@ -193,6 +198,7 @@ model_runner = function(code.cur, #GU code for taxa of interest
                        sources = paste0("Sources limited to:  ", paste0(use.only.source, collapse=", ")),
                        knots = knots.vec
   )
+  if(is.null(use.only.source)){diagnostics.text$sources = "All sources used"}
   cat("\n")
   return(list(plot.title = plot.title,
               dat.abund = out.abund$data,
@@ -201,13 +207,16 @@ model_runner = function(code.cur, #GU code for taxa of interest
               fig.abund = out.abund$fig,
               fig.nfj.abund = compare.abund$fig,
               fig.trend = out.trend$fig,
-              fig.nfj.trend = gp.nfj.trend,
+              # fig.nfj.trend = gp.nfj.trend,
               fig.activity.maxdata = gp.activity.maxdata,
               fig.activity.maxabund = gp.activity.maxabund,
               fig.hist =gp.hist,
               fig.counts = gp.counts,
               diagnostics.text = diagnostics.text,
-              fitted.model = fit))
+              fitted.model = fit,
+              abund.species = out.abund$abund.species,
+              abund.highdense = out.abund$abund.highdense,
+              abund.bestnfj = out.abund$abund.bestnfj))
 }
 
 report_maker = function(modelfit.output,
@@ -240,23 +249,27 @@ report_maker = function(modelfit.output,
   ggsave(here("4_res/fit-summaries/temp-files/cur.trend.jpg"),
          modelfit.output$fig.trend, 
          width = fig.width, height = fig.height)
-  ggsave(here("4_res/fit-summaries/temp-files/cur.nfj.trend.jpg"),
-         modelfit.output$fig.nfj.trend, 
-         width = fig.width, height = fig.height)
-  saveRDS(modelfit.output$diagnostics.text,
-          here("4_res/fit-summaries/temp-files/cur.diagnostics.RDS"))
-  ggsave(here("4_res/fit-summaries/temp-files/cur.counts.jpg"),
-         modelfit.output$fig.counts, 
-         width = fig.width, height = fig.height)
-  ggsave(here("4_res/fit-summaries/temp-files/cur.hist.jpg"),
-         modelfit.output$fig.hist, 
-         width = fig.width, height = fig.height)
-  ggsave(here("4_res/fit-summaries/temp-files/cur.activity.maxdata.jpg"),
-         modelfit.output$fig.activity.maxdata, 
-         width = fig.width, height = fig.height)
-  ggsave(here("4_res/fit-summaries/temp-files/cur.activity.maxabund.jpg"),
-         modelfit.output$fig.activity.maxabund, 
-         width = fig.width, height = fig.height)
+  # ggsave(here("4_res/fit-summaries/temp-files/cur.nfj.trend.jpg"),
+  #        modelfit.output$fig.nfj.trend, 
+  #        width = fig.width, height = fig.height)
+  # saveRDS(modelfit.output$diagnostics.text,
+          # here("4_res/fit-summaries/temp-files/cur.diagnostics.RDS"))
+  ## Note: I've cut the following from the reports for the sake of speed. 
+  ## These plots didn't seem particularly useful, and plot-saving + report-making
+  ## is ~ 1/2 of the total runtime. If these plots are returned in the report,
+  ## uncomment these lines.
+  # ggsave(here("4_res/fit-summaries/temp-files/cur.counts.jpg"),
+  #        modelfit.output$fig.counts, 
+  #        width = fig.width, height = fig.height)
+  # ggsave(here("4_res/fit-summaries/temp-files/cur.hist.jpg"),
+  #        modelfit.output$fig.hist, 
+  #        width = fig.width, height = fig.height)
+  # ggsave(here("4_res/fit-summaries/temp-files/cur.activity.maxdata.jpg"),
+  #        modelfit.output$fig.activity.maxdata, 
+  #        width = fig.width, height = fig.height)
+  # ggsave(here("4_res/fit-summaries/temp-files/cur.activity.maxabund.jpg"),
+  #        modelfit.output$fig.activity.maxabund, 
+  #        width = fig.width, height = fig.height)
   render(input = here("3_scripts/species-fitting-report.Rmd"),
          output_dir = here("4_res/fit-summaries/"),
          params = list(title = out$diagnostics.text[["title"]]),

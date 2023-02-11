@@ -32,11 +32,12 @@ diagnostics.text = readRDS(here("4_res/fit-summaries/temp-files/cur.diagnostics.
 kable(diagnostics.text[-1])
 ```
 
-(If nothing is specified in sources, all sources are included)
 
-## Average annual abundance
+## Predicted abundance averaged across years
 
-Calculated in predicted NABA 4th of July observations per day -- this is the number we would expect to get if we chose a year at random, and carried out NABA 4th of July protocols for every day of that year. This is obviously not feasible, but serves as a benchmark for population sizes, and comparisons across regions show relative differences in abundance. We compare to the NABA 4th of july data by region; the model is fit to all data sources, but we would expect there should be some correspondence (e.g. if NABA data show sharp decline in the Pacific Northwest, we wouldn't expect the model to predict sharp increases).
+[Technical note: when we include effects of source and effort, the values are based on predictions
+of NABA greater circle counts. Each year's abundance is the sum of predictions for each day of the year.]
+
 
 ![Abundance map](../4_res/fit-summaries/temp-files/cur.abund.jpg)
 
@@ -44,25 +45,31 @@ Calculated in predicted NABA 4th of July observations per day -- this is the num
 
 ## Growth rates (trend in log abundance)
 
-This represents the log-linear trend in yearly abundance for a given location. 
+This represents the log-linear trend in yearly abundance for a given location. Because of how this value is calculated, it's equally appropriate for all sources. [Technical note: if we allow trends across years
+to vary by source or aspects other than lat/lon, this will need to be modified.]
+
 
 ![Trend map](../4_res/fit-summaries/temp-files/cur.trend.jpg)
 
-![Reference: NABA 4th of july abundance by region](../4_res/fit-summaries/temp-files/cur.nfj.abund.jpg)
+<!-- ![Reference: NABA 4th of july abundance by region](../4_res/fit-summaries/temp-files/cur.nfj.trend.jpg) -->
 
 ## Diagnostics: summary info
 
-![Data across the year, split by inferred or not](../4_res/fit-summaries/temp-files/cur.hist.jpg)
+[technical note: these plots have been cut for speed. These diagnostics did not seem useful. Consider returning if digging into phenology patterns]
 
-![Data by region, using FWS regions](../4_res/fit-summaries/temp-files/cur.counts.jpg)
+<!-- ![Data across the year, split by inferred or not](../4_res/fit-summaries/temp-files/cur.hist.jpg) -->
+
+<!-- ![Data by region, using FWS regions](../4_res/fit-summaries/temp-files/cur.counts.jpg) -->
 
 ## Diagnostics: activity curves
+
+[technical note: these plots have been cut for speed. These diagnostics did not seem useful. Consider returning if digging into phenology patterns]
 
 These two plots show yearly predicted activity curves for the lat/lon with the most nearby observations,
 and for the location with the highest estimated abundance. If there is no `doy` term in the
 model formula, these plots are not relevant. If there is, use these plots to ensure we don't have
 strange model behavior outside the season of actual butterfly activity.
 
-![Location of maximum data density](../4_res/fit-summaries/temp-files/cur.activity.maxdata.jpg)
+<!-- ![Location of maximum data density](../4_res/fit-summaries/temp-files/cur.activity.maxdata.jpg) -->
 
-![Data by region, using FWS regions](../4_res/fit-summaries/temp-files/cur.activity.maxabund.jpg)
+<!-- ![Data by region, using FWS regions](../4_res/fit-summaries/temp-files/cur.activity.maxabund.jpg) -->

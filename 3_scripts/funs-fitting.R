@@ -20,12 +20,21 @@ source(here("3_scripts/funs.R"))
 #                                  lat = seq(min(dat$lat), max(dat$lat), by = 1)))
 # pts.test = pts.rect[inhulln(shape.hull, pts.rect),]
 
-grid_plot_allyr = function(dat, regions.dict, use.range, dat.constrain){
+grid_plot_allyr = function(dat, 
+                           regions.dict, 
+                           use.range, 
+                           dat.constrain,
+                           do.pheno = TRUE){#if TRUE, predict on each day of the year. Otherwise, predict on one day of hte year.
   ## for easy calculating abundance
-  loc.pts = as.data.frame(expand.grid(lon = seq(min(dat$lon), max(dat$lon), by = 1),
-                                      lat = seq(min(dat$lat), max(dat$lat), by = 1)))
+  if(do.pheno){ ## model includes phenology curve, so predict along that.
+    doy.vec = seq(0,365, by = 1)
+  } else{
+    doy.vec = 180
+  }
+  loc.pts = as.data.frame(expand.grid(lon = seq(round(min(dat$lon)), round(max(dat$lon)), by = 1),
+                                      lat = seq(round(min(dat$lat)), round(max(dat$lat)), by = 1)))
   if(use.range){
-    loc.pts = use_range(loc.pts, code.cur = dat$code[1])
+    loc.pts = use_range(dat = loc.pts, code.cur = dat$code[1])
   }else if(dat.constrain){
     shape.hull = convhulln(loc.pts[,c("lon", "lat")])
     loc.pts = loc.pts[inhulln(shape.hull, as.matrix(loc.pts[, c("lon","lat")])),]
@@ -41,7 +50,7 @@ grid_plot_allyr = function(dat, regions.dict, use.range, dat.constrain){
     rename(regionfac = region)
   loc.pts = loc.pts[loc.pts$regionfac %in% dat$regionfac, ]
   grid.plot = expand_grid(loc.pts[, c("lat","lon", "regionfac")],
-                          doy = seq(0,365, by = 1),
+                          doy = doy.vec,
                           year = unique(dat$year))
   if("site.refac" %in% names(dat)){
     grid.plot$site.refac = as.factor("light on data")
@@ -49,7 +58,7 @@ grid_plot_allyr = function(dat, regions.dict, use.range, dat.constrain){
   return(grid.plot)
 }
 
-grid_plot_oneyr = function(dat, regions.dict, dat.constrain){
+grid_plot_oneyr = function(dat, regions.dict, dat.constrain, do.pheno = TRUE){
   ## for calculating trends
   loc.pts = as.data.frame(expand.grid(lon = seq(min(dat$lon), max(dat$lon), by = .2),
                                       lat = seq(min(dat$lat), max(dat$lat), by = .2)))
@@ -79,10 +88,14 @@ grid_plot_oneyr = function(dat, regions.dict, dat.constrain){
 abund_mapper = function(dat, fit, regions.dict, sourcefac = "NFJ", 
                         use.range = FALSE, #if TRUE, constrain to species range KML
                         dat.constrain = FALSE,#if constraining geography to convex hull, set this to TRUE to only predict there.
-                        do.confidence = FALSE){ #if true, calculate upper and lower confidence limits. Possibly. Interpretation seems tricky
+                        do.confidence = FALSE, #if true, calculate upper and lower confidence limits. Possibly. Interpretation seems tricky
+                        do.pheno = TRUE # set to FALSE if we're not fitting a phenology curve. if TRUE, predicts activity every day of the year. 
+                        # if FALSE, predicts for a single day in each year.
+){
   state.map.data <- maps::map('state', fill = TRUE, plot = FALSE) %>%
     st_as_sf()
-  grid.plot = grid_plot_allyr(dat, regions.dict, use.range = use.range, dat.constrain = dat.constrain)
+  grid.plot = grid_plot_allyr(dat, regions.dict, use.range = use.range, 
+                              dat.constrain = dat.constrain, do.pheno = do.pheno)
   grid.plot$sourcefac = sourcefac
   ## confidence stuff is messy. Not keeping this updated.
   if(do.confidence){
@@ -97,36 +110,40 @@ abund_mapper = function(dat, fit, regions.dict, sourcefac = "NFJ",
                 abund.upper = mean(count.upper)*365)
   }else{
     grid.plot$count = predict(fit, newdata = grid.plot, type = "response")
-    loc.sum = grid.plot %>% 
+    grid.yearly = grid.plot %>% 
+      group_by(lat, lon, year) %>% 
+      summarize(abund.index = mean(count)*365) %>% 
+      ungroup()
+    loc.sum = grid.yearly %>% 
       group_by(lat, lon) %>% 
-      summarize(abund.index = mean(count)*365)
+      summarize(abund.index = mean(abund.index)) %>% 
+      ungroup()
   }
   ## calculating abundance metrics
   
   ## yearly total abundance
-  abund.species = grid.plot %>% 
+  abund.species = grid.yearly %>% 
     group_by(year) %>% 
-    summarize(abund.index = sum(count)) %>% 
+    summarize(abund.index = sum(abund.index)) %>% 
     ungroup()
   ## yearly abundance at location of highest predicted density.
-  loc.highdense = loc.sum[(loc.sum$abund.index == max(loc.sum$abund.index))[1],]
-  abund.highdense = grid.plot %>% 
+  loc.highdense = loc.sum[which.max(loc.sum$abund.index),]
+  abund.highdense = grid.yearly %>% 
     filter(lat == loc.highdense$lat, 
            lon == loc.highdense$lon)
   ## yearly abundance at location with most NFJ sightings. 
   # reminder: predictions are happening at the rounded lat/lon, so let's find the rounded lat/lon with
   # the most NFJ obs
-  dat.nfj = dat %>% 
+  dat.nfj = dat %>%
     filter(source == "NFJ") %>% 
     mutate(lon = round(lon),
            lat = round(lat)) %>% 
     group_by(lon, lat) %>% 
-    summarize(abund = mean(count)) %>% 
+    summarize(nfj.abund = mean(count)) %>% 
     ungroup()
-  loc.bestnfj = dat.nfj[dat.nfj$abund == max(dat.nfj$abund)[1],]
-  abund.bestnfj = grid.plot %>% 
-    filter(lat == loc.bestnfj$lat, 
-           lon == loc.bestnfj$lon)
+  dat.nfj = inner_join(grid.yearly, dat.nfj)
+  abund.bestnfj = dat.nfj %>% 
+    filter(nfj.abund == max(nfj.abund))
   ## visualizing
   dat.pts = viz_filter(dat %>%  select(lon,lat, inferred), reso = 2)
   gp = ggplot()+
@@ -164,13 +181,16 @@ abund_mapper = function(dat, fit, regions.dict, sourcefac = "NFJ",
   if(do.confidence){
     res = list(fig = gp, fig.lower = gp.lower, fig.upper = gp.upper, data  = loc.sum)
   }else{
-    res = list(fig = gp, data = loc.sum, abund.species = abund.species, abund.highdense = abund.highdense, abund.bestnfj = abund.bestnfj)
+    res = list(fig = gp, data = loc.sum, 
+               abund.species = abund.species, abund.highdense = abund.highdense, 
+               abund.bestnfj = abund.bestnfj)
   }
   return(res)
 }
 
 trend_plotter = function(dat, fit, regions.dict, 
                          dat.constrain = FALSE, #if TRUE, only predict in the convex hull of the lat/lon of the data 
+                         do.pheno = TRUE, #if no doy term in the model, set to FALSE for faster calculations.
                          sourcefac = "NFJ"){ #if FALSE, set up 2-color gradient moving outward from 0. 
   #                                                  If TRUE, use a single color gradient adapted to observe GR.
   ## using median year and median year + 1 to help minimize numerical weirdness.
@@ -276,7 +296,8 @@ activity_plotter = function(dat, fit, regions.dict, lat.plot, lon.plot,
     theme_minimal()
 }
 
-NFJ_compare = function(dat, fit, regions.dict, nyears = 5,
+NFJ_compare = function(dat, fit, regions.dict, use.range = FALSE,
+                       nyears = 5,
                        across.doy = TRUE,#if FALSE, will just look at points estimates of doy for predictions. If TRUE, calculates activity-days in that year
                        across.year = TRUE #if FALSE, will treat each year separately. If TRUE, will report the average across all years. TRUE is probably more
                        #faithful as a model validation, as the model isn't structured to capture year-to-year fluctations.
@@ -284,6 +305,9 @@ NFJ_compare = function(dat, fit, regions.dict, nyears = 5,
   dat.comp = dat %>% 
     filter(sourcefac == "NFJ") %>% 
     filter(max(year)-year < nyears)
+  if(use.range){
+    dat.comp = use_range(dat.comp, code.cur = dat.comp$code[1])
+  }
   if(across.doy){
     dat.pred = expand_grid(nesting(dat.comp[, c("lat", "lon", "year", "regionfac")]),
                            doy = 0:365)
@@ -330,7 +354,7 @@ NFJ_compare = function(dat, fit, regions.dict, nyears = 5,
   return(list(fig = gp, cor = round(dat.cor$estimate,4)))
 }
 
-NFJ_regional_trends = function(dat, regions.dict){
+NFJ_regional_trends = function(dat, regions.dict, use.range = FALSE){
   ## calculate states as reminder for each region
   regions.df = data.frame(region = unique(dat$region))
   regions.df$label = ""

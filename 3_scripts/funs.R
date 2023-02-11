@@ -122,12 +122,12 @@ use_range = function(dat, #data frame of any data of interest, with columns `lon
                      code.cur){
   dat.sp = dat # separate object for spatial coordinates, because I'm paranoid about interactions with other code #use polygon range map
   range.map = rgdal::readOGR(here(paste0("2_data_wrangling/range-maps/", code.cur, ".kml")))
-  coordinates(dat.sp) <- ~ lon + lat
+  sp::coordinates(dat.sp) <- ~ lon + lat
   sp::proj4string(dat.sp) <- sp::proj4string(range.map)
   overlaid <- sp::over(dat.sp, as(range.map, "SpatialPolygons"))
   ind.within <- which(!is.na(overlaid))
-  dat.cur = dat.cur[ind.within,]
-  return(dat.cur)
+  dat = dat[ind.within,]
+  return(dat)
 }
 
 ## quickly filter to avoid plotting multiple points with identical lat/lon (makes mapping much faster)
