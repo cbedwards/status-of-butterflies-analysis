@@ -67,6 +67,8 @@ model_runner = function(code.cur, #GU code for taxa of interest
   
   ## make factor version of source
   dat$sourcefac = as.factor(dat$source)
+  ## make factor version of universal effort type
+  dat$effort.universal.type = as.factor(dat$effort.universal.type)
   
   ## adding customized site levels for random effects of sites
   dat$site.refac = sitere_maker(dat)
@@ -101,7 +103,8 @@ model_runner = function(code.cur, #GU code for taxa of interest
   ##remove "absence for" entries in list of species names -- these are to denote inferences
   names.vec = names.vec[!grepl("absence for ", names.vec)]
   plot.title = paste0(dat$common[1], " (", code.cur,")", ": " , paste0(names.vec, collapse = ", "))
-  cat(paste0("\n**************\nFitting ", plot.title,"\n**************\n"))
+  cat(paste0("\n******************************************\nFitting ", plot.title,
+             "\n******************************************\n"))
   
   ## constraining geography if called for - this version is clipping to the convex hull
   ## My thinking here is that splines can misbehave if we have many observations (of 0)
@@ -155,21 +158,22 @@ model_runner = function(code.cur, #GU code for taxa of interest
                             do.pheno = do.pheno)
   out.trend$fig #+ scale_fill_viridis()
   
-  cat("calculating activity curve at data-dense region\n")
-  ## plot activity curves for point of max data
-  gp.activity.maxdata = demo_activity_plots(dat, fit, regions.dict)
+  # cat("calculating activity curve at data-dense region\n")
+  # ## plot activity curves for point of max data
+  # gp.activity.maxdata = demo_activity_plots(dat, fit, regions.dict)
+  # 
   ## plot activity curves for point of max estimated density (diangostic for unreasonable activity curves)
-  pt.maxabund = out.abund$data[which.max(out.abund$data$abund.index),]
-  cat("calculating activity curve at high estimated abundance region\n")
-  gp.activity.maxabund = activity_plotter(dat, fit, regions.dict, 
-                                          lat.plot = pt.maxabund$lat, 
-                                          lon.plot = pt.maxabund$lon,
-                                          allyears = TRUE,
-                                          source.adaptive = FALSE)
+  # pt.maxabund = out.abund$data[which.max(out.abund$data$abund.index),]
+  # cat("calculating activity curve at high estimated abundance region\n")
+  # gp.activity.maxabund = activity_plotter(dat, fit, regions.dict, 
+  #                                         lat.plot = pt.maxabund$lat, 
+  #                                         lon.plot = pt.maxabund$lon,
+  #                                         allyears = TRUE,
+  #                                         source.adaptive = FALSE)
   
   ## Plot NFJ abundance by region
   cat("Comparing to NFJ abundance\n")
-  compare.abund = NFJ_compare(dat, fit, regions.dict, use.range = use.range, nyears = 10)
+  compare.abund = NFJ_compare(dat, fit, regions.dict, use.range = use.range, nyears = 10, across.doy = FALSE)
   
   ## Plot NFJ trends by region
   ## This is no longer being used in the report. uncomment if being used again.
@@ -208,8 +212,8 @@ model_runner = function(code.cur, #GU code for taxa of interest
               fig.nfj.abund = compare.abund$fig,
               fig.trend = out.trend$fig,
               # fig.nfj.trend = gp.nfj.trend,
-              fig.activity.maxdata = gp.activity.maxdata,
-              fig.activity.maxabund = gp.activity.maxabund,
+              # fig.activity.maxdata = gp.activity.maxdata,
+              # fig.activity.maxabund = gp.activity.maxabund,
               fig.hist =gp.hist,
               fig.counts = gp.counts,
               diagnostics.text = diagnostics.text,

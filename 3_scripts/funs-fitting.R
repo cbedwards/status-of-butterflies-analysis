@@ -51,7 +51,9 @@ grid_plot_allyr = function(dat,
   loc.pts = loc.pts[loc.pts$regionfac %in% dat$regionfac, ]
   grid.plot = expand_grid(loc.pts[, c("lat","lon", "regionfac")],
                           doy = doy.vec,
-                          year = unique(dat$year))
+                          year = unique(dat$year),
+                          effort.universal = 60,
+                          effort.universal.type = factor("party.minutes", levels = levels(dat$effort.universal.type)))
   if("site.refac" %in% names(dat)){
     grid.plot$site.refac = as.factor("light on data")
   }
@@ -62,7 +64,12 @@ grid_plot_oneyr = function(dat, regions.dict, dat.constrain, do.pheno = TRUE){
   ## for calculating trends
   loc.pts = as.data.frame(expand.grid(lon = seq(min(dat$lon), max(dat$lon), by = .2),
                                       lat = seq(min(dat$lat), max(dat$lat), by = .2)))
-  if(use.range){
+  if(do.pheno){ ## model includes phenology curve, so predict along that.
+    doy.vec = seq(0,365, by = 1)
+  } else{
+    doy.vec = 180
+  }
+  if(use.range){5
     loc.pts = use_range(loc.pts, code.cur = dat$code[1])
   }else if(dat.constrain){
     shape.hull = convhulln(loc.pts[,c("lon", "lat")])
@@ -78,7 +85,9 @@ grid_plot_oneyr = function(dat, regions.dict, dat.constrain, do.pheno = TRUE){
     rename(regionfac = region)
   loc.pts = loc.pts[loc.pts$regionfac %in% dat$regionfac, ]
   grid.plot = expand_grid(loc.pts[, c("lat","lon", "regionfac")],
-                          doy = seq(0,365, by = 1))
+                          doy = doy.vec,
+                          effort.universal = 60,
+                          effort.universal.type = factor("party.minutes", levels = levels(dat$effort.universal.type)))
   if("site.refac" %in% names(dat)){
     grid.plot$site.refac = as.factor("light on data")
   }
