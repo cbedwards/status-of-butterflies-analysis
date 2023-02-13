@@ -1,5 +1,5 @@
 ## Collin will be using this as his main workspace. model-tester will be a more accessible tutorial space.
-
+# setwd("G:/repos/status-of-butterflies-analysis")
 library(here)
 library(tidyverse)
 library(mgcv)
@@ -101,8 +101,8 @@ geography.constrain = FALSE
 
 ## formula:
 form.use = formula(count ~ te(lat, lon, by = year, k = c(5, 5), bs = c("cr", "cr")) +
-                     # effort.universal:effort.universal.type +
-                     # sourcefac + 
+                     effort.universal:effort.universal.type +
+                     sourcefac +
                      s(site.refac, bs = 're')) ## can specify form listed above or use formula() to write it directly here.
 do.pheno = FALSE
 
@@ -116,7 +116,7 @@ do.pheno = FALSE
 use.only.source = NULL
 
 ## How many threads to use when fitting? reduce if your computer is struggling.
-n.threads.use = 6
+n.threads.use = 4
 
 
 ## choosing species
@@ -146,13 +146,17 @@ if(specs.do.all){
     group_by(code) %>% 
     summarise(nyear = length(unique(year)),
               nsite = length(unique(site)),
+              nsource = length(unique(source)),
+              neffort.type = length(unique(effort.universal.type)),
               nobs = n()
     ) %>% 
     ungroup()
   dat.use = dat.sum %>% ## identifying thresholds for minimum years of data, minimum sites, minimum obs 
     filter(nobs >= 100) %>% 
     filter(nyear >= 10 ) %>% 
-    filter(nsite >= 10 )
+    filter(nsite >= 10 ) %>% 
+    filter(nsource > 1 ) %>% 
+    filter(neffort.type > 1)
   dat.use = dat.use[!(grepl("-", dat.use$code)),]
   dat.use = dat.use %>% 
     filter(code != "TBD") %>% 
@@ -195,15 +199,32 @@ for(i.spec in 1:nrow(specs.do)){
   trend.highdense = coef(out.lm)[2]
   out.lm = lm(log(abund.index) ~ year, data = out$abund.bestnfj)
   trend.bestnfj = coef(out.lm)[2]
+  res.cur =  data.frame(
+    code = code.cur, 
+    abund.correlation = out$abund.cor,
+    species.trend = trend.spec,
+    trend.at.highest.predictions = trend.highdense,
+    trend.at.best.nfj.data = trend.bestnfj,
+    filename = output.name
+  )
+  ## Quick and dirty - update results species by species, given crashes
+  cur.files = list.files(here(paste0("4_res/fit-summaries/")))
+  cur.file.code = cur.files[grepl(paste0("AAA-run-summary - ", run.suffix), cur.files)]
+  cur.file.code = cur.file.code[grepl("[.]txt", cur.file.code)]
+  if(length(cur.file.code)>0){
+    cur.file.code = gsub("[.]txt", "", cur.file.code)
+    cur.nums = as.numeric(gsub(paste0("AAA-run-summary - ", run.suffix, "-V"), "", cur.file.code))
+    use.num = max(cur.nums)+1
+  }else{
+    use.num = 1
+  }
+
+  ##
   summary.df = rbind(summary.df,
-                     data.frame(
-                       code = code.cur, 
-                       abund.correlation = out$abund.cor,
-                       species.trend = trend.spec,
-                       trend.at.highest.predictions = trend.highdense,
-                       trend.at.best.nfj.data = trend.bestnfj,
-                       filename = output.name
-                     ))
+                    res.cur)
+  write.csv(summary.df,
+            here(paste0("4_res/fit-summaries/","AAA-run-summary - ", run.suffix, "-V", use.num, "-trends - ongoing.csv")),
+            row.names = FALSE, append = TRUE)
 }
 
 ## saving summary file ----------------
