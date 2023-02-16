@@ -28,7 +28,7 @@ library(knitr)
 ```{r}
 #| label: tbl-model
 #| tbl-cap: "Details of model fitting"
-diagnostics.text = readRDS(here("4_res/fit-summaries/temp-files/cur.diagnostics.RDS"))
+diagnostics.text = readRDS(here("4_res/temp-files/cur.diagnostics.RDS"))
 kable(diagnostics.text[-1])
 ```
 
@@ -39,9 +39,9 @@ kable(diagnostics.text[-1])
 of NABA greater circle counts. Each year's abundance is the sum of predictions for each day of the year.]
 
 
-![Abundance map](../4_res/fit-summaries/temp-files/cur.abund.jpg)
+![Abundance map](../4_res/temp-files/cur.abund.jpg)
 
-![Sanity check: NABA 4th of july abundance by region](../4_res/fit-summaries/temp-files/cur.nfj.abund.jpg)
+![Sanity check: NABA 4th of july abundance by region](../4_res/temp-files/cur.nfj.abund.jpg)
 
 ## Growth rates (trend in log abundance)
 
@@ -49,17 +49,17 @@ This represents the log-linear trend in yearly abundance for a given location. B
 to vary by source or aspects other than lat/lon, this will need to be modified.]
 
 
-![Trend map](../4_res/fit-summaries/temp-files/cur.trend.jpg)
+![Trend map](../4_res/temp-files/cur.trend.jpg)
 
-<!-- ![Reference: NABA 4th of july abundance by region](../4_res/fit-summaries/temp-files/cur.nfj.trend.jpg) -->
+<!-- ![Reference: NABA 4th of july abundance by region](../4_res/temp-files/cur.nfj.trend.jpg) -->
 
 ## Diagnostics: summary info
 
 [technical note: these plots have been cut for speed. These diagnostics did not seem useful. Consider returning if digging into phenology patterns]
 
-<!-- ![Data across the year, split by inferred or not](../4_res/fit-summaries/temp-files/cur.hist.jpg) -->
+<!-- ![Data across the year, split by inferred or not](../4_res/temp-files/cur.hist.jpg) -->
 
-<!-- ![Data by region, using FWS regions](../4_res/fit-summaries/temp-files/cur.counts.jpg) -->
+<!-- ![Data by region, using FWS regions](../4_res/temp-files/cur.counts.jpg) -->
 
 ## Diagnostics: activity curves
 
@@ -70,6 +70,6 @@ and for the location with the highest estimated abundance. If there is no `doy` 
 model formula, these plots are not relevant. If there is, use these plots to ensure we don't have
 strange model behavior outside the season of actual butterfly activity.
 
-<!-- ![Location of maximum data density](../4_res/fit-summaries/temp-files/cur.activity.maxdata.jpg) -->
+<!-- ![Location of maximum data density](../4_res/temp-files/cur.activity.maxdata.jpg) -->
 
-<!-- ![Data by region, using FWS regions](../4_res/fit-summaries/temp-files/cur.activity.maxabund.jpg) -->
+<!-- ![Data by region, using FWS regions](../4_res/temp-files/cur.activity.maxabund.jpg) -->

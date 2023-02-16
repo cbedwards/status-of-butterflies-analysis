@@ -1,0 +1,467 @@
+code,scientific,common
+ACHLYC,Achalarus lyciades,Hoary Edge
+ADEBRE,Adelpha bredowii,Bredow's Sister
+ADEBRE,Adelpha bredowii californica,Bredow's Sister
+AGRAVAN,Agraulis vanillae,Gulf Fritillary
+AGRGLA,Agriades glandon,Arctic Blue
+AGRGLA,Plebejus glandon,Arctic Blue
+AGRGLA,Agriades glandon podarce,Arctic Blue
+AGRGLA,Agriades glandon franklinii,Arctic Blue
+AGRGLA,Agriades glandon glandon,Arctic Blue
+AGRGLA,Agriades podarce,Arctic Blue
+AMBAES,Amblyscirtes aesculapius,Lace-wing Roadside-skipper
+AMBHEG,Atrytonopsis hegon,Pepper and Salt Skipper
+AMBHEG,Amblyscirtes hegon,Pepper and Salt Skipper
+AMBVIA,Atrytonopsis vialis,Common Roadside Skipper
+AMBVIA,Amblyscirtes vialis,Common Roadside Skipper
+ANAAND,Anaea andria,Goatweed Leafwing
+ANARJAT,Anartia jatrophae,White Peacock
+ANATLOG,Atrytone logan,Delaware Skipper
+ANATLOG,Anatrytone logan,Delaware Skipper
+ANCNUM,Ancyloxypha numitor,Least Skipper
+ANCNUM,Ancycloxypha numitor,Least Skipper
+ANTHLAN,Anthocharis lanceolata,Gray Marble
+ANTHSAR,Anthocharis thoosa,Pacific Orangetip
+ANTHSAR,Anthocharis sara thoosa,Pacific Orangetip
+ANTHSAR,Anthocharis sara stella,Pacific Orangetip
+ANTHSAR,Anthocharis sara (includes thoosa and julia),Pacific Orangetip
+ANTHSAR,Anthocharis sara sara,Pacific Orangetip
+ANTHSAR,Anthocharis julia,Pacific Orangetip
+ANTHSAR,Anthocharis sara,Pacific Orangetip
+APOMOR,Apodemia mormo,Mormon Metalmark
+APOMOR,Apodemia mormo duryi,Mormon Metalmark
+APOMOR,Apodemia mormo virgulti,Mormon Metalmark
+APOMOR,Aphodemia virgulti,Mormon Metalmark
+APOMOR,Apodemia virgulti,Mormon Metalmark
+APOMOR,Apodemia mormo mejicanus,Mormon Metalmark
+ASCMON,Ascia monuste,Great Southern White
+ASTCEL,Asterocampa celtis,Hackberry Emperor
+ASTCLY,Asterocampa clyton,Tawny Emperor
+ATACAM,Atalopedes campestris,Sachem skipper
+ATLHAL,Atlides halesus,Great Purple Hairstreak 
+ATRYHIA,Atrytonopsis hianna,Dusted Skipper
+ATRYHIA,Atrytonopsis hianna loammi,Dusted Skipper
+BATPHI,Battus philenor,Pipevine Swallowtail
+BATPOL,Battus polydamas,Polydamas Swallowtail
+BFLY,Butterfly,BFLY
+BFLY,Butterfly sp.,BFLY
+BOLOBEL,Boloria bellona,Meadow Fritillary
+BOLOCHA,Boloria chariclea,Arctic Fritillary
+BOLOEPI,Boloria epithore,Pacific Fritillary
+BOLOSEL,Boloria selene,Silver-bordered Fritillary
+BREEXI,Brephidium exile,???
+BREISO,Brephidium exilis,Western Pygmy-Blue
+BREISO,Brephidium isophthalma,Western Pygmy-Blue
+CALLAUG,Incisalia augustinus iroides,Brown Elfin
+CALLAUG,Callophrys augustinus,Brown Elfin
+CALLDUM,Callophrys dumetorum apama,Western Green Hairstreak 
+CALLDUM,Callophrys dumetorum viridis,Western Green Hairstreak 
+CALLDUM,Callophrys dumetorum,Western Green Hairstreak 
+CALLDUM,Callophrys dumetorum affinis,Western Green Hairstreak 
+CALLDUM,Callophrys affinis,Western Green Hairstreak 
+CALLDUM,Callophrys dumetorum dumetorum,Western Green Hairstreak 
+CALLERY,Callophrys eryphon,Western Pine Elfin
+CALLERY,Incisalia eryphon,Western Pine Elfin
+CALLGRY,Callophrys gryneus sweadneri,Juniper Hairstreak 
+CALLGRY,Callophrys gryneus thornei,Juniper Hairstreak 
+CALLGRY,Callophrys gryneus loki,Juniper Hairstreak 
+CALLGRY,Callophrys gryneus muiri,Juniper Hairstreak 
+CALLGRY,Mitoura gryneus nelsoni,Juniper Hairstreak 
+CALLGRY,Callophrys gryneus siva,Juniper Hairstreak 
+CALLGRY,Callophrys gryneus nelsoni,Juniper Hairstreak 
+CALLGRY,Mitoura gryneus chalcosiva,Juniper Hairstreak 
+CALLGRY,Callophrys gryneus gryneus,Juniper Hairstreak 
+CALLGRY,Callophrys gryneus,Juniper Hairstreak 
+CALLHEN,Callophrys henrici,Henry's Elfin
+CALLIRU,Callophrys irus,Frosted Elfin
+CALLJOH,Callophrys johnsoni,Johnson's Hairstreak 
+CALLJOH,Mitoura johnsoni,Johnson's Hairstreak 
+CALLMOS,Callophrys mossii,Moss' Elfin
+CALLMOS,Incisalia mossii,Moss' Elfin
+CALLNIP,Callophrys niphon,Eastern Pine Elfin
+CALLSHE,Callophrys sheridanii,Sheridan's Green Hairstreak
+CALLSHE,Callophrys sheridanii sheridanii,Sheridan's Green Hairstreak
+CALLSHE,Callophrys perplexa,Sheridan's Green Hairstreak
+CALLSHE,Callophrys sheridanii lemberti,Sheridan's Green Hairstreak
+CALLSHE,Callophrys sheridanii comstocki,Sheridan's Green Hairstreak
+CALPETH,Calpodes ethlius,Brazilian Skipper
+CALYCEC,Calycopis cecrops,Red-banded Hairstreak
+CARTPAL,Carterocephalus palaemon,Arctic Skipper
+CELLAD,Celastrina ladon echo,Spring Azure
+CELLAD,Celastrina ladon ladon,Spring Azure
+CELLAD,Celastrina ladon/neglecta,Spring Azure
+CELLAD,Celastrina ladon humulus,Spring Azure
+CELLAD,Celastrina ladon argentata,Spring Azure
+CELLAD,Celastrina ladon neglecta,Spring Azure
+CELLAD,Celastrina ladon idella,Spring Azure
+CELLAD,Celastrina ladon,Spring Azure
+CELLAD,Celastrina echo,Spring Azure
+CELLAD,Celastrina ladon serotina,Spring Azure
+CELLAD,Celastrina serotina,Spring Azure
+CELLAD,Celastrina ladon violacea,Spring Azure
+CELLAD,Celastrina ladon ssp.,Spring Azure
+CEROET,Cercyonis oetus,Small Wood-Nymph
+CERPEG,Cercyonis pegala boopis,Common Wood-Nymph
+CERPEG,Cercyonis pegala,Common Wood-Nymph
+CERSTH,Cercyonis sthenele,Great Basin Wood-Nymph 
+CERSTH,Cercyonis sthenele silvestris,Great Basin Wood-Nymph 
+CHLOGOR,Chlosyne gorgone,Gorgone Checkerspot
+CHLOHAR,Chlosyne harrisii,Harris' Checkerspot
+CHLOHOF,Chlosyne hoffmanni,Hoffmann's Checkerspot
+CHLOLAC,Chlosyne lacinia,Bordered Patch
+CHLOLEA,Chlosyne leanira,Leanira Checkerspot
+CHLOLEA,Thessalia leanira,Leanira Checkerspot
+CHLONYC,Chlosyne nycteis,Silvery Checkerspot 
+CHLOPAL,Chlosyne palla,Northern Checkerspot
+COETUL,Coenonympha tullia california,Common Ringlet
+COETUL,Coenonympha tullia nipisiquit,Common Ringlet
+COETUL,Coenonympha tullia ochracea,Common Ringlet
+COETUL,Coenonympha tullia inornata,Common Ringlet
+COETUL,Coenonympha tullia,Common Ringlet
+COETUL,Coenonympha tullia ampelos,Common Ringlet
+COLALE,Colias alexandra krauthii,Queen Alexandra's Sulphur
+COLALE,Colias alexandra,Queen Alexandra's Sulphur
+COLALE,Colias alexandra harfordii,Queen Alexandra's Sulphur
+COLALE,Colias harfordii,Queen Alexandra's Sulphur
+COLCES,Zerene cesonia,Southern Dogface
+COLCES,Colias cesonia,Southern Dogface
+COLEU1,Colias eurydice,California Dogface
+COLEU1,Zerene eurydice,California Dogface
+COLEU2,Colias eurytheme,Orange Sulphur 
+COLINT,Colias interior,Pink-edged Sulphur
+COLPHI,Colias philodice (eriphyle),Clouded Sulphur
+COLPHI,Colias philodice,Clouded Sulphur
+COPAUR,Copaeodes aurantiaca,Orange Skipperling 
+COPAUR,Copaeodes aurantiacus,Orange Skipperling 
+COPMIN,Copaeodes minimus,Southern Skipperling
+CYLGEM,Cyllopsis gemma,Gemmed Satyr
+DANGIL,Danaus gilippus,Queen
+DANPLE,Danaus plexippus,Monarch
+ENOANT,Enodia anthedon,Northern Pearly-eye
+ENOPOR,Enodia portlandia,Southern Pearly-eye
+EPACLA,Epargyreus clarus,Silver-spotted Skipper
+EREEPI,Erebia epipsodea,Common Alpine
+ERYBAP,Erynnis baptisiae,Wild Indigo Duskywing
+ERYBRI,Erynnis brizo lacustra,Sleepy Duskywing
+ERYBRI,Erynnis brizo,Sleepy Duskywing
+ERYFUN,Erynnis funeralis,Funereal Duskywing
+ERYHOR,Erynnis horatius,Horace's Duskywing
+ERYICE,Erynnis icelus,Dreamy Duskywing
+ERYJUV,Erynnis juvenalis,Juvenal's Duskywing
+ERYJUV,Erynnis juvenalis clitus,Juvenal's Duskywing
+ERYPAC,Erynnis pacuvius,Pacuvius Duskywing
+ERYPER,Erynnis persius,Persius Duskywing
+ERYPRO,Erynnis propertius,Propertius Duskywing
+ERYTRI,Erynnis tristis,Mournful Duskywing
+ERYZAR,Erynnis zarucco,Zarucco Duskywing
+EUCAUS,Euchloe ausonides,Large Marble
+EUCHYA,Euchloe hyantis,California Marble
+EUCHYA,Euchloe hyantis foothill,California Marble
+EUCHYA,Euchloe lotta,California Marble
+EUCHYA,Euchloe hyantis hyantis,California Marble
+EUCHYA,Euchloe hyantis lotta,California Marble
+EUPBAT,Euphilotes bernardino,Western Square-dotted Blue
+EUPBAT,Euphilotes battoides,Western Square-dotted Blue
+EUPBAT,Euphilotes battoides baueri,Western Square-dotted Blue
+EUPBAT,Euphilotes battoides bernardino,Western Square-dotted Blue
+EUPBAT,Euphilotes battoides ellisi,Western Square-dotted Blue
+EUPBAT,Euphilotes battoides allyni,Western Square-dotted Blue
+EUPBAT,Euphilotes battoides centralis,Western Square-dotted Blue
+EUPBAT,Euphilotes battoides intermedia,Western Square-dotted Blue
+EUPENO,Euphilotes enoptes ancilla,Pacific Dotted-Blue
+EUPENO,Euphilotes enoptes,Pacific Dotted-Blue
+EUPENO,Euphilotes ancilla,Pacific Dotted-Blue
+EUPENO,Euphilotes enoptes mojave,Pacific Dotted-Blue
+EUPENO,Euphilotes enoptes enoptes,Pacific Dotted-Blue
+EUPENO,Euphilotes enoptes dammersi,Pacific Dotted-Blue
+EUPHCHA,Euphydryas chalcedona,Anicia/Colon/Chalcedon Checkerspot
+EUPHCHA,Euphydryas colon,Anicia/Colon/Chalcedon Checkerspot
+EUPHCHA,Euphydryas chalcedona chalcedona,Anicia/Colon/Chalcedon Checkerspot
+EUPHCHA,Euphydryas chalcedona colon,Anicia/Colon/Chalcedon Checkerspot
+EUPHCHA,Euphydryas chalcedona anicia,Anicia/Colon/Chalcedon Checkerspot
+EUPHCHA,Euphydryas anicia,Anicia/Colon/Chalcedon Checkerspot
+EUPHEDI,Euphydryas editha,Edith's Checkerspot
+EUPHPHA,Euphydryas phaeton,Baltimore Checkerspot
+EUPTCLA,Euptoieta claudia,Variegated Fritillary
+EUPYCON,Euphyes conspicuus,Black Dash
+EUPYCON,Euphyes conspicua,Black Dash
+EUPYDIO,Euphyes dion,Dion Skipper
+EUPYVES,Euphyes vestra,Dun Skipper 
+EUPYVES,Euphyes vestris,Dun Skipper 
+EURDAI,Eurema daira,Barred Yellow
+EURLIS,Eurema lisa,Little Yellow
+EURLIS,Pyrisitia lisa,Little Yellow
+EURNIC,Abaeis nicippe,Sleepy Orange
+EURNIC,Eurema nicippe,Sleepy Orange
+EURYMAR,Eurytides marcellus,Zebra Swallowtail
+EVEAMY,Cupido amyntula,Western Tailed-Blue
+EVEAMY,Everes amyntula,Western Tailed-Blue
+EVECOM,Cupido comyntas,Eastern Tailed-Blue
+EVECOM,Everes comyntas,Eastern Tailed-Blue
+FENTAR,Feniseca tarquinius,Harvester
+GLALYG,Glaucopsyche lygdamus,Silvery Blue
+GLAPIA,Glaucopsyche piasus,Arrowhead Blue
+HABGRU,Habrodais grunus,Golden Hairstreak
+HELCHA,Heliconius charithonia,Zebra Heliconian
+HELIERI,Heliopetes ericetorum,Northern White-Skipper
+HEMCER,Hemiargus ceraunus,Ceranus Blue
+HEMISO,Echinargus isola,Reakirt's Blue
+HEMISO,Hemiargus isola,Reakirt's Blue
+HERSOS,Hermeuptychia sosybius,Carolina Satyr
+HESCOL,Hesperia columbia,Columbian Skipper
+HESCOM,Hesperia colorado,Western Branded Skipper
+HESCOM,Hesperia colorado idaho,Western Branded Skipper
+HESCOM,Hesperia colorado tildeni,Western Branded Skipper
+HESCOM,Hesperia comma colorado,Western Branded Skipper
+HESCOM,Hesperia comma,Western Branded Skipper
+HESCOM,Hesperia colorado ssp.,Western Branded Skipper
+HESCOM,Hesperia comma assiniboia,Western Branded Skipper
+HESCOM,Hesperia colorado harpalus,Western Branded Skipper
+HESJUB,Hesperia juba,Juba Skipper 
+HESLEO,Hesperia leonardus,Leonard's Skipper
+HESLIN,Hesperia lindseyi,Lindsey's Skipper
+HESNEV,Hesperia nevada,Nevada Skipper
+HESSAS,Hesperia sassacus,Indian Skipper
+HYLPHY,Hylephila phyleus,Fiery Skipper
+JUNCOE,Junonia coenia,Common Buckeye
+JUNCOE,Junonoia coenia,Common Buckeye
+LEPCAS,Leptotes cassius,Cassius Blue
+LEPMAR,Leptotes marina,Marine Blue
+LERACC,Lerema accius,Clouded Skipper
+LEROEUF,Lerodea eufala,Eufala Skipper
+LIBCAR,Libytheana carinenta,American Snout
+LIBCAR,Libytheana carienta,American Snout
+LIMARC,Limenitis archippus,Viceroy
+LIMART,L. a. arthemis,Red-spotted Purple/White Admiral
+LIMART,Limenitis arthemis,Red-spotted Purple/White Admiral
+LIMLOR,Limenitis lorquini,Lorquin's Admiral
+LIMWEI,Limenitis weidemeyerii,Weidemeyer's Admiral
+LYCAARO,Lycaena arota arota,Tailed Copper
+LYCAARO,Lycaena arota,Tailed Copper
+LYCAARO,Lycaena arota virginiensis,Tailed Copper
+LYCACUP,Lycaena cupreus snowi,Lustrous Copper
+LYCACUP,Lycaena cupreus,Lustrous Copper
+LYCAEDI,Lycaena editha,Edith's Copper
+LYCAEPI,Lycaena epixanthe,Bog Copper
+LYCAEPI,Lyceana epixanthe,Bog Copper
+LYCAGOR,Lycaena gorgon,Gorgon Copper
+LYCAHEL,Lycaena helloides,Purplish Copper
+LYCAHET,Lycaena heteronea,Blue Copper
+LYCAHYL,Bronze Copper,Bronze Copper
+LYCAHYL,Lyceana hyllus,Bronze Copper
+LYCAMAR,Lycaena mariposa,Mariposa Copper
+LYCANIV,Lycaena nivalis,Lilac-bordered Copper
+LYCAPHL,Lycaena phlaeas,American Copper
+LYCARUB,Lycaena rubidus,Ruddy Copper
+LYCARUB,Lycaena rubidus ferrisi,Ruddy Copper
+LYCAXAN,Lycaena xanthoides,Great Copper
+LYCIDA,Plebejus idas,Northern Blue
+LYCIDA,Lycaeides idas anna,Northern Blue
+LYCIDA,Lycaeides idas,Northern Blue
+LYCMEL,Plebejus melissa,Melissa/Karner Blue
+LYCMEL,Lycaeides melissa melissa,Melissa/Karner Blue
+LYCMEL,Lycaeides melissa,Melissa/Karner Blue
+MEGICYM,Megisto cymela,Little Wood-Satyr
+MEGICYM,Megisto cymela (includes viola),Little Wood-Satyr
+NASLHE,Nastra lherminier,Swarthy Skipper
+NATIOL,Nathalis iole,Dainty Sulphur
+NEOPMEN,Neophasia menapia,Pine White
+NONE,None Seen This Day,
+NYMANT,Nymphalis antiopa,Mourning Cloak
+NYMCAL,Nymphalis californica,California Tortoiseshell
+NYMMIL,Aglais milberti,Milbert's Tortoiseshell
+NYMMIL,Nymphalis milbertii,Milbert's Tortoiseshell
+NYMMIL,Nymphalis milberti,Milbert's Tortoiseshell
+NYMVAU,Nymphalis vaualbum,Compton Tortoiseshell
+NYMVAU,Nymphalis l-album,Compton Tortoiseshell
+NYMVAU,Nymphalis vau-album,Compton Tortoiseshell
+OCHAGR,Ochlodes agricola,Rural Skipper
+OCHSYL,Ochlodes sylvanoides,Woodland Skipper
+OCHSYL,Ocholdes sylvanoides,Woodland Skipper
+OCHYUM,Ochlodes yuma,Yuma Skipper
+OENCHR,Oeneis chryxus chryxus,Chryxus Arctic
+OENCHR,Oeneis chryxus,Chryxus Arctic
+OENCHR,Oeneis chryxus ivallda,Chryxus Arctic
+OLIMAC,Oligoria maculata,Twin-spot Skipper
+PANOCO,Panoquina ocola,Ocola Skipper
+PAPCAN,Papilio canadensis,Canadian Tiger Swallowtail
+PAPCRE,Papilio rumiko,Western/Giant Swallowtail
+PAPCRE,Papilio cresphontes,Western/Giant Swallowtail
+PAPEUR,Papilio eurymedon,Pale Swallowtail
+PAPGLA,Pterourus appalachiensis,Eastern Tiger Swallowtail
+PAPGLA,Papilio glaucus,Eastern Tiger Swallowtail
+PAPIND,Papilio indra,Indra Swallowtail
+PAPMUL,Papilio multicaudatus,Two-tailed Swallowtail
+PAPMUL,Papilio multicaudata,Two-tailed Swallowtail
+PAPPAL,Papilio palamedes,Palamedes Swallowtail
+PAPPOL,Papilio polyxenes,Black Swallowtail
+PAPPOL,Papilio polyxenes coloro,Black Swallowtail
+PAPRUT,Papilio rutulus,Western Tiger Swallowtail
+PAPTRO,Papilio troilus,Spicebush Swallowtail
+PAPZEL,Papilio zelicaon,Anise Swallowtail
+PARNCLO,Parnassius clodius,Clodius Parnassian
+PARNPHO,Parnassius phoebus smintheus, Rocky Mountain Parnassian
+PARNPHO,Parnassius phoebus behri, Rocky Mountain Parnassian
+PARNPHO,Parnassius phoebus behrii, Rocky Mountain Parnassian
+PARNPHO,Parnassius phoebus phoebus, Rocky Mountain Parnassian
+PARNPHO,Parnassius smintheus, Rocky Mountain Parnassian
+PARNPHO,Parnassius phoebus, Rocky Mountain Parnassian
+PARRMAL,Parrhasius m-album,White-M Hairstreak
+PHISON,Philotes sonorensis,Sonoran Blue
+PHOEAGA,Phoebis agarithe,Large Orange Sulphur
+PHOEPHI,Phoebis philea,Orange-barred Sulphur
+PHOESEN,Phoebis sennae,Cloudless Sulphur
+PHOLCAT,Pholisora catullus,Common Sootywing
+PHYCAM,Phyciodes campestris montana,Field Crescent
+PHYCAM,Phyciodes campestris,Field Crescent
+PHYCAM,Phyciodes campestris campestris,Field Crescent
+PHYCAM,Phyciodes pulchella,Field Crescent
+PHYCAM,Phyciodes campestris inornatus,Field Crescent
+PHYCAM,Phyciodes campestris campestris/montana,Field Crescent
+PHYMYL,Phyciodes mylitta,Mylitta Crescent
+PHYORS,Phyciodes orseis herlani,California Crescent
+PHYORS,Phyciodes orseis,California Crescent
+PHYPHA,Phyciodes phaon,Phaon Crescent
+PHYSEL,Phyciodes cocyta selenis,Northern Crescent
+PHYSEL,Phyciodes selenis,Northern Crescent
+PHYSEL,Phyciodes cocyta,Northern Crescent
+PHYTEX,Phyciodes texana texana,Texan Crescent
+PHYTEX,Phyciodes texana,Texan Crescent
+PHYTEX,Phyciodes texana seminole,Texan Crescent
+PHYTHA,Phyciodes tharos,Pearl Crescent
+PIENAP,Pieris napi marginalis,Margined White
+PIENAP,Pieris marginalis,Margined White
+PIENAP,Pieris napi oleracea,Margined White
+PIENAP,Pieris napi,Margined White
+PIENAP,Pieris  napi,Margined White
+PIERAP,Pieris rapae,Cabbage White
+PLEACM,Plebejus acmon (includes texana and lutzi),Acmon Blue
+PLEACM,Plebejus acmon,Acmon Blue
+PLEICA,Plebejus icarioides missionensis,Boisduval's Blue
+PLEICA,Plebejus icarioides,Boisduval's Blue
+PLELUP,Plebejus lupini texanus,Lupine Blue 
+PLELUP,Plebejus lupini,Lupine Blue 
+PLESAE,Plebejus saepiolus,Greenish Blue
+PLESHA,Plebejus shasta,Shasta Blue
+POAHOB,Poanes hobomok,Hobomok Skipper
+POAMAS,Poanes massasoit,Mulberry Wing
+POAMEL,Poanes melane,Umber Skipper
+POATAX,Poanes taxiles,Taxiles Skipper
+POAVIA,Poanes viator,Broad-winged Skipper
+POAZAB,Poanes zabulon,Zabulon Skipper
+POLIMYS,Polites mystic,Long Dash
+POLIORI,Polites origenes,Crossline Skipper
+POLIPEC,Polites peckius,Peck's Skipper
+POLISAB,Polites sabuleti,Sandhill Skipper
+POLISAB,Polites sabuleti tecumseh,Sandhill Skipper
+POLISAB,Polites sabuleti ssp.,Sandhill Skipper
+POLISAB,Polites sabuleti sabuleti,Sandhill Skipper
+POLISON,Polites sonora,Sonora Skipper
+POLITHE,Polites themistocles,Tawny-edged Skipper
+POLIVIB,Polites vibex,Whirlabout
+POLYCOM,Polygonia comma,Eastern Comma
+POLYFAU,Polygonia faunus silvius,Green Comma 
+POLYFAU,Polygonia faunus,Green Comma 
+POLYFAU,Polygonia faunus faunus,Green Comma 
+POLYFAU,Polygonia faunus hylas,Green Comma 
+POLYGRA,Polygonia gracilis zephyrus,Hoary Comma
+POLYGRA,Polygonia gracilis,Hoary Comma
+POLYINT,Polygonia interrogationis,Question Mark
+POLYPRO,Polygonia progne,Gray Comma
+POLYSAT,Polygonia satyrus,Satyr Comma
+POMVER,Pompeius verna,Little Glassywing
+PONBEC,Pontia beckerii,Becker's White
+PONOCC,Pontia occidentalis,Western White
+PONPRO,Pontia protodice,Checkered White 
+PONPRO,Pontia protidice,Checkered White 
+PONSIS,Pontia sisymbrii,Spring White
+PYRALB,Pyrgus albescens,White Checkered-Skipper
+PYRCOM,Pyrgus communis,Common Checkered-Skipper
+PYROIL,Pyrgus oileus,Tropical Checkered-Skipper
+PYRRUR,Pyrgus ruralis,Two-banded Checkered-Skipper
+PYRSCR,Pyrgus scriptura,Small Checkered-Skipper
+S-LIAR,Limenitis arthemis arthemis,White Admiral
+S-LIAS,Limenitis arthemis astyanax,Astyanax' Red-spotted Purple
+S-LYSA,Lycaeides melissa samuelis,Karner Blue
+SATACA,Satyrium acadicum,Acadian Hairstreak
+SATACA,Satyrium acadica,Acadian Hairstreak
+SATAUR,Satyrium auretorum,Gold-hunter's Hairstreak
+SATBEH,Satyrium behrii,Behr's Hairstreak
+SATCA1,Satyrium calanus,Banded Hairstreak
+SATCA2,Satyrium californica,California Hairstreak
+SATCA3,Satyrium caryaevorum,Hickory Hairstreak
+SATEDW,Satyrium edwardsii,Edwards' Hairstreak
+SATFUL,Satyrium fulginosa,Sooty Hairstreak
+SATFUL,Satyrium fuliginosum fuliginosum,Sooty Hairstreak
+SATFUL,Satyrium fuliginosa,Sooty Hairstreak
+SATFUL,Satyrium fuliginosum semiluna,Sooty Hairstreak
+SATLIP,Satyrium liparops,Striped Hairstreak
+SATSAE,Satyrium saepium,Hedgerow Hairstreak
+SATSYL,Satyrium sylvinus,Sylvan Hairstreak
+SATTET,Satyrium tetra,Mountain Mahogany Hairstreak
+SATTIT,Satyrium titus,Coral Hairstreak
+SATYAPP,Satyrodes appalachia,Appalachian Brown
+SATYEUR,Satyrodes eurydice,Eyed Brown
+SPEYAPH,Speyeria aphrodite,Aphrodite Fritillary
+SPEYAPH,Speyeris aphrodite,Aphrodite Fritillary
+SPEYATL,Speyeria atlantis atlantis,Atlantis/Northwestern Fritillary
+SPEYATL,Speyeria atlantis irene,Atlantis/Northwestern Fritillary
+SPEYATL,Speyeria atlantis nausicaa,Atlantis/Northwestern Fritillary
+SPEYATL,Speyeria hesperis,Atlantis/Northwestern Fritillary
+SPEYATL,Speyeria atlantis hesperis,Atlantis/Northwestern Fritillary
+SPEYATL,Speyeria atlantis,Atlantis/Northwestern Fritillary
+SPEYCAL,Speyeria callippe ssp.,Callippe Fritillary
+SPEYCAL,Speyeria callippe,Callippe Fritillary
+SPEYCAL,Speyeria callippe nevadensis,Callippe Fritillary
+SPEYCAL,Speyeria callippe juba,Callippe Fritillary
+SPEYCOR,Speyeria coronis,Coronis Fritillary
+SPEYCYB,Speyeria cybele,Great Spangled Fritillary
+SPEYCYB,Speyeria cybele leto,Great Spangled Fritillary
+SPEYEGL,Speyeria egleis,Great Basin Fritillary
+SPEYHYD,Speyeria hydaspe,Hydaspe Fritillary
+SPEYIDA,Speyeria idalia,Regal Fritillary
+SPEYMOR,Speyeria mormonia,Mormon Fritillary
+SPEYMOR,Speyeria mormonia luski,Mormon Fritillary
+SPEYMOR,Speyeria mormonia atronia,Mormon Fritillary
+SPEYZER,Speyeria zerene,Zerene Fritillary
+SPEYZER,Speyeria zerene carolae,Zerene Fritillary
+STAPHAY,Staphylus hayhurstii,Hayhurst's Scallopwing
+STRMEL,Strymon melinus,Gray Hairstreak
+TBD,Piruna ajijiciensis,TBD
+TBD,Zizina Otis,TBD
+TBD,Temenis loathoe,TBD
+TBD,Antigonus erosus,TBD
+TBD,Archaeoprepona demophon,TBD
+TBD,Pteronymia cotytto,TBD
+TBD,Plebejus anna,TBD
+TBD,Celastrina humulus,TBD
+TBD,Mimoides phaon,TBD
+TBD,Panthiades bathildis,TBD
+TBD,Astraptes talus,TBD
+TBD,Anaea forreri,TBD
+TBD,Michaelus ira,TBD
+TBD,Pieriballia viardi,TBD
+TBD,Heliopetes alana,TBD
+TBD,Melete lycimnia,TBD
+TBD,Phocides belus,TBD
+TBD,Atlides rustan,TBD
+TBD,Ministrymon janevicroy,TBD
+TBD,Saliana esperi,TBD
+TBD,Anastrus sempiternus,TBD
+TBD,Callimormus saturnus,TBD
+TBD,Electrostrymon mathewi,TBD
+TBD,Zizina otis,TBD
+THOBAT,Thorybes bathyllus,Southern Cloudywing
+THODIV,Thorybes diversus,Western Cloudywing
+THOMEX,Thorybes mexicanus,Mexican Cloudywing
+THOMEX,Thorybes mexicana nevada,Mexican Cloudywing
+THOPYL,Thorybes pylades,Northern Cloudywing
+THYLIN,Thymelicus lineola,European Skipper
+URBDO1,Urbanus dorantes,Dorantes Longtail
+URBPR3,Urbanus proteus,Long-tailed Skipper
+VANANN,Vanessa annabella,West Coast Lady 
+VANATA,Vanessa atalanta,Red Admiral
+VANCAR,Vanessa cardui,Painted Lady
+VANVIR,Vanessa virginiensis,American Lady
+WALEGE,Wallengrenia egeremet,Northern Broken-Dash
+WALOTH,Wallengrenia otho,Southern Broken-Dash
