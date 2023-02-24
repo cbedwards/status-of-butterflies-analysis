@@ -17,6 +17,7 @@ model_runner = function(code.cur, #GU code for taxa of interest
                         #               if using each site as a separate level for random effects,
                         #               sitere_maker = function(dat){return(as.factor(dat$site))}
                         regions.dict, #dictionary to map states to regions
+                        fit.family = "nb",
                         use.range = FALSE, #if TRUE, reads in associated range map from 2_data_wrangling and cuts observations outside it
                         suitability.cutoff = NA, #if NA, use kml polygons of range map. If specified, estimated habitat suitability from .tiff, and include points with the specified suitability
                         use.inferred = TRUE, #if TRUE, infer zeros from community surveys that didn't report focal species
@@ -134,7 +135,7 @@ model_runner = function(code.cur, #GU code for taxa of interest
   fit = bam(form.use,
             data = dat,
             method="fREML", 
-            family="nb",
+            family=fit.family,
             knots=knot_maker(),
             discrete = TRUE,
             nthreads = n.threads.use)
@@ -152,6 +153,7 @@ model_runner = function(code.cur, #GU code for taxa of interest
   
   out.abund.and.trends = trend_and_abund_calc(dat=dat, fit = fit, 
                                               regions.dict = regions.dict, 
+                                              fit.family = fit.family,
                                               use.range = use.range, 
                                               dat.constrain = geography.constrain, 
                                               do.pheno = do.pheno)
@@ -196,7 +198,7 @@ model_runner = function(code.cur, #GU code for taxa of interest
   ## IF NFJ is in the data
   if(sum(dat$source == "NFJ")>0){
     cat("Comparing to NFJ abundance\n")
-    compare.abund = NFJ_compare(dat, fit, regions.dict, use.range = use.range, nyears = 10, across.doy = FALSE)
+    compare.abund = NFJ_compare(dat, fit, regions.dict, fit.family = fit.family, use.range = use.range, nyears = 10, across.doy = FALSE)
   }else{
     cat("No NFJ data, so no comparison to NFJ abundance")
     compare.abund = list(fig = ggplot()+ggtitle("No NFJ data"), cor = NA)

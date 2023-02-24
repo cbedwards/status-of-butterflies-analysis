@@ -9,29 +9,23 @@
 ## The sitere_maker() allows us to avoid estimating separate random effects for
 ## sites without sufficient data. See the final "filter()" call in designating temp.
 
-
 ## ## function to make site id for random effects.
-## treat any site with <5 years of non-zero data as a generic site
+## treat any site with <3 observations as a generic site
 sitere_maker = function(dat){
+  ##identify the sites NOT to lump
   temp = dat %>% 
-    group_by(site, year) %>% 
-    summarize(has.nonzero = any(count>0)) %>% 
-    filter(has.nonzero == TRUE) %>% 
     group_by(site) %>% 
-    summarize(nyear.nonzero = n()) %>% 
-    filter(nyear.nonzero < 4)
+    summarize(n.obs = n()) %>% 
+    filter(n.obs > 2)
+  cat(paste0("combining sites with low data into one random effect, total of ", nrow(temp)," observations affected \n"))
   site.re = rep("light on data", nrow(dat))
   site.re[dat$site %in% temp$site] = dat$site[dat$site %in% temp$site]
-  ## adding the following line to reduce model complexity. With this line, random effects
-  ## are basically just there to capture effort.
-  # site.re[dat$effort.universal.type!="site-based"] = "effort reported"
   site.re = as.factor(site.re)
   if(sum(site.re == "light on data")>0){
     site.re = relevel(site.re, ref = "light on data")
   }
   return(as.factor(site.re))
 }
-
 ## default knot placement:
 knot_maker = function(dat){
   return(list())
@@ -43,11 +37,12 @@ knot_maker = function(dat){
 do.summary = TRUE #If true, create summary text file for the whole combination of runs. 
 use.inferred = TRUE # specify whether or not to use inferred 0s.
 use.range = TRUE ## should we constrain data to within the range maps?
+fit.family = "nb" #negative binomial fit
 geography.constrain = FALSE ## should we constrain model to convex hull of non-zero counts? Superceded by use.range
 use.only.source = "NFJ" ## select a subset of the data sources to use. If left as NULL, will use all sources
 
 ## performance-tweaking parameters
-copy.heatmaps = FALSE ## If true, save a copy of the abundance and trends heatmaps for each species. Takes extra time to do this.
+copy.heatmaps = TRUE ## If true, save a copy of the abundance and trends heatmaps for each species. Takes extra time to do this.
 n.threads.use = 4 ## How many threads to use when fitting? reduce if your computer is struggling.
 do.pheno = FALSE ## !!IF!! the formula does not include phenology in the form of a doy-related term,
 ## setting this to FALSE will substantially speed up runs. WARNING: If do.pheno is FALSE and formula includes doy, results will be WRONG.
@@ -107,9 +102,9 @@ if(specs.do.all){
   specs.do = data.frame(code = codes.use)
   specs.do$specname = codes.use
 }
-problem.codes = c("CALLDUM", "CALLPOL", "CHLOPAL", "ERYZAR", "EUPYBIM")
+# problem.codes = c("CALLDUM", "CALLPOL", "CHLOPAL", "ERYZAR", "EUPYBIM")
 ## quick and dirty solution: skip those five species.
-specs.do = specs.do[-((which(specs.do$code %in% problem.codes))),]
+# specs.do = specs.do[-((which(specs.do$code %in% problem.codes))),]
 
 ### Misc ------------
 ## Grab FWS regions, designated by state based on this map: https://www.fws.gov/about/regions

@@ -1,3 +1,9 @@
+# QUICK NOTE: Noam Ross suggested that gamm4 package may be a bigger speedup when 
+# the limiting factor is random effects. I don't have currently ahve the time to try rewriting
+# using a new package (2 days to flying to CO), but I should look at this next chance I get.
+# 
+# https://peerj.com/articles/6876/#fig-19
+
 ## To facilitate running multiple versions of the model, this will read in a parameter file
 ## from 3_scripts/parameter-files and run it. Results will be saved to 4_res/fits-parameterized
 ## 
@@ -9,10 +15,10 @@ gc()
 ### Parameter file name should be the only piece that needs in THIS script. Save parameters in an R file in 3_scripts/parameter-files
 ### and provide the name (without ".R") here
 
-run.name = "full-run-only-MASSBfly"
+run.name = "full-run-all-sources-presence-absence"
 
 ## If running on Collin's desktop
-setwd("G:/repos/status-of-butterflies-analysis") ## for running out of rstudio, specific to Collin's desktop
+# setwd("G:/repos/status-of-butterflies-analysis") ## for running out of rstudio, specific to Collin's desktop
 
 
 ## QUICK NOTE FOR DEBUGGING FRUSTRATING PROBLEM!!
@@ -62,8 +68,6 @@ dir.create(res.path)
 dir.create(paste0(res.path,"/heatmaps"))
 file.copy(from = here(paste0("3_scripts/parameter-files/", run.name, ".R")),
           to = here(paste0(res.path, "/parameters-used.R")))
-file.create(paste0("res.path/","error-log.txt"))
-
 ## actual model fitting and saving --------
 summary.df = NULL
 for(i.spec in 1:nrow(specs.do)){
@@ -74,6 +78,7 @@ for(i.spec in 1:nrow(specs.do)){
                        knot_maker = knot_maker,
                        sitere_maker = sitere_maker,
                        regions.dict = regions.dict,
+                       fit.family = fit.family,
                        use.inferred = use.inferred,
                        geography.constrain = geography.constrain,
                        use.only.source = use.only.source,

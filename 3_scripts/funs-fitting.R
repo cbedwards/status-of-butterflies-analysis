@@ -127,6 +127,7 @@ grid_plot_oneyr = function(dat, regions.dict, do.pheno = TRUE, use.range = TRUE,
 # n0/(n+1)*(exp(n*r + r)-1)/(exp(r)-1)
 
 trend_and_abund_calc = function(dat, fit, regions.dict, 
+                                fit.family,
                                 use.range = TRUE,
                                 dat.constrain = FALSE, 
                                 do.pheno = TRUE, #if no doy term in the model, set to FALSE for faster calculations.
@@ -157,7 +158,7 @@ trend_and_abund_calc = function(dat, fit, regions.dict,
   }else{
     loc.plot = loc.plot %>% 
       rename(gr.med = gr) %>% 
-      mutate(abund.index = abund.index*365)%>% #making it butterfly-days, equiv to when phenology is measured
+      mutate(abund.index = abund.index * 365)%>% #making it butterfly-days, equiv to when phenology is measured
       select(lon, lat, gr.med, abund.index)
   }
   abund.tot = sum(loc.plot$abund.index)
@@ -268,7 +269,8 @@ activity_plotter = function(dat, fit, regions.dict, lat.plot, lon.plot,
     theme_minimal()
 }
 
-NFJ_compare = function(dat, fit, regions.dict, use.range = FALSE,
+NFJ_compare = function(dat, fit, regions.dict, fit.family,
+                       use.range = FALSE,
                        nyears = 5,
                        across.doy = TRUE,#if FALSE, will just look at points estimates of doy for predictions. If TRUE, calculates activity-days in that year
                        across.year = TRUE #if FALSE, will treat each year separately. If TRUE, will report the average across all years. TRUE is probably more
@@ -301,10 +303,15 @@ NFJ_compare = function(dat, fit, regions.dict, use.range = FALSE,
     dat.full = dat.full %>% 
       group_by(lat, lon, code, region) %>% 
       summarize(count = mean(count),
+                presence = mean(presence),
                 count.pred = mean(count.pred)) %>% 
       ungroup()
   }
-  dat.cor = cor.test(dat.full$count, dat.full$count.pred)
+  if(fit.family == "binomial"){ #quick handling of count vs presence/absence
+    dat.cor = cor.test(dat.full$presence, dat.full$count.pred)
+  }else{
+    dat.cor = cor.test(dat.full$count, dat.full$count.pred)
+  }
   p_pretty = function(p){
     if(is.na(p) | is.null(p)){
       res = "P undefined"
@@ -315,14 +322,25 @@ NFJ_compare = function(dat, fit, regions.dict, use.range = FALSE,
     )
     return(res)
   }
-  gp = ggplot(dat.full, aes(x = count, y = count.pred))+
-    geom_point(aes(col = region))+
-    geom_smooth(method = lm)+
-    # geom_smooth(method = lm, formula = dat.full$count.pred ~ dat.full$count:dat.full$region)+
-    ggtitle(paste0(dat.full$code[1],": ", dat$sommon[1], ", NFJ counts vs predictions, last ", nyears, " years\n",
-                   "Correlation of ", round(dat.cor$estimate,4),", ", p_pretty(dat.cor$p.value)))+
-    xlab("Actual count")+
-    ylab("Prediction")
+  if(fit.family == "binomial"){
+    gp = ggplot(dat.full, aes(x = presence, y = count.pred))+
+      geom_point(aes(col = region))+
+      geom_smooth(method = lm)+
+      # geom_smooth(method = lm, formula = dat.full$count.pred ~ dat.full$count:dat.full$region)+
+      ggtitle(paste0(dat.full$code[1],": ", dat$common[1], ", NFJ presence vs predictions, last ", nyears, " years\n",
+                     "Correlation of ", round(dat.cor$estimate,4),", ", p_pretty(dat.cor$p.value)))+
+      xlab("Actual presence (avg across year)")+
+      ylab("Predicted presence (avg across year)")
+  }else{
+    gp = ggplot(dat.full, aes(x = count, y = count.pred))+
+      geom_point(aes(col = region))+
+      geom_smooth(method = lm)+
+      # geom_smooth(method = lm, formula = dat.full$count.pred ~ dat.full$count:dat.full$region)+
+      ggtitle(paste0(dat.full$code[1],": ", dat$sommon[1], ", NFJ counts vs predictions, last ", nyears, " years\n",
+                     "Correlation of ", round(dat.cor$estimate,4),", ", p_pretty(dat.cor$p.value)))+
+      xlab("Actual count")+
+      ylab("Prediction")
+  }
   return(list(fig = gp, cor = round(dat.cor$estimate,4)))
 }
 

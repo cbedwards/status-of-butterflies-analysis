@@ -41,6 +41,7 @@ knot_maker = function(dat){
 ## Functional parameters
 do.summary = TRUE #If true, create summary text file for the whole combination of runs. 
 use.inferred = TRUE # specify whether or not to use inferred 0s.
+fit.family = "nb" #negative binomial fit
 use.range = TRUE ## should we constrain data to within the range maps?
 geography.constrain = FALSE ## should we constrain model to convex hull of non-zero counts? Superceded by use.range
 use.only.source = NULL ## select a subset of the data sources to use. If left as NULL, will use all sources
