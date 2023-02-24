@@ -1,0 +1,277 @@
+Fit on: 2023-02-24 12:10:21
+
+Parameters:
+==================
+form.use:
+  count ~ te(lat, lon, by = year, k = c(5, 5), bs = c("cr", "cr")) + effort.universal + s(site.refac, bs = "re")
+
+use.inferred:
+  TRUE
+
+geography.constrain:
+  FALSE
+
+use.only.source:
+  MASSBfly
+
+
+
+Correlation summaries:
+==================
+code	abund.correlation
+ACHLYC	NA
+AMBHEG	NA
+ANATLOG	NA
+ANCNUM	NA
+ATACAM	NA
+ATRYHIA	NA
+BOLOBEL	NA
+BOLOSEL	NA
+CALLAUG	NA
+CALLGRY	NA
+CALLIRU	NA
+CALLNIP	NA
+CELLAD	NA
+CERPEG	NA
+CHLOHAR	NA
+COETUL	NA
+COLEU2	NA
+COLPHI	NA
+DANPLE	NA
+ENOANT	NA
+EPACLA	NA
+ERYBAP	NA
+ERYHOR	NA
+ERYICE	NA
+ERYJUV	NA
+EUPHPHA	NA
+EUPTCLA	NA
+EUPYCON	NA
+EUPYVES	NA
+EVECOM	NA
+FENTAR	NA
+GLALYG	NA
+HESLEO	NA
+HESMET	NA
+HESSAS	NA
+HYLPHY	NA
+LIMARC	NA
+LIMART	NA
+LYCAEPI	NA
+LYCAPHL	NA
+MEGICYM	NA
+NYMANT	NA
+NYMMIL	NA
+PAPCAN	NA
+PAPCRE	NA
+PAPGLA	NA
+PAPPOL	NA
+PAPTRO	NA
+PHOLCAT	NA
+PHYTHA	NA
+PIERAP	NA
+POAHOB	NA
+POAMAS	NA
+POAVIA	NA
+POAZAB	NA
+POLIMYS	NA
+POLIORI	NA
+POLIPEC	NA
+POLITHE	NA
+POLYCOM	NA
+POLYINT	NA
+POMVER	NA
+SATACA	NA
+SATCA1	NA
+SATEDW	NA
+SATLIP	NA
+SATTIT	NA
+SATYAPP	NA
+SATYEUR	NA
+SPEYAPH	NA
+SPEYATL	NA
+SPEYCYB	NA
+STRMEL	NA
+THOBAT	NA
+THOPYL	NA
+THYLIN	NA
+VANATA	NA
+VANCAR	NA
+WALEGE	NA
+
+
+ Report files generated:
+==================
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/ACHLYC-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/AMBHEG-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/ANATLOG-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/ANCNUM-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/ATACAM-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/ATRYHIA-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/BOLOBEL-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/BOLOSEL-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/CALLAUG-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/CALLGRY-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/CALLIRU-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/CALLNIP-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/CELLAD-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/CERPEG-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/CHLOHAR-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/COETUL-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/COLEU2-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/COLPHI-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/DANPLE-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/ENOANT-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/EPACLA-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/ERYBAP-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/ERYHOR-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/ERYICE-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/ERYJUV-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/EUPHPHA-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/EUPTCLA-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/EUPYCON-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/EUPYVES-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/EVECOM-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/FENTAR-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/GLALYG-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/HESLEO-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/HESMET-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/HESSAS-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/HYLPHY-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/LIMARC-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/LIMART-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/LYCAEPI-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/LYCAPHL-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/MEGICYM-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/NYMANT-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/NYMMIL-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/PAPCAN-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/PAPCRE-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/PAPGLA-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/PAPPOL-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/PAPTRO-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/PHOLCAT-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/PHYTHA-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/PIERAP-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/POAHOB-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/POAMAS-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/POAVIA-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/POAZAB-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/POLIMYS-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/POLIORI-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/POLIPEC-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/POLITHE-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/POLYCOM-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/POLYINT-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/POMVER-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/SATACA-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/SATCA1-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/SATEDW-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/SATLIP-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/SATTIT-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/SATYAPP-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/SATYEUR-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/SPEYAPH-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/SPEYATL-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/SPEYCYB-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/STRMEL-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/THOBAT-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/THOPYL-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/THYLIN-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/VANATA-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/VANCAR-full-run-only-MASSBfly-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-MASSBfly-V1/WALEGE-full-run-only-MASSBfly-V1.html
+
+
+ Human notes on model fit:
+==================
+[Fill in as desired]
+
+
+============================================================
+============================================================
+============================================================
+
+
+
+Extra details:  knot and site-making functions, region dictionary
+==================
+
+
+knot_maker():
+function(dat){
+  return(list())
+}
+<bytecode: 0x0000029f0dce5b18>
+
+
+sitere_maker():
+function(dat){
+  ##identify the sites NOT to lump
+  temp = dat %>% 
+    group_by(site) %>% 
+    summarize(n.obs = n()) %>% 
+    filter(n.obs > 2)
+  cat(paste0("combining sites with low data into one random effect, total of ", nrow(temp)," observations affected \n"))
+  site.re = rep("light on data", nrow(dat))
+  site.re[dat$site %in% temp$site] = dat$site[dat$site %in% temp$site]
+  site.re = as.factor(site.re)
+  if(sum(site.re == "light on data")>0){
+    site.re = relevel(site.re, ref = "light on data")
+  }
+  return(as.factor(site.re))
+}
+<bytecode: 0x0000029ed955d9d8>
+
+
+Region dictionary:
+state	region
+Alabama	Southeast
+Arizona	Southwest
+Arkansas	Southeast
+California	Pacific Southwest
+Colorado	Mountain-Prarie
+Connecticut	Northeast
+Delaware	Northeast
+District of Columbia	Northeast
+Florida	Southeast
+Georgia	Southeast
+Idaho	Pacific
+Illinois	Midwest
+Indiana	Midwest
+Iowa	Midwest
+Kansas	Mountain-Prarie
+Kentucky	Southeast
+Louisiana	Southeast
+Maine	Northeast
+Maryland	Northeast
+Massachusetts	Northeast
+Michigan	Midwest
+Minnesota	Midwest
+Mississippi	Southeast
+Missouri	Midwest
+Montana	Mountain-Prarie
+Nebraska	Mountain-Prarie
+Nevada	Pacific Southwest
+New Hampshire	Northeast
+New Jersey	Northeast
+New Mexico	Southwest
+New York	Northeast
+North Carolina	Southeast
+North Dakota	Mountain-Prarie
+Ohio	Midwest
+Oklahoma	Southwest
+Oregon	Pacific
+Pennsylvania	Northeast
+Rhode Island	Northeast
+South Carolina	Southeast
+South Dakota	Mountain-Prarie
+Tennessee	Southeast
+Texas	Southwest
+Utah	Mountain-Prarie
+Vermont	Northeast
+Virginia	Northeast
+Washington	Pacific
+West Virginia	Northeast
+Wisconsin	Midwest
+Wyoming	Mountain-Prarie

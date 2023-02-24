@@ -31,14 +31,13 @@ knot_maker = function(dat){
   return(list())
 }
 
-
 ## Parameters ----------
 ## Functional parameters
 do.summary = TRUE #If true, create summary text file for the whole combination of runs. 
 use.inferred = TRUE # specify whether or not to use inferred 0s.
 use.range = TRUE ## should we constrain data to within the range maps?
 geography.constrain = FALSE ## should we constrain model to convex hull of non-zero counts? Superceded by use.range
-use.only.source = "MASSBfly" ## select a subset of the data sources to use. If left as NULL, will use all sources
+use.only.source = "OhioLeps" ## select a subset of the data sources to use. If left as NULL, will use all sources
 
 ## performance-tweaking parameters
 copy.heatmaps = TRUE ## If true, save a copy of the abundance and trends heatmaps for each species. Takes extra time to do this.
@@ -72,7 +71,7 @@ if(specs.do.all){
   #count the number of years, sites, and observation events with > 0 butterflies reported (per species)
   dat.sum = dat %>% 
     filter(presence == 1) %>% 
-    filter(source == "MASSBfly") %>% 
+    filter(source == "OhioLeps") %>% 
     group_by(code) %>% 
     summarise(nyear = length(unique(year)),
               nsite = length(unique(site)),
@@ -100,8 +99,8 @@ if(specs.do.all){
   specs.do = data.frame(code = codes.use)
   specs.do$specname = codes.use
 }
-problem.codes = c("JUNCOE", "VANVIR")
-## quick and dirty solution: skip those five species.
+problem.codes = c("ASTCEL", "HYLPHY", "JUNCOE", "VANVIR")
+# ## quick and dirty solution: skip those five species.
 # specs.do = specs.do[-(1:max(which(specs.do$code %in% problem.codes))),]
 specs.do = specs.do[-((which(specs.do$code %in% problem.codes))),]
 

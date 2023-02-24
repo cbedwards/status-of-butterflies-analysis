@@ -1,0 +1,647 @@
+Fit on: 2023-02-24 13:39:09
+
+Parameters:
+==================
+form.use:
+  count ~ te(lat, lon, by = year, k = c(5, 5), bs = c("cr", "cr")) + effort.universal + s(site.refac, bs = "re")
+
+use.inferred:
+  TRUE
+
+geography.constrain:
+  FALSE
+
+use.only.source:
+  NFJ
+
+
+
+Correlation summaries:
+==================
+code	abund.correlation
+ACHLYC	0.9296
+ADEBRE	0.9566
+AGRAVAN	0.9652
+AGRGLA	0.9409
+AMBHEG	0.7894
+AMBVIA	0.8996
+ANAAND	0.8833
+ANATLOG	0.9372
+ANCNUM	0.6064
+ANTHLAN	0.9887
+ANTHMID	0.4251
+ANTHSAR	0.9633
+APOMOR	0.9262
+ASTCEL	0.8302
+ASTCLY	0.9862
+ATACAM	0.7946
+ATLHAL	0.6932
+ATRARO	0.9332
+ATRYHIA	0.9581
+AUTCEL	0.9817
+BATPHI	0.8913
+BOLOBEL	0.8192
+BOLOCHA	NA
+BOLOEPI	0.9676
+BOLOSEL	0.9105
+BREEXI	0.7299
+BREISO	0.9845
+CALBOR	0.4228
+CALLAUG	0.3831
+CALLDUM	0.9832
+CALLERY	0.9285
+CALLGRY	0.983
+CALLHEN	0.6083
+CALLIRU	0.9275
+CALLMOS	0.9909
+CALLNIP	0.9856
+CALLPOL	0.9756
+CALLSHE	0.92
+CALLSPI	0.7105
+CALNEM	0.9587
+CALYCEC	0.8713
+CARTPAL	0.9807
+CELLAD	0.8304
+CELNEG	0.7228
+CEROET	0.9635
+CERPEG	0.9285
+CERSTH	0.3681
+CHLOGOR	0.9535
+CHLOHAR	0.5952
+CHLOHOF	0.9957
+CHLOLAC	0.9153
+CHLOLEA	0.9996
+CHLONYC	0.9254
+CHLOPAL	0.9897
+COETUL	0.9074
+COLALE	0.9183
+COLCES	0.9248
+COLEU1	0.9981
+COLEU2	0.845
+COLINT	0.9698
+COLOCC	0.9733
+COLPHI	0.9352
+COPAUR	0.955
+CYLGEM	0.8833
+DANGIL	0.8994
+DANPLE	0.8208
+DYMDYM	0.6097
+ENOANT	0.8937
+ENOCRE	0.9071
+ENOPOR	0.3016
+EPACLA	0.8901
+EREEPI	0.9031
+ERYBAP	0.852
+ERYBRI	0.8581
+ERYFUN	0.4742
+ERYHOR	0.9078
+ERYICE	0.8562
+ERYJUV	0.8389
+ERYMAR	0.8013
+ERYPAC	0.9422
+ERYPER	0.8885
+ERYPRO	0.9583
+ERYTRI	0.9095
+ERYZAR	0.9139
+EUCAUS	0.9342
+EUCHYA	0.665
+EUCOLY	0.9973
+EUPBAT	0.9492
+EUPENO	0.8915
+EUPHCHA	0.9213
+EUPHEDI	0.8203
+EUPHPHA	0.9365
+EUPTCLA	0.534
+EUPYBIM	0.9991
+EUPYCON	0.949
+EUPYDIO	0.4831
+EUPYDUK	0.8493
+EUPYVES	0.8553
+EURLIS	0.9307
+EURMEX	0.9878
+EURNIC	0.7361
+EURYMAR	0.2905
+EVEAMY	0.9927
+EVECOM	0.8564
+FENTAR	0.7564
+GLALYG	0.9064
+GLAPIA	0.8745
+HABGRU	0.9424
+HELIERI	0.9689
+HEMCER	0.849
+HEMISO	0.7201
+HERSOS	0.9357
+HESCOM	0.9786
+HESJUB	0.9356
+HESLEO	0.9535
+HESLIN	0.9938
+HESMET	0.5246
+HESNEV	0.748
+HESOTT	0.3448
+HESPAH	0.9088
+HESSAS	0.6462
+HESVIR	0.9985
+HYLPHY	0.9659
+JUNCOE	0.8333
+LEPMAR	0.82
+LERACC	0.7507
+LEROEUF	0.8966
+LIBCAR	0.522
+LIMARC	0.9693
+LIMART	0.9994
+LIMLOR	0.9593
+LIMWEI	0.7762
+LYCAARO	0.9992
+LYCACUP	0.9976
+LYCADIO	0.6658
+LYCADOR	0.9343
+LYCAEDI	0.9934
+LYCAEPI	0.9983
+LYCAGOR	0.978
+LYCAHEL	0.9573
+LYCAHET	0.8525
+LYCAHYL	0.9256
+LYCAMAR	0.9397
+LYCANIV	0.9882
+LYCAPHL	0.905
+LYCARUB	0.9857
+LYCAXAN	0.9989
+LYCIDA	0.987
+LYCMEL	0.939
+MEGICYM	0.8979
+NASLHE	0.8819
+NATIOL	0.7003
+NEOPMEN	0.9224
+NYMANT	0.7433
+NYMCAL	0.9505
+NYMMIL	0.9093
+NYMVAU	0.9911
+OARGAR	0.8375
+OCHAGR	0.9749
+OCHSYL	0.7911
+OENCHR	0.7335
+OENNEV	0.9383
+PANOCO	0.9796
+PAPCAN	0.9262
+PAPCRE	0.9746
+PAPEUR	0.9598
+PAPGLA	0.8126
+PAPIND	0.8447
+PAPMUL	0.9511
+PAPPOL	0.8297
+PAPRUT	0.9382
+PAPTRO	0.9183
+PAPZEL	0.979
+PARNCLO	0.9626
+PARNPHO	0.9891
+PARRMAL	0.8752
+PHOEAGA	0.7503
+PHOESEN	0.5157
+PHOLCAT	0.2522
+PHYBAT	0.7829
+PHYCAM	0.9016
+PHYMYL	0.9661
+PHYORS	0.9954
+PHYPAL	0.337
+PHYPIC	0.9114
+PHYSEL	0.9707
+PHYTEX	0.9287
+PHYTHA	0.7694
+PIENAP	0.9702
+PIERAP	0.6693
+PIEVIR	0.7222
+PIRPIR	0.987
+PLEACM	0.9656
+PLEICA	0.7588
+PLELUP	0.9446
+PLESAE	0.9132
+PLESHA	0.998
+POAHOB	0.9523
+POAMAS	0.7993
+POAMEL	0.975
+POATAX	0.716
+POAVIA	0.962
+POAZAB	0.8882
+POLIMYS	0.8219
+POLIORI	0.8702
+POLIPEC	0.8811
+POLISAB	0.9902
+POLISON	0.9084
+POLITHE	0.877
+POLYCOM	0.5928
+POLYFAU	0.9729
+POLYGRA	0.9436
+POLYINT	0.9994
+POLYPRO	0.9741
+POLYSAT	0.9941
+POMVER	0.9032
+PONBEC	0.9726
+PONOCC	0.8355
+PONPRO	0.9941
+PONSIS	0.7928
+PROBYS	0.915
+PYRALB	0.1907
+PYRCOM	0.7984
+PYRRUR	0.9919
+PYRSCR	0.9972
+SATACA	0.9117
+SATAUR	0.5169
+SATBEH	0.9342
+SATCA1	0.9479
+SATCA2	0.9849
+SATCA3	0.8973
+SATEDW	0.9309
+SATFAV	0.8953
+SATFUL	0.9654
+SATLIP	0.8532
+SATSAE	0.9894
+SATSYL	0.9571
+SATTET	0.6639
+SATTIT	0.9215
+SATYAPP	0.8131
+SATYEUR	0.7039
+SPEYAPH	0.9412
+SPEYATL	0.8924
+SPEYCAL	0.9317
+SPEYCOR	0.9688
+SPEYCYB	0.92
+SPEYEDW	0.9446
+SPEYEGL	0.9878
+SPEYHYD	0.9257
+SPEYIDA	0.7094
+SPEYMOR	0.62
+SPEYZER	0.9753
+STAPHAY	0.9541
+STRMEL	0.9501
+THOBAT	0.9215
+THOMEX	0.9415
+THOPYL	0.9072
+THYLIN	0.9725
+URBPR3	0.9861
+VANANN	0.9337
+VANATA	0.6493
+VANCAR	0.6244
+VANVIR	0.9885
+WALEGE	0.894
+
+
+ Report files generated:
+==================
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/ACHLYC-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/ADEBRE-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/AGRAVAN-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/AGRGLA-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/AMBHEG-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/AMBVIA-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/ANAAND-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/ANATLOG-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/ANCNUM-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/ANTHLAN-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/ANTHMID-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/ANTHSAR-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/APOMOR-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/ASTCEL-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/ASTCLY-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/ATACAM-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/ATLHAL-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/ATRARO-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/ATRYHIA-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/AUTCEL-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/BATPHI-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/BOLOBEL-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/BOLOCHA-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/BOLOEPI-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/BOLOSEL-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/BREEXI-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/BREISO-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/CALBOR-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/CALLAUG-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/CALLDUM-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/CALLERY-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/CALLGRY-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/CALLHEN-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/CALLIRU-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/CALLMOS-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/CALLNIP-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/CALLPOL-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/CALLSHE-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/CALLSPI-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/CALNEM-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/CALYCEC-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/CARTPAL-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/CELLAD-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/CELNEG-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/CEROET-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/CERPEG-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/CERSTH-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/CHLOGOR-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/CHLOHAR-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/CHLOHOF-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/CHLOLAC-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/CHLOLEA-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/CHLONYC-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/CHLOPAL-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/COETUL-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/COLALE-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/COLCES-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/COLEU1-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/COLEU2-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/COLINT-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/COLOCC-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/COLPHI-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/COPAUR-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/CYLGEM-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/DANGIL-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/DANPLE-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/DYMDYM-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/ENOANT-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/ENOCRE-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/ENOPOR-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/EPACLA-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/EREEPI-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/ERYBAP-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/ERYBRI-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/ERYFUN-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/ERYHOR-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/ERYICE-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/ERYJUV-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/ERYMAR-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/ERYPAC-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/ERYPER-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/ERYPRO-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/ERYTRI-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/ERYZAR-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/EUCAUS-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/EUCHYA-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/EUCOLY-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/EUPBAT-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/EUPENO-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/EUPHCHA-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/EUPHEDI-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/EUPHPHA-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/EUPTCLA-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/EUPYBIM-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/EUPYCON-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/EUPYDIO-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/EUPYDUK-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/EUPYVES-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/EURLIS-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/EURMEX-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/EURNIC-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/EURYMAR-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/EVEAMY-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/EVECOM-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/FENTAR-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/GLALYG-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/GLAPIA-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/HABGRU-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/HELIERI-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/HEMCER-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/HEMISO-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/HERSOS-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/HESCOM-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/HESJUB-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/HESLEO-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/HESLIN-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/HESMET-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/HESNEV-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/HESOTT-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/HESPAH-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/HESSAS-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/HESVIR-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/HYLPHY-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/JUNCOE-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/LEPMAR-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/LERACC-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/LEROEUF-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/LIBCAR-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/LIMARC-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/LIMART-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/LIMLOR-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/LIMWEI-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/LYCAARO-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/LYCACUP-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/LYCADIO-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/LYCADOR-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/LYCAEDI-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/LYCAEPI-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/LYCAGOR-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/LYCAHEL-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/LYCAHET-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/LYCAHYL-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/LYCAMAR-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/LYCANIV-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/LYCAPHL-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/LYCARUB-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/LYCAXAN-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/LYCIDA-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/LYCMEL-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/MEGICYM-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/NASLHE-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/NATIOL-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/NEOPMEN-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/NYMANT-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/NYMCAL-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/NYMMIL-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/NYMVAU-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/OARGAR-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/OCHAGR-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/OCHSYL-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/OENCHR-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/OENNEV-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PANOCO-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PAPCAN-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PAPCRE-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PAPEUR-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PAPGLA-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PAPIND-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PAPMUL-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PAPPOL-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PAPRUT-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PAPTRO-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PAPZEL-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PARNCLO-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PARNPHO-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PARRMAL-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PHOEAGA-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PHOESEN-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PHOLCAT-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PHYBAT-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PHYCAM-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PHYMYL-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PHYORS-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PHYPAL-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PHYPIC-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PHYSEL-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PHYTEX-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PHYTHA-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PIENAP-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PIERAP-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PIEVIR-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PIRPIR-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PLEACM-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PLEICA-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PLELUP-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PLESAE-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PLESHA-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/POAHOB-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/POAMAS-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/POAMEL-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/POATAX-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/POAVIA-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/POAZAB-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/POLIMYS-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/POLIORI-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/POLIPEC-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/POLISAB-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/POLISON-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/POLITHE-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/POLYCOM-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/POLYFAU-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/POLYGRA-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/POLYINT-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/POLYPRO-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/POLYSAT-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/POMVER-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PONBEC-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PONOCC-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PONPRO-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PONSIS-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PROBYS-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PYRALB-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PYRCOM-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PYRRUR-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/PYRSCR-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/SATACA-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/SATAUR-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/SATBEH-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/SATCA1-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/SATCA2-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/SATCA3-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/SATEDW-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/SATFAV-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/SATFUL-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/SATLIP-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/SATSAE-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/SATSYL-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/SATTET-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/SATTIT-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/SATYAPP-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/SATYEUR-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/SPEYAPH-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/SPEYATL-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/SPEYCAL-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/SPEYCOR-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/SPEYCYB-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/SPEYEDW-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/SPEYEGL-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/SPEYHYD-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/SPEYIDA-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/SPEYMOR-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/SPEYZER-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/STAPHAY-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/STRMEL-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/THOBAT-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/THOMEX-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/THOPYL-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/THYLIN-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/URBPR3-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/VANANN-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/VANATA-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/VANCAR-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/VANVIR-full-run-only-NFJ-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-NFJ-V1/WALEGE-full-run-only-NFJ-V1.html
+
+
+ Human notes on model fit:
+==================
+[Fill in as desired]
+
+
+============================================================
+============================================================
+============================================================
+
+
+
+Extra details:  knot and site-making functions, region dictionary
+==================
+
+
+knot_maker():
+function(dat){
+  return(list())
+}
+<bytecode: 0x0000022443188298>
+
+
+sitere_maker():
+function(dat){
+  ##identify the sites NOT to lump
+  temp = dat %>% 
+    group_by(site) %>% 
+    summarize(n.obs = n()) %>% 
+    filter(n.obs > 2)
+  cat(paste0("combining sites with low data into one random effect, total of ", nrow(temp)," observations affected \n"))
+  site.re = rep("light on data", nrow(dat))
+  site.re[dat$site %in% temp$site] = dat$site[dat$site %in% temp$site]
+  site.re = as.factor(site.re)
+  if(sum(site.re == "light on data")>0){
+    site.re = relevel(site.re, ref = "light on data")
+  }
+  return(as.factor(site.re))
+}
+<bytecode: 0x000002240b1f53d0>
+
+
+Region dictionary:
+state	region
+Alabama	Southeast
+Arizona	Southwest
+Arkansas	Southeast
+California	Pacific Southwest
+Colorado	Mountain-Prarie
+Connecticut	Northeast
+Delaware	Northeast
+District of Columbia	Northeast
+Florida	Southeast
+Georgia	Southeast
+Idaho	Pacific
+Illinois	Midwest
+Indiana	Midwest
+Iowa	Midwest
+Kansas	Mountain-Prarie
+Kentucky	Southeast
+Louisiana	Southeast
+Maine	Northeast
+Maryland	Northeast
+Massachusetts	Northeast
+Michigan	Midwest
+Minnesota	Midwest
+Mississippi	Southeast
+Missouri	Midwest
+Montana	Mountain-Prarie
+Nebraska	Mountain-Prarie
+Nevada	Pacific Southwest
+New Hampshire	Northeast
+New Jersey	Northeast
+New Mexico	Southwest
+New York	Northeast
+North Carolina	Southeast
+North Dakota	Mountain-Prarie
+Ohio	Midwest
+Oklahoma	Southwest
+Oregon	Pacific
+Pennsylvania	Northeast
+Rhode Island	Northeast
+South Carolina	Southeast
+South Dakota	Mountain-Prarie
+Tennessee	Southeast
+Texas	Southwest
+Utah	Mountain-Prarie
+Vermont	Northeast
+Virginia	Northeast
+Washington	Pacific
+West Virginia	Northeast
+Wisconsin	Midwest
+Wyoming	Mountain-Prarie

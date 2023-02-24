@@ -38,7 +38,7 @@ do.summary = TRUE #If true, create summary text file for the whole combination o
 use.inferred = TRUE # specify whether or not to use inferred 0s.
 use.range = TRUE ## should we constrain data to within the range maps?
 geography.constrain = FALSE ## should we constrain model to convex hull of non-zero counts? Superceded by use.range
-use.only.source = "MASSBfly" ## select a subset of the data sources to use. If left as NULL, will use all sources
+use.only.source = "NFJ" ## select a subset of the data sources to use. If left as NULL, will use all sources
 
 ## performance-tweaking parameters
 copy.heatmaps = TRUE ## If true, save a copy of the abundance and trends heatmaps for each species. Takes extra time to do this.
@@ -72,7 +72,6 @@ if(specs.do.all){
   #count the number of years, sites, and observation events with > 0 butterflies reported (per species)
   dat.sum = dat %>% 
     filter(presence == 1) %>% 
-    filter(source == "MASSBfly") %>% 
     group_by(code) %>% 
     summarise(nyear = length(unique(year)),
               nsite = length(unique(site)),
@@ -86,7 +85,9 @@ if(specs.do.all){
   dat.use = dat.sum %>% ## identifying thresholds for minimum years of data, minimum sites, minimum obs 
     filter(nobs >= 100) %>% 
     filter(nyear >= 10 ) %>% 
-    filter(nsite >= 10 )
+    filter(nsite >= 10 ) %>% 
+    filter(nsource > 1 ) %>% 
+    filter(neffort.type > 1)
   dat.use = dat.use[!(grepl("-", dat.use$code)),]
   dat.use = dat.use %>% 
     filter(code != "TBD") %>% 
@@ -100,10 +101,9 @@ if(specs.do.all){
   specs.do = data.frame(code = codes.use)
   specs.do$specname = codes.use
 }
-problem.codes = c("JUNCOE", "VANVIR")
+# problem.codes = c("CALLDUM", "CALLPOL", "CHLOPAL", "ERYZAR", "EUPYBIM")
 ## quick and dirty solution: skip those five species.
-# specs.do = specs.do[-(1:max(which(specs.do$code %in% problem.codes))),]
-specs.do = specs.do[-((which(specs.do$code %in% problem.codes))),]
+# specs.do = specs.do[-((which(specs.do$code %in% problem.codes))),]
 
 ### Misc ------------
 ## Grab FWS regions, designated by state based on this map: https://www.fws.gov/about/regions

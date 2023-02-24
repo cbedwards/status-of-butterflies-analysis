@@ -1,0 +1,269 @@
+Fit on: 2023-02-24 14:31:57
+
+Parameters:
+==================
+form.use:
+  count ~ te(lat, lon, by = year, k = c(5, 5), bs = c("cr", "cr")) + effort.universal + s(site.refac, bs = "re")
+
+use.inferred:
+  TRUE
+
+geography.constrain:
+  FALSE
+
+use.only.source:
+  OhioLeps
+
+
+
+Correlation summaries:
+==================
+code	abund.correlation
+ACHLYC	NA
+ANATLOG	NA
+ANCNUM	NA
+ANTHMID	NA
+ASTCLY	NA
+ATACAM	NA
+BATPHI	NA
+BOLOBEL	NA
+CALYCEC	NA
+CELLAD	NA
+CERPEG	NA
+CHLONYC	NA
+COLEU2	NA
+COLPHI	NA
+CYLGEM	NA
+DANPLE	NA
+ENOANT	NA
+EPACLA	NA
+ERYBAP	NA
+ERYBRI	NA
+ERYHOR	NA
+ERYICE	NA
+ERYJUV	NA
+EUPHPHA	NA
+EUPTCLA	NA
+EUPYVES	NA
+EURLIS	NA
+EURNIC	NA
+EURYMAR	NA
+EVECOM	NA
+FENTAR	NA
+HERSOS	NA
+HESLEO	NA
+LIBCAR	NA
+LIMARC	NA
+LYCAHYL	NA
+LYCAPHL	NA
+MEGICYM	NA
+NASLHE	NA
+NYMANT	NA
+PAPCRE	NA
+PAPGLA	NA
+PAPPOL	NA
+PAPTRO	NA
+PHOESEN	NA
+PHOLCAT	NA
+PHYTHA	NA
+PIERAP	NA
+POAHOB	NA
+POAVIA	NA
+POAZAB	NA
+POLIMYS	NA
+POLIORI	NA
+POLIPEC	NA
+POLITHE	NA
+POLYCOM	NA
+POLYINT	NA
+POMVER	NA
+PYRCOM	NA
+SATACA	NA
+SATCA1	NA
+SATCA3	NA
+SATLIP	NA
+SATTIT	NA
+SATYAPP	NA
+SATYEUR	NA
+SPEYAPH	NA
+SPEYCYB	NA
+STRMEL	NA
+THOBAT	NA
+THOPYL	NA
+THYLIN	NA
+VANATA	NA
+VANCAR	NA
+WALEGE	NA
+
+
+ Report files generated:
+==================
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/ACHLYC-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/ANATLOG-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/ANCNUM-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/ANTHMID-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/ASTCLY-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/ATACAM-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/BATPHI-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/BOLOBEL-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/CALYCEC-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/CELLAD-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/CERPEG-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/CHLONYC-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/COLEU2-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/COLPHI-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/CYLGEM-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/DANPLE-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/ENOANT-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/EPACLA-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/ERYBAP-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/ERYBRI-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/ERYHOR-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/ERYICE-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/ERYJUV-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/EUPHPHA-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/EUPTCLA-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/EUPYVES-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/EURLIS-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/EURNIC-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/EURYMAR-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/EVECOM-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/FENTAR-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/HERSOS-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/HESLEO-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/LIBCAR-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/LIMARC-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/LYCAHYL-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/LYCAPHL-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/MEGICYM-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/NASLHE-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/NYMANT-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/PAPCRE-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/PAPGLA-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/PAPPOL-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/PAPTRO-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/PHOESEN-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/PHOLCAT-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/PHYTHA-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/PIERAP-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/POAHOB-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/POAVIA-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/POAZAB-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/POLIMYS-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/POLIORI-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/POLIPEC-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/POLITHE-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/POLYCOM-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/POLYINT-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/POMVER-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/PYRCOM-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/SATACA-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/SATCA1-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/SATCA3-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/SATLIP-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/SATTIT-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/SATYAPP-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/SATYEUR-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/SPEYAPH-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/SPEYCYB-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/STRMEL-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/THOBAT-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/THOPYL-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/THYLIN-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/VANATA-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/VANCAR-full-run-only-OhioLeps-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-OhioLeps-V1/WALEGE-full-run-only-OhioLeps-V1.html
+
+
+ Human notes on model fit:
+==================
+[Fill in as desired]
+
+
+============================================================
+============================================================
+============================================================
+
+
+
+Extra details:  knot and site-making functions, region dictionary
+==================
+
+
+knot_maker():
+function(dat){
+  return(list())
+}
+<bytecode: 0x000002038c9b5388>
+
+
+sitere_maker():
+function(dat){
+  ##identify the sites NOT to lump
+  temp = dat %>% 
+    group_by(site) %>% 
+    summarize(n.obs = n()) %>% 
+    filter(n.obs > 2)
+  cat(paste0("combining sites with low data into one random effect, total of ", nrow(temp)," observations affected \n"))
+  site.re = rep("light on data", nrow(dat))
+  site.re[dat$site %in% temp$site] = dat$site[dat$site %in% temp$site]
+  site.re = as.factor(site.re)
+  if(sum(site.re == "light on data")>0){
+    site.re = relevel(site.re, ref = "light on data")
+  }
+  return(as.factor(site.re))
+}
+<bytecode: 0x0000020388b9ba40>
+
+
+Region dictionary:
+state	region
+Alabama	Southeast
+Arizona	Southwest
+Arkansas	Southeast
+California	Pacific Southwest
+Colorado	Mountain-Prarie
+Connecticut	Northeast
+Delaware	Northeast
+District of Columbia	Northeast
+Florida	Southeast
+Georgia	Southeast
+Idaho	Pacific
+Illinois	Midwest
+Indiana	Midwest
+Iowa	Midwest
+Kansas	Mountain-Prarie
+Kentucky	Southeast
+Louisiana	Southeast
+Maine	Northeast
+Maryland	Northeast
+Massachusetts	Northeast
+Michigan	Midwest
+Minnesota	Midwest
+Mississippi	Southeast
+Missouri	Midwest
+Montana	Mountain-Prarie
+Nebraska	Mountain-Prarie
+Nevada	Pacific Southwest
+New Hampshire	Northeast
+New Jersey	Northeast
+New Mexico	Southwest
+New York	Northeast
+North Carolina	Southeast
+North Dakota	Mountain-Prarie
+Ohio	Midwest
+Oklahoma	Southwest
+Oregon	Pacific
+Pennsylvania	Northeast
+Rhode Island	Northeast
+South Carolina	Southeast
+South Dakota	Mountain-Prarie
+Tennessee	Southeast
+Texas	Southwest
+Utah	Mountain-Prarie
+Vermont	Northeast
+Virginia	Northeast
+Washington	Pacific
+West Virginia	Northeast
+Wisconsin	Midwest
+Wyoming	Mountain-Prarie
