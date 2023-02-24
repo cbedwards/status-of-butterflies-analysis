@@ -143,7 +143,7 @@ Satyrinae,SF-SATY
 Pyrginae,SF-PYRG
 Nymphalinae,SF-NYMP
 Satyrium fuliginosa,SATFUL
-"",?-SP
+,?-SP
 Hesperiidae,F-HESP
 Papilioninae,SF-PAPI
 Pieridae,F-PIER
@@ -966,6 +966,7 @@ Parnassius phoebus phoebus,PARNPHO
 Parnassius phoebus smintheus,PARNPHO
 Parnassius phoebus behri,PARNPHO
 Parrhasius m-album,PARRMAL
+Parrhasius malbum,PARRMAL
 Pellicia sp.,PEL-SP
 Pellicia arina,PELARI
 Pellicia dimidiata,PELDIM

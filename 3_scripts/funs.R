@@ -83,7 +83,15 @@ trip_abs = function(dat, #full data set
   events.obs = unique(dat.obs$event.id)
   events.no.obs = unique(dat.com$event.id)
   events.no.obs = events.no.obs[!events.no.obs %in% events.obs]
-  cat(paste0("Total of ", length(events.obs), " observations of taxa (or related unknowns), and\n", length(events.no.obs), " inferred zero events."))
+  cat(paste0("Total of ", length(events.obs), " observations of taxa (or related unknowns), and\n", length(events.no.obs), " inferred zero events.\n"))
+  #How many inferred zeroes are we skipping because of our infer.messy.levels?
+  dat.obs.exact = dat.com[dat.com$code %in% code.cur,]
+  events.obs.exact = unique(dat.obs.exact$event.id)
+  events.no.obs.exact = unique(dat.com$event.id)
+  events.no.obs.exact = events.no.obs.exact[!events.no.obs.exact %in% events.obs.exact]
+  cat(paste0("Because of our current infer.messy.levels, we skipped inferring zeroes for ", 
+             length(events.no.obs.exact)-length(events.no.obs),
+             " events\n"))
   #identify all the trips that were NOT observed in the data
   trip.abs = trip.temp[trip.temp$event.id %in% events.no.obs,]
   trip.abs$code = code.cur
@@ -94,7 +102,9 @@ trip_abs = function(dat, #full data set
   dat.use = dat[dat$code == code.cur, ]
   dat.use = dat.use[!is.na(dat.use$code),]
   dat.use = rbind(dat.use, trip.abs)
-  return(dat.use)
+  return(list(dat = dat.use,
+              events.missed.messy = length(events.no.obs.exact)-length(events.no.obs))
+  )
 }
 
 
@@ -107,7 +117,9 @@ make_dataset = function(code.cur,
                         name.pretty = NULL){
   if(is.null(name.pretty)){name.pretty = code.cur}
   dat = as.data.frame(fread(here("2_data_wrangling/cleaned-data/cleaned-data-aggregated.csv")))
-  dat.cur = trip_abs(dat, code.cur, infer.messy.levels)
+  dat.trips = trip_abs(dat, code.cur, infer.messy.levels)
+  dat.cur = dat.trips$dat
+  events.missed.messy = dat.trips$events.missed.messy
   ## add code to restrict to range
   ## just use polygon of range map
   if(use.range){
@@ -116,6 +128,7 @@ make_dataset = function(code.cur,
   }
   fwrite(dat.cur, 
          here("2_data_wrangling/cleaned by code", paste0(name.pretty,".csv")))
+  return(events.missed.messy)
 }
 
 use_range = function(dat, #data frame of any data of interest, with columns `lon` and `lat` for longitude and latitude.

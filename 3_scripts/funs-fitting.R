@@ -22,8 +22,8 @@ source(here("3_scripts/funs.R"))
 
 grid_plot_allyr = function(dat, 
                            regions.dict, 
-                           use.range, 
                            dat.constrain,
+                           use.range = TRUE, 
                            do.pheno = TRUE){#if TRUE, predict on each day of the year. Otherwise, predict on one day of hte year.
   ## for easy calculating abundance
   if(do.pheno){ ## model includes phenology curve, so predict along that.
@@ -52,15 +52,19 @@ grid_plot_allyr = function(dat,
   grid.plot = expand_grid(loc.pts[, c("lat","lon", "regionfac")],
                           doy = doy.vec,
                           year = unique(dat$year),
-                          effort.universal = 60,
+                          effort.universal = 0,
                           effort.universal.type = factor("party.minutes", levels = levels(dat$effort.universal.type)))
+  if(all(unique(dat$effort.universal.type == "site-based"))){ ## accounting for case when site-based is the only option
+    grid.plot$effort.universal = 1
+    effort.universal.type = factor("site-based", levels = levels(dat$effort.universal.type))
+  }
   if("site.refac" %in% names(dat)){
-    grid.plot$site.refac = as.factor("light on data")
+    grid.plot$site.refac = factor("dummy.site", levels = levels(dat$site.refac))
   }
   return(grid.plot)
 }
 
-grid_plot_oneyr = function(dat, regions.dict, dat.constrain, do.pheno = TRUE){
+grid_plot_oneyr = function(dat, regions.dict, do.pheno = TRUE, use.range = TRUE, dat.constrain = FALSE){
   ## for calculating trends
   loc.pts = as.data.frame(expand.grid(lon = seq(min(dat$lon), max(dat$lon), by = .2),
                                       lat = seq(min(dat$lat), max(dat$lat), by = .2)))
@@ -69,7 +73,7 @@ grid_plot_oneyr = function(dat, regions.dict, dat.constrain, do.pheno = TRUE){
   } else{
     doy.vec = 180
   }
-  if(use.range){5
+  if(use.range){
     loc.pts = use_range(loc.pts, code.cur = dat$code[1])
   }else if(dat.constrain){
     shape.hull = convhulln(loc.pts[,c("lon", "lat")])
@@ -86,146 +90,86 @@ grid_plot_oneyr = function(dat, regions.dict, dat.constrain, do.pheno = TRUE){
   loc.pts = loc.pts[loc.pts$regionfac %in% dat$regionfac, ]
   grid.plot = expand_grid(loc.pts[, c("lat","lon", "regionfac")],
                           doy = doy.vec,
-                          effort.universal = 60,
-                          effort.universal.type = factor("party.minutes", levels = levels(dat$effort.universal.type)))
+                          effort.universal = 0,
+                          effort.universal.type = factor(dat$effort.universal.type[1], 
+                                                         #note: we're setting effort to 0 (remember: normalized), 
+                                                         #  so we can use any effort type. Just want one that's present. 
+                                                         levels = levels(dat$effort.universal.type)))
   if("site.refac" %in% names(dat)){
-    grid.plot$site.refac = as.factor("light on data")
+    grid.plot$site.refac = factor("dummy.site", levels = c(levels(dat$site.refac), "dummy.site"))
   }
   return(grid.plot)
 }
 
-abund_mapper = function(dat, fit, regions.dict, sourcefac = "NFJ", 
-                        use.range = FALSE, #if TRUE, constrain to species range KML
-                        dat.constrain = FALSE,#if constraining geography to convex hull, set this to TRUE to only predict there.
-                        do.confidence = FALSE, #if true, calculate upper and lower confidence limits. Possibly. Interpretation seems tricky
-                        do.pheno = TRUE # set to FALSE if we're not fitting a phenology curve. if TRUE, predicts activity every day of the year. 
-                        # if FALSE, predicts for a single day in each year.
-){
-  state.map.data <- maps::map('state', fill = TRUE, plot = FALSE) %>%
-    st_as_sf()
-  grid.plot = grid_plot_allyr(dat, regions.dict, use.range = use.range, 
-                              dat.constrain = dat.constrain, do.pheno = do.pheno)
-  grid.plot$sourcefac = sourcefac
-  ## confidence stuff is messy. Not keeping this updated.
-  if(do.confidence){
-    mod.pred = predict(fit, newdata = grid.plot, type = "response", se = TRUE)
-    grid.plot$count = mod.pred$fit
-    grid.plot$count.lower = mod.pred$fit - 1.96*mod.pred$se
-    grid.plot$count.upper = mod.pred$fit + 1.96*mod.pred$se
-    loc.sum = grid.plot %>% 
-      group_by(lat, lon) %>% 
-      summarize(abund.index = mean(count)*365,
-                abund.lower = mean(count.lower)*365,
-                abund.upper = mean(count.upper)*365)
-  }else{
-    grid.plot$count = predict(fit, newdata = grid.plot, type = "response")
-    grid.yearly = grid.plot %>% 
-      group_by(lat, lon, year) %>% 
-      summarize(abund.index = mean(count)*365) %>% 
-      ungroup()
-    loc.sum = grid.yearly %>% 
-      group_by(lat, lon) %>% 
-      summarize(abund.index = mean(abund.index)) %>% 
-      ungroup()
-  }
-  ## calculating abundance metrics
-  
-  ## yearly total abundance
-  abund.species = grid.yearly %>% 
-    group_by(year) %>% 
-    summarize(abund.index = sum(abund.index)) %>% 
-    ungroup()
-  ## yearly abundance at location of highest predicted density.
-  loc.highdense = loc.sum[which.max(loc.sum$abund.index),]
-  abund.highdense = grid.yearly %>% 
-    filter(lat == loc.highdense$lat, 
-           lon == loc.highdense$lon)
-  ## yearly abundance at location with most NFJ sightings. 
-  # reminder: predictions are happening at the rounded lat/lon, so let's find the rounded lat/lon with
-  # the most NFJ obs
-  dat.nfj = dat %>%
-    filter(source == "NFJ") %>% 
-    mutate(lon = round(lon),
-           lat = round(lat)) %>% 
-    group_by(lon, lat) %>% 
-    summarize(nfj.abund = mean(count)) %>% 
-    ungroup()
-  dat.nfj = inner_join(grid.yearly, dat.nfj)
-  abund.bestnfj = dat.nfj %>% 
-    filter(nfj.abund == max(nfj.abund))
-  ## visualizing
-  dat.pts = viz_filter(dat %>%  select(lon,lat, inferred), reso = 2)
-  gp = ggplot()+
-    geom_tile(data = loc.sum, aes(x = lon, y = lat, fill = log10(abund.index)))+
-    geom_point(data = dat.pts %>% filter(inferred == TRUE), aes(x = lon, y = lat), col = "coral", size = .2)+
-    geom_point(data = dat.pts %>% filter(inferred == FALSE), aes(x = lon, y = lat), col = "springgreen3", size = .2)+
-    geom_sf(data = state.map.data, fill = NA)+
-    scale_fill_viridis()+
-    theme_minimal()+
-    ggtitle(paste0(dat$code[1], ": ", dat$sommon[1], " estimated abundance (averaged across all years)\ncoral points: inferred observations; green points: direct observations"))
-  ## TROUBLE ADDING RANGE MAP. UPDATE HERE WITH ELIZA INPUT
-  # if(use.range){
-  #   range.map = rgdal::readOGR(here(paste0("2_data_wrangling/range-maps/", code.cur, ".kml")))
-  #   gp = gp + 
-  #     geom_path(data = range.map, aes(x = long, y = lat), fill = NA, color = "black")
-  # }
-  ## confidence stuff is messy. Not keeping this updated.
-  if(do.confidence){
-    gp.lower = ggplot()+
-      geom_tile(data = loc.sum, aes(x = lon, y = lat, fill = log10(abund.lower)))+
-      geom_point(data = dat.pts, aes(x = lon, y = lat), size = .2)+
-      geom_sf(data = state.map.data, fill = NA)+
-      scale_fill_viridis()+
-      theme_minimal()+
-      ggtitle(paste0(dat$code[1], " estimated abundance, LOWER CONFIDENCE LIMIT"))
-    gp.upper= ggplot()+
-      geom_tile(data = loc.sum, aes(x = lon, y = lat, fill = log10(abund.upper)))+
-      geom_point(data = dat.pts, aes(x = lon, y = lat), size = .2)+
-      geom_sf(data = state.map.data, fill = NA)+
-      scale_fill_viridis()+
-      theme_minimal()+
-      ggtitle(paste0(dat$code[1], " estimated abundance, UPPER CONFIDENCE LIMIT"))
-  }
-  ## not keeping do.confidence updated
-  if(do.confidence){
-    res = list(fig = gp, fig.lower = gp.lower, fig.upper = gp.upper, data  = loc.sum)
-  }else{
-    res = list(fig = gp, data = loc.sum, 
-               abund.species = abund.species, abund.highdense = abund.highdense, 
-               abund.bestnfj = abund.bestnfj)
-  }
-  return(res)
-}
 
-trend_plotter = function(dat, fit, regions.dict, 
-                         dat.constrain = FALSE, #if TRUE, only predict in the convex hull of the lat/lon of the data 
-                         do.pheno = TRUE, #if no doy term in the model, set to FALSE for faster calculations.
-                         sourcefac = "NFJ"){ #if FALSE, set up 2-color gradient moving outward from 0. 
-  #                                                  If TRUE, use a single color gradient adapted to observe GR.
-  ## using median year and median year + 1 to help minimize numerical weirdness.
-  ## 
-  state.map.data <- maps::map('state', fill = TRUE, plot = FALSE) %>%
-    st_as_sf()
-  
+
+##Update: this is the past abundance mapper. It struggles with larger data sets, I ran into issues with RAM.
+##It's also inefficient when we know our population trends are linear. 
+
+
+
+#Calculates raw trend, and abundance.
+#Note: mean abundance for a single site across years, when growth is exactly exponential (ie our models here):
+#1/(N+1) \sum_{t = 0}^n N_0 e^{rt}
+#(just tex writing for the sum N_0 + N_0*e^r + N_0*e^(r*2)...)
+#This has a closed-form solution that doesn't require calculating individual years
+#(valuable given memory limitations, size of our data)
+#Solution is \frac{N_0}{n+1} \frac{e^(rt + r)-1}{e^r-1}
+## Test case:
+#n0 = 1000 #initial size of 1000
+# r = .05 #growth rate
+# n = 50 #number of years
+# ## calculate each year and average
+# yrs = 0:n
+# pop = n0*exp(r*yrs)
+# mean(pop)
+# ## closed form
+# n0/(n+1)*(exp(n*r + r)-1)/(exp(r)-1)
+
+trend_and_abund_calc = function(dat, fit, regions.dict, 
+                                use.range = TRUE,
+                                dat.constrain = FALSE, 
+                                do.pheno = TRUE, #if no doy term in the model, set to FALSE for faster calculations.
+                                sourcefac = "NFJ"){
   ## Prepping two sequential years for predicting
-  loc.plot = grid_plot_oneyr(dat, regions.dict, dat.constrain)
+  loc.plot = grid_plot_oneyr(dat = dat, regions.dict = regions.dict,
+                             dat.constrain = dat.constrain, 
+                             do.pheno = do.pheno, use.range = use.range)
   loc.plot$sourcefac = sourcefac
   loc.plot.y1 = loc.plot.y2 = loc.plot
-  loc.plot.y1$year  = round(median(dat$year))
+  loc.plot.y1$year  = min(dat$year)
   loc.plot.y2$year = loc.plot.y1$year + 1
   
   #predict
-  loc.plot.y1$count = predict(fit, newdata = loc.plot.y1, type = "response")
-  loc.plot.y2$count = predict(fit, newdata = loc.plot.y2, type = "response")
+  loc.plot.y1$count = predict(fit, newdata = loc.plot.y1, type = "response", discrete = FALSE)
+  loc.plot.y2$count = predict(fit, newdata = loc.plot.y2, type = "response", discrete = FALSE)
   
   ## combining
   loc.plot$gr = log(loc.plot.y2$count)-log(loc.plot.y1$count)
-  
-  loc.plot = loc.plot %>% 
-    group_by(lon, lat) %>% 
-    summarize(gr.med = median(gr)) %>% 
-    ungroup()
-  
+  nyear = max(dat$year)-min(dat$year)
+  loc.plot$abund.index = loc.plot.y1$count/(nyear+1) * (exp(nyear * loc.plot$gr)-1)/(exp(loc.plot$gr)-1)
+  if(do.pheno){
+    loc.plot = loc.plot %>% 
+      group_by(lon, lat) %>% 
+      summarize(gr.med = median(gr),
+                abund.index = sum(abund.index)*diff(dat$doy[1:2])) %>% 
+      ungroup()
+  }else{
+    loc.plot = loc.plot %>% 
+      rename(gr.med = gr) %>% 
+      mutate(abund.index = abund.index*365)%>% #making it butterfly-days, equiv to when phenology is measured
+      select(lon, lat, gr.med, abund.index)
+  }
+  abund.tot = sum(loc.plot$abund.index)
+  gr.tot = sum(loc.plot$gr.med * (loc.plot$abund.index/abund.tot))
+  return(list(loc.plot = loc.plot, global.gr = gr.tot))
+}
+
+
+## new version: takes loc.plot dataframe from trend_and_abund_calc(), data, plots it
+trend_plotter = function(dat, loc.plot){ 
+  state.map.data <- maps::map('state', fill = TRUE, plot = FALSE) %>%
+    st_as_sf()
   dat.pts = viz_filter(dat %>%  select(lon,lat, inferred), reso = 2)
   gp = ggplot()+
     geom_tile(data = loc.plot, 
@@ -243,6 +187,25 @@ trend_plotter = function(dat, fit, regions.dict,
   return(list(fig = gp, data  = loc.plot))
 }
 
+
+abund_plotter = function(dat, loc.plot){
+  state.map.data <- maps::map('state', fill = TRUE, plot = FALSE) %>%
+    st_as_sf()
+  
+  ## visualizing
+  dat.pts = viz_filter(dat %>%  select(lon,lat, inferred), reso = 2)
+  gp = ggplot()+
+    geom_tile(data = loc.plot, aes(x = lon, y = lat, fill = log10(abund.index)))+
+    geom_point(data = dat.pts %>% filter(inferred == TRUE), aes(x = lon, y = lat), col = "coral", size = .2)+
+    geom_point(data = dat.pts %>% filter(inferred == FALSE), aes(x = lon, y = lat), col = "springgreen3", size = .2)+
+    geom_sf(data = state.map.data, fill = NA)+
+    scale_fill_viridis()+
+    theme_minimal()+
+    ggtitle(paste0(dat$code[1], ": ", dat$common[1], 
+                   " estimated abundance (averaged across all years)\ncoral points: inferred observations; green points: direct observations"))
+  res = list(fig = gp)
+  return(res)
+}
 
 
 demo_activity_plots = function(dat, fit, regions.dict){ 
@@ -386,5 +349,153 @@ NFJ_regional_trends = function(dat, regions.dict, use.range = FALSE){
     ggtitle(paste0(dat$code[1],": ", dat$sommon[1]," Trends in NFJ data, log scale, by region\nline: glm.nb; points: count+1"))
 }
 
+#### Old versions of trend + abund calculations from before optimization.
 
+trend_plotter_old = function(dat, fit, regions.dict, 
+                             dat.constrain = FALSE, #if TRUE, only predict in the convex hull of the lat/lon of the data 
+                             do.pheno = TRUE, #if no doy term in the model, set to FALSE for faster calculations.
+                             sourcefac = "NFJ"){ #if FALSE, set up 2-color gradient moving outward from 0. 
+  #                                                  If TRUE, use a single color gradient adapted to observe GR.
+  ## using median year and median year + 1 to help minimize numerical weirdness.
+  ## 
+  state.map.data <- maps::map('state', fill = TRUE, plot = FALSE) %>%
+    st_as_sf()
+  
+  ## Prepping two sequential years for predicting
+  loc.plot = grid_plot_oneyr(dat, regions.dict, dat.constrain)
+  loc.plot$sourcefac = sourcefac
+  loc.plot.y1 = loc.plot.y2 = loc.plot
+  loc.plot.y1$year  = round(median(dat$year))
+  loc.plot.y2$year = loc.plot.y1$year + 1
+  
+  #predict
+  loc.plot.y1$count = predict(fit, newdata = loc.plot.y1, type = "response")
+  loc.plot.y2$count = predict(fit, newdata = loc.plot.y2, type = "response")
+  
+  ## combining
+  loc.plot$gr = log(loc.plot.y2$count)-log(loc.plot.y1$count)
+  
+  loc.plot = loc.plot %>% 
+    group_by(lon, lat) %>% 
+    summarize(gr.med = median(gr)) %>% 
+    ungroup()
+  
+  dat.pts = viz_filter(dat %>%  select(lon,lat, inferred), reso = 2)
+  gp = ggplot()+
+    geom_tile(data = loc.plot, 
+              aes(x = lon, y = lat, fill = gr.med))+
+    geom_point(data = dat.pts %>% filter(inferred == TRUE), aes(x = lon, y = lat), col = "coral", size = .2)+
+    geom_point(data = dat.pts %>% filter(inferred == FALSE), aes(x = lon, y = lat), col = "springgreen3", size = .2)+
+    geom_sf(data = state.map.data, fill = NA)+
+    theme_minimal()+
+    labs(fill = "Growth rate")+
+    ggtitle(paste0(dat$code[1], ": ", dat$sommon[1]," growth rates\ncoral points: inferred observations; green points: direct observations"))+
+    scale_fill_gradient2(low = muted("blue"),
+                         mid = "white",
+                         high = muted("green"),
+                         midpoint = 0)
+  return(list(fig = gp, data  = loc.plot))
+}
 
+abund_mapper_old = function(dat, fit, regions.dict, sourcefac = "NFJ", 
+                            use.range = FALSE, #if TRUE, constrain to species range KML
+                            dat.constrain = FALSE,#if constraining geography to convex hull, set this to TRUE to only predict there.
+                            do.confidence = FALSE, #if true, calculate upper and lower confidence limits. Possibly. Interpretation seems tricky
+                            do.pheno = TRUE # set to FALSE if we're not fitting a phenology curve. if TRUE, predicts activity every day of the year. 
+                            # if FALSE, predicts for a single day in each year.
+){
+  state.map.data <- maps::map('state', fill = TRUE, plot = FALSE) %>%
+    st_as_sf()
+  grid.plot = grid_plot_allyr(dat, regions.dict, use.range = use.range, 
+                              dat.constrain = dat.constrain, do.pheno = do.pheno)
+  grid.plot$sourcefac = sourcefac
+  ## confidence stuff is messy. Not keeping this updated.
+  if(do.confidence){
+    mod.pred = predict(fit, newdata = grid.plot, type = "response", se = TRUE)
+    grid.plot$count = mod.pred$fit
+    grid.plot$count.lower = mod.pred$fit - 1.96*mod.pred$se
+    grid.plot$count.upper = mod.pred$fit + 1.96*mod.pred$se
+    loc.sum = grid.plot %>% 
+      group_by(lat, lon) %>% 
+      summarize(abund.index = mean(count)*365,
+                abund.lower = mean(count.lower)*365,
+                abund.upper = mean(count.upper)*365)
+  }else{
+    grid.plot$count = predict(fit, newdata = grid.plot, type = "response")
+    grid.yearly = grid.plot %>% 
+      group_by(lat, lon, year) %>% 
+      summarize(abund.index = mean(count)*365) %>% 
+      ungroup()
+    loc.sum = grid.yearly %>% 
+      group_by(lat, lon) %>% 
+      summarize(abund.index = mean(abund.index)) %>% 
+      ungroup()
+  }
+  ## calculating abundance metrics
+  
+  ## yearly total abundance
+  abund.species = grid.yearly %>% 
+    group_by(year) %>% 
+    summarize(abund.index = sum(abund.index)) %>% 
+    ungroup()
+  ## yearly abundance at location of highest predicted density.
+  loc.highdense = loc.sum[which.max(loc.sum$abund.index),]
+  abund.highdense = grid.yearly %>% 
+    filter(lat == loc.highdense$lat, 
+           lon == loc.highdense$lon)
+  ## yearly abundance at location with most NFJ sightings. 
+  # reminder: predictions are happening at the rounded lat/lon, so let's find the rounded lat/lon with
+  # the most NFJ obs
+  dat.nfj = dat %>%
+    filter(source == "NFJ") %>% 
+    mutate(lon = round(lon),
+           lat = round(lat)) %>% 
+    group_by(lon, lat) %>% 
+    summarize(nfj.abund = mean(count)) %>% 
+    ungroup()
+  dat.nfj = inner_join(grid.yearly, dat.nfj)
+  abund.bestnfj = dat.nfj %>% 
+    filter(nfj.abund == max(nfj.abund))
+  ## visualizing
+  dat.pts = viz_filter(dat %>%  select(lon,lat, inferred), reso = 2)
+  gp = ggplot()+
+    geom_tile(data = loc.sum, aes(x = lon, y = lat, fill = log10(abund.index)))+
+    geom_point(data = dat.pts %>% filter(inferred == TRUE), aes(x = lon, y = lat), col = "coral", size = .2)+
+    geom_point(data = dat.pts %>% filter(inferred == FALSE), aes(x = lon, y = lat), col = "springgreen3", size = .2)+
+    geom_sf(data = state.map.data, fill = NA)+
+    scale_fill_viridis()+
+    theme_minimal()+
+    ggtitle(paste0(dat$code[1], ": ", dat$sommon[1], " estimated abundance (averaged across all years)\ncoral points: inferred observations; green points: direct observations"))
+  ## TROUBLE ADDING RANGE MAP. UPDATE HERE WITH ELIZA INPUT
+  # if(use.range){
+  #   range.map = rgdal::readOGR(here(paste0("2_data_wrangling/range-maps/", code.cur, ".kml")))
+  #   gp = gp + 
+  #     geom_path(data = range.map, aes(x = long, y = lat), fill = NA, color = "black")
+  # }
+  ## confidence stuff is messy. Not keeping this updated.
+  if(do.confidence){
+    gp.lower = ggplot()+
+      geom_tile(data = loc.sum, aes(x = lon, y = lat, fill = log10(abund.lower)))+
+      geom_point(data = dat.pts, aes(x = lon, y = lat), size = .2)+
+      geom_sf(data = state.map.data, fill = NA)+
+      scale_fill_viridis()+
+      theme_minimal()+
+      ggtitle(paste0(dat$code[1], " estimated abundance, LOWER CONFIDENCE LIMIT"))
+    gp.upper= ggplot()+
+      geom_tile(data = loc.sum, aes(x = lon, y = lat, fill = log10(abund.upper)))+
+      geom_point(data = dat.pts, aes(x = lon, y = lat), size = .2)+
+      geom_sf(data = state.map.data, fill = NA)+
+      scale_fill_viridis()+
+      theme_minimal()+
+      ggtitle(paste0(dat$code[1], " estimated abundance, UPPER CONFIDENCE LIMIT"))
+  }
+  ## not keeping do.confidence updated
+  if(do.confidence){
+    res = list(fig = gp, fig.lower = gp.lower, fig.upper = gp.upper, data  = loc.sum)
+  }else{
+    res = list(fig = gp, data = loc.sum, 
+               abund.species = abund.species, abund.highdense = abund.highdense, 
+               abund.bestnfj = abund.bestnfj)
+  }
+  return(res)
+}

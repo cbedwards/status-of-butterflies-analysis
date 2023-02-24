@@ -1,0 +1,642 @@
+Fit on: 2023-02-24 04:55:35
+
+Parameters:
+==================
+form.use:
+  count ~ te(lat, lon, by = year, k = c(5, 5), bs = c("cr", "cr")) + effort.universal:effort.universal.type + sourcefac + s(site.refac, bs = "re")
+
+use.inferred:
+  TRUE
+
+geography.constrain:
+  FALSE
+
+use.only.source:
+  
+
+
+
+Correlation summaries:
+==================
+code	abund.correlation
+ACHLYC	0.9192
+ADEBRE	0.9591
+AGRAVAN	0.9326
+AGRGLA	0.9779
+AMBHEG	0.8154
+AMBVIA	0.9071
+ANAAND	0.8838
+ANATLOG	0.9355
+ANCNUM	0.55
+ANTHLAN	0.9852
+ANTHMID	0.6617
+ANTHSAR	0.9365
+APOMOR	0.93
+ASTCEL	0.7588
+ASTCLY	0.9864
+ATACAM	0.7998
+ATLHAL	0.6188
+ATRARO	0.9358
+ATRYHIA	0.9677
+AUTCEL	0.9825
+BATPHI	0.8891
+BOLOBEL	0.792
+BOLOCHA	NA
+BOLOEPI	0.9719
+BOLOSEL	0.9027
+BREEXI	0.7365
+BREISO	0.9878
+CALBOR	0.3387
+CALLAUG	0.358
+CALLDUM	0.9577
+CALLERY	0.9011
+CALLGRY	0.9773
+CALLHEN	0.5678
+CALLIRU	0.8632
+CALLMOS	0.9879
+CALLPOL	0.972
+CALLSHE	0.7674
+CALLSPI	0.7044
+CALNEM	0.9596
+CALYCEC	0.8608
+CARTPAL	0.3306
+CELLAD	0.8228
+CELNEG	0.7221
+CEROET	0.9615
+CERPEG	0.9388
+CERSTH	0.2761
+CHLOHAR	0.5099
+CHLOHOF	0.9955
+CHLOLAC	0.9107
+CHLOLEA	0.9997
+CHLONYC	0.8839
+CHLOPAL	0.9938
+COETUL	0.9218
+COLALE	0.9235
+COLCES	0.9237
+COLEU1	0.9982
+COLEU2	0.8225
+COLINT	0.9695
+COLOCC	0.973
+COLPHI	0.9302
+COPAUR	0.9643
+CYLGEM	0.79
+DANGIL	0.9004
+DANPLE	0.8009
+DYMDYM	0.5572
+ENOANT	0.8596
+ENOCRE	0.9082
+ENOPOR	0.1976
+EPACLA	0.8804
+EREEPI	0.905
+ERYBAP	0.7787
+ERYBRI	0.823
+ERYFUN	0.3476
+ERYHOR	0.9078
+ERYICE	0.8273
+ERYJUV	0.8396
+ERYMAR	0.7948
+ERYPAC	0.9361
+ERYPER	0.8441
+ERYPRO	0.9639
+ERYTRI	0.7829
+EUCAUS	0.9611
+EUCHYA	0.6534
+EUCOLY	0.9967
+EUPBAT	0.9123
+EUPENO	0.8929
+EUPHCHA	0.9379
+EUPHEDI	0.7843
+EUPHPHA	0.9192
+EUPTCLA	0.5166
+EUPYBIM	0.9989
+EUPYCON	0.9493
+EUPYDIO	0.4672
+EUPYDUK	0.8511
+EUPYVES	0.8598
+EURLIS	0.9162
+EURMEX	0.9913
+EURNIC	0.7164
+EURYMAR	0.2923
+EVEAMY	0.9926
+EVECOM	0.8627
+FENTAR	0.736
+GLALYG	0.792
+GLAPIA	0.8813
+HABGRU	0.9254
+HELIERI	0.9649
+HEMCER	0.8437
+HEMISO	0.6932
+HERSOS	0.9296
+HESCOM	0.9762
+HESJUB	0.9231
+HESLEO	0.9866
+HESLIN	0.994
+HESMET	0.6048
+HESNEV	0.7683
+HESOTT	0.3503
+HESPAH	0.9068
+HESSAS	0.7128
+HESVIR	0.9989
+HYLPHY	0.9424
+JUNCOE	0.775
+LEPMAR	0.717
+LERACC	0.7488
+LEROEUF	0.8962
+LIBCAR	0.5692
+LIMARC	0.9688
+LIMART	0.9994
+LIMLOR	0.9477
+LIMWEI	0.7727
+LYCAARO	0.9969
+LYCACUP	0.9945
+LYCADIO	0.6849
+LYCADOR	0.9375
+LYCAEDI	0.9905
+LYCAEPI	0.9996
+LYCAGOR	0.972
+LYCAHEL	0.9571
+LYCAHET	0.8004
+LYCAHYL	0.939
+LYCAMAR	0.9201
+LYCANIV	0.9881
+LYCAPHL	0.9319
+LYCARUB	0.9723
+LYCAXAN	0.9992
+LYCIDA	0.9813
+LYCMEL	0.941
+MEGICYM	0.9005
+NASLHE	0.8919
+NATIOL	0.6986
+NEOPMEN	0.9322
+NYMANT	0.6995
+NYMCAL	0.9248
+NYMMIL	0.9071
+NYMVAU	0.9926
+OARGAR	0.8346
+OCHAGR	0.9877
+OCHSYL	0.6742
+OENCHR	0.7154
+OENNEV	0.9313
+PANOCO	0.979
+PAPCAN	0.9217
+PAPCRE	0.9745
+PAPEUR	0.9281
+PAPGLA	0.7744
+PAPIND	0.8433
+PAPMUL	0.9567
+PAPPOL	0.8203
+PAPRUT	0.4917
+PAPTRO	0.9017
+PAPZEL	0.9758
+PARNCLO	0.9529
+PARNPHO	0.9747
+PARRMAL	0.865
+PHOEAGA	0.7494
+PHOESEN	0.5263
+PHOLCAT	0.2781
+PHYBAT	0.7841
+PHYCAM	0.8428
+PHYMYL	0.9477
+PHYORS	0.9954
+PHYPAL	0.3101
+PHYPIC	0.9089
+PHYSEL	0.9731
+PHYTEX	0.9284
+PHYTHA	0.752
+PIENAP	0.9656
+PIERAP	0.6945
+PIEVIR	0.7804
+PLEACM	0.9656
+PLEICA	0.7159
+PLELUP	0.9473
+PLESAE	0.8688
+PLESHA	0.9979
+POAHOB	0.9431
+POAMAS	0.843
+POAMEL	0.9786
+POATAX	0.5846
+POAVIA	0.9621
+POAZAB	0.8044
+POLIMYS	0.8686
+POLIORI	0.8577
+POLIPEC	0.8972
+POLISAB	0.9804
+POLISON	0.9079
+POLITHE	0.8721
+POLYCOM	0.5867
+POLYFAU	0.9725
+POLYGRA	0.8878
+POLYINT	0.9994
+POLYPRO	0.9748
+POLYSAT	0.9933
+POMVER	0.8977
+PONBEC	0.9743
+PONOCC	0.8016
+PONPRO	0.9942
+PONSIS	0.7872
+PROBYS	0.913
+PYRALB	0.2506
+PYRCOM	0.7879
+PYRRUR	0.9919
+PYRSCR	0.9962
+SATACA	0.9285
+SATAUR	0.4035
+SATBEH	0.9471
+SATCA1	0.9455
+SATCA2	0.985
+SATCA3	0.9185
+SATEDW	0.943
+SATFAV	0.8761
+SATFUL	0.9653
+SATLIP	0.8562
+SATSAE	0.9956
+SATSYL	0.7775
+SATTET	0.7493
+SATTIT	0.9288
+SATYAPP	0.8086
+SATYEUR	0.7575
+SPEYAPH	0.9373
+SPEYATL	0.8779
+SPEYCAL	0.9304
+SPEYCOR	0.9711
+SPEYCYB	0.9061
+SPEYEDW	0.92490000000000006
+SPEYEGL	0.9862
+SPEYHYD	0.9288
+SPEYIDA	0.6889
+SPEYMOR	0.4443
+SPEYZER	0.9719
+STAPHAY	0.95
+STRMEL	0.9356
+THOBAT	0.9193
+THOMEX	0.9325
+THOPYL	0.8963
+THYLIN	0.9776
+URBPR3	0.9858
+VANANN	0.9208
+VANATA	0.6179
+VANCAR	0.3929
+VANVIR	0.9887
+WALEGE	0.8886
+
+
+ Report files generated:
+==================
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/ACHLYC-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/ADEBRE-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/AGRAVAN-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/AGRGLA-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/AMBHEG-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/AMBVIA-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/ANAAND-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/ANATLOG-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/ANCNUM-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/ANTHLAN-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/ANTHMID-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/ANTHSAR-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/APOMOR-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/ASTCEL-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/ASTCLY-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/ATACAM-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/ATLHAL-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/ATRARO-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/ATRYHIA-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/AUTCEL-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/BATPHI-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/BOLOBEL-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/BOLOCHA-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/BOLOEPI-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/BOLOSEL-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/BREEXI-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/BREISO-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/CALBOR-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/CALLAUG-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/CALLDUM-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/CALLERY-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/CALLGRY-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/CALLHEN-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/CALLIRU-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/CALLMOS-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/CALLPOL-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/CALLSHE-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/CALLSPI-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/CALNEM-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/CALYCEC-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/CARTPAL-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/CELLAD-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/CELNEG-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/CEROET-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/CERPEG-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/CERSTH-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/CHLOHAR-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/CHLOHOF-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/CHLOLAC-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/CHLOLEA-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/CHLONYC-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/CHLOPAL-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/COETUL-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/COLALE-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/COLCES-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/COLEU1-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/COLEU2-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/COLINT-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/COLOCC-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/COLPHI-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/COPAUR-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/CYLGEM-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/DANGIL-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/DANPLE-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/DYMDYM-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/ENOANT-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/ENOCRE-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/ENOPOR-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/EPACLA-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/EREEPI-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/ERYBAP-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/ERYBRI-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/ERYFUN-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/ERYHOR-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/ERYICE-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/ERYJUV-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/ERYMAR-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/ERYPAC-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/ERYPER-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/ERYPRO-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/ERYTRI-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/EUCAUS-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/EUCHYA-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/EUCOLY-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/EUPBAT-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/EUPENO-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/EUPHCHA-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/EUPHEDI-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/EUPHPHA-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/EUPTCLA-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/EUPYBIM-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/EUPYCON-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/EUPYDIO-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/EUPYDUK-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/EUPYVES-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/EURLIS-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/EURMEX-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/EURNIC-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/EURYMAR-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/EVEAMY-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/EVECOM-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/FENTAR-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/GLALYG-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/GLAPIA-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/HABGRU-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/HELIERI-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/HEMCER-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/HEMISO-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/HERSOS-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/HESCOM-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/HESJUB-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/HESLEO-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/HESLIN-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/HESMET-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/HESNEV-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/HESOTT-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/HESPAH-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/HESSAS-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/HESVIR-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/HYLPHY-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/JUNCOE-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/LEPMAR-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/LERACC-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/LEROEUF-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/LIBCAR-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/LIMARC-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/LIMART-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/LIMLOR-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/LIMWEI-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/LYCAARO-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/LYCACUP-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/LYCADIO-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/LYCADOR-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/LYCAEDI-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/LYCAEPI-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/LYCAGOR-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/LYCAHEL-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/LYCAHET-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/LYCAHYL-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/LYCAMAR-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/LYCANIV-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/LYCAPHL-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/LYCARUB-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/LYCAXAN-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/LYCIDA-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/LYCMEL-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/MEGICYM-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/NASLHE-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/NATIOL-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/NEOPMEN-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/NYMANT-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/NYMCAL-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/NYMMIL-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/NYMVAU-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/OARGAR-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/OCHAGR-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/OCHSYL-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/OENCHR-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/OENNEV-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PANOCO-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PAPCAN-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PAPCRE-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PAPEUR-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PAPGLA-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PAPIND-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PAPMUL-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PAPPOL-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PAPRUT-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PAPTRO-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PAPZEL-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PARNCLO-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PARNPHO-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PARRMAL-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PHOEAGA-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PHOESEN-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PHOLCAT-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PHYBAT-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PHYCAM-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PHYMYL-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PHYORS-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PHYPAL-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PHYPIC-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PHYSEL-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PHYTEX-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PHYTHA-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PIENAP-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PIERAP-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PIEVIR-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PLEACM-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PLEICA-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PLELUP-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PLESAE-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PLESHA-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/POAHOB-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/POAMAS-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/POAMEL-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/POATAX-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/POAVIA-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/POAZAB-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/POLIMYS-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/POLIORI-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/POLIPEC-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/POLISAB-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/POLISON-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/POLITHE-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/POLYCOM-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/POLYFAU-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/POLYGRA-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/POLYINT-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/POLYPRO-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/POLYSAT-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/POMVER-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PONBEC-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PONOCC-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PONPRO-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PONSIS-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PROBYS-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PYRALB-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PYRCOM-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PYRRUR-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/PYRSCR-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/SATACA-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/SATAUR-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/SATBEH-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/SATCA1-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/SATCA2-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/SATCA3-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/SATEDW-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/SATFAV-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/SATFUL-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/SATLIP-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/SATSAE-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/SATSYL-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/SATTET-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/SATTIT-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/SATYAPP-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/SATYEUR-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/SPEYAPH-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/SPEYATL-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/SPEYCAL-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/SPEYCOR-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/SPEYCYB-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/SPEYEDW-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/SPEYEGL-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/SPEYHYD-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/SPEYIDA-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/SPEYMOR-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/SPEYZER-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/STAPHAY-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/STRMEL-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/THOBAT-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/THOMEX-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/THOPYL-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/THYLIN-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/URBPR3-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/VANANN-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/VANATA-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/VANCAR-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/VANVIR-full-run-all-sources-V1.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-all-sources-V1/WALEGE-full-run-all-sources-V1.html
+
+
+ Human notes on model fit:
+==================
+[Fill in as desired]
+
+
+============================================================
+============================================================
+============================================================
+
+
+
+Extra details:  knot and site-making functions, region dictionary
+==================
+
+
+knot_maker():
+function(dat){
+  return(list())
+}
+<bytecode: 0x00000204b3e26118>
+
+
+sitere_maker():
+function(dat){
+  ##identify the sites NOT to lump
+  temp = dat %>% 
+    group_by(site) %>% 
+    summarize(n.obs = n()) %>% 
+    filter(n.obs > 2)
+  cat(paste0("combining sites with low data into one random effect, total of ", nrow(temp)," observations affected \n"))
+  site.re = rep("light on data", nrow(dat))
+  site.re[dat$site %in% temp$site] = dat$site[dat$site %in% temp$site]
+  ## adding the following line to reduce model complexity. With this line, random effects
+  ## are basically just there to capture effort
+  # site.re[dat$effort.universal.type!="site-based"] = "effort reported"
+  site.re = as.factor(site.re)
+  if(sum(site.re == "light on data")>0){
+    site.re = relevel(site.re, ref = "light on data")
+  }
+  return(as.factor(site.re))
+}
+<bytecode: 0x00000204e62fb970>
+
+
+Region dictionary:
+state	region
+Alabama	Southeast
+Arizona	Southwest
+Arkansas	Southeast
+California	Pacific Southwest
+Colorado	Mountain-Prarie
+Connecticut	Northeast
+Delaware	Northeast
+District of Columbia	Northeast
+Florida	Southeast
+Georgia	Southeast
+Idaho	Pacific
+Illinois	Midwest
+Indiana	Midwest
+Iowa	Midwest
+Kansas	Mountain-Prarie
+Kentucky	Southeast
+Louisiana	Southeast
+Maine	Northeast
+Maryland	Northeast
+Massachusetts	Northeast
+Michigan	Midwest
+Minnesota	Midwest
+Mississippi	Southeast
+Missouri	Midwest
+Montana	Mountain-Prarie
+Nebraska	Mountain-Prarie
+Nevada	Pacific Southwest
+New Hampshire	Northeast
+New Jersey	Northeast
+New Mexico	Southwest
+New York	Northeast
+North Carolina	Southeast
+North Dakota	Mountain-Prarie
+Ohio	Midwest
+Oklahoma	Southwest
+Oregon	Pacific
+Pennsylvania	Northeast
+Rhode Island	Northeast
+South Carolina	Southeast
+South Dakota	Mountain-Prarie
+Tennessee	Southeast
+Texas	Southwest
+Utah	Mountain-Prarie
+Vermont	Northeast
+Virginia	Northeast
+Washington	Pacific
+West Virginia	Northeast
+Wisconsin	Midwest
+Wyoming	Mountain-Prarie

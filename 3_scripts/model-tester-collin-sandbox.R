@@ -25,20 +25,19 @@ source(here("3_scripts/funs-fitting.R"))
 source(here("3_scripts/model-fitting-function.R"))
 
 
-## function to make site id for random effects.
+## ## function to make site id for random effects.
 ## treat any site with <5 years of non-zero data as a generic site
 sitere_maker = function(dat){
+  ##identify the sites NOT to lump
   temp = dat %>% 
-    group_by(site, year) %>% 
-    summarize(has.nonzero = any(count>0)) %>% 
-    filter(has.nonzero == TRUE) %>% 
     group_by(site) %>% 
-    summarize(nyear.nonzero = n()) %>% 
-    filter(nyear.nonzero < 5)
+    summarize(n.obs = n()) %>% 
+    filter(n.obs > 2)
+  cat(paste0("combining sites with low data into one random effect, total of ", nrow(temp)," observations affected \n"))
   site.re = rep("light on data", nrow(dat))
   site.re[dat$site %in% temp$site] = dat$site[dat$site %in% temp$site]
   ## adding the following line to reduce model complexity. With this line, random effects
-  ## are basically just there to capture effort.
+  ## are basically just there to capture effort
   # site.re[dat$effort.universal.type!="site-based"] = "effort reported"
   site.re = as.factor(site.re)
   if(sum(site.re == "light on data")>0){

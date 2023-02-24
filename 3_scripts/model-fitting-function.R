@@ -32,7 +32,7 @@ model_runner = function(code.cur, #GU code for taxa of interest
   
   if(!do.pheno){cat("do.pheno set to FALSE, calculations of trends + abundance calculated accordingly.\nCheck that there is no `doy` term in the model!\n")}
   if(use.inferred){
-    make_dataset(code = code.cur, 
+    events.missed.messy = make_dataset(code = code.cur, 
                  use.range = use.range, 
                  infer.messy.levels = infer.messy.levels)
     dat = qread(paste0("2_data_wrangling/cleaned by code/",code.cur, ".csv")) 
@@ -41,6 +41,7 @@ model_runner = function(code.cur, #GU code for taxa of interest
     dat = qread(paste0("2_data_wrangling/cleaned-data/cleaned-data-aggregated.csv"))
     dat = dat %>%
       filter(code == code.cur)
+    events.missed.messy = NA
   }
   dat = dat %>% 
     filter(!is.na(count))
@@ -128,7 +129,7 @@ model_runner = function(code.cur, #GU code for taxa of interest
   }
   
   #
-  
+  cat("fitting gam\n")
   time.start = proc.time()
   fit = bam(form.use,
             data = dat,
@@ -147,33 +148,59 @@ model_runner = function(code.cur, #GU code for taxa of interest
   
   ## generate plots --------------
   ## plot abundance map
-  cat("calculating abundance\n")
-  out.abund = abund_mapper(dat, fit, regions.dict, use.range = use.range, dat.constrain = geography.constrain, do.pheno = do.pheno)
-  out.abund$fig
+  cat("calculating abundance and trends\n")
   
-  cat("calculating trends\n")
+  out.abund.and.trends = trend_and_abund_calc(dat=dat, fit = fit, 
+                                              regions.dict = regions.dict, 
+                                              use.range = use.range, 
+                                              dat.constrain = geography.constrain, 
+                                              do.pheno = do.pheno)
+  loc.plot = out.abund.and.trends$loc.plot ## for simplicity
+  cat("making heatmap plots\n")
+  #plot abundance
+  out.abund = abund_plotter(dat = dat, loc.plot = loc.plot)
   ## plot trends
-  out.trend = trend_plotter(dat, fit, regions.dict, 
-                            dat.constrain = geography.constrain,
-                            do.pheno = do.pheno)
-  out.trend$fig #+ scale_fill_viridis()
+  out.trend = trend_plotter(dat = dat, loc.plot = loc.plot)
+  cat("identifying trends from key locations\n")
+  trend.species = out.abund.and.trends$global.gr
   
-  # cat("calculating activity curve at data-dense region\n")
-  # ## plot activity curves for point of max data
-  # gp.activity.maxdata = demo_activity_plots(dat, fit, regions.dict)
-  # 
-  ## plot activity curves for point of max estimated density (diangostic for unreasonable activity curves)
-  # pt.maxabund = out.abund$data[which.max(out.abund$data$abund.index),]
-  # cat("calculating activity curve at high estimated abundance region\n")
-  # gp.activity.maxabund = activity_plotter(dat, fit, regions.dict, 
-  #                                         lat.plot = pt.maxabund$lat, 
-  #                                         lon.plot = pt.maxabund$lon,
-  #                                         allyears = TRUE,
-  #                                         source.adaptive = FALSE)
+  trend.highabund = loc.plot$gr.med[which.max(loc.plot$abund.index)]
+  
+  
+  
+  if(sum(dat$source == "NFJ")>0){
+    dat.nfj = dat %>%
+      filter(source == "NFJ") %>% 
+      mutate(lon = round(lon),
+             lat = round(lat)) %>% 
+      group_by(lon, lat) %>% 
+      summarize(nfj.abund = mean(count)) %>% 
+      ungroup()
+    loc.plot.merge = loc.plot %>% 
+      mutate(lon = round(lon),
+             lat = round(lat)) %>% 
+      group_by(lon, lat) %>% 
+      summarize(gr.med = mean(gr.med),
+                abund.index = mean(abund.index)) %>% 
+      ungroup()
+    dat.nfj = inner_join(loc.plot.merge, dat.nfj, by = c("lon", "lat"))
+    dat.nfj = dat.nfj %>% 
+      filter(nfj.abund == max(nfj.abund))
+    trend.mostnfj = dat.nfj$gr.med[1];
+  }
+  else{
+    trend.mostnfj = NA
+  }
   
   ## Plot NFJ abundance by region
-  cat("Comparing to NFJ abundance\n")
-  compare.abund = NFJ_compare(dat, fit, regions.dict, use.range = use.range, nyears = 10, across.doy = FALSE)
+  ## IF NFJ is in the data
+  if(sum(dat$source == "NFJ")>0){
+    cat("Comparing to NFJ abundance\n")
+    compare.abund = NFJ_compare(dat, fit, regions.dict, use.range = use.range, nyears = 10, across.doy = FALSE)
+  }else{
+    cat("No NFJ data, so no comparison to NFJ abundance")
+    compare.abund = list(fig = ggplot()+ggtitle("No NFJ data"), cor = NA)
+  }
   
   ## Plot NFJ trends by region
   ## This is no longer being used in the report. uncomment if being used again.
@@ -184,7 +211,7 @@ model_runner = function(code.cur, #GU code for taxa of interest
   
   ## Turn knots.list into something human-readable. 
   knots.vec = "knots: "
-  knots.list = knot_maker()
+  knots.list = knot_maker(dat)
   if(length(knots.list)==0){
     knots.vec = "knots: all automatically placed"
   }else{
@@ -205,152 +232,155 @@ model_runner = function(code.cur, #GU code for taxa of interest
   if(is.null(use.only.source)){diagnostics.text$sources = "All sources used"}
   cat("\n")
   return(list(plot.title = plot.title,
-              dat.abund = out.abund$data,
-              dat.trend = out.trend$data,
+              loc.plot = loc.plot,
               abund.cor = compare.abund$cor,
               fig.abund = out.abund$fig,
-              fig.nfj.abund = compare.abund$fig,
               fig.trend = out.trend$fig,
-              # fig.nfj.trend = gp.nfj.trend,
-              # fig.activity.maxdata = gp.activity.maxdata,
-              # fig.activity.maxabund = gp.activity.maxabund,
+              fig.nfj.abund = compare.abund$fig,
               fig.hist =gp.hist,
               fig.counts = gp.counts,
               diagnostics.text = diagnostics.text,
               fitted.model = fit,
-              abund.species = out.abund$abund.species,
-              abund.highdense = out.abund$abund.highdense,
-              abund.bestnfj = out.abund$abund.bestnfj))
+              trend.species = trend.species,
+              trend.highabund = trend.highabund,
+              trend.mostnfj = trend.mostnfj,
+              n = nrow(dat),
+              events.missed.messy = events.missed.messy))
 }
 
 report_maker = function(modelfit.output,
                         code.cur,
-                        run.suffix, 
+                        res.path, 
+                        copy.heatmaps = FALSE,
                         fig.width = 7.5, 
                         fig.height = 5){
-  cur.files = list.files(here(paste0("4_res/fit-summaries/")))
-  cur.file.code = cur.files[grepl(paste0(code.cur,"-", run.suffix), cur.files)]
-  cur.file.code = cur.file.code[grepl("[.]pdf", cur.file.code)]
-  if(length(cur.file.code)>0){
-    cur.file.code = gsub("[.]pdf", "", cur.file.code)
-    cur.nums = as.numeric(gsub(paste0(code.cur, "-", run.suffix,"-V"), "", cur.file.code))
-    use.num = max(cur.nums)+1
-  }else{
-    use.num = 1
-  }
+  run.name = gsub(".*/", "", res.path)
   filename.use = paste0(code.cur,
-                        "-", run.suffix,
-                        "-V", use.num, ".html")
-  path.use = here(paste0("4_res/fit-summaries/", filename.use))
+                        "-", run.name,".html")
+  path.use = here(paste0(res.path ,"/", filename.use))
   
+  ##fitting individual models is only taking a few minutes at most.
+  ##Probably easier to re-fit than to save and load
+  # saveRDS(modelfit.output$fitted.model,
+  #         here(paste0(res.path, "/", code.cur, "-fitted-model.RDS")))
   ## saving jpgs for making the report
-  ggsave(here("4_res/fit-summaries/temp-files/cur.abund.jpg"),
+  dir.create(here("4_res/temp-files"))
+  ggsave(here("4_res/temp-files/cur.abund.jpg"),
          modelfit.output$fig.abund, 
          width = fig.width, height = fig.height)
-  ggsave(here("4_res/fit-summaries/temp-files/cur.nfj.abund.jpg"),
+  ggsave(here("4_res/temp-files/cur.nfj.abund.jpg"),
          modelfit.output$fig.nfj.abund, 
          width = fig.width, height = fig.height)
-  ggsave(here("4_res/fit-summaries/temp-files/cur.trend.jpg"),
+  ggsave(here("4_res/temp-files/cur.trend.jpg"),
          modelfit.output$fig.trend, 
          width = fig.width, height = fig.height)
+  ## copy heatmaps for later use in Rshiny app. Slows process
+  if(copy.heatmaps){
+    file.copy(from = here("4_res/temp-files/cur.abund.jpg"),
+              to = here(paste0(res.path,"/heatmaps/", code.cur, "-abund-map.jpg")))
+    file.copy(from = here("4_res/temp-files/cur.trend.jpg"),
+              to = here(paste0(res.path,"/heatmaps/", code.cur, "-trend-map.jpg")))
+  }
   # ggsave(here("4_res/fit-summaries/temp-files/cur.nfj.trend.jpg"),
   #        modelfit.output$fig.nfj.trend, 
   #        width = fig.width, height = fig.height)
-  # saveRDS(modelfit.output$diagnostics.text,
-          # here("4_res/fit-summaries/temp-files/cur.diagnostics.RDS"))
+  saveRDS(modelfit.output$diagnostics.text,
+          here("4_res/temp-files/cur.diagnostics.RDS"))
   ## Note: I've cut the following from the reports for the sake of speed. 
   ## These plots didn't seem particularly useful, and plot-saving + report-making
   ## is ~ 1/2 of the total runtime. If these plots are returned in the report,
   ## uncomment these lines.
-  # ggsave(here("4_res/fit-summaries/temp-files/cur.counts.jpg"),
+  # ggsave(here("4_res/temp-files/cur.counts.jpg"),
   #        modelfit.output$fig.counts, 
   #        width = fig.width, height = fig.height)
-  # ggsave(here("4_res/fit-summaries/temp-files/cur.hist.jpg"),
+  # ggsave(here("4_res/ftemp-files/cur.hist.jpg"),
   #        modelfit.output$fig.hist, 
   #        width = fig.width, height = fig.height)
-  # ggsave(here("4_res/fit-summaries/temp-files/cur.activity.maxdata.jpg"),
+  # ggsave(here("4_res/temp-files/cur.activity.maxdata.jpg"),
   #        modelfit.output$fig.activity.maxdata, 
   #        width = fig.width, height = fig.height)
-  # ggsave(here("4_res/fit-summaries/temp-files/cur.activity.maxabund.jpg"),
+  # ggsave(here("4_res/temp-files/cur.activity.maxabund.jpg"),
   #        modelfit.output$fig.activity.maxabund, 
   #        width = fig.width, height = fig.height)
   render(input = here("3_scripts/species-fitting-report.Rmd"),
-         output_dir = here("4_res/fit-summaries/"),
+         output_dir = here(res.path),
          params = list(title = out$diagnostics.text[["title"]]),
          output_file = filename.use)
   return(path.use)
+  files.temp = list.files(here("4_res/temp-files"))
+  file.remove(paste(here("4_res/temp-files/", files.temp, collapse = "")))
 }
 
 
-## Note: this makes a big pdf that's hard to load/view.
-model_saver = function(modelfit.output,
-                       code.cur,
-                       run.suffix){
-  ## identify next available version number (to avoid overwriting)
-  cur.files = list.files(here(paste0("4_res/fit-summaries/")))
-  cur.file.code = cur.files[grepl(paste0(code.cur,"-", run.suffix), cur.files)]
-  cur.file.code = cur.file.code[grepl("[.]pdf", cur.file.code)]
-  if(length(cur.file.code)>0){
-    cur.file.code = gsub("[.]pdf", "", cur.file.code)
-    cur.nums = as.numeric(gsub(paste0(code.cur, "-", run.suffix,"-V"), "", cur.file.code))
-    use.num = max(cur.nums)+1
-  }else{
-    use.num = 1
-  }
-  ## saving PDF
-  path.use = here(paste0("4_res/fit-summaries/",
-                         code.cur,
-                         "-", run.suffix,
-                         "-V", use.num, ".pdf"))
-  cat(paste0("Saving ", modelfit.output$plot.title," to\n",
-             path.use))
-  pdf(path.use,
-      width = 15, height = 20)
-  ## map of abundance
-  gp = ggarrange(modelfit.output$fig.abund,
-                 modelfit.output$fig.njf.abund, ncol = 1)
-  print(annotate_figure(gp, top = text_grob(modelfit.output$plot.title, size = 18)))
-  ## map of trends
-  gp = ggarrange(modelfit.output$fig.trend, 
-                 modelfit.output$fig.nfj.trend, ncol = 1)
-  print(annotate_figure(gp, top = text_grob(modelfit.output$plot.title, size = 18)))
-  
-  plot(NA, xlim = c(0,5), ylim = c(0,5), bty = "n", 
-       xaxt = "n", yaxt = "n", xlab = "", ylab = "")
-  text(1,4, modelfit.output$diagnostics.text["heading"], pos = 4, cex = 3)
-  text(1,3, modelfit.output$diagnostics.text["title"], pos = 4, cex = 2)
-  text(1,2, modelfit.output$diagnostics.text["formula"], pos = 4, cex = 2)
-  text(1,1.5, modelfit.output$diagnostics.text["sources"], pos = 4)
-  text(1,1, modelfit.output$diagnostics.text["knots"], pos = 4)
-  
-  gp = ggarrange(modelfit.output$fig.hist, modelfit.output$fig.counts, ncol=1)
-  print(annotate_figure(gp, top = text_grob(modelfit.output$plot.title, size = 18)))
-  
-  ## activity curves for highest data denstiy, highest estimated abundance
-  print(modelfit.output$fig.activity.maxdata + ggtitle(
-    paste0(modelfit.output$fig.activity.maxdata$labels$title, "\n(Location of highest data density)")
-  ))
-  print(modelfit.output$fig.activity.maxabund + ggtitle(
-    paste0(modelfit.output$fig.activity.maxabund$labels$title, "\n(Location of highest estimated abundance)")
-  ))
-  dev.off()
-  ## save jpgs for faster viewing of maps etc.
-  ggsave(here(paste0("4_res/fit-summaries/jpgs-fastviews/",
-                     code.cur, "-", run.suffix,
-                     "-V", use.num, "-abund-map.jpg")),
-         modelfit.output$fig.abund, 
-         width = 15, height = 12)
-  ggsave(here(paste0("4_res/fit-summaries/jpgs-fastviews/",
-                     code.cur, "-", run.suffix,
-                     "-V", use.num, "-trend-map.jpg")),
-         modelfit.output$fig.trend, 
-         width = 15, height = 12)
-  ggsave(here(paste0("4_res/fit-summaries/jpgs-fastviews/",
-                     code.cur, "-", run.suffix,
-                     "-V", use.num, "-trend-NFJ.jpg")),
-         modelfit.output$fig.nfj.abund, 
-         width = 15, height = 12)
-  cat("\n")
-  return(path.use)
-}
-
+# ## Note: this makes a big pdf that's hard to load/view.
+# model_saver = function(modelfit.output,
+#                        code.cur,
+#                        run.suffix){
+#   ## identify next available version number (to avoid overwriting)
+#   cur.files = list.files(here(paste0("4_res/fit-summaries/")))
+#   cur.file.code = cur.files[grepl(paste0(code.cur,"-", run.suffix), cur.files)]
+#   cur.file.code = cur.file.code[grepl("[.]pdf", cur.file.code)]
+#   if(length(cur.file.code)>0){
+#     cur.file.code = gsub("[.]pdf", "", cur.file.code)
+#     cur.nums = as.numeric(gsub(paste0(code.cur, "-", run.suffix,"-V"), "", cur.file.code))
+#     use.num = max(cur.nums)+1
+#   }else{
+#     use.num = 1
+#   }
+#   ## saving PDF
+#   path.use = here(paste0("4_res/fit-summaries/",
+#                          code.cur,
+#                          "-", run.suffix,
+#                          "-V", use.num, ".pdf"))
+#   cat(paste0("Saving ", modelfit.output$plot.title," to\n",
+#              path.use))
+#   pdf(path.use,
+#       width = 15, height = 20)
+#   ## map of abundance
+#   gp = ggarrange(modelfit.output$fig.abund,
+#                  modelfit.output$fig.njf.abund, ncol = 1)
+#   print(annotate_figure(gp, top = text_grob(modelfit.output$plot.title, size = 18)))
+#   ## map of trends
+#   gp = ggarrange(modelfit.output$fig.trend, 
+#                  modelfit.output$fig.nfj.trend, ncol = 1)
+#   print(annotate_figure(gp, top = text_grob(modelfit.output$plot.title, size = 18)))
+#   
+#   plot(NA, xlim = c(0,5), ylim = c(0,5), bty = "n", 
+#        xaxt = "n", yaxt = "n", xlab = "", ylab = "")
+#   text(1,4, modelfit.output$diagnostics.text["heading"], pos = 4, cex = 3)
+#   text(1,3, modelfit.output$diagnostics.text["title"], pos = 4, cex = 2)
+#   text(1,2, modelfit.output$diagnostics.text["formula"], pos = 4, cex = 2)
+#   text(1,1.5, modelfit.output$diagnostics.text["sources"], pos = 4)
+#   text(1,1, modelfit.output$diagnostics.text["knots"], pos = 4)
+#   
+#   gp = ggarrange(modelfit.output$fig.hist, modelfit.output$fig.counts, ncol=1)
+#   print(annotate_figure(gp, top = text_grob(modelfit.output$plot.title, size = 18)))
+#   
+#   ## activity curves for highest data denstiy, highest estimated abundance
+#   print(modelfit.output$fig.activity.maxdata + ggtitle(
+#     paste0(modelfit.output$fig.activity.maxdata$labels$title, "\n(Location of highest data density)")
+#   ))
+#   print(modelfit.output$fig.activity.maxabund + ggtitle(
+#     paste0(modelfit.output$fig.activity.maxabund$labels$title, "\n(Location of highest estimated abundance)")
+#   ))
+#   dev.off()
+#   ## save jpgs for faster viewing of maps etc.
+#   ggsave(here(paste0("4_res/fit-summaries/jpgs-fastviews/",
+#                      code.cur, "-", run.suffix,
+#                      "-V", use.num, "-abund-map.jpg")),
+#          modelfit.output$fig.abund, 
+#          width = 15, height = 12)
+#   ggsave(here(paste0("4_res/fit-summaries/jpgs-fastviews/",
+#                      code.cur, "-", run.suffix,
+#                      "-V", use.num, "-trend-map.jpg")),
+#          modelfit.output$fig.trend, 
+#          width = 15, height = 12)
+#   ggsave(here(paste0("4_res/fit-summaries/jpgs-fastviews/",
+#                      code.cur, "-", run.suffix,
+#                      "-V", use.num, "-trend-NFJ.jpg")),
+#          modelfit.output$fig.nfj.abund, 
+#          width = 15, height = 12)
+#   cat("\n")
+#   return(path.use)
+# }
+# 
