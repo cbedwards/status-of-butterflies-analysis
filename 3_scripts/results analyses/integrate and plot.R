@@ -2,15 +2,15 @@
 library(here)
 library(tidyverse)
 library(ggforce)
-res.full = read_csv(here("4_res/fits-parameterized/full-run-all-sources-V1/AAA-run-summary-trends.csv"))
+res.full = read_csv(here("4_res/fits-parameterized/full-run-all-sources-V2/AAA-run-summary-trends.csv"))
 res.full$run = "all sources"
-res.ohio = read_csv(here("4_res/fits-parameterized/full-run-only-OhioLeps-V1/AAA-run-summary-trends.csv"))
+res.ohio = read_csv(here("4_res/fits-parameterized/full-run-only-OhioLeps-V2/AAA-run-summary-trends.csv"))
 res.ohio$run = "OhioLeps"
-res.NFJ = read_csv(here("4_res/fits-parameterized/full-run-only-NFJ-V1/AAA-run-summary-trends.csv"))
+res.NFJ = read_csv(here("4_res/fits-parameterized/full-run-only-NFJ-V2/AAA-run-summary-trends.csv"))
 res.NFJ$run = "NFJ"
-res.MASSBfly = read_csv(here("4_res/fits-parameterized/full-run-only-MASSBfly-V1/AAA-run-summary-trends.csv"))
+res.MASSBfly = read_csv(here("4_res/fits-parameterized/full-run-only-MASSBfly-V2/AAA-run-summary-trends.csv"))
 res.MASSBfly$run = "MASSBfly"
-res.ill = read_csv(here("4_res/fits-parameterized/full-run-only-Illinois-BMN-V1/AAA-run-summary-trends.csv"))
+res.ill = read_csv(here("4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/AAA-run-summary-trends.csv"))
 res.ill$run = "Illinois BMN"
 
 res.all = bind_rows(res.full, res.ohio, res.NFJ, res.MASSBfly, res.ill)

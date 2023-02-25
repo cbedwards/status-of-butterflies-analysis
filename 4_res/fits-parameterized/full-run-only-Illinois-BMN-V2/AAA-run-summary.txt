@@ -1,0 +1,265 @@
+Fit on: 2023-02-25 09:52:31
+
+Parameters:
+==================
+form.use:
+  count ~ te(lat, lon, by = year, k = c(5, 5), bs = c("cr", "cr")) + effort.universal + s(site.refac, bs = "re")
+
+use.inferred:
+  TRUE
+
+geography.constrain:
+  FALSE
+
+use.only.source:
+  Illinois Butterfly Monitoring Network
+
+
+
+Correlation summaries:
+==================
+code	abund.correlation
+AMBVIA	NA
+ANATLOG	NA
+ANCNUM	NA
+ASTCLY	NA
+ATRYHIA	NA
+BATPHI	NA
+BOLOBEL	NA
+BOLOSEL	NA
+CELLAD	NA
+CERPEG	NA
+CHLONYC	NA
+COLCES	NA
+DANPLE	NA
+ENOANT	NA
+EPACLA	NA
+ERYBAP	NA
+ERYHOR	NA
+ERYJUV	NA
+EUPHPHA	NA
+EUPTCLA	NA
+EUPYBIM	NA
+EUPYCON	NA
+EUPYDIO	NA
+EUPYVES	NA
+EURLIS	NA
+EURYMAR	NA
+EVECOM	NA
+LIBCAR	NA
+LIMARC	NA
+LYCAHEL	NA
+LYCAHYL	NA
+LYCAPHL	NA
+MEGICYM	NA
+NATIOL	NA
+NYMANT	NA
+PAPGLA	NA
+PAPPOL	NA
+PAPTRO	NA
+PHOESEN	NA
+PHOLCAT	NA
+PHYTHA	NA
+PIERAP	NA
+POAHOB	NA
+POAMAS	NA
+POAVIA	NA
+POAZAB	NA
+POLIMYS	NA
+POLIORI	NA
+POLIPEC	NA
+POLITHE	NA
+POLYCOM	NA
+POLYINT	NA
+POLYPRO	NA
+POMVER	NA
+PONPRO	NA
+PYRCOM	NA
+SATACA	NA
+SATCA1	NA
+SATEDW	NA
+SATLIP	NA
+SATTIT	NA
+SATYAPP	NA
+SATYEUR	NA
+SPEYAPH	NA
+SPEYCYB	NA
+SPEYIDA	NA
+STRMEL	NA
+THOBAT	NA
+THOPYL	NA
+THYLIN	NA
+VANATA	NA
+VANCAR	NA
+WALEGE	NA
+
+
+ Report files generated:
+==================
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/AMBVIA-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/ANATLOG-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/ANCNUM-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/ASTCLY-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/ATRYHIA-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/BATPHI-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/BOLOBEL-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/BOLOSEL-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/CELLAD-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/CERPEG-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/CHLONYC-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/COLCES-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/DANPLE-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/ENOANT-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/EPACLA-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/ERYBAP-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/ERYHOR-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/ERYJUV-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/EUPHPHA-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/EUPTCLA-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/EUPYBIM-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/EUPYCON-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/EUPYDIO-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/EUPYVES-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/EURLIS-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/EURYMAR-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/EVECOM-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/LIBCAR-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/LIMARC-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/LYCAHEL-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/LYCAHYL-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/LYCAPHL-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/MEGICYM-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/NATIOL-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/NYMANT-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/PAPGLA-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/PAPPOL-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/PAPTRO-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/PHOESEN-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/PHOLCAT-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/PHYTHA-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/PIERAP-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/POAHOB-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/POAMAS-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/POAVIA-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/POAZAB-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/POLIMYS-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/POLIORI-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/POLIPEC-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/POLITHE-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/POLYCOM-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/POLYINT-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/POLYPRO-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/POMVER-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/PONPRO-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/PYRCOM-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/SATACA-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/SATCA1-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/SATEDW-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/SATLIP-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/SATTIT-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/SATYAPP-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/SATYEUR-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/SPEYAPH-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/SPEYCYB-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/SPEYIDA-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/STRMEL-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/THOBAT-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/THOPYL-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/THYLIN-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/VANATA-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/VANCAR-full-run-only-Illinois-BMN-V2.html
+G:/repos/status-of-butterflies-analysis/4_res/fits-parameterized/full-run-only-Illinois-BMN-V2/WALEGE-full-run-only-Illinois-BMN-V2.html
+
+
+ Human notes on model fit:
+==================
+[Fill in as desired]
+
+
+============================================================
+============================================================
+============================================================
+
+
+
+Extra details:  knot and site-making functions, region dictionary
+==================
+
+
+knot_maker():
+function(dat){
+  return(list())
+}
+<bytecode: 0x0000026e5bb57578>
+
+
+sitere_maker():
+function(dat){
+  ##identify the sites NOT to lump
+  temp = dat %>% 
+    group_by(site) %>% 
+    summarize(n.obs = n()) %>% 
+    filter(n.obs > 2)
+  cat(paste0("combining sites with low data into one random effect, total of ", nrow(temp)," observations affected \n"))
+  site.re = rep("light on data", nrow(dat))
+  site.re[dat$site %in% temp$site] = dat$site[dat$site %in% temp$site]
+  site.re = as.factor(site.re)
+  if(sum(site.re == "light on data")>0){
+    site.re = relevel(site.re, ref = "light on data")
+  }
+  return(as.factor(site.re))
+}
+<bytecode: 0x0000026e5c345708>
+
+
+Region dictionary:
+state	region
+Alabama	Southeast
+Arizona	Southwest
+Arkansas	Southeast
+California	Pacific Southwest
+Colorado	Mountain-Prarie
+Connecticut	Northeast
+Delaware	Northeast
+District of Columbia	Northeast
+Florida	Southeast
+Georgia	Southeast
+Idaho	Pacific
+Illinois	Midwest
+Indiana	Midwest
+Iowa	Midwest
+Kansas	Mountain-Prarie
+Kentucky	Southeast
+Louisiana	Southeast
+Maine	Northeast
+Maryland	Northeast
+Massachusetts	Northeast
+Michigan	Midwest
+Minnesota	Midwest
+Mississippi	Southeast
+Missouri	Midwest
+Montana	Mountain-Prarie
+Nebraska	Mountain-Prarie
+Nevada	Pacific Southwest
+New Hampshire	Northeast
+New Jersey	Northeast
+New Mexico	Southwest
+New York	Northeast
+North Carolina	Southeast
+North Dakota	Mountain-Prarie
+Ohio	Midwest
+Oklahoma	Southwest
+Oregon	Pacific
+Pennsylvania	Northeast
+Rhode Island	Northeast
+South Carolina	Southeast
+South Dakota	Mountain-Prarie
+Tennessee	Southeast
+Texas	Southwest
+Utah	Mountain-Prarie
+Vermont	Northeast
+Virginia	Northeast
+Washington	Pacific
+West Virginia	Northeast
+Wisconsin	Midwest
+Wyoming	Mountain-Prarie

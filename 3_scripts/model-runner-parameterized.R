@@ -15,10 +15,10 @@ gc()
 ### Parameter file name should be the only piece that needs in THIS script. Save parameters in an R file in 3_scripts/parameter-files
 ### and provide the name (without ".R") here
 
-run.name = "full-run-all-sources-presence-absence"
+run.name = "full-run-only-MASSBfly"
 
 ## If running on Collin's desktop
-# setwd("G:/repos/status-of-butterflies-analysis") ## for running out of rstudio, specific to Collin's desktop
+setwd("G:/repos/status-of-butterflies-analysis") ## for running out of rstudio, specific to Collin's desktop
 
 
 ## QUICK NOTE FOR DEBUGGING FRUSTRATING PROBLEM!!
@@ -100,7 +100,8 @@ for(i.spec in 1:nrow(specs.do)){
       trend.at.highest.predictions = out$trend.highabund,
       trend.at.best.nfj.data = out$trend.mostnfj,
       filename = output.name,
-      n.data = out$n
+      n.data = out$n,
+      zeroes.missed.messy = out$events.missed.messy
     )
     summary.df = rbind(summary.df,
                        res.cur)
