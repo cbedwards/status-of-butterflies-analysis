@@ -57,12 +57,15 @@ All species codes given in `specs.do$code` will be run. For simple test cases, y
 
 ## Function descriptions
 
+I'm only going to describe arguments that differ from those provided in the "parameters" section
+
 (*in progress*)
 
-### `model_runner` 
+### `model_runner` (in `model-fitting-function.R`)
 Runs the model and returns various results for a given species. This includes creating and saving the data for that species, fitting the provided model, and predicting trends and abundance. This function takes the parameters listed above, as well as infer.messy.levels, which specifies how to handle "unknown in X genus" or "X family". For whatever levels are specified, during the "inferring zeroes" step in the code, trips that didn't report the focal species but *did* report an unknown at the specified level will be skipped over.
 
 Results structure:
+
 - `plot.title`: pretty name for the plot
 - `loc.plot`: data frame of lon, lat, estimated abundance averaged across all years (`abund.index`), estimated growth rate `gr.med`
 - `abund.cor`: correlation in abundance between the average NFJ counts for each site across the last 10 years, and the average of the model predictions for those counts.
@@ -78,6 +81,10 @@ Results structure:
 - `trend.mostnfj`: estimated trend at the location of highest average NFJ counts. Potentially useful for diagnostics.
 - `n`: total number of data points used.
 - `events.missed.messy`: number of zeroes NOT inferred because of the given infer.messy.levels.
+
+### `report_maker` (in `model-fitting-function.R`)
+
+This function takes the output of `model_runner` as well as a path to save results to (`$)
 
 ## Git ignore details
 
