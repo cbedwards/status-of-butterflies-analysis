@@ -27,6 +27,8 @@ model_runner = function(code.cur, #GU code for taxa of interest
                         do.pheno = TRUE, #If model doesn't include doy term, set to FALSE to speed up calculations. MAKE SURE THIS IS TRUE WHEN THERE IS A DOY TERM IN THE MODEL!
                         geography.constrain = FALSE, #if TRUE, restrict data to only the observations within the convex hull (in lat/lon)
                         #                               of non-inferred data. NOTE: this is overridden if using the range maps (if use.range == TRUE)
+                        pheno.window = NULL, #if NULL, include all data. Otherwise, specify vector of probabilities for quantiles, and data will be clipped to the doy defined by those quanitles.
+                        #we recommend c(0.001, 0.999) as a good window choice.
                         regions.use = NULL, #if specified, limit analyses to only the provided FWS region(s)
                         min.year = -9999, #only use years after this point. For fast check of Wayne's question
                         use.only.source= NULL, #if NULL, use all sources. If a vector of characters, use only the specified sources.
@@ -52,6 +54,18 @@ model_runner = function(code.cur, #GU code for taxa of interest
   ## filter by year:
   dat = dat[dat$year >= min.year,]
   
+  ## filter by doy
+  if(!is.null(pheno.window)){
+    dat.nzero = dat %>% 
+      filter(count > 0)
+    doy.window = quantile(dat.nzero$doy, pheno.window, na.rm = T)
+    cat("Clipping data to the the window between these days:\n")
+    print(doy.window)
+    dat = dat[dat$doy >= doy.window[[1]],]
+    dat = dat[dat$doy <= doy.window[[2]],]
+  }
+  
+
   
   ## 
   ## UPDATE: this is being applied in the data generation step (make_dataset) to reduce size of data files.
@@ -89,12 +103,15 @@ model_runner = function(code.cur, #GU code for taxa of interest
       filter(region %in% regions.use)
   }
   
+
   
   ## FOR TESTING PURPOSES let's remove region = NA -- there are a few sites that are 
   ## at boundaries of coastlines and are being mistakenly identified as state == ""
   dat = dat %>% 
     filter(!is.na(dat$region))
   dat$regionfac = as.factor(dat$region)
+  
+  cat(paste0("working with a total of ", nrow(dat), " records.\n"))
   
   ##round counts to nearest whole number - some data are measured using distance sampling
   ##or other methods that can give decimals.
@@ -260,6 +277,7 @@ model_runner = function(code.cur, #GU code for taxa of interest
               trend.highabund = trend.highabund,
               trend.mostnfj = trend.mostnfj,
               n = nrow(dat),
+              data = dat,
               events.missed.messy = events.missed.messy))
 }
 

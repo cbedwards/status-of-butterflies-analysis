@@ -138,7 +138,9 @@ trend_and_abund_calc = function(dat, fit, regions.dict,
                              do.pheno = do.pheno, use.range = use.range)
   loc.plot$sourcefac = sourcefac
   loc.plot.y1 = loc.plot.y2 = loc.plot
-  loc.plot.y1$year  = min(dat$year)
+  # loc.plot.y1$year  = min(dat$year)
+  # loc.plot.y2$year = loc.plot.y1$year + 1
+  loc.plot.y1$year  = 2010
   loc.plot.y2$year = loc.plot.y1$year + 1
   
   #predict
@@ -148,12 +150,13 @@ trend_and_abund_calc = function(dat, fit, regions.dict,
   ## combining
   loc.plot$gr = log(loc.plot.y2$count)-log(loc.plot.y1$count)
   nyear = max(dat$year)-min(dat$year)
-  loc.plot$abund.index = loc.plot.y1$count/(nyear+1) * (exp(nyear * loc.plot$gr)-1)/(exp(loc.plot$gr)-1)
+  # loc.plot$abund.index = loc.plot.y1$count/(nyear+1) * (exp(nyear * loc.plot$gr)-1)/(exp(loc.plot$gr)-1)
+  loc.plot$abund.index = loc.plot.y1$count
   if(do.pheno){
     loc.plot = loc.plot %>% 
       group_by(lon, lat) %>% 
       summarize(gr.med = median(gr),
-                abund.index = sum(abund.index)*diff(dat$doy[1:2])) %>% 
+                abund.index = sum(abund.index)) %>% 
       ungroup()
   }else{
     loc.plot = loc.plot %>% 

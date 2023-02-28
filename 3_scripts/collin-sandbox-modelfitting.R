@@ -50,8 +50,8 @@ knot_maker = function(dat){
 form.use = formula(count ~ te(lat, lon, by = year, k = c(10, 10), bs = c("cr", "cr")) +
                      effort.universal:effort.universal.type +
                      # effort.universal + 
-                     s(doy, by = sourcefac, k = 4) +
-                     sourcefac +
+                     s(doy, k = 6) +
+                     # sourcefac +
                      s(site.refac, bs = 're')) ## can specify form listed above or use formula() to write it directly here.
 ## we also need to give it a region dictionary
 
@@ -60,7 +60,7 @@ regions.dict = read.csv(here("2_data_wrangling/FWS-regions-by-state.csv"))
 
 ##Note: regions for FWS
 
-out = model_runner(code.cur = "PIERAP",
+out = model_runner(code.cur = "ATACAM",
                    form.use = form.use, #formula for the model
                    knot_maker = knot_maker, #knot-generating function. We can leave it be
                    sitere_maker = sitere_maker, #function for defining custom "sites"
@@ -71,11 +71,18 @@ out = model_runner(code.cur = "PIERAP",
                    infer.messy.levels = c("GENUS", "SUBFAMILY", "FAMILY", "COMPLEX"), #When inferring zeroes, how do we deal with "Unknown in genus of interest"? 
                    ## specified levels of unknowns are ignored when inferring zeroes.
                    geography.constrain = FALSE, #superceeded by the range maps. If TRUE, restricts analysis to convex hull of non-zero observations
-                   use.only.source = NULL, #Can specify using data only from individual sources. NULL means use all sources
+                   use.only.source = "NFJ", #Can specify using data only from individual sources. NULL means use all sources
                    n.threads.use = 2, # how many cores to us?
+                   pheno.window = c(0.001, 0.999),
                    regions.use = NULL,
                    min.year = -9999,
                    do.pheno = TRUE) #if including phenology in your model, set to TRUE to calculate abundance separately for each day of year.
+
+out$fig.abund
+out$fig.trend
+
+temp = predict(out$fitted.model, newdata = out$data, type = 'response')
+summary(temp)
 
 
 ## formula for the model fit

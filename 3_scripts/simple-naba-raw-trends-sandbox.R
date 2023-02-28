@@ -1,3 +1,19 @@
+library(tidyverse)
+library(here)
+library(mgcv)
+library(sf)
+library(sp)
+library(geometry)
+library(viridis)
+library(scales)
+library(ggpubr)
+library(rgdal)
+library(geometry)
+source(here("3_scripts/funs.R"))
+source(here("3_scripts/funs-fitting.R"))
+source(here("3_scripts/model-fitting-function.R"))
+
+
 # gr = .005
 # (exp(gr*20)-1)*100
 # 
@@ -11,7 +27,7 @@
 #   ggplot(dat.sum %>% filter(source == "Illinois Butterfly Monitoring Network"), aes(x = year, y = nrecord))+
 #   geom_path()
 
-cur.code = "POAZAB"
+cur.code = "EVECOM"
 
 make_dataset(cur.code, use.range = T,
              infer.messy.levels = c("GENUS", "SUBFAMILY", "FAMILY", "COMPLEX"),
@@ -26,7 +42,7 @@ dat.spec = left_join(dat.spec, regions.dict, by = "state")
 ### Misc ------------
 
 dat.use = dat.spec %>% 
-  filter(source == "NFJ") %>% 
+  filter(source == "ATACHAM") %>% 
   group_by(region, year) %>% 
   summarise(ave = mean(count)) %>% 
   ungroup()
