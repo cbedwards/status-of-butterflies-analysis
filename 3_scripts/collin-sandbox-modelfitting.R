@@ -49,7 +49,7 @@ knot_maker = function(dat){
 ## formula for the model fit
 form.use = formula(count ~ te(lat, lon, by = year, k = c(5, 5), bs = c("cr", "cr")) +
                      effort.universal:effort.universal.type + 
-                     s(doy, by = regionfac, k = 8) + 
+                     # s(doy, k = 8) + 
                      sourcefac +
                      s(site.refac, bs = 're')) ## can specify form listed above or use formula() to write it directly here.
 ## we also need to give it a region dictionary
@@ -71,4 +71,5 @@ out = model_runner(code.cur = "PIERAP",
                    geography.constrain = FALSE, #superceeded by the range maps. If TRUE, restricts analysis to convex hull of non-zero observations
                    use.only.source = NULL, #Can specify using data only from individual sources. NULL means use all sources
                    n.threads.use = 2, # how many cores to us?
-                   do.pheno = TRUE) #if including phenology in your model, set to TRUE to calculate abundance separately for each day of year.
+                   min.year = 2010,
+                   do.pheno = FALSE) #if including phenology in your model, set to TRUE to calculate abundance separately for each day of year.

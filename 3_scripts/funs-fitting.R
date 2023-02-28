@@ -66,8 +66,8 @@ grid_plot_allyr = function(dat,
 
 grid_plot_oneyr = function(dat, regions.dict, do.pheno = TRUE, use.range = TRUE, dat.constrain = FALSE){
   ## for calculating trends
-  loc.pts = as.data.frame(expand.grid(lon = seq(min(dat$lon), max(dat$lon), by = .2),
-                                      lat = seq(min(dat$lat), max(dat$lat), by = .2)))
+  loc.pts = as.data.frame(expand.grid(lon = seq(min(dat$lon), max(dat$lon), by = .5),
+                                      lat = seq(min(dat$lat), max(dat$lat), by = .5)))
   if(do.pheno){ ## model includes phenology curve, so predict along that.
     doy.vec = seq(0,365, by = 1)
   } else{
