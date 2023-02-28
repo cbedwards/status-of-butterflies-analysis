@@ -27,6 +27,7 @@ model_runner = function(code.cur, #GU code for taxa of interest
                         do.pheno = TRUE, #If model doesn't include doy term, set to FALSE to speed up calculations. MAKE SURE THIS IS TRUE WHEN THERE IS A DOY TERM IN THE MODEL!
                         geography.constrain = FALSE, #if TRUE, restrict data to only the observations within the convex hull (in lat/lon)
                         #                               of non-inferred data. NOTE: this is overridden if using the range maps (if use.range == TRUE)
+                        regions.use = NULL, #if specified, limit analyses to only the provided FWS region(s)
                         min.year = -9999, #only use years after this point. For fast check of Wayne's question
                         use.only.source= NULL, #if NULL, use all sources. If a vector of characters, use only the specified sources.
                         n.threads.use = 4){ #how many threads to let mgcv::bam() use. 
@@ -82,6 +83,13 @@ model_runner = function(code.cur, #GU code for taxa of interest
   
   ## add regions and a factor version of regions to the data  
   dat = left_join(dat, regions.dict, by = "state")
+  
+  if(!is.null(regions.use)){
+    dat = dat %>% 
+      filter(region %in% regions.use)
+  }
+  
+  
   ## FOR TESTING PURPOSES let's remove region = NA -- there are a few sites that are 
   ## at boundaries of coastlines and are being mistakenly identified as state == ""
   dat = dat %>% 
