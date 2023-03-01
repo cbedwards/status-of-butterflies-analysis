@@ -19,8 +19,8 @@ species.id<-"ATACAM" #species code for analysis
 k.lat<-40 #static # knots across latitude
 k.lon<-40 #static # knots accross longitude
 k.doy<-4  #static # knots across doy if pheno smoothing
-pheno<-TRUE #True or False pheno smoothing
-
+pheno<-TRUE #True or False for  smoothing across doy (check smooth structure on line 59)
+savefigs<-FALSE #True or False for saving ggplot and summary output files; see line 98
 ## First, the model_runner() function can do most of the steps, and spit out a bunch of
 ## useful results + figures.
 
@@ -56,7 +56,7 @@ if(pheno) {
   form.use = formula(count ~ te(lat, lon, by = year, k = c(k.lat, k.lon), bs = c("cr", "cr")) +
                        effort.universal:effort.universal.type + 
                        sourcefac +
-                       s(doy, by=as.factor(region), k=k.doy) +
+                       s(doy,  k=k.doy) + #by=as.factor(region)
                        s(site.refac, bs = 're')) ## can specify form listed above or use formula() to write it directly here.
   ## we also need to give it a region dictionary
   
@@ -95,6 +95,7 @@ out$fig.abund
 out$fig.trend
 summary(out$loc.plot)
 
+if(savefigs) {
 if(pheno) {
 ggsave(out$fig.abund, file=paste0(species.id,"-",k.lat,"x",k.lon,"-p",k.doy,"ab.png"))
 ggsave(out$fig.trend, file=paste0(species.id,"-",k.lat,"x",k.lon,"-p",k.doy,"tr.png"))
@@ -103,4 +104,5 @@ write_csv(as.data.frame(summary(out$loc.plot)), file=paste0(species.id,"-p",k.la
   ggsave(out$fig.abund, file=paste0(species.id,"-",k.lat,"x",k.lon,"-","ab.png"))
   ggsave(out$fig.trend, file=paste0(species.id,"-",k.lat,"x",k.lon,"-","tr.png"))
   write_csv(as.data.frame(summary(out$loc.plot)), file=paste0(species.id,"-",k.lat,"x",k.lon,"-",".csv"))
+}
 }
