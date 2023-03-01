@@ -99,9 +99,22 @@ trip_abs = function(dat, #full data set
   trip.abs$inferred = TRUE
   trip.abs$common = dat[dat$code == code.cur,"common"][1]
   trip.abs = trip.abs[,names(dat)]
+  
+  ## Coding in solutions for two taxonomic issues here, per Erica + Leslie
+  ## COLEU2 and COLPHI can't be reported in Illinois Butterfly Monitoring network or the tenessee program 
+  if(code.cur %in% c("COLEU2", "COLPHI")){
+   trip.abs = trip.abs[trip.abs$source != "Illinois Butterfly Monitoring Network",] 
+  }
+  ## COLEU2, COLPHI, PYRALB, PYRCOM
+  if(code.cur %in% c("COLEU2", "COLPHI", "PYRALB", "PYRCOM")){
+    trip.abs = trip.abs[trip.abs$source != "Tennessee Butterfly Monitoring Network",] 
+  } 
+  
+  
   dat.use = dat[dat$code == code.cur, ]
   dat.use = dat.use[!is.na(dat.use$code),]
   dat.use = rbind(dat.use, trip.abs)
+  
   return(list(dat = dat.use,
               events.missed.messy = length(events.no.obs.exact)-length(events.no.obs))
   )

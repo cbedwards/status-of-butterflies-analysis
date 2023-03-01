@@ -48,7 +48,7 @@ knot_maker = function(dat){
 
 ## formula for the model fit
 form.use = formula(count ~ te(lat, lon, by = year, k = c(10, 10), bs = c("cr", "cr")) +
-                     effort.universal:effort.universal.type +
+                     effort.universal+#:effort.universal.type +
                      # effort.universal + 
                      s(doy, k = 6) +
                      # sourcefac +
@@ -75,7 +75,7 @@ out = model_runner(code.cur = "ATACAM",
                    n.threads.use = 2, # how many cores to us?
                    pheno.window = c(0.001, 0.999),
                    regions.use = NULL,
-                   min.year = -9999,
+                   min.year = 2000,
                    do.pheno = TRUE) #if including phenology in your model, set to TRUE to calculate abundance separately for each day of year.
 
 out$fig.abund
@@ -89,7 +89,7 @@ summary(temp)
 form.use = formula(count ~ te(lat, lon, by = year, k = c(10, 10), bs = c("cr", "cr")) +
                      effort.universal:effort.universal.type +
                      # effort.universal + 
-                     s(doy, by = region, k = 4) +
+                     s(doy, k = 4) +
                      sourcefac +
                      s(site.refac, bs = 're')) ## can specify form listed above or use formula() to write it directly here.
 ## we also need to give it a region dictionary
@@ -99,7 +99,7 @@ regions.dict = read.csv(here("2_data_wrangling/FWS-regions-by-state.csv"))
 
 ##Note: regions for FWS
 
-out2 = model_runner(code.cur = "PIERAP",
+out2 = model_runner(code.cur = "COLEU2",
                    form.use = form.use, #formula for the model
                    knot_maker = knot_maker, #knot-generating function. We can leave it be
                    sitere_maker = sitere_maker, #function for defining custom "sites"
