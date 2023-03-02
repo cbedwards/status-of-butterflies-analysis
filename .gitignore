@@ -6,6 +6,7 @@
 *.pdf
 *.jpg
 *.html
+*.tiff
 pull-updated-data-collin-desktop.R
 
 4_res/fits-parameterized/archive/
