@@ -16,9 +16,10 @@ source(here("3_scripts/model-fitting-function.R"))
 ### Example: cabbage white butterfly -------
 ##Variables to adjust species and knots 
 species.id<-"ATACAM" #species code for analysis
-k.lat<-40 #static # knots across latitude
-k.lon<-40 #static # knots accross longitude
-k.doy<-4  #static # knots across doy if pheno smoothing
+year.id<-2000 #minimum year for analysis
+k.lat<-20 #static # knots across latitude
+k.lon<-20 #static # knots across longitude
+k.doy<-6  #static # knots across doy if pheno smoothing
 pheno<-TRUE #True or False for  smoothing across doy (check smooth structure on line 59)
 savefigs<-FALSE #True or False for saving ggplot and summary output files; see line 98
 ## First, the model_runner() function can do most of the steps, and spit out a bunch of
@@ -56,7 +57,7 @@ if(pheno) {
   form.use = formula(count ~ te(lat, lon, by = year, k = c(k.lat, k.lon), bs = c("cr", "cr")) +
                        effort.universal:effort.universal.type + 
                        sourcefac +
-                       s(doy,  k=k.doy) + #by=as.factor(region)
+                       s(doy, by=as.factor(state), k=k.doy) + #by=as.factor(region)
                        s(site.refac, bs = 're')) ## can specify form listed above or use formula() to write it directly here.
   ## we also need to give it a region dictionary
   
@@ -80,7 +81,7 @@ out = model_runner(code.cur = species.id,
                    sitere_maker = sitere_maker, #function for defining custom "sites"
                    regions.dict = regions.dict, #dictionary for identifying regions. 
                    fit.family = "nb", #error distribution for model fit. nb = negative binomial
-                   min.year=2020,
+                   min.year=year.id,
                    use.range = TRUE, #constrain analysis to the range maps provided by Eliza. TRUE is good here.
                    use.inferred = TRUE, #infer zeroes from community-gathering trips? TRUE is good here
                    infer.messy.levels = c("GENUS", "SUBFAMILY", "FAMILY", "COMPLEX"), #When inferring zeroes, how do we deal with "Unknown in genus of interest"? 
@@ -106,3 +107,7 @@ write_csv(as.data.frame(summary(out$loc.plot)), file=paste0(species.id,"-p",k.la
   write_csv(as.data.frame(summary(out$loc.plot)), file=paste0(species.id,"-",k.lat,"x",k.lon,"-",".csv"))
 }
 }
+
+
+atacam = read.csv(here("2_data_wrangling/cleaned by code/ATACAM.csv"))
+ggplot(atacam, aes(x=source, y=year)) + geom_bar()
