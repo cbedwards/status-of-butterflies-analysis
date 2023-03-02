@@ -159,7 +159,10 @@ model_runner = function(code.cur, #GU code for taxa of interest
       filter(source %in% use.only.source)
   }
   
-  #
+  cat("final data details (for debugging contrast errors):\n")
+  cat(paste0(length(unique(dat$source)), " sources\n"))
+  cat(paste0(length(unique(dat$regionfac)), " regions\n"))
+  cat(paste0(length(unique(dat$effort.universal.type)), " effort types\n"))
   cat("fitting gam\n")
   time.start = proc.time()
   fit = bam(form.use,
