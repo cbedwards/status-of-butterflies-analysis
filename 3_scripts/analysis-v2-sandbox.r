@@ -45,14 +45,14 @@ sitere_maker = function(dat){
   return(as.factor(site.re))
 }
 
-cur.code = "ATACAM"
+cur.code = "POAZAB"
 year.min = 1990 #cut off years before this
 yr.region.min = 10 # need at least this many years represented in non-inferred data 
 # to use a region.
 
 n.threads.use = 2
 
-if(FALSE){
+if(TRUE){
   make_dataset(cur.code, use.range = T,
                infer.messy.levels = c("GENUS", "SUBFAMILY", "FAMILY", "COMPLEX"),
                name.pretty = NULL)
@@ -94,21 +94,21 @@ dat.window = dat.spec %>%
             n.noninferred = sum(inferred == FALSE)) %>% 
   ungroup()
 
-hist((dat.spec %>% filter(inferred == FALSE, region == "Pacific Southwest"))$doy, breaks=40)
+# hist((dat.spec %>% filter(inferred == FALSE, region == "Pacific Southwest"))$doy, breaks=40)
 
-ggplot(dat.spec %>% filter(inferred == FALSE, region == "Pacific Southwest"),
-       aes(x = doy, y = count)) +
-  geom_point()+
-  geom_smooth()
+# ggplot(dat.spec %>% filter(inferred == FALSE, region == "Pacific Southwest"),
+# aes(x = doy, y = count)) +
+# geom_point()+
+# geom_smooth()
 
 
 ## baseline function -----
 
 init.time = proc.time()
 out = bam(count ~ s(doy, by = regionfac, 
-                        bs = "cc", k = 10) + #phenology
+                    bs = "cc", k = 10) + #phenology
             regionfac + year:regionfac + #variation across regions
-            event.typefac + effort.universal:effort.universal.type + #accounting for effort and source
+            sourcefac + effort.universal:effort.universal.type + #accounting for effort and source
             s(site.refac, bs = "re"), #random effect to account for effort, biology, pseudoreplication
           method="fREML", 
           knots = list(doy = c(0.5, 364.5)),
@@ -121,15 +121,15 @@ proc.time()-init.time
 ## simple version of the model
 init.time = proc.time()
 out.simple = bam(count ~ 0 + s(doy, bs = "cc", k = 10) + #phenology
-            regionfac + year:regionfac + #variation across regions
-              event.typefac + effort.universal:effort.universal.type + #accounting for effort and source
-            s(site.refac, bs = "re"), #random effect to account for effort, biology, pseudoreplication
-          method="fREML", 
-          knots = list(doy = c(0.5, 364.5)),
-          family = "nb",
-          discrete = TRUE,
-          nthreads = n.threads.use,
-          data = dat.spec)
+                   regionfac + year:regionfac + #variation across regions
+                   sourcefac + effort.universal:effort.universal.type + #accounting for effort and source
+                   s(site.refac, bs = "re"), #random effect to account for effort, biology, pseudoreplication
+                 method="fREML", 
+                 knots = list(doy = c(0.5, 364.5)),
+                 family = "nb",
+                 discrete = TRUE,
+                 nthreads = n.threads.use,
+                 data = dat.spec)
 proc.time()-init.time
 
 
@@ -239,15 +239,15 @@ gp.phenos
 cur.source = "NFJ"
 cur.region = dat.spec$regionfac[1]
 dat.pred.simple = as.data.frame(expand.grid(year = 10,
-                                     doy = seq(0, 365, by = .1),
-                                     regionfac = cur.region,
-                                     sourcefac = cur.source,
-                                     effort.universal = 0,
-                                     event.typefac = "NFJ",
-                                     effort.universal.type = "duration",
-                                     site.refac = "totally new site"))
-dat.pred.simple$count = predict(out.simple, newdata = dat.pred, type = 'response',
-                         discrete = FALSE)
+                                            doy = seq(0, 365, by = .1),
+                                            regionfac = cur.region,
+                                            sourcefac = cur.source,
+                                            effort.universal = 0,
+                                            event.typefac = "NFJ",
+                                            effort.universal.type = "duration",
+                                            site.refac = "totally new site"))
+dat.pred.simple$count = predict(out.simple, newdata = dat.pred.simple, type = 'response',
+                                discrete = FALSE)
 gp.pheno.simple =  ggplot(dat.pred.simple, aes(x = doy, y = count))+
   # geom_point(data = dat.spec, aes(col = sourcefac))+
   geom_path(col = "black")+
@@ -258,4 +258,5 @@ plot_grid(gp.trends, gp.trends.simple+ggtitle("with only single activity curve")
 
 plot_grid(gp.phenos, gp.pheno.simple, ncol = 1, rel_heights = c(2,1))
 
-anova.gam(out, out.simple)
+anova.comp = anova.gam(out, out.simple, test = "Chisq")
+# anova.comp$`Pr(>Chi)`[2]

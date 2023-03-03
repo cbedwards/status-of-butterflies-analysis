@@ -9,6 +9,7 @@ library(scales)
 library(ggpubr)
 library(rgdal)
 library(geometry)
+library(quantreg)
 source(here("3_scripts/funs.R"))
 source(here("3_scripts/funs-fitting.R"))
 source(here("3_scripts/model-fitting-function.R"))
@@ -53,12 +54,17 @@ ggplot(dat.use, aes(x = year, y = ave))+
   facet_wrap(.~region)
 
 
+rq(doy ~ year, tau = c(.1, .5, .9), data = dat.spec %>%  filter(source == "NFJ"))
+
 res = NULL
 print(cur.code)
 for(cur.region in na.omit(unique(dat.spec$region))){
   dat.fit = dat.spec %>% 
     filter(source == "NFJ") %>% 
-    filter(region == cur.region)
+    filter(region == cur.region) %>% 
+    filter(year>2000)
+    # filter(doy > 100) %>% 
+    # filter(doy <200)
   out.lm = glm.nb(count ~ year, data = dat.fit)
   res.cur = data.frame(region = cur.region, 
                        trend = coef(out.lm)[2],
@@ -66,3 +72,4 @@ for(cur.region in na.omit(unique(dat.spec$region))){
   res = rbind(res, res.cur)
 }
 res
+
