@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+    <idinfo>
+        <citation>
+            <citeinfo>
+                <origin/>
+                <pubdate>20100622</pubdate>
+                <title>US Fish and Wildlife Service Regional Boundaries</title>
+                <geoform>vector digital data</geoform>
+                <pubinfo>
+                    <pubplace/>
+                    <publish>U.S. Fish &amp; Wildlife Service</publish>
+                </pubinfo>
+                <onlink>http://ecos.fws.gov/ServCatFiles/reference/holding/53231/FWS_Regional_Boundaries.zip</onlink>
+                <onlink>http://www.fws.gov/GIS/data/national/index.html</onlink>
+            </citeinfo>
+        </citation>
+        <descript>
+            <abstract>This data set delineates the legacy boundaries of the U.S. Fish and Wildlife Service geographic Regions.  The dataset was created as a geographic representation of the Regional administrative boundaries of the US Fish and Wildlife Service at a very coarse scale.  The boundaries were created using the ArcGIS shoreline dataset from approximately 1995.  This dataset should not be used for legal purposes or at small scales and does not accurately denote the shorelines of the united states.  The Regional Boundaries data set is managed by the FWS Headquarters Information Resources and Technology Management, Branch of Geospatial Data Management. The complete data and metadata can be accessed here: https://catalog.data.gov/dataset/us-fish-and-wildlife-service-regional-boundaries.  This data set is a graphical representation and has limitations of accuracy as determined by, among others, the source, scale and resolution of the data.  DOI Interior Regions / Regional Boundaries (https://fws.maps.arcgis.com/home/item.html?id=309aa728d6c041ceaefc1526a409b5d1).</abstract>
+            <purpose>Legacy boundaries of the management Regions of the U.S. Fish and Wildlife Service. The U.S. Fish and Wildlife Service is organized into eight geographic Regions.</purpose>
+        </descript>
+        <status>
+            <progress>Complete</progress>
+            <update>As needed</update>
+        </status>
+        <spdom>
+            <bounding>
+                <westbc>-179.133392</westbc>
+                <eastbc>179.772678</eastbc>
+                <northbc>71.398048</northbc>
+                <southbc>-0.581546</southbc>
+            </bounding>
+        </spdom>
+        <keywords>
+            <theme>
+                <themekt>None</themekt>
+                <themekey>FWS</themekey>
+                <themekey>Fish and Wildlife Service</themekey>
+                <themekey>boundaries</themekey>
+                <themekey>bgds</themekey>
+            </theme>
+            <theme>
+                <themekt>ISO 19115 Topic Category</themekt>
+                <themekey>boundaries</themekey>
+            </theme>
+            <place>
+                <placekt>None</placekt>
+                <placekey>USA</placekey>
+            </place>
+        </keywords>
+        <accconst>None</accconst>
+        <useconst>Although these data and information have been processed successfully on a computer system at the U.S. Fish and Wildlife Service, USFWS, no warranty expressed or implied is made regarding the accuracy or utility of the data and information on any other system or for general or scientific purposes, nor shall the act of distribution constitute any such warranty. Inherent in any data set used to develop graphical representations are limitations of accuracy as determined by, among others, the source, scale and resolution of the data. This disclaimer applies both to individual use of the data and information, and aggregate use with other data and information. It is also strongly recommended that careful attention be paid to the contents of the metadata file associated with this data and information, and aggregate use with other data and information. The USFWS is not liable for the user’s improper or incorrect use of the data and information described and/or contained herein. These data and any derived products are not legal documents and are not intended to be used as such. The information contained in these data may be dynamic and could change over time. The data are not better than the original sources from which they are derived. It is the responsibility of the data user to use the data appropriately and consistent with the limitations of geospatial data in general and these data in particular. It is strongly recommended that the data described or contained herein be acquired directly from an authorized USFWS source and not indirectly through some other sources which may have changed the data in some way. The USFWS is not liable for data or information that indirectly acquired through other sources.No warranty expressed or implied is made regarding the accuracy or utility of the data on any other system or for general or scientific purposes, nor shall the act of distribution constitute any such warranty.</useconst>
+        <ptcontac>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>U.S. Fish and Wildlife Service, Information Resource and Technology Management</cntorg>
+                </cntorgp>
+                <cntpos>National GIS Coordinator</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>755 Parfet Street</address>
+                    <address>Suite 250</address>
+                    <city>Lakewood</city>
+                    <state>CO</state>
+                    <postal>80215</postal>
+                </cntaddr>
+                <cntvoice>(303) 275-2348</cntvoice>
+                <cntemail>FWS_GIS@fws.gov</cntemail>
+            </cntinfo>
+        </ptcontac>
+        <datacred>U.S. Fish and Wildlife Service</datacred>
+        <secinfo>
+            <secsys>FIPS Pub 199</secsys>
+            <sechandl>Standard Technical Controls</sechandl>
+        </secinfo>
+        <native>ESRI ArcCatalog 9.3.1.3000</native>
+    </idinfo>
+    <dataqual>
+        <attracc>
+            <attraccr>Not Available</attraccr>
+        </attracc>
+        <logic>Polygons are closed</logic>
+        <complete>Not Available</complete>
+        <posacc>
+            <horizpa>
+                <horizpar>Not Available</horizpar>
+            </horizpa>
+        </posacc>
+        <lineage>
+            <procstep>
+                <procdesc>FWS Regional boundaries were compiled</procdesc>
+            </procstep>
+        </lineage>
+    </dataqual>
+    <spdoinfo>
+        <direct>Vector</direct>
+    </spdoinfo>
+    <eainfo>
+        <detailed>
+            <enttyp>
+                <enttypl>FWS_Regional_Boundaries</enttypl>
+                <enttypd>USFWS Regional Boundaries</enttypd>
+                <enttypds>US Fish and Wildlife Service</enttypds>
+            </enttyp>
+            <attr>
+                <attrlabl>Shape_Leng</attrlabl>
+                <attrdef>Perimeter of the polygon in square decimal degrees</attrdef>
+                <attrdefs>ESRI</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>Calculated value</udom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>Shape_Area</attrlabl>
+                <attrdef>Area of feature in internal units squared.</attrdef>
+                <attrdefs>ESRI</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>Positive real numbers that are automatically generated.</udom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>OBJECTID</attrlabl>
+                <attrdef>Object ID</attrdef>
+                <attrdefs>ESRI</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>Unique object identity number</udom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>REGION_1</attrlabl>
+                <attrdef>Geographic Region</attrdef>
+                <attrdefs>US Fish and Wildlife Service</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>4</edomv>
+                                                						
+                        
+                        <edomvd>Southeast Region</edomvd>
+                                                						
+                        
+                        <edomvds>US Fish and Wildlife Service</edomvds>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>2</edomv>
+                                                						
+                        
+                        <edomvd>Southwest Region</edomvd>
+                                                						
+                        
+                        <edomvds>US Fish and Wildlife Service</edomvds>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>8</edomv>
+                                                						
+                        
+                        <edomvd>Pacific Southwest Region</edomvd>
+                                                						
+                        
+                        <edomvds>US Fish and Wildlife Service</edomvds>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>3</edomv>
+                                                						
+                        
+                        <edomvd>Midwest Region</edomvd>
+                                                						
+                        
+                        <edomvds>US Fish and Wildlife Service</edomvds>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>6</edomv>
+                                                						
+                        
+                        <edomvd>Mountain Prairie Region</edomvd>
+                                                						
+                        
+                        <edomvds>US Fish and Wildlife Service</edomvds>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>7</edomv>
+                                                						
+                        
+                        <edomvd>Alaska Region</edomvd>
+                                                						
+                        
+                        <edomvds>US Fish and Wildlife Service</edomvds>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>5</edomv>
+                                                						
+                        
+                        <edomvd>Northeast Region</edomvd>
+                                                						
+                        
+                        <edomvds>US Fish and Wildlife Service</edomvds>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+                <attrdomv>
+                                        					
+                    
+                    <edom>
+                                                						
+                        
+                        <edomv>1</edomv>
+                                                						
+                        
+                        <edomvd>Pacific Region</edomvd>
+                                                						
+                        
+                        <edomvds>US Fish and Wildlife Service</edomvds>
+                                                					
+                    
+                    </edom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>FID</attrlabl>
+                <attrdef>Internal feature number.</attrdef>
+                <attrdefs>ESRI</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>Sequential unique whole numbers that are automatically generated.</udom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>Shape</attrlabl>
+                <attrdef>Feature geometry.</attrdef>
+                <attrdefs>ESRI</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>Coordinates defining the features.</udom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>REGNAME_1</attrlabl>
+                <attrdef>Region Name</attrdef>
+                <attrdefs>US Fish and Wildlife Service</attrdefs>
+                <attrdomv>
+                                        					
+                    
+                    <udom>US Fish and Wildlife Service Region Name</udom>
+                                        				
+                
+                </attrdomv>
+            </attr>
+        </detailed>
+    </eainfo>
+    <distinfo>
+        <distrib>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>U.S. Fish and Wildlife Service, Information Resource and Technology Management</cntorg>
+                </cntorgp>
+                <cntpos>National GIS Coordinator</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>Suite 250</address>
+                    <address>755 Parfet Street</address>
+                    <city>Lakewood</city>
+                    <state>CO</state>
+                    <postal>80215</postal>
+                </cntaddr>
+                <cntvoice>(303) 275-2348</cntvoice>
+                <cntemail>FWS_GIS@fws.gov</cntemail>
+            </cntinfo>
+        </distrib>
+        <distliab>Although this data set has been processed successfully by the U.S. Fish and Wildlife Service using the best available information, no warranty, expressed or implied, is made regarding the accuracy or utility of the data on any other system or for general or scientific purposes, nor shall the act of distribution constitute any such warranty. This disclaimer applies both to individual use of the data and aggregate use with other data. The U.S. Fish and Wildlife Service shall not be held liable for improper or incorrect use of the data described and/or contained in.</distliab>
+        <stdorder>
+            <digform>
+                <digtinfo>
+                    <formname>ZIP Compressed Archive</formname>
+                    <formspec>FWS_Regional_Boundaries.zip</formspec>
+                    <filedec>FWS Regional Boundaries</filedec>
+                    <transize>3949012</transize>
+                </digtinfo>
+                <digtopt>
+                    <onlinopt>
+                        <computer>
+                            <networka>
+                                <networkr>http://ecos.fws.gov/ServCatFiles/reference/holding/53231/FWS_Regional_Boundaries.zip</networkr>
+                            </networka>
+                        </computer>
+                    </onlinopt>
+                    <onlinopt>
+                        <computer>
+                            <networka>
+                                <networkr>http://gis.fws.gov/ArcGIS/rest/services/FWS_Regional_Boundaries/MapServer</networkr>
+                            </networka>
+                        </computer>
+                    </onlinopt>
+                </digtopt>
+            </digform>
+            <fees>None</fees>
+        </stdorder>
+    </distinfo>
+    <metainfo>
+        <metd>20121220</metd>
+        <metc>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>U.S. Fish and Wildlife Service, Information Resource and Technology Management</cntorg>
+                </cntorgp>
+                <cntpos>National GIS Coordinator</cntpos>
+                <cntaddr>
+                    <addrtype>mailing and physical</addrtype>
+                    <address>Suite 250</address>
+                    <address>755 Parfet Street</address>
+                    <city>Lakewood</city>
+                    <state>CO</state>
+                    <postal>80215</postal>
+                </cntaddr>
+                <cntvoice>(303) 275-2348</cntvoice>
+                <cntemail>FWS_GIS@fws.gov</cntemail>
+            </cntinfo>
+        </metc>
+        <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+        <metstdv>FGDC-STD-001-1998</metstdv>
+        <mettc>local time</mettc>
+    </metainfo>
+</metadata>
