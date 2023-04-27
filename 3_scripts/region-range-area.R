@@ -26,7 +26,7 @@ for(cur.code in maps.list){
   range.map = terra::vect(range.map)
   
   
-  cur.area = data.frame(region = unique(usfws$REGNAME))
+
   cur.area$km2 = -99
   cur.area$code = cur.code
   for(i in 1:nrow(cur.area)){
@@ -39,6 +39,16 @@ for(cur.code in maps.list){
   }
   res.area = rbind(res.area, cur.area)
 }
+
+## Now do the total regions (for the one-hat model)
+cur.area = data.frame(region = unique(usfws$REGNAME))
+cur.area$km2 = -99
+cur.area$code = "total region"
+for(i in 1:nrow(cur.area)){
+  cur.area$km2[i] = terra::expanse(usfws[usfws$REGNAME==cur.area$region[i],], unit = "km")
+}
+res.area = rbind(res.area, cur.area)
+
 
 ## clear out entries with no abundance, the alaska region that we're not using
 res.area = res.area %>% 

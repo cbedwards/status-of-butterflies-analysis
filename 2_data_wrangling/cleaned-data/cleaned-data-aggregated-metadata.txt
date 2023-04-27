@@ -19,6 +19,8 @@ Duration – survey minutes for some pollard walk programs
 list.length – column for calculating list length (effort metric) for list length analysis of MA butterfly club data (not currently implemented, all Nas presently)
 party.size – effort metric for NABA fourth of July counts
 party.minutes – effort metric for NABA fourth of July counts
+effort.universal - single variable to capture party.minutes, duration, and lack of either. Values are normalized separately for party.minutes and duration. When neither is provided, value is set to zero. Best if used in conjunction with effort.universal.type, below.
+effort.universal.type - identifies whether the effort.universal is coming from duration, party.minutes, or neither.
 site – unique identifier for the site. For many pollard-type data, effort is likely to be similar across days/years in the same site (since they walk the same route each time). When other effort information isn't available, a random effect of site in these cases can help account for differences in efforts between sites.
 
 Additional:

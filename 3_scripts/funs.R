@@ -7,7 +7,7 @@ library(data.table, include.only = c("fread", "fwrite"))
 
 #quick read function for ease of reading
 library(data.table, include.only = c("fread", "fwrite"))
-qread = function(x) as.data.frame(fread(here(x))) 
+qread = function(x) as.data.frame(data.table::fread(here(x))) 
 
 ## ggplot theme for easier visualization
 
